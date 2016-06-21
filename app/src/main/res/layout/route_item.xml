@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:clickable="true"
+    android:background="?android:attr/selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/linear"
+        android:orientation="vertical">
+
+
+
+    <TextView
+        android:id="@+id/tv_entity_name"
+        android:layout_width="387dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="1dp"
+        android:background="#FFFFFF"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:paddingBottom="12dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="12dp"
+        android:text="Bapuji Nagar"
+        android:textColor="#000000"
+        android:textSize="14dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/linear"
+        android:background="#787878" />
+
+</RelativeLayout>
