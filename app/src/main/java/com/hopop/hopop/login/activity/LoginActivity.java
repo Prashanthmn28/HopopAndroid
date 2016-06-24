@@ -80,7 +80,6 @@ public class LoginActivity extends AppCompatActivity {
 
     @OnClick (R.id.button_signup)
     public void signupUser(View view){
-
         Intent i = new Intent(LoginActivity.this, RegisterActivity.class);
         startActivity(i);
     }

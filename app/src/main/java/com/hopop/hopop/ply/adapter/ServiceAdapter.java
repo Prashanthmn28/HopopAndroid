@@ -53,8 +53,8 @@ public class ServiceAdapter extends BaseAdapter {
         if (rowView == null) {
             vi = inflater.inflate(R.layout.list_service_item, null);
             holder = new ViewHolder();
-            holder.mInterval = (TextView) vi.findViewById(R.id.tv_interval);
-            holder.mAvailability = (TextView) vi.findViewById(R.id.tv_availability);
+            /*holder.mInterval = (TextView) vi.findViewById(R.id.tv_interval);
+            holder.mAvailability = (TextView) vi.findViewById(R.id.tv_availability);*/
             holder.mFillingStatus = (TextView) vi.findViewById(R.id.tv_filling_status);
             holder.mimageId = (ImageView)vi.findViewById(R.id.imageView2);
 
