@@ -24,7 +24,6 @@ public class SourceList implements Parcelable {
                 '}';
     }
 
-
     public List<FromRoute> getFromRoutes() {
         return fromRoutes;
     }

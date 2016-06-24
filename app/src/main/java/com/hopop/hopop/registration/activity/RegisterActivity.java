@@ -25,9 +25,12 @@ import com.facebook.AccessTokenTracker;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
+import com.facebook.GraphRequest;
+import com.facebook.GraphResponse;
 import com.facebook.Profile;
 import com.facebook.ProfileTracker;
 import com.facebook.appevents.AppEventsLogger;
+import com.facebook.appevents.internal.Constants;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 import com.facebook.stetho.Stetho;
@@ -41,6 +44,11 @@ import com.linkedin.platform.errors.LIAuthError;
 import com.linkedin.platform.listeners.AuthListener;
 import com.linkedin.platform.utils.Scope;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
@@ -80,30 +88,63 @@ public class RegisterActivity extends AppCompatActivity {
 
         callbackManager = CallbackManager.Factory.create();
 
-        LoginButton loginButton = (LoginButton) findViewById(R.id.login_button);
+        LoginButton loginButton = (LoginButton) findViewById(R.id.fb_login_button);
         loginButton.setReadPermissions("public_profile", "email", "user_friends");
 
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
-            @Override
-            public void onSuccess(LoginResult loginResult) {
-                Intent i = new Intent(getApplicationContext(), SourceActivity.class);
-                startActivity(i);
-                System.out.print("Logged in"+loginResult);
-            }
+                    @Override
+                    public void onSuccess(LoginResult loginResult) {
+                        Log.e("ln: ", "Facebook Login Successful!");
+                        Log.e("ln: ", "Logged in user Details : ");
+                        Log.e("ln: ", "--------------------------");
+                        Log.e("ln: ", loginResult.getAccessToken().getUserId());
+                        Log.e("ln: ", loginResult.getAccessToken().getToken());
 
-            @Override
-            public void onCancel() {
-                // App code
 
-            }
+                        GraphRequest request = GraphRequest.newMeRequest(
+                                loginResult.getAccessToken(),
+                                new GraphRequest.GraphJSONObjectCallback() {
+                                    @Override
+                                    public void onCompleted(JSONObject object, GraphResponse response) {
+                                        Log.i("LoginActivity", response.toString());
+                                        try {
+                                            String id = object.getString("id");
+                                            try {
+                                                URL profile_pic = new URL("http://graph.facebook.com/" + id + "/picture?type=small");
+                                                Log.e("profile_pic", profile_pic + "");
+                                            } catch (MalformedURLException e) {
+                                                e.printStackTrace();
+                                                }
+                                            String name = object.getString("name");
+                                            String email = object.getString("email");
+                                        } catch (JSONException e) {
+                                            e.printStackTrace();
+                                        }
+                                    }
+                                });
+                        Bundle parameters = new Bundle();
+                        parameters.putString("fields", "id,name,email,gender, birthday,picture.type(small)");
+                        request.setParameters(parameters);
+                        request.executeAsync();
 
-            @Override
-            public void onError(FacebookException exception) {
-                // App code
-                Log.i("Error", "Error");
-            }
-        });
+                        Intent intent = new Intent(RegisterActivity.this,SourceActivity.class);
+                        startActivity(intent);
+
+                    }
+
+                    @Override
+                    public void onCancel() {
+
+                    }
+
+                    @Override
+                    public void onError(FacebookException error) {
+
+                    }
+                });
     }
+
+
 
     /*@Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -117,7 +158,7 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     public void login_linkedin(){
-        LISessionManager.getInstance(getApplicationContext()).init(this, buildScope(), new AuthListener() {
+        LISessionManager.getInstance(getApplicationContext()).init(RegisterActivity.this, buildScope(), new AuthListener() {
             @Override
             public void onAuthSuccess() {
 
@@ -158,9 +199,11 @@ public class RegisterActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        LISessionManager.getInstance(getApplicationContext()).onActivityResult(this, requestCode, resultCode, data);
+        Log.e("Register","Jump from on Result");
+        //LISessionManager.getInstance(getApplicationContext()).onActivityResult(this, requestCode, resultCode, data);
         Intent intent = new Intent(RegisterActivity.this,SourceActivity.class);
         startActivity(intent);
+        callbackManager.onActivityResult(requestCode,resultCode,data);
     }
 
     // This method is used to make permissions to retrieve data from linkedin

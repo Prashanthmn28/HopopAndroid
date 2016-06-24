@@ -1,6 +1,8 @@
 package com.hopop.hopop.communicators.services;
 
+import com.hopop.hopop.destination.data.ForSeatAvailability;
 import com.hopop.hopop.login.data.LoginUser;
+import com.hopop.hopop.ply.data.SeatTimeInfo;
 import com.hopop.hopop.registration.data.RegisterUser;
 import com.hopop.hopop.response.Registerresponse;
 import com.hopop.hopop.source.data.SourceList;
@@ -23,5 +25,8 @@ public interface RegisterClass {
 
     @GET("from_route.php")
     Call<SourceList> groupListSrc();
+
+    @POST("seat_time_info.php")
+    Call<SeatTimeInfo> forSeatAvailiability(@Body ForSeatAvailability forSeats);
 
 }
