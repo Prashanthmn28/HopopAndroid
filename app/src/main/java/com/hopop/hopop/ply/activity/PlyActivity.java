@@ -25,12 +25,12 @@ import com.hopop.hopop.destination.activity.DestinationActivity;
 import com.hopop.hopop.destination.data.ForSeatAvailability;
 import com.hopop.hopop.login.activity.R;
 import com.hopop.hopop.ply.adapter.DataAdapter;
-import com.hopop.hopop.ply.adapter.ServiceAdapter;
 import com.hopop.hopop.payment.activity.PaymentActivity;
 import com.hopop.hopop.ply.data.SeatTimeInfo;
 import com.hopop.hopop.source.activity.SourceActivity;
 
 import java.util.ArrayList;
+import java.util.logging.Logger;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -39,15 +39,10 @@ import retrofit2.Response;
 public class PlyActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener  {
 
     TextView srcTxt,destTxt,row1,row2,row3;
-
-    //ListView mServiceListview;
-    ServiceAdapter mAdapter;
     Toolbar toolbar;
-
     private RecyclerView recyclerView;
     private ArrayList<SeatTimeList> data;
     private DataAdapter adapter;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,9 +55,6 @@ public class PlyActivity extends AppCompatActivity implements NavigationView.OnN
         recyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
-
-        //  mServiceListview = (ListView) findViewById(R.id.listView);
-
         //-----------post the parameters of from and to locations to server-----------------
         String src_point = SourceActivity.src;
         String src_pointId = SourceActivity.srcRId;
@@ -87,7 +79,9 @@ public class PlyActivity extends AppCompatActivity implements NavigationView.OnN
                 }
 
                 if(sti.getSeatTimeList() != null) {
-                    adapter = new DataAdapter(sti.getSeatTimeList());
+                    Log.e(getClass().getSimpleName(),"The sorted list is "+sti.getSortedSeatTimeListByTime());
+                    ArrayList<SeatTimeList> timeList = sti.getSortedSeatTimeListByTime();
+                    adapter = new DataAdapter(timeList);
                     recyclerView.setAdapter(adapter);
 
                     ((DataAdapter)adapter).setOnItemClickListener(new DataAdapter.ItemClickListenr() {

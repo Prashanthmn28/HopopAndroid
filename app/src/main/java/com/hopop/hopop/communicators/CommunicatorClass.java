@@ -25,18 +25,6 @@ public class CommunicatorClass {
                    .addInterceptor(interceptor)
                     .addNetworkInterceptor(new StethoInterceptor()).build();
 
-/*
-            addNetworkInterceptor(new Interceptor() {
-                @Override
-                public Response intercept(Chain chain) throws IOException {
-                    Request request = chain.request().newBuilder().addHeader("AutheKey", "Send the obtained key value").build();
-                    return chain.proceed(request);
-                }
-            })
-*/
-
-
-
             Retrofit retrofit = new Retrofit.Builder()
                     .baseUrl("http://redbeak.azurewebsites.net/php/")
                     .client(client)

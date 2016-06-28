@@ -6,6 +6,11 @@ import android.os.Parcelable;
 import com.google.gson.annotations.SerializedName;
 import com.orm.SugarRecord;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Comparator;
+import java.util.Date;
+
 public class SeatTimeList extends SugarRecord implements Parcelable {
 
     @SerializedName("route_id")
@@ -123,6 +128,31 @@ public class SeatTimeList extends SugarRecord implements Parcelable {
         this.imageId = imageId;
     }
 
+    public static Comparator<SeatTimeList> timeComparator = new Comparator<SeatTimeList>() {
+        @Override
+        public int compare(SeatTimeList jc1, SeatTimeList jc2) {
+            //write the convertion logic and then do comarition of it and return int
+
+            SimpleDateFormat format = new SimpleDateFormat("HH:mm:ss");
+            Date d1 = null;
+            Date d2 = null;
+
+            try {
+                d1 = format.parse(jc1.getTimeSlot());
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+            try {
+                d2 = format.parse(jc2.getTimeSlot());
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+
+
+
+            return (d2.getTime() > d1.getTime() ? -1 :0);
+        }
+    };
 
     @Override
     public int describeContents() {
