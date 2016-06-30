@@ -11,6 +11,7 @@ import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v7.app.NotificationCompat;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -21,9 +22,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.hopop.hopop.communicators.CommunicatorClass;
+import com.hopop.hopop.database.Wallet;
 import com.hopop.hopop.login.activity.R;
+import com.hopop.hopop.login.data.LoginUser;
+import com.hopop.hopop.payment.data.WalletInfo;
 import com.hopop.hopop.source.activity.SourceActivity;
 import com.hopop.hopop.login.activity.LoginActivity;
 
@@ -32,6 +38,9 @@ import javax.annotation.Nullable;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class PaymentActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -61,6 +70,46 @@ public class PaymentActivity extends AppCompatActivity
         }
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        String userMobileNum = LoginActivity.usrMobileNum;
+        Log.i(getClass().getSimpleName(),"UserLogin Mobile Number:"+userMobileNum);
+
+       /* final WalletInfo walletInfo = new WalletInfo();
+        walletInfo.setWallet();*/
+        LoginUser loginUser  = new LoginUser();
+
+        loginUser.setMobile_number(userMobileNum);
+
+        CommunicatorClass.getRegisterClass().forWallet(loginUser).enqueue(new Callback<WalletInfo>() {
+            @Override
+            public void onResponse(Call<WalletInfo> call, Response<WalletInfo> response) {
+                Toast.makeText(PaymentActivity.this,"Payment Activity Successfully",Toast.LENGTH_SHORT).show();
+
+                Log.e(getClass().getSimpleName(),"Successfull");
+
+                WalletInfo walletInfo = response.body();
+                for (Wallet wallet:walletInfo.getWallet())
+                {
+                    Log.i(getClass().getSimpleName(),"user wallet is:"+wallet.getBalance().toString());
+
+                    TextView balance = (TextView) findViewById(R.id.textView_BalanceAmt);
+
+                    String bal = wallet.getBalance().toString();
+
+                    balance.setText(bal+"Rs");
+                }
+
+
+
+            }
+
+            @Override
+            public void onFailure(Call<WalletInfo> call, Throwable t) {
+                Log.i(getClass().getSimpleName(),"Failure");
+
+            }
+        });
+
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

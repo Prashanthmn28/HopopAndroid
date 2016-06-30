@@ -1,7 +1,9 @@
 package com.hopop.hopop.communicators.services;
 
+import com.hopop.hopop.database.Wallet;
 import com.hopop.hopop.destination.data.ForSeatAvailability;
 import com.hopop.hopop.login.data.LoginUser;
+import com.hopop.hopop.payment.data.WalletInfo;
 import com.hopop.hopop.ply.data.SeatTimeInfo;
 import com.hopop.hopop.registration.data.RegisterUser;
 import com.hopop.hopop.response.Registerresponse;
@@ -28,5 +30,8 @@ public interface RegisterClass {
 
     @POST("seat_time_info.php")
     Call<SeatTimeInfo> forSeatAvailiability(@Body ForSeatAvailability forSeats);
+
+    @POST("wallet_info.php")
+    Call<WalletInfo> forWallet(@Body LoginUser loginUser);
 
 }

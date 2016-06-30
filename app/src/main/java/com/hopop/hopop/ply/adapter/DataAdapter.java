@@ -1,6 +1,8 @@
 package com.hopop.hopop.ply.adapter;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -11,17 +13,26 @@ import android.widget.TextView;
 
 import com.hopop.hopop.database.SeatTimeList;
 import com.hopop.hopop.login.activity.R;
+import com.hopop.hopop.ply.data.SeatTimeInfo;
 import com.hopop.hopop.source.adapter.RecyclerAdapter;
 
+import java.text.DateFormat;
+import java.text.NumberFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
     private ArrayList<SeatTimeList> seatTimeLst;
     private Context context;
     static ItemClickListenr itemClickListenr;
 
+
     public DataAdapter(ArrayList<SeatTimeList> seatTimeLst) {
         this.seatTimeLst = seatTimeLst;
+
     }
 
     @Override
@@ -35,28 +46,83 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
 
         holder.tnumOfSeats.findViewById(R.id.textView_seats);
         holder.numOfSeats.setText(seatTimeLst.get(position).getSeatsAvailable());
-        holder.timeSlot.setText(seatTimeLst.get(position).getTimeSlot());
-        holder.ttimeSlot.findViewById(R.id.textView_slot);
+        holder.numOfSeats.setTypeface(null,Typeface.BOLD);
+
+        Calendar c = Calendar.getInstance();
+
+        int sseconds = c.get(Calendar.SECOND);
+        int sminutes = c.get(Calendar.MINUTE);
+        int shour = c.get(Calendar.HOUR);
+        String systime = shour+":"+sminutes+":"+sseconds;
+
+        SimpleDateFormat format = new SimpleDateFormat("hh:mm:ss");
+
+        String timeSlot = seatTimeLst.get(position).getTimeSlot();
+
+        Date d1 = null;
+        Date d2 = null;
+
         try {
-            if( Integer.parseInt(seatTimeLst.get(position).getSeatsAvailable()) > 6){
+            d1 = format.parse(systime);
+            Log.i(getClass().getSimpleName(),"system time"+d1);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        try {
+            d2 = format.parse(timeSlot);
+            Log.i(getClass().getSimpleName(),"given time"+d2);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        //in milliseconds
+        long diff = d2.getTime() - d1.getTime();
+
+        if(diff<0)
+        {
+            //negative values
+        }
+        else
+        {
+        Log.i(getClass().getSimpleName(),"diff time"+diff);
+        long diffSeconds = diff / 1000 ;
+        long diffMinutes = diffSeconds/ 60;
+        Log.i(getClass().getSimpleName(),"diff in mins"+diffMinutes);
+
+        if(diffMinutes<=59)
+        {
+            holder.timeSlot.setText(String.valueOf(diffMinutes)+" mins");
+        }
+        else
+        {
+                long diffHours = diffSeconds / 3600;
+                Log.i(getClass().getSimpleName(), "diff in hours" + diffHours);
+                long hourmins = diffMinutes - (diffHours * 60);
+                Log.i(getClass().getSimpleName(), "diff in hours" + hourmins);
+                holder.timeSlot.setText(String.valueOf(diffHours) + " Hours " + String.valueOf(hourmins) + " mins");
+
+        }
+        holder.timeSlot.setTypeface(null, Typeface.BOLD);
+        holder.ttimeSlot.findViewById(R.id.textView_slot);
+
+        try {
+            if( Integer.parseInt(seatTimeLst.get(position).getSeatsAvailable()) <12  && Integer.parseInt(seatTimeLst.get(position).getSeatsAvailable()) > 7){
                 holder.mimageId.setImageResource(R.drawable.orangebus);
                 holder.mFillingStatus.setText("Slowly Filling");
-                holder.mFillingStatus.setTextColor(context.getResources().getColor(seatTimeLst.get(position).getColor()));
+                holder.mFillingStatus.setTextColor(Color.rgb(255, 145, 5));
             }else if(Integer.parseInt(seatTimeLst.get(position).getSeatsAvailable()) < 6  && Integer.parseInt(seatTimeLst.get(position).getSeatsAvailable()) > 0){
                 holder.mimageId.setImageResource(R.drawable.redbus);
                 holder.mFillingStatus.findViewById(R.id.tv_filling_status);
-                holder.mFillingStatus.setTextColor(context.getResources().getColor(seatTimeLst.get(position).getColor()));
+                holder.mFillingStatus.setTextColor(Color.rgb(237, 28, 2));
             }else {
                 holder.mimageId.setImageResource(R.drawable.greenbus);
                 holder.mFillingStatus.setText("Booking Started");
-                holder.mFillingStatus.setTextColor(context.getResources().getColor(seatTimeLst.get(position).getColor()));
+                holder.mFillingStatus.setTextColor(Color.rgb(0, 179, 0));
             }
         }catch (Exception e){
             Log.d(getClass().getSimpleName(),e.getMessage());
         }
-
-
-
+        }//else of positive value
     }
 
     @Override
@@ -90,7 +156,7 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
 
         @Override
         public void onClick(View v) {
-            itemClickListenr.onItemClick(getAdapterPosition(),v);
+           itemClickListenr.onItemClick(getAdapterPosition(),v);
         }
     }
 }

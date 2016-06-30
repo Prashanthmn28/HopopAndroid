@@ -7,12 +7,18 @@ import com.google.gson.annotations.SerializedName;
 import com.hopop.hopop.database.SeatTimeList;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class SeatTimeInfo implements Parcelable {
 
     @SerializedName("seat_time_list")
     private ArrayList<SeatTimeList> seatTimeList = new ArrayList<SeatTimeList>();
+
+    public SeatTimeInfo(ArrayList<SeatTimeList> seatTimeLst) {
+        this.seatTimeList = seatTimeList;
+
+    }
 
 
     @Override
@@ -35,6 +41,11 @@ public class SeatTimeInfo implements Parcelable {
         this.seatTimeList = seatTimeList;
     }
 
+    public ArrayList<SeatTimeList> getSortedSeatTimeListByTime() {
+        Collections.sort(seatTimeList, SeatTimeList.timeComparator);
+        return seatTimeList;
+    }
+
 
     @Override
     public int describeContents() {
@@ -46,7 +57,7 @@ public class SeatTimeInfo implements Parcelable {
         dest.writeTypedList(this.seatTimeList);
     }
 
-    protected SeatTimeInfo(Parcel in) {
+    public SeatTimeInfo(Parcel in) {
         this.seatTimeList = in.createTypedArrayList(SeatTimeList.CREATOR);
     }
 

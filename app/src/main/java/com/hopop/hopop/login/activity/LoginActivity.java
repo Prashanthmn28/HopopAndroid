@@ -28,6 +28,8 @@ import retrofit2.Response;
 
 public class LoginActivity extends AppCompatActivity {
 
+    public static String usrMobileNum = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,7 +50,7 @@ public class LoginActivity extends AppCompatActivity {
     public void loginUser(View view){
         if(checkFieldValidation()){
 
-            LoginUser loginUser = new LoginUser();
+            final LoginUser loginUser = new LoginUser();
             loginUser.setMobile_number(mobile.getText().toString().trim());
             loginUser.setPassword(pass.getText().toString().trim());
             Log.d("RANDOM TAG", "on submit button pressed");
@@ -58,7 +60,7 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(LoginActivity.this, "Login SuccessFully", Toast.LENGTH_SHORT).show();
                     Intent searchIntent = new Intent(LoginActivity.this, SourceActivity.class);
                     startActivity(searchIntent);
-
+                    usrMobileNum = loginUser.getMobile_number();
                     Log.e(getClass().getSimpleName(), "successful");
 
                 }

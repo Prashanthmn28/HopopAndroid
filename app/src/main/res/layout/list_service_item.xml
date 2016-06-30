@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:layout_marginLeft="23dp"
-                android:text="Seats available"
+                android:text="Seats"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
 
@@ -58,7 +58,7 @@
                 android:layout_below="@+id/numOfSeats"
                 android:layout_marginTop="5dp"
                 android:padding="5dp"
-                android:text="In Next :"
+                android:text="In Next "
                 android:textSize="15sp"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
