@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/profile"
+            android:icon="@drawable/ic_account_circle_white_24px"
+            android:title="Profile" />
+        <item
+            android:id="@+id/booking"
+            android:icon="@drawable/ic_view_carousel_white_24px"
+            android:title="MyBooking" />
+        <item
+            android:id="@+id/wallet"
+            android:icon="@drawable/ic_account_balance_wallet_white_24px"
+            android:title="Wallet" />
+        <item
+            android:id="@+id/route"
+            android:icon="@drawable/ic_swap_calls_white_24dp"
+            android:title="Suggest Route" />
+        <item
+            android:id="@+id/notification"
+            android:icon="@drawable/ic_notifications_white_24px"
+            android:title="Notifications" />
+        <item
+                android:id="@+id/feedback"
+                android:icon="@drawable/ic_stars_white_24px"
+                android:title="Feedback" />
+        <item
+                android:id="@+id/about"
+                android:icon="@drawable/ic_info_outline_white_24px"
+                android:title="About Us" />
+    </group>
+
+</menu>
