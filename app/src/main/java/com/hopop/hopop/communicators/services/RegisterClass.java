@@ -1,12 +1,19 @@
 package com.hopop.hopop.communicators.services;
 
-import com.hopop.hopop.database.Wallet;
 import com.hopop.hopop.destination.data.ForSeatAvailability;
 import com.hopop.hopop.login.data.LoginUser;
+import com.hopop.hopop.payment.data.BookIdInfo;
+import com.hopop.hopop.payment.data.ForBookId;
 import com.hopop.hopop.payment.data.WalletInfo;
 import com.hopop.hopop.ply.data.SeatTimeInfo;
 import com.hopop.hopop.registration.data.RegisterUser;
 import com.hopop.hopop.response.Registerresponse;
+import com.hopop.hopop.sidenavigation.mybooking.BookingHisInfo;
+import com.hopop.hopop.sidenavigation.profile.ProfileDetail;
+import com.hopop.hopop.sidenavigation.profile.ProfileDetailsInfo;
+import com.hopop.hopop.sidenavigation.profile.ProfileUpdatedInfo;
+import com.hopop.hopop.sidenavigation.suggestedroute.data.ForSuggestedRoute;
+import com.hopop.hopop.sidenavigation.suggestedroute.data.SuggestedInfo;
 import com.hopop.hopop.source.data.SourceList;
 
 import retrofit2.Call;
@@ -33,5 +40,20 @@ public interface RegisterClass {
 
     @POST("wallet_info.php")
     Call<WalletInfo> forWallet(@Body LoginUser loginUser);
+
+    @POST("suggested_routes.php")
+    Call<SuggestedInfo> forRoute (@Body ForSuggestedRoute forSuggestR);
+
+    @POST("booking_info.php")
+    Call<BookIdInfo> forBookIdInfo(@Body ForBookId forBookId);
+
+    @POST("profile_details.php")
+    Call<ProfileDetailsInfo> forProfile(@Body LoginUser loginUser);
+
+    @POST("profile_update.php")
+    Call<ProfileUpdatedInfo> updateProfile(@Body ProfileDetail profileDetail);
+
+    @POST("booking_history.php")
+    Call<BookingHisInfo> bookingHis(@Body LoginUser loginUser);
 
 }

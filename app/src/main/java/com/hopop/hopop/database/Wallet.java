@@ -4,18 +4,11 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 import com.facebook.stetho.json.annotation.JsonProperty;
-import com.facebook.stetho.json.annotation.JsonValue;
-import com.google.gson.annotations.SerializedName;
 import com.orm.SugarRecord;
-
-/**
- * Created by girishvinu on 6/27/2016.
- */
-
 
 public class Wallet extends SugarRecord implements Parcelable {
 
-   @JsonProperty
+    @JsonProperty
     private String balance;
 
 

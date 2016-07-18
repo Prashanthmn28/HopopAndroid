@@ -1,23 +1,17 @@
 package com.hopop.hopop.source.activity;
 
-import android.app.SearchManager;
-import android.content.Context;
-import android.database.Cursor;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.design.widget.NavigationView;
-import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.SearchView;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -25,10 +19,7 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.view.View;
-import android.widget.AutoCompleteTextView;
-import android.widget.ListView;
 import android.widget.EditText;
-import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
 import com.hopop.hopop.communicators.CommunicatorClass;
@@ -36,10 +27,15 @@ import com.hopop.hopop.database.FromRoute;
 import com.hopop.hopop.destination.activity.DestinationActivity;
 import com.hopop.hopop.login.activity.LoginActivity;
 import com.hopop.hopop.login.activity.R;
-import com.hopop.hopop.source.adapter.RecyclerAdapter;
-import com.hopop.hopop.source.adapter.SearchFilter;
+import com.hopop.hopop.sidenavigation.aboutus.AboutUs;
+import com.hopop.hopop.sidenavigation.feedback.FeedBack;
+import com.hopop.hopop.sidenavigation.mybooking.MyBooking;
+import com.hopop.hopop.sidenavigation.notifications.Notifications;
+import com.hopop.hopop.sidenavigation.profile.Profile;
+import com.hopop.hopop.sidenavigation.suggestedroute.activity.SuggestedRoute;
+import com.hopop.hopop.sidenavigation.wallet.Wallet;
+import com.hopop.hopop.source.adapter.SrcRecyclerAdapter;
 import com.hopop.hopop.source.data.SourceList;
-import com.orm.SugarRecord;
 import com.orm.query.Condition;
 import com.orm.query.Select;
 
@@ -62,9 +58,11 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
     public static String src = null,srcRId=null;
     @Bind(R.id.source_list)
     RecyclerView source_list;
-    RecyclerAdapter recyclerAdapter;
+    SrcRecyclerAdapter recyclerAdapter;
     public List<FromRoute> list1 = new ArrayList<>();
     public List<FromRoute> listItems = new ArrayList<>();
+
+    List<FromRoute> tempDestList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,22 +85,18 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
                 Toast.makeText(SourceActivity.this, "In source Activity Login SuccessFully", Toast.LENGTH_SHORT).show();
                 SourceList sl = response.body();
                 for(FromRoute fromRoute: sl.getFromRoutes()){
-//                    Log.d(getClass().getSimpleName(),"the stop id is "+fromRoute.getStopId());
                     if(FromRoute.isNew(fromRoute.getStopId())) {
                         fromRoute.save();
                     }
                 }
                 list1 = Select.from(FromRoute.class).list();
                 for(FromRoute frmRout:list1){
-//                  Log.e(getClass().getSimpleName(),"the db item is "+frmRout);
                 }
                 listItems = FromRoute.findWithQuery(FromRoute.class,"Select * from FROM_ROUTE Group By stop_location");
-//            Log.i(getClass().getSimpleName(),"the size of the list is "+listItems.size());
                 for(FromRoute fromRoute: listItems){
                     Log.i(getClass().getSimpleName(),"the stops are "+fromRoute.getStopLocation());
                 }
 
-//          Log.e(getClass().getSimpleName(),"the list1 routes item is "+list1.toString());
                 displayTheList(listItems);
                 addTextListener();
             }
@@ -124,13 +118,14 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
 
     List<FromRoute> startingPoint = null;
     private void displayTheList(final List<FromRoute> fromRoutes){
-        recyclerAdapter = new RecyclerAdapter(fromRoutes,getApplicationContext());
+        recyclerAdapter = new SrcRecyclerAdapter(fromRoutes,getApplicationContext());
         source_list.setAdapter(recyclerAdapter);
-        ((RecyclerAdapter)recyclerAdapter).setOnItemClickListener(new RecyclerAdapter.ItemClickListenr() {
+        ((SrcRecyclerAdapter)recyclerAdapter).setOnItemClickListener(new SrcRecyclerAdapter.ItemClickListenr() {
+
             @Override
             public void onItemClick(int position, View v) {
-                //          Log.i(getClass().getSimpleName(),"the item clicked is "+fromRoutes.get(position).getStopLocation());
-                src = fromRoutes.get(position).getStopLocation();
+                Log.i(getClass().getSimpleName(),"the item clicked is "+fromRoutes.get(position).getStopLocation());
+                src = recyclerAdapter.getFilteredItem(position).getStopLocation();
                 startingPoint = Select.from(FromRoute.class).where(Condition.prop("stop_location").eq(src)).list();
                 for (FromRoute fromRoute: startingPoint) {
                     Log.i(getClass().getSimpleName(),"starting point:" + fromRoute.getRouteId());
@@ -155,7 +150,7 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
     private void destList(List<FromRoute> destinationPoint) {
 
         for(FromRoute fromRoute:startingPoint) {
-            List<FromRoute> tempDestList = FromRoute.findWithQuery(FromRoute.class, "Select * from FROM_ROUTE where route_id = ? AND stop_location != ? Group By stop_location", fromRoute.getRouteId(), src);
+            tempDestList = FromRoute.findWithQuery(FromRoute.class, "Select * from FROM_ROUTE where route_id = ? AND stop_location != ? Group By stop_location", fromRoute.getRouteId(), src);
             if (destinationPoint.isEmpty()) {
                 destinationPoint.addAll(tempDestList);
             } else {
@@ -194,14 +189,14 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
 
                 query = query.toString().toLowerCase();
                 final List<FromRoute> fromRoutes = new ArrayList<>();
-                for (int i = 0; i < list1.size(); i++) {
-                    final String text = list1.get(i).toString().toLowerCase();
+                for (int i = 0; i < listItems.size(); i++) {
+                    final String text = listItems.get(i).toString().toLowerCase();
                     if (text.contains(query)) {
-                        fromRoutes.add(list1.get(i));
+                        fromRoutes.add(listItems.get(i));
                     }
                 }
                 source_list.setLayoutManager(new LinearLayoutManager(SourceActivity.this));
-                recyclerAdapter = new RecyclerAdapter(fromRoutes, SourceActivity.this);
+                recyclerAdapter = new SrcRecyclerAdapter(fromRoutes, SourceActivity.this);
                 source_list.setAdapter(recyclerAdapter);
                 recyclerAdapter.notifyDataSetChanged();  // data set changed
             }
@@ -232,20 +227,6 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
 
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 
     //@SuppressWarnings("StatementWithEmptyBody")
     @Override
@@ -255,17 +236,38 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
 
         if (id == R.id.profile) {
 
+            Intent profileintent = new Intent(SourceActivity.this, Profile.class);
+            startActivity(profileintent);
+
         } else if (id == R.id.booking) {
+
+            Intent bookingintent = new Intent(SourceActivity.this, MyBooking.class);
+            startActivity(bookingintent);
 
         } else if (id == R.id.wallet) {
 
+            Intent walletintent = new Intent(SourceActivity.this, Wallet.class);
+            startActivity(walletintent);
+
         } else if (id == R.id.route) {
+
+            Intent routeintent = new Intent(SourceActivity.this, SuggestedRoute.class);
+            startActivity(routeintent);
 
         } else if (id == R.id.notification) {
 
+            Intent notifyintent = new Intent(SourceActivity.this, Notifications.class);
+            startActivity(notifyintent);
+
         } else if (id == R.id.feedback) {
 
+            Intent feedbackintent = new Intent(SourceActivity.this, FeedBack.class);
+            startActivity(feedbackintent);
+
         } else if (id == R.id.about) {
+
+            Intent aboutintent = new Intent(SourceActivity.this, AboutUs.class);
+            startActivity(aboutintent);
 
         }
 

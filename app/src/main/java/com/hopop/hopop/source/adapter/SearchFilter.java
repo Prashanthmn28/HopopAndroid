@@ -8,16 +8,15 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-
 public  class SearchFilter extends Filter {
 
-    private final RecyclerAdapter adapter;
+    private final SrcRecyclerAdapter adapter;
     private final List<FromRoute> originalList;
 
     final List<FromRoute> filteredList;
 
 
-    public SearchFilter(RecyclerAdapter recyclerAdapter, List<FromRoute> fromRoutes) {
+    public SearchFilter(SrcRecyclerAdapter recyclerAdapter, List<FromRoute> fromRoutes) {
 
         super();
         this.adapter = recyclerAdapter;
@@ -51,5 +50,9 @@ public  class SearchFilter extends Filter {
         adapter.filteredList.clear();
         adapter.filteredList.addAll((ArrayList<FromRoute>) results.values);
         adapter.notifyDataSetChanged();
+    }
+
+    public List<FromRoute> getFilteredList() {
+        return filteredList;
     }
 }

@@ -20,39 +20,39 @@ import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.view.WindowManager;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import com.facebook.stetho.Stetho;
 import com.hopop.hopop.database.FromRoute;
 
+import com.hopop.hopop.destination.adapter.DestRecyclerAdapter;
 import com.hopop.hopop.login.activity.R;
 import com.hopop.hopop.ply.activity.PlyActivity;
-import com.hopop.hopop.source.activity.SourceActivity;
-import com.hopop.hopop.source.adapter.RecyclerAdapter;
-import com.orm.query.Select;
+import com.hopop.hopop.sidenavigation.aboutus.AboutUs;
+import com.hopop.hopop.sidenavigation.feedback.FeedBack;
+import com.hopop.hopop.sidenavigation.mybooking.MyBooking;
+import com.hopop.hopop.sidenavigation.notifications.Notifications;
+import com.hopop.hopop.sidenavigation.profile.Profile;
+import com.hopop.hopop.sidenavigation.suggestedroute.activity.SuggestedRoute;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 public class DestinationActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
 
     EditText destSearch;
-    // @Bind(R.id.dest_list)
+    @Bind(R.id.dest_list)
     RecyclerView dest_list;
-    RecyclerAdapter recyclerAdapter;
+    DestRecyclerAdapter destRecyclerAdapter;
     private static final int TIME_DELAY = 3000;
     private static long back_pressed;
-    public List<FromRoute> list1 = new ArrayList<>();
     public static String destSelect = null;
     public static String destSelectId = null;
-
+    List<FromRoute> list1;
+    DestRecyclerAdapter recyclerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,9 +60,10 @@ public class DestinationActivity extends AppCompatActivity implements Navigation
         Stetho.initializeWithDefaults(this);
         setTitle(R.string.DropHeader);
         setContentView(R.layout.activity_destination);
+        ButterKnife.bind(this);
         destSearch = (EditText) findViewById( R.id.destSearch);
         dest_list = (RecyclerView) findViewById(R.id.dest_list);
-        ButterKnife.bind(this);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
@@ -71,18 +72,12 @@ public class DestinationActivity extends AppCompatActivity implements Navigation
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         dest_list.setLayoutManager(layoutManager);
         dest_list.setItemAnimator(new DefaultItemAnimator());
-        List<FromRoute> list1 = Select.from(FromRoute.class).list();
-        for(FromRoute frmRout:list1){
-            //  Log.e(getClass().getSimpleName(),"the db item is "+frmRout);
-        }
         Bundle bundle = getIntent().getExtras();
         ArrayList<FromRoute> stopPoints = bundle.getParcelableArrayList("mylist");
-
+        list1 = stopPoints;
         //--------DISPLAY THE LIST OF STOP POINTS-----
         displayTheList(stopPoints);
         //--------EOF --------------------------------
-
-
 
         //------------FOR SEARCH--------
         addTextListener();
@@ -100,13 +95,16 @@ public class DestinationActivity extends AppCompatActivity implements Navigation
 
 
     private void displayTheList(final List<FromRoute> fromRoutes){
-        RecyclerAdapter recyclerAdapter = new RecyclerAdapter(fromRoutes,getApplicationContext());
+        recyclerAdapter = new DestRecyclerAdapter(fromRoutes, this);
         dest_list.setAdapter(recyclerAdapter);
-        ((RecyclerAdapter)recyclerAdapter).setOnItemClickListener(new RecyclerAdapter.ItemClickListenr() {
+        dest_list.setLayoutManager(new LinearLayoutManager(DestinationActivity.this));
+        recyclerAdapter.setOnItemClickListener(new DestRecyclerAdapter.ItemClickListenr(){
             @Override
             public void onItemClick(int position, View v) {
                 Log.i(getClass().getSimpleName(), "the item clicked is " + fromRoutes.get(position).getStopLocation());
-                destSelect = fromRoutes.get(position).getStopLocation();
+
+                destSelect = recyclerAdapter.getFilteredItem(position).getStopLocation();
+                // destSelect = fromRoutes.get(position).getStopLocation();
                 destSelectId = fromRoutes.get(position).getRouteId();
 
                 Intent destIntent = new Intent(DestinationActivity.this, PlyActivity.class);
@@ -121,17 +119,7 @@ public class DestinationActivity extends AppCompatActivity implements Navigation
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
             public void onTextChanged(CharSequence query, int start, int before, int count) {
                 query = query.toString().toLowerCase();
-                final List<FromRoute> fromRoutes = new ArrayList<>();
-                for (int i = 0; i < list1.size(); i++) {
-                    final String text = list1.get(i).toString().toLowerCase();
-                    if (text.contains(query)) {
-                        fromRoutes.add(list1.get(i));
-                    }
-                }
-                dest_list.setLayoutManager(new LinearLayoutManager(DestinationActivity.this));
-                recyclerAdapter = new RecyclerAdapter(fromRoutes, DestinationActivity.this);
-                dest_list.setAdapter(recyclerAdapter);
-                recyclerAdapter.notifyDataSetChanged();  // data set changed
+                recyclerAdapter.getFilter().filter(query);
             }
         });
     }
@@ -143,17 +131,38 @@ public class DestinationActivity extends AppCompatActivity implements Navigation
 
         if (id == R.id.profile) {
 
+            Intent profileintent = new Intent(DestinationActivity.this, Profile.class);
+            startActivity(profileintent);
+
         } else if (id == R.id.booking) {
+
+            Intent bookingintent = new Intent(DestinationActivity.this, MyBooking.class);
+            startActivity(bookingintent);
 
         } else if (id == R.id.wallet) {
 
+            Intent walletintent = new Intent(DestinationActivity.this, com.hopop.hopop.sidenavigation.wallet.Wallet.class);
+            startActivity(walletintent);
+
         } else if (id == R.id.route) {
+
+            Intent routeintent = new Intent(DestinationActivity.this, SuggestedRoute.class);
+            startActivity(routeintent);
 
         } else if (id == R.id.notification) {
 
+            Intent notifyintent = new Intent(DestinationActivity.this, Notifications.class);
+            startActivity(notifyintent);
+
         } else if (id == R.id.feedback) {
 
+            Intent feedbackintent = new Intent(DestinationActivity.this, FeedBack.class);
+            startActivity(feedbackintent);
+
         } else if (id == R.id.about) {
+
+            Intent aboutintent = new Intent(DestinationActivity.this, AboutUs.class);
+            startActivity(aboutintent);
 
         }
 
@@ -161,6 +170,17 @@ public class DestinationActivity extends AppCompatActivity implements Navigation
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+    @Override
+    public void onBackPressed() {
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
+    }
+
+
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
@@ -173,28 +193,5 @@ public class DestinationActivity extends AppCompatActivity implements Navigation
         }
     }
 
-    @Override
-    public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
-        }
-        if (back_pressed + TIME_DELAY > System.currentTimeMillis()) {
-            super.onBackPressed();
-        } else {
-            Toast.makeText(getBaseContext(), "Press once again to exit!",
-                    Toast.LENGTH_SHORT).show();
-        }
-        back_pressed = System.currentTimeMillis();
-
-        Intent intent = new Intent(DestinationActivity.this, SourceActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK); // clears all previous activities task
-        finish(); // destroy current activity
-        startActivity(intent); // starts new activity
-
-    }
 }
 

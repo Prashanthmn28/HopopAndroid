@@ -1,29 +1,59 @@
 package com.hopop.hopop.sidenavigation.aboutus;
 
-import android.app.Activity;
+import android.content.pm.ActivityInfo;
+import android.graphics.Point;
+import android.graphics.Typeface;
 import android.os.Bundle;
-import android.webkit.WebView;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.util.DisplayMetrics;
+import android.view.Display;
+import android.view.View;
+import android.widget.TextView;
 
 import com.hopop.hopop.login.activity.R;
+import com.hopop.hopop.sidenavigation.aboutus.Justify.TextJustification;
 
-public class AboutUs extends Activity {
+public class AboutUs extends AppCompatActivity {
+    static Point size;
+    static float density;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aboutus);
+        setTitle("AboutUs");
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_keyboard_backspace_white_48px));
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        String htmlText = "<html><body style=\"text-align:justify\"> %s </body></Html>";
-        String myData = "At RedBeak, we all come here to solve the biggest problem in Travel Domain. And yes!! " +
-                "We are Damn Serious about this stuff!!! Ever wondered! Why Bangalore has the worst Traffic in India? " +
-                "It’s because Bangalore lack in a good public and private Transportation system.Added to that its not " +
-                "managed and organised properly. This problem planted a seed in our minds which eventually started to " +
-                "grow and here we are right in front of You!! You might think we have restricted ourselves to " +
-                "Bangalore... Nope!!! The Tree always grows… We believe Bangalore is a good place to start. We have a " +
-                "great team who are passionate about innovating things and also fun and adventure loving. Finally, " +
-                "we dream of making India a better and a smart nation where transportation will never become a problem " +
-                "for people. Well, you want to know more about the things we are working on ??!!!.Just scroll down a bit...";
+        Display display = getWindowManager().getDefaultDisplay();
+        size = new Point();
+        DisplayMetrics dm = new DisplayMetrics();
+        display.getMetrics(dm);
+        density = dm.density;
+        display.getSize(size);
 
-        WebView webView = (WebView) findViewById(R.id.webView1);
-        webView.loadData(String.format(htmlText, myData), "text/html", "utf-8");
+
+        TextView tv = (TextView) findViewById(R.id.textView);
+        Typeface typeface = Typeface.createFromAsset(this.getAssets(), "Roboto-Medium.ttf");
+        tv.setTypeface(typeface);
+        tv.setLineSpacing(0f, 1.2f);
+        tv.setTextSize(20 * AboutUs.density);
+
+        //some random long text
+        String myText = getResources().getString(R.string.about);
+
+        tv.setText(myText);
+        TextJustification.justify(tv, size.x);
+
+
     }
 }

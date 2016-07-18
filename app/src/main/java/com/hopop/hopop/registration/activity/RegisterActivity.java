@@ -5,12 +5,10 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
 import android.content.res.Configuration;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.InputType;
-import android.util.Base64;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
@@ -27,10 +25,8 @@ import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;
-import com.facebook.Profile;
 import com.facebook.ProfileTracker;
 import com.facebook.appevents.AppEventsLogger;
-import com.facebook.appevents.internal.Constants;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 import com.facebook.stetho.Stetho;
@@ -64,8 +60,6 @@ public class RegisterActivity extends AppCompatActivity {
     private static final String TAG = RegisterActivity.class.getSimpleName();
     public static final String PACKAGE = "com.hopop.hopop.login.activity";
 
-    //private static final String TAG = "RegisterActivity";
-
     private CallbackManager callbackManager;
     private AccessTokenTracker accessTokenTracker;
     private ProfileTracker profileTracker;
@@ -92,82 +86,72 @@ public class RegisterActivity extends AppCompatActivity {
         loginButton.setReadPermissions("public_profile", "email", "user_friends");
 
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
-                    @Override
-                    public void onSuccess(LoginResult loginResult) {
-                        Log.e("ln: ", "Facebook Login Successful!");
-                        Log.e("ln: ", "Logged in user Details : ");
-                        Log.e("ln: ", "--------------------------");
-                        Log.e("ln: ", loginResult.getAccessToken().getUserId());
-                        Log.e("ln: ", loginResult.getAccessToken().getToken());
+            @Override
+            public void onSuccess(LoginResult loginResult) {
+                Log.e("ln: ", "Facebook Login Successful!");
+                Log.e("ln: ", "Logged in user Details : ");
+                Log.e("ln: ", "--------------------------");
+                Log.e("ln: ", loginResult.getAccessToken().getUserId());
+                Log.e("ln: ", loginResult.getAccessToken().getToken());
 
 
-                        GraphRequest request = GraphRequest.newMeRequest(
-                                loginResult.getAccessToken(),
-                                new GraphRequest.GraphJSONObjectCallback() {
-                                    @Override
-                                    public void onCompleted(JSONObject object, GraphResponse response) {
-                                        Log.i("LoginActivity", response.toString());
-                                        try {
-                                            String id = object.getString("id");
-                                            try {
-                                                URL profile_pic = new URL("http://graph.facebook.com/" + id + "/picture?type=small");
-                                                Log.e("profile_pic", profile_pic + "");
-                                            } catch (MalformedURLException e) {
-                                                e.printStackTrace();
-                                                }
-                                            String name = object.getString("name");
-                                            String email = object.getString("email");
-                                        } catch (JSONException e) {
-                                            e.printStackTrace();
-                                        }
+                GraphRequest request = GraphRequest.newMeRequest(
+                        loginResult.getAccessToken(),
+                        new GraphRequest.GraphJSONObjectCallback() {
+                            @Override
+                            public void onCompleted(JSONObject object, GraphResponse response) {
+                                Log.i("LoginActivity", response.toString());
+                                try {
+                                    String id = object.getString("id");
+                                    try {
+                                        URL profile_pic = new URL("http://graph.facebook.com/" + id + "/picture?type=small");
+                                        Log.e("profile_pic", profile_pic + "");
+                                    } catch (MalformedURLException e) {
+                                        e.printStackTrace();
                                     }
-                                });
-                        Bundle parameters = new Bundle();
-                        parameters.putString("fields", "id,name,email,gender, birthday,picture.type(small)");
-                        request.setParameters(parameters);
-                        request.executeAsync();
+                                    String name = object.getString("name");
+                                    String email = object.getString("email");
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                        });
+                Bundle parameters = new Bundle();
+                parameters.putString("fields", "id,name,email,gender, birthday,picture.type(small)");
+                request.setParameters(parameters);
+                request.executeAsync();
 
-                        Intent intent = new Intent(RegisterActivity.this,SourceActivity.class);
-                        startActivity(intent);
+                Intent intent = new Intent(RegisterActivity.this, SourceActivity.class);
+                startActivity(intent);
 
-                    }
+            }
 
-                    @Override
-                    public void onCancel() {
+            @Override
+            public void onCancel() {
 
-                    }
+            }
 
-                    @Override
-                    public void onError(FacebookException error) {
+            @Override
+            public void onError(FacebookException error) {
 
-                    }
-                });
+            }
+        });
     }
 
-
-
-    /*@Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        callbackManager.onActivityResult(requestCode, resultCode, data);
-    }*/
-
     @OnClick(R.id.button_Lin)
-    public void linkedInUser(View view){
+    public void linkedInUser(View view) {
         login_linkedin();
     }
 
-    public void login_linkedin(){
+    public void login_linkedin() {
         LISessionManager.getInstance(getApplicationContext()).init(RegisterActivity.this, buildScope(), new AuthListener() {
             @Override
             public void onAuthSuccess() {
 
                 Intent i = new Intent(getApplicationContext(), SourceActivity.class);
                 startActivity(i);
-                //System.out.print("Logged in"+login_linkedin(););
 
                 Toast.makeText(getApplicationContext(), "success" + LISessionManager.getInstance(getApplicationContext()).getSession().getAccessToken().toString(), Toast.LENGTH_LONG).show();
-                //login_linkedin().setVisibility(View.GONE);
 
             }
 
@@ -199,11 +183,10 @@ public class RegisterActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        Log.e("Register","Jump from on Result");
-        //LISessionManager.getInstance(getApplicationContext()).onActivityResult(this, requestCode, resultCode, data);
-        Intent intent = new Intent(RegisterActivity.this,SourceActivity.class);
+        Log.e("Register", "Jump from on Result");
+        Intent intent = new Intent(RegisterActivity.this, SourceActivity.class);
         startActivity(intent);
-        callbackManager.onActivityResult(requestCode,resultCode,data);
+        callbackManager.onActivityResult(requestCode, resultCode, data);
     }
 
     // This method is used to make permissions to retrieve data from linkedin
@@ -214,7 +197,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     // This Method is used to generate "Android Package Name" hash key
 
-    public void generateHashkey(){
+    public void generateHashkey() {
         try {
             PackageInfo info = getPackageManager().getPackageInfo(
                     PACKAGE,
@@ -223,8 +206,6 @@ public class RegisterActivity extends AppCompatActivity {
                 MessageDigest md = MessageDigest.getInstance("SHA");
                 md.update(signature.toByteArray());
 
-                /*((TextView) findViewById(R.id.package_name)).setText(info.packageName);
-                ((TextView) findViewById(R.id.hash_key)).setText(Base64.encodeToString(md.digest(), Base64.NO_WRAP));*/
             }
         } catch (PackageManager.NameNotFoundException e) {
             Log.d(TAG, e.getMessage(), e);
@@ -279,19 +260,6 @@ public class RegisterActivity extends AppCompatActivity {
         }
     }
 
-    /*@OnClick(R.id.button_Lin)
-    public void linkedInUser(View view) {
-        //button_Lin();
-
-    }*/
-
-
-
-    /*@OnClick(R.id.button_fb)
-    public void facebookUser(View view){
-        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/login/"));
-        startActivity(browserIntent);
-    }*/
 
     @OnTouch(R.id.Button_eye)
     public boolean onTouch(View v, MotionEvent event) {
@@ -310,7 +278,6 @@ public class RegisterActivity extends AppCompatActivity {
 
     //checking field are empty
     private boolean checkFieldValidation() {
-
         boolean valid = true;
         String fNameValidation = fName.getText().toString();
         String lNameValidation = lName.getText().toString();
@@ -318,43 +285,69 @@ public class RegisterActivity extends AppCompatActivity {
         String mobileValidation = mobile.getText().toString();
         String passwordValidation = pass.getText().toString();
 
-        if (fName.length() == 0) {
+        if (fName.length() == 0)
+        {
             fName.requestFocus();
-            fName.setError("Field Cann't be Empty");
-        } else if (!fNameValidation.matches("[a-zA-Z ]+")) {
-            fName.requestFocus();
-            fName.setError("Enter Only Alphabetical Character");
-        } else if (lName.length() == 0) {
-            lName.requestFocus();
-            lName.setError("Field Cann't be Empty");
-        } else if (!lNameValidation.matches("[a-zA-Z ]+")) {
-            lName.requestFocus();
-            lName.setError("Enter Only Alphabetical Character");
-        } else if (email.length() == 0) {
-            email.requestFocus();
-            email.setError("Field Cann't be Empty");
-        } else if (!emailValidation.matches("^[A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
-                + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$")) {
-            email.requestFocus();
-            email.setError("Enter Valid Email Id");
-        } else if (mobile.length() == 0) {
-            mobile.requestFocus();
-            mobile.setError("Field Cann't be Empty");
-        } else if (!mobileValidation.matches("^(?:(?:\\+|0{0,2})91(\\s*[\\-]\\s*)?|[0]?)?[789]\\d{9}$")) {
-            mobile.requestFocus();
-            mobile.setError("Enter Valid Mobile Number");
-        } else if (pass.length() == 0) {
-            pass.requestFocus();
-            pass.setError("Field Cann't be Empty");
-        } else {
-            //no connection
-            Toast.makeText(RegisterActivity.this, "No Internet Connection", Toast.LENGTH_LONG).show();
+            fName.setError("First Name is compulsory.");
+            valid=false;
         }
+        else if (!fNameValidation.matches("[a-zA-Z ]+"))
+        {
+            fName.requestFocus();
+            fName.setError("Enter Only Alphabetical Character.");
+            valid=false;
+        }
+        else if (lName.length() == 0)
+        {
+            lName.requestFocus();
+            lName.setError("Last Name is compulsory.");
+            valid=false;
+        }
+        else if (!lNameValidation.matches("[a-zA-Z ]+"))
+        {
+            lName.requestFocus();
+            lName.setError("Enter Only Alphabetical Character.");
+            valid=false;
+        }
+        else if (email.length() == 0)
+        {
+            email.requestFocus();
+            email.setError("Email is compulsory.");
+            valid=false;
+        }
+        else if (!emailValidation.matches("^[A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
+                + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$"))
+        {
+            email.requestFocus();
+            email.setError("Enter Valid Email Id.");
+            valid=false;
+        }
+        else if (mobile.length() == 0)
+        {
+            mobile.requestFocus();
+            mobile.setError("Mobile Number is compulsory.");
+            valid=false;
+        }
+        else if (!mobileValidation.matches("^(?:(?:\\+|0{0,2})91(\\s*[\\-]\\s*)?|[0]?)?[789]\\d{9}$"))
+        {
+            mobile.requestFocus();
+            mobile.setError("Enter Valid Mobile Number.");
+            valid=false;
+        }
+        else if (pass.length() == 0)
+        {
+            pass.requestFocus();
+            pass.setError("Password is compulsory.");
+            valid=false;
+        }
+        else
+        {
+            valid=true;
+        }
+
 
         return valid;
     }
-
-
 
 
     @Override

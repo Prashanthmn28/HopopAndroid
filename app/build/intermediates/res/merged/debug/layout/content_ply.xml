@@ -86,6 +86,43 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_notrip"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:gravity="center"
+        android:layout_below="@+id/textView_AS"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_needtrip"
+        android:textSize="18dp"
+        android:gravity="center"
+        android:layout_marginBottom="139dp"
+        android:layout_alignBottom="@+id/card_recycler_view"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Suggest this trip"
+        android:textSize="20dp"
+        android:id="@+id/button_suggest"
+        android:textColor="#fff"
+        android:visibility="invisible"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/mybtn"
+        android:layout_alignTop="@+id/textView_needtrip"
+        android:layout_alignRight="@+id/textView_AS"
+        android:layout_alignEnd="@+id/textView_AS"
+        android:layout_alignLeft="@+id/textView_AS"
+        android:layout_alignStart="@+id/textView_AS" />
 
 
 </RelativeLayout>

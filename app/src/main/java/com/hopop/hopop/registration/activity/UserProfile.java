@@ -31,6 +31,7 @@ public class UserProfile extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private static final String host = "api.linkedin.com";
+    private static final String host1 = "in.linkedin.com/";
     private static final String topCardUrl = "https://" + host + "/v1/people/~:(email-address,formatted-name,phone-numbers,public-profile-url,picture-url,picture-urls::(original))";
     ProgressDialog progress;
     ImageView profile_pic;
@@ -43,7 +44,7 @@ public class UserProfile extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        logout = (Button) findViewById(R.id.logout);
+        logout = (Button) findViewById(R.id.button_logout);
         setSupportActionBar(toolbar);
         progress= new ProgressDialog(this);
         progress.setMessage("Retrieve data...");
@@ -95,7 +96,6 @@ public class UserProfile extends AppCompatActivity
 
             @Override
             public void onApiError(LIApiError error) {
-                //((TextView) findViewById(R.id.error)).setText(error.toString());
 
             }
         });
@@ -111,8 +111,8 @@ public class UserProfile extends AppCompatActivity
         View header = LayoutInflater.from(this).inflate(R.layout.nav_header_source, null);
         navigation_view.addHeaderView(header);
 
-        user_name = (TextView) header.findViewById(R.id.username);
-        profile_pic = (ImageView) header.findViewById(R.id.profile_pic);
+        user_name = (TextView) header.findViewById(R.id.textView_userName);
+        profile_pic = (ImageView) header.findViewById(R.id.profile_image);
         user_mobile = (TextView) header.findViewById(R.id.textView_mobile);
     }
 
@@ -147,27 +147,6 @@ public class UserProfile extends AppCompatActivity
         }
     }
 
-    /*@Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.user_profile, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }*/
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override

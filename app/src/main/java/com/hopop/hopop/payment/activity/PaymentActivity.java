@@ -19,17 +19,27 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.hopop.hopop.communicators.CommunicatorClass;
+import com.hopop.hopop.database.BookId;
 import com.hopop.hopop.database.Wallet;
+import com.hopop.hopop.destination.activity.DestinationActivity;
 import com.hopop.hopop.login.activity.R;
 import com.hopop.hopop.login.data.LoginUser;
+import com.hopop.hopop.payment.data.BookIdInfo;
+import com.hopop.hopop.payment.data.ForBookId;
 import com.hopop.hopop.payment.data.WalletInfo;
+import com.hopop.hopop.ply.activity.PlyActivity;
+import com.hopop.hopop.sidenavigation.aboutus.AboutUs;
+import com.hopop.hopop.sidenavigation.feedback.FeedBack;
+import com.hopop.hopop.sidenavigation.mybooking.MyBooking;
+import com.hopop.hopop.sidenavigation.notifications.Notifications;
+import com.hopop.hopop.sidenavigation.profile.Profile;
+import com.hopop.hopop.sidenavigation.suggestedroute.activity.SuggestedRoute;
 import com.hopop.hopop.source.activity.SourceActivity;
 import com.hopop.hopop.login.activity.LoginActivity;
 
@@ -41,12 +51,11 @@ import butterknife.OnClick;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-
 public class PaymentActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     Toolbar toolbar;
-
+    String[] bookidNum = {null};
     @Nullable
     @Bind(R.id.textView_justme)
     TextView MePlus;
@@ -70,16 +79,11 @@ public class PaymentActivity extends AppCompatActivity
         }
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        //Read the wallet amount from the server and display it
         String userMobileNum = LoginActivity.usrMobileNum;
         Log.i(getClass().getSimpleName(),"UserLogin Mobile Number:"+userMobileNum);
-
-       /* final WalletInfo walletInfo = new WalletInfo();
-        walletInfo.setWallet();*/
         LoginUser loginUser  = new LoginUser();
-
         loginUser.setMobile_number(userMobileNum);
-
         CommunicatorClass.getRegisterClass().forWallet(loginUser).enqueue(new Callback<WalletInfo>() {
             @Override
             public void onResponse(Call<WalletInfo> call, Response<WalletInfo> response) {
@@ -98,18 +102,13 @@ public class PaymentActivity extends AppCompatActivity
 
                     balance.setText(bal+"Rs");
                 }
-
-
-
             }
-
             @Override
             public void onFailure(Call<WalletInfo> call, Throwable t) {
                 Log.i(getClass().getSimpleName(),"Failure");
-
             }
         });
-
+        //--------eof-----------------
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -121,7 +120,6 @@ public class PaymentActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
-
 
     @OnClick(R.id.textView_justme)
     public void mePlusUser(View view){
@@ -165,34 +163,90 @@ public class PaymentActivity extends AppCompatActivity
 
     @OnClick(R.id.button_Pay)
     public void payUser(View view){
-        AlertDialog alertDialog = new AlertDialog.Builder(
-                PaymentActivity.this).create();
 
-        // Setting Dialog Title
-        alertDialog.setTitle("Ticket Confirmed");
+        final ForBookId forBookId = new ForBookId();
+        // forBookId.setUser_id("");
 
-        // Setting Dialog Message
-        alertDialog.setMessage("Booking Id: 772");
+        String userMobileNum = LoginActivity.usrMobileNum;
+        //   Log.i(getClass().getSimpleName(),"UserLogin Mobile Number:"+userMobileNum);
+        String frmRoute = SourceActivity.src;
+        // Log.i(getClass().getSimpleName(),"Source Point:"+frmRoute);
+        String toRoute = DestinationActivity.destSelect;
+        // Log.i(getClass().getSimpleName(),"Stop Point:"+toRoute);
+        String rid = PlyActivity.routeId;
+        //Log.i(getClass().getSimpleName(),"routeId:"+rid);
+        String tid = PlyActivity.tripId;
+        //Log.i(getClass().getSimpleName(),"tripId:"+tid);
+        // String num_seats = PlyActivity.seats;
 
-        // Setting Icon to Dialog
-        alertDialog.setIcon(R.drawable.tick);
+        String num_seats = numofSeats.getText().toString();
+        Log.i(getClass().getSimpleName(),"SeatsNumber:"+num_seats);
 
-        // Setting OK Button
-        alertDialog.setButton("OK",
-                new DialogInterface.OnClickListener() {
 
-                    public void onClick(DialogInterface dialog,
-                                        int which) {
-                        Intent intent_1 = new Intent(PaymentActivity.this, SourceActivity.class);
-                        startActivity(intent_1);
-                    }
-                });
+        forBookId.setUser_mobile(userMobileNum);
+        forBookId.setFrom_route(frmRoute);
+        forBookId.setTo_route(toRoute);
+        forBookId.setRoute_id(rid);
+        forBookId.setTrip_id(tid);
+        forBookId.setTotal_seats(num_seats);
 
-        // Showing Alert Message
-        alertDialog.show();
 
-        showNotification(PaymentActivity.this);
+        CommunicatorClass.getRegisterClass().forBookIdInfo(forBookId).enqueue(new Callback<BookIdInfo>() {
+            @Override
+            public void onResponse(Call<BookIdInfo> call, Response<BookIdInfo> response) {
+                Log.e(getClass().getSimpleName(), "successful bookid");
 
+                BookIdInfo bookIdInfo = response.body();
+                for (BookId bookId: bookIdInfo.getBookId())
+                {
+                    //Log.i(getClass().getSimpleName(),"user BookId is:"+bookId.getBookId().toString());
+
+                    bookidNum[0] = bookId.getBookId().toString();
+                    Log.i(getClass().getSimpleName(),"user BookId is:"+bookidNum[0]);
+
+                    //-----------------------------
+
+                    AlertDialog alertDialog = new AlertDialog.Builder(
+                            PaymentActivity.this).create();
+
+                    // Setting Dialog Title
+                    alertDialog.setTitle("Ticket Confirmed");
+
+                    // Setting Dialog Message
+
+                    alertDialog.setMessage("Booking Id:"+  bookidNum[0]);
+
+                    // Setting Icon to Dialog
+                    alertDialog.setIcon(R.drawable.tick);
+
+                    // Setting OK Button
+                    alertDialog.setButton("OK",
+                            new DialogInterface.OnClickListener() {
+
+                                public void onClick(DialogInterface dialog,
+                                                    int which) {
+                                    Intent intent_1 = new Intent(PaymentActivity.this, SourceActivity.class);
+                                    startActivity(intent_1);
+                                }
+                            });
+
+                    // Showing Alert Message
+                    alertDialog.show();
+
+                    showNotification(PaymentActivity.this);
+
+
+
+
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<BookIdInfo> call, Throwable t) {
+
+            }
+        });
 
 
     }
@@ -215,19 +269,41 @@ public class PaymentActivity extends AppCompatActivity
 
         if (id == R.id.profile) {
 
+            Intent profileintent = new Intent(PaymentActivity.this, Profile.class);
+            startActivity(profileintent);
+
         } else if (id == R.id.booking) {
+
+            Intent bookingintent = new Intent(PaymentActivity.this, MyBooking.class);
+            startActivity(bookingintent);
 
         } else if (id == R.id.wallet) {
 
+            Intent walletintent = new Intent(PaymentActivity.this, com.hopop.hopop.sidenavigation.wallet.Wallet.class);
+            startActivity(walletintent);
+
         } else if (id == R.id.route) {
+
+            Intent routeintent = new Intent(PaymentActivity.this, SuggestedRoute.class);
+            startActivity(routeintent);
 
         } else if (id == R.id.notification) {
 
+            Intent notifyintent = new Intent(PaymentActivity.this, Notifications.class);
+            startActivity(notifyintent);
+
         } else if (id == R.id.feedback) {
+
+            Intent feedbackintent = new Intent(PaymentActivity.this, FeedBack.class);
+            startActivity(feedbackintent);
 
         } else if (id == R.id.about) {
 
+            Intent aboutintent = new Intent(PaymentActivity.this, AboutUs.class);
+            startActivity(aboutintent);
+
         }
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

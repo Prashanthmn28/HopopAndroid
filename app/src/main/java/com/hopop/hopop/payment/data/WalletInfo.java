@@ -4,15 +4,11 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 import com.facebook.stetho.json.annotation.JsonProperty;
-import com.google.gson.annotations.SerializedName;
 import com.hopop.hopop.database.Wallet;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by girishvinu on 6/27/2016.
- */
 public class WalletInfo implements Parcelable {
 
     @JsonProperty

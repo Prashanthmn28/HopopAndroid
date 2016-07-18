@@ -41,6 +41,11 @@ public class LoginActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
+
+        if (BuildConfig.DEBUG){
+            mobile.setText("9844425308");
+            pass.setText("swaroop");
+        }
     }
 
     @Bind(R.id.editText_mn) EditText mobile;
@@ -95,13 +100,13 @@ public class LoginActivity extends AppCompatActivity {
 
         if (mobile.length() == 0) {
             mobile.requestFocus();
-            mobile.setError("Field Cann't be Empty");
+            mobile.setError("Mobile Number is required.");
         } else if (!mobileValidation.matches("^(?:(?:\\+|0{0,2})91(\\s*[\\-]\\s*)?|[0]?)?[789]\\d{9}$")) {
             mobile.requestFocus();
-            mobile.setError("Enter Valid Mobile Number");
+            mobile.setError("Enter Valid Mobile Number.");
         } else if (passwordValidation.length() == 0) {
             pass.requestFocus();
-            pass.setError("Field Cann't be Empty");
+            pass.setError("Password is required.");
         }
 
         return valid;

@@ -8,7 +8,6 @@ import com.hopop.hopop.database.SeatTimeList;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 
 public class SeatTimeInfo implements Parcelable {
 
