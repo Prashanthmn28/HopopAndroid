@@ -13,11 +13,7 @@ import android.widget.TextView;
 
 import com.hopop.hopop.database.SeatTimeList;
 import com.hopop.hopop.login.activity.R;
-import com.hopop.hopop.ply.data.SeatTimeInfo;
-import com.hopop.hopop.source.adapter.RecyclerAdapter;
 
-import java.text.DateFormat;
-import java.text.NumberFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -48,14 +44,8 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
         holder.numOfSeats.setText(seatTimeLst.get(position).getSeatsAvailable());
         holder.numOfSeats.setTypeface(null,Typeface.BOLD);
 
-        Calendar c = Calendar.getInstance();
-
-        int sseconds = c.get(Calendar.SECOND);
-        int sminutes = c.get(Calendar.MINUTE);
-        int shour = c.get(Calendar.HOUR);
-        String systime = shour+":"+sminutes+":"+sseconds;
-
-        SimpleDateFormat format = new SimpleDateFormat("hh:mm:ss");
+        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+        String systime = sdf.format(new Date());
 
         String timeSlot = seatTimeLst.get(position).getTimeSlot();
 
@@ -63,13 +53,13 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
         Date d2 = null;
 
         try {
-            d1 = format.parse(systime);
+            d1 = sdf.parse(systime);
             Log.i(getClass().getSimpleName(),"system time"+d1);
         } catch (ParseException e) {
             e.printStackTrace();
         }
         try {
-            d2 = format.parse(timeSlot);
+            d2 = sdf.parse(timeSlot);
             Log.i(getClass().getSimpleName(),"given time"+d2);
         } catch (ParseException e) {
             e.printStackTrace();
@@ -84,44 +74,44 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
         }
         else
         {
-        Log.i(getClass().getSimpleName(),"diff time"+diff);
-        long diffSeconds = diff / 1000 ;
-        long diffMinutes = diffSeconds/ 60;
-        Log.i(getClass().getSimpleName(),"diff in mins"+diffMinutes);
+            Log.i(getClass().getSimpleName(),"diff time"+diff);
+            long diffSeconds = diff / 1000 ;
+            long diffMinutes = diffSeconds/ 60;
+            Log.i(getClass().getSimpleName(),"diff in mins"+diffMinutes);
 
-        if(diffMinutes<=59)
-        {
-            holder.timeSlot.setText(String.valueOf(diffMinutes)+" mins");
-        }
-        else
-        {
+            if(diffMinutes<=59)
+            {
+                holder.timeSlot.setText(String.valueOf(diffMinutes)+" mins");
+            }
+            else
+            {
                 long diffHours = diffSeconds / 3600;
                 Log.i(getClass().getSimpleName(), "diff in hours" + diffHours);
                 long hourmins = diffMinutes - (diffHours * 60);
                 Log.i(getClass().getSimpleName(), "diff in hours" + hourmins);
                 holder.timeSlot.setText(String.valueOf(diffHours) + " Hours " + String.valueOf(hourmins) + " mins");
 
-        }
-        holder.timeSlot.setTypeface(null, Typeface.BOLD);
-        holder.ttimeSlot.findViewById(R.id.textView_slot);
-
-        try {
-            if( Integer.parseInt(seatTimeLst.get(position).getSeatsAvailable()) <12  && Integer.parseInt(seatTimeLst.get(position).getSeatsAvailable()) > 7){
-                holder.mimageId.setImageResource(R.drawable.orangebus);
-                holder.mFillingStatus.setText("Slowly Filling");
-                holder.mFillingStatus.setTextColor(Color.rgb(255, 145, 5));
-            }else if(Integer.parseInt(seatTimeLst.get(position).getSeatsAvailable()) < 6  && Integer.parseInt(seatTimeLst.get(position).getSeatsAvailable()) > 0){
-                holder.mimageId.setImageResource(R.drawable.redbus);
-                holder.mFillingStatus.findViewById(R.id.tv_filling_status);
-                holder.mFillingStatus.setTextColor(Color.rgb(237, 28, 2));
-            }else {
-                holder.mimageId.setImageResource(R.drawable.greenbus);
-                holder.mFillingStatus.setText("Booking Started");
-                holder.mFillingStatus.setTextColor(Color.rgb(0, 179, 0));
             }
-        }catch (Exception e){
-            Log.d(getClass().getSimpleName(),e.getMessage());
-        }
+            holder.timeSlot.setTypeface(null, Typeface.BOLD);
+            holder.ttimeSlot.findViewById(R.id.textView_slot);
+
+            try {
+                if( Integer.parseInt(seatTimeLst.get(position).getSeatsAvailable()) <=12  && Integer.parseInt(seatTimeLst.get(position).getSeatsAvailable()) > 7){
+                    holder.mimageId.setImageResource(R.drawable.orangebus);
+                    holder.mFillingStatus.setText("Slowly Filling");
+                    holder.mFillingStatus.setTextColor(Color.rgb(255, 145, 5));
+                }else if(Integer.parseInt(seatTimeLst.get(position).getSeatsAvailable()) <=6  && Integer.parseInt(seatTimeLst.get(position).getSeatsAvailable()) > 0){
+                    holder.mimageId.setImageResource(R.drawable.redbus);
+                    holder.mFillingStatus.findViewById(R.id.tv_filling_status);
+                    holder.mFillingStatus.setTextColor(Color.rgb(237, 28, 2));
+                }else {
+                    holder.mimageId.setImageResource(R.drawable.greenbus);
+                    holder.mFillingStatus.setText("Booking Started");
+                    holder.mFillingStatus.setTextColor(Color.rgb(0, 179, 0));
+                }
+            }catch (Exception e){
+                Log.d(getClass().getSimpleName(),e.getMessage());
+            }
         }//else of positive value
     }
 
@@ -156,7 +146,7 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
 
         @Override
         public void onClick(View v) {
-           itemClickListenr.onItemClick(getAdapterPosition(),v);
+            itemClickListenr.onItemClick(getAdapterPosition(),v);
         }
     }
 }

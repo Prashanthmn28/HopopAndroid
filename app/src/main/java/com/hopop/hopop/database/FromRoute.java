@@ -3,9 +3,7 @@ package com.hopop.hopop.database;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import com.facebook.stetho.json.annotation.JsonProperty;
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.internal.Primitives;
 import com.orm.SugarRecord;
 import com.orm.dsl.Table;
 import com.orm.query.Condition;

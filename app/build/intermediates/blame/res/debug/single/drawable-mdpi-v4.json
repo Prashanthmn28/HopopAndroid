@@ -8,6 +8,10 @@
         "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.12.1\\res\\drawable-mdpi-v4\\com_facebook_tooltip_blue_xout.png"
     },
     {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
+    },
+    {
         "merged": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_list_pressed_holo_dark.9.png",
         "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_list_pressed_holo_dark.9.png"
     },
@@ -20,8 +24,20 @@
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_view_carousel_24dp.png"
     },
     {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\messenger_button_send_round_shadow.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.0\\res\\drawable-mdpi-v4\\messenger_button_send_round_shadow.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_switch_track_mtrl_alpha.9.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
+    },
+    {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_account_balance_wallet_white_24px.png",
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_account_balance_wallet_white_24px.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_person_black_18px.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_person_black_18px.png"
     },
     {
         "merged": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_star_black_16dp.png",
@@ -44,12 +60,24 @@
         "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_info_24dp.png"
     },
     {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_account_circle_black_48px.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_account_circle_black_48px.png"
+    },
+    {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_notifications_24dp.png",
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_notifications_24dp.png"
     },
     {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png"
+    },
+    {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_account_circle_white_24px.png",
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_account_circle_white_24px.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_power_settings_new_white_24px.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_power_settings_new_white_24px.png"
     },
     {
         "merged": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_go_search_api_mtrl_alpha.png",
@@ -60,12 +88,24 @@
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_perm_contact_calendar_black_24px.png"
     },
     {
+        "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\com_facebook_button_send_icon_white.png",
+        "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.13.1\\res\\drawable-mdpi-v4\\com_facebook_button_send_icon_white.png"
+    },
+    {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png",
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png"
     },
     {
-        "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\com_facebook_button_send_icon_white.png",
-        "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.13.1\\res\\drawable-mdpi-v4\\com_facebook_button_send_icon_white.png"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_person_white_24px1.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_person_white_24px1.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\com_facebook_button_icon_white.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.0\\res\\drawable-mdpi-v4\\com_facebook_button_icon_white.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_info_24dp.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_info_24dp.png"
     },
     {
         "merged": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\com_facebook_button_icon_blue.png",
@@ -100,6 +140,10 @@
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.13.1\\res\\drawable-mdpi-v4\\messenger_button_send_round_shadow.png"
     },
     {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_visibility_black_18px.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_visibility_black_18px.png"
+    },
+    {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_btn_check_to_on_mtrl_015.png",
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
     },
@@ -112,8 +156,20 @@
         "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.12.1\\res\\drawable-mdpi-v4\\com_facebook_tooltip_black_xout.png"
     },
     {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\com_facebook_tooltip_black_background.9.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.0\\res\\drawable-mdpi-v4\\com_facebook_tooltip_black_background.9.png"
+    },
+    {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_info_24dp.png",
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_info_24dp.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_keyboard_backspace_white_48px.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_keyboard_backspace_white_48px.png"
     },
     {
         "merged": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png",
@@ -124,16 +180,32 @@
         "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_view_carousel_white_24px.png"
     },
     {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_view_carousel_white_24px.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_view_carousel_white_24px.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_account_box_white_24px.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_account_box_white_24px.png"
+    },
+    {
         "merged": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_light.9.png",
         "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
     },
     {
-        "merged": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png",
-        "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_person_outline_24dp.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_person_outline_24dp.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_dark.9.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
     },
     {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_go_search_api_mtrl_alpha.png",
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_ic_go_search_api_mtrl_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png",
+        "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_person_black_18px.png",
@@ -146,6 +218,10 @@
     {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_ab_back_mtrl_am_alpha.png",
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_ic_ab_back_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_account_balance_wallet_24dp.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_account_balance_wallet_24dp.png"
     },
     {
         "merged": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_list_divider_mtrl_alpha.9.png",
@@ -192,6 +268,10 @@
         "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_account_circle_black_48px.png"
     },
     {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_view_carousel_24dp.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_view_carousel_24dp.png"
+    },
+    {
         "merged": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_btn_check_to_on_mtrl_000.png",
         "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
     },
@@ -212,6 +292,10 @@
         "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_person_white_24px1.png"
     },
     {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\com_facebook_button_send_icon_white.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.0\\res\\drawable-mdpi-v4\\com_facebook_button_send_icon_white.png"
+    },
+    {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png",
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
@@ -222,6 +306,10 @@
     {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_star_half_black_36dp.png",
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_ic_star_half_black_36dp.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png",
@@ -240,12 +328,24 @@
         "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
     },
     {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png"
+    },
+    {
         "merged": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_popup_background_mtrl_mult.9.png",
         "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_popup_background_mtrl_mult.9.png"
     },
     {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\messenger_bubble_large_white.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.0\\res\\drawable-mdpi-v4\\messenger_bubble_large_white.png"
+    },
+    {
         "merged": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_power_settings_new_white_24px.png",
         "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_power_settings_new_white_24px.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_list_pressed_holo_light.9.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_list_pressed_holo_light.9.png"
     },
     {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\com_facebook_favicon_white.png",
@@ -256,12 +356,24 @@
         "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png"
+    },
+    {
         "merged": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_info_outline_white_24px.png",
         "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_info_outline_white_24px.png"
     },
     {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_dark.9.png",
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_portrait_48px.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_portrait_48px.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_person_white_24px.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_person_white_24px.png"
     },
     {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_power_settings_new_white_24px.png",
@@ -284,16 +396,36 @@
         "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_list_pressed_holo_light.9.png"
     },
     {
-        "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\com_facebook_button_icon_blue.png",
-        "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.13.1\\res\\drawable-mdpi-v4\\com_facebook_button_icon_blue.png"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\com_facebook_button_send_icon_blue.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.0\\res\\drawable-mdpi-v4\\com_facebook_button_send_icon_blue.png"
     },
     {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png",
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
+        "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\com_facebook_button_icon_blue.png",
+        "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.13.1\\res\\drawable-mdpi-v4\\com_facebook_button_icon_blue.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_phone_iphone_black_18px.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_phone_iphone_black_18px.png"
+    },
+    {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png",
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_voice_search_api_mtrl_alpha.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_ic_voice_search_api_mtrl_alpha.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_stars_white_24px.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_stars_white_24px.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_info_outline_white_24px.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_info_outline_white_24px.png"
     },
     {
         "merged": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\com_facebook_tooltip_black_background.9.png",
@@ -306,6 +438,14 @@
     {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png",
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\com_facebook_tooltip_black_xout.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.0\\res\\drawable-mdpi-v4\\com_facebook_tooltip_black_xout.png"
     },
     {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\com_facebook_button_send_icon_blue.png",
@@ -332,6 +472,10 @@
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_visibility_black_18px.png"
     },
     {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png",
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
     },
@@ -340,12 +484,20 @@
         "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_search_white_48px.png"
     },
     {
-        "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_account_circle_24dp.png",
-        "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_account_circle_24dp.png"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_swap_calls_24dp.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_swap_calls_24dp.png"
     },
     {
         "merged": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_ab_back_mtrl_am_alpha.png",
         "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_ic_ab_back_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_account_circle_24dp.png",
+        "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_account_circle_24dp.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\com_facebook_favicon_white.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.0\\res\\drawable-mdpi-v4\\com_facebook_favicon_white.png"
     },
     {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_stars_white_24px.png",
@@ -354,6 +506,14 @@
     {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png",
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_popup_background_mtrl_mult.9.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_popup_background_mtrl_mult.9.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\com_facebook_tooltip_blue_bottomnub.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.0\\res\\drawable-mdpi-v4\\com_facebook_tooltip_blue_bottomnub.png"
     },
     {
         "merged": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_btn_radio_to_on_mtrl_000.png",
@@ -372,12 +532,24 @@
         "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.12.1\\res\\drawable-mdpi-v4\\com_facebook_button_like_icon_selected.png"
     },
     {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_list_divider_mtrl_alpha.9.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
+    },
+    {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_perm_contact_calendar_black_24px1.png",
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_perm_contact_calendar_black_24px1.png"
     },
     {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_star_black_16dp.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_ic_star_black_16dp.png"
+    },
+    {
         "merged": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\com_facebook_tooltip_blue_background.9.png",
         "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.12.1\\res\\drawable-mdpi-v4\\com_facebook_tooltip_blue_background.9.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_mail_black_18px.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_mail_black_18px.png"
     },
     {
         "merged": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_perm_contact_calendar_black_24px.png",
@@ -390,6 +562,14 @@
     {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\com_facebook_profile_picture_blank_portrait.png",
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.13.1\\res\\drawable-mdpi-v4\\com_facebook_profile_picture_blank_portrait.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_account_balance_wallet_white_24px.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_account_balance_wallet_white_24px.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_light.9.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
     },
     {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_lock_black_18px.png",
@@ -406,6 +586,10 @@
     {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_info_outline_white_24px.png",
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_info_outline_white_24px.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\com_facebook_tooltip_blue_bottomnub.png",
@@ -432,8 +616,20 @@
         "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_account_circle_white_24px.png"
     },
     {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_star_black_36dp.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_ic_star_black_36dp.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_list_longpressed_holo.9.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_list_longpressed_holo.9.png"
+    },
+    {
         "merged": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png",
         "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_edit_black_24dp.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_edit_black_24dp.png"
     },
     {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_search_black_48px.png",
@@ -442,6 +638,10 @@
     {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_person_outline_24dp.png",
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_person_outline_24dp.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_account_circle_24dp.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_account_circle_24dp.png"
     },
     {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\com_facebook_button_icon_white.png",
@@ -456,12 +656,20 @@
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_person_white_24px.png"
     },
     {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_perm_contact_calendar_black_24px1.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_perm_contact_calendar_black_24px1.png"
+    },
+    {
         "merged": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\messenger_bubble_small_white.png",
         "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.12.1\\res\\drawable-mdpi-v4\\messenger_bubble_small_white.png"
     },
     {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_textfield_default_mtrl_alpha.9.png",
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_textfield_default_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\com_facebook_tooltip_blue_topnub.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.0\\res\\drawable-mdpi-v4\\com_facebook_tooltip_blue_topnub.png"
     },
     {
         "merged": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\com_facebook_button_icon_white.png",
@@ -476,6 +684,14 @@
         "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_notifications_24dp.png"
     },
     {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\com_facebook_profile_picture_blank_portrait.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.0\\res\\drawable-mdpi-v4\\com_facebook_profile_picture_blank_portrait.png"
+    },
+    {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_list_pressed_holo_dark.9.png",
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_list_pressed_holo_dark.9.png"
     },
@@ -488,12 +704,24 @@
         "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
     },
     {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\messenger_bubble_small_white.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.0\\res\\drawable-mdpi-v4\\messenger_bubble_small_white.png"
+    },
+    {
         "merged": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_account_box_white_24px.png",
         "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_account_box_white_24px.png"
     },
     {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_voice_search_api_mtrl_alpha.png",
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_ic_voice_search_api_mtrl_alpha.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_clear_mtrl_alpha.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_ic_clear_mtrl_alpha.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\com_facebook_close.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.0\\res\\drawable-mdpi-v4\\com_facebook_close.png"
     },
     {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_list_pressed_holo_light.9.png",
@@ -504,6 +732,10 @@
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_ic_star_half_black_16dp.png"
     },
     {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\com_facebook_profile_picture_blank_square.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.0\\res\\drawable-mdpi-v4\\com_facebook_profile_picture_blank_square.png"
+    },
+    {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\messenger_bubble_large_white.png",
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.13.1\\res\\drawable-mdpi-v4\\messenger_bubble_large_white.png"
     },
@@ -512,12 +744,32 @@
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.13.1\\res\\drawable-mdpi-v4\\com_facebook_profile_picture_blank_square.png"
     },
     {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_textfield_default_mtrl_alpha.9.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_textfield_default_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\com_facebook_button_icon_blue.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.0\\res\\drawable-mdpi-v4\\com_facebook_button_icon_blue.png"
+    },
+    {
         "merged": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_menu_share_mtrl_alpha.png",
         "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
     },
     {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_btn_radio_to_on_mtrl_015.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
+    },
+    {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\com_facebook_tooltip_black_background.9.png",
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.13.1\\res\\drawable-mdpi-v4\\com_facebook_tooltip_black_background.9.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\md_nav_back.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.github.afollestad.material-dialogs\\core\\0.8.5.3\\res\\drawable-mdpi-v4\\md_nav_back.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\com_facebook_tooltip_blue_xout.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.0\\res\\drawable-mdpi-v4\\com_facebook_tooltip_blue_xout.png"
     },
     {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png",
@@ -532,12 +784,28 @@
         "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
     },
     {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_search_black_48px.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_search_black_48px.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_perm_contact_calendar_black_24px.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_perm_contact_calendar_black_24px.png"
+    },
+    {
         "merged": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_person_outline_24dp.png",
         "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_person_outline_24dp.png"
     },
     {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_account_circle_white_24px.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_account_circle_white_24px.png"
+    },
+    {
         "merged": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_view_carousel_24dp.png",
         "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_view_carousel_24dp.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_notifications_white_24px.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_notifications_white_24px.png"
     },
     {
         "merged": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\com_facebook_button_send_icon_blue.png",
@@ -584,6 +852,18 @@
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png"
     },
     {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\com_facebook_tooltip_black_topnub.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.0\\res\\drawable-mdpi-v4\\com_facebook_tooltip_black_topnub.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_star_half_black_16dp.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_ic_star_half_black_16dp.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_search_api_mtrl_alpha.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_ic_search_api_mtrl_alpha.png"
+    },
+    {
         "merged": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_star_half_black_16dp.png",
         "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_ic_star_half_black_16dp.png"
     },
@@ -598,6 +878,18 @@
     {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png",
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_go_search_api_mtrl_alpha.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_ic_go_search_api_mtrl_alpha.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_launcher.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\HopopAndroid\\linkedin-sdk\\unspecified\\res\\drawable-mdpi-v4\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_list_focused_holo.9.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_list_focused_holo.9.png"
     },
     {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_btn_radio_to_on_mtrl_000.png",
@@ -620,6 +912,10 @@
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
     },
     {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png"
+    },
+    {
         "merged": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_star_black_36dp.png",
         "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_ic_star_black_36dp.png"
     },
@@ -636,12 +932,24 @@
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
     },
     {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_lock_black_18px.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_lock_black_18px.png"
+    },
+    {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_spinner_mtrl_am_alpha.9.png",
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png",
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_btn_check_to_on_mtrl_015.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_spinner_mtrl_am_alpha.9.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png",
@@ -668,6 +976,14 @@
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
     },
     {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_btn_check_to_on_mtrl_000.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_notifications_24dp.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_notifications_24dp.png"
+    },
+    {
         "merged": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_voice_search_api_mtrl_alpha.png",
         "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_ic_voice_search_api_mtrl_alpha.png"
     },
@@ -688,20 +1004,48 @@
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.13.1\\res\\drawable-mdpi-v4\\messenger_bubble_small_blue.png"
     },
     {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\com_facebook_tooltip_blue_background.9.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.0\\res\\drawable-mdpi-v4\\com_facebook_tooltip_blue_background.9.png"
+    },
+    {
         "merged": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_btn_rating_star_on_mtrl_alpha.png",
         "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_btn_rating_star_on_mtrl_alpha.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\com_facebook_button_like_icon_selected.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.0\\res\\drawable-mdpi-v4\\com_facebook_button_like_icon_selected.png"
     },
     {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\com_facebook_tooltip_blue_topnub.png",
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.13.1\\res\\drawable-mdpi-v4\\com_facebook_tooltip_blue_topnub.png"
     },
     {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\com_facebook_tooltip_black_bottomnub.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.0\\res\\drawable-mdpi-v4\\com_facebook_tooltip_black_bottomnub.png"
+    },
+    {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\com_facebook_tooltip_black_bottomnub.png",
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.13.1\\res\\drawable-mdpi-v4\\com_facebook_tooltip_black_bottomnub.png"
     },
     {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_menu_share_mtrl_alpha.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
+    },
+    {
         "merged": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\com_facebook_tooltip_black_topnub.png",
         "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.12.1\\res\\drawable-mdpi-v4\\com_facebook_tooltip_black_topnub.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\messenger_bubble_small_blue.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.0\\res\\drawable-mdpi-v4\\messenger_bubble_small_blue.png"
     },
     {
         "merged": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_person_white_24px.png",
@@ -714,6 +1058,14 @@
     {
         "merged": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_dark.9.png",
         "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
     },
     {
         "merged": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png",
@@ -740,6 +1092,10 @@
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_notifications_white_24px.png"
     },
     {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
+    },
+    {
         "merged": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_search_black_48px.png",
         "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_search_black_48px.png"
     },
@@ -748,20 +1104,52 @@
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_account_circle_black_48px.png"
     },
     {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_account_box_black_24px.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_account_box_black_24px.png"
+    },
+    {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_stars_24dp.png",
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_stars_24dp.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_btn_rating_star_off_mtrl_alpha.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_btn_rating_star_off_mtrl_alpha.png"
     },
     {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png",
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
     },
     {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_stars_24dp.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_stars_24dp.png"
+    },
+    {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\messenger_bubble_small_white.png",
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.13.1\\res\\drawable-mdpi-v4\\messenger_bubble_small_white.png"
     },
     {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_menu_moreoverflow_mtrl_alpha.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_ic_menu_moreoverflow_mtrl_alpha.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_btn_rating_star_on_mtrl_alpha.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_btn_rating_star_on_mtrl_alpha.png"
+    },
+    {
         "merged": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png",
         "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\messenger_bubble_large_blue.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.0\\res\\drawable-mdpi-v4\\messenger_bubble_large_blue.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_list_pressed_holo_dark.9.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_list_pressed_holo_dark.9.png"
     },
     {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_account_balance_wallet_24dp.png",
@@ -780,6 +1168,10 @@
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.13.1\\res\\drawable-mdpi-v4\\com_facebook_tooltip_blue_background.9.png"
     },
     {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_perm_contact_calendar_white_24px.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_perm_contact_calendar_white_24px.png"
+    },
+    {
         "merged": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_stars_24dp.png",
         "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_stars_24dp.png"
     },
@@ -788,12 +1180,24 @@
         "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_ic_star_half_black_36dp.png"
     },
     {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_star_half_black_36dp.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_ic_star_half_black_36dp.png"
+    },
+    {
         "merged": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_account_balance_wallet_24dp.png",
         "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_account_balance_wallet_24dp.png"
     },
     {
         "merged": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_visibility_black_18px.png",
         "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_visibility_black_18px.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_ab_back_mtrl_am_alpha.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_ic_ab_back_mtrl_am_alpha.png"
     },
     {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_btn_rating_star_on_mtrl_alpha.png",
@@ -808,11 +1212,23 @@
         "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
     },
     {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\ic_search_white_48px.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_search_white_48px.png"
+    },
+    {
         "merged": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_list_focused_holo.9.png",
         "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_list_focused_holo.9.png"
     },
     {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_btn_radio_to_on_mtrl_000.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
+    },
+    {
         "merged": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\messenger_bubble_large_blue.png",
         "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.12.1\\res\\drawable-mdpi-v4\\messenger_bubble_large_blue.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
     }
 ]
