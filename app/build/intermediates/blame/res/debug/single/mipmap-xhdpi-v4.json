@@ -16,12 +16,24 @@
         "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\src\\main\\res\\mipmap-xhdpi\\ic_logo.png"
     },
     {
+        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\logo.png",
+        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\mipmap-xhdpi\\logo.png"
+    },
+    {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_action_next_item.png",
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\src\\main\\res\\mipmap-xhdpi\\ic_action_next_item.png"
     },
     {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_logo.png",
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\src\\main\\res\\mipmap-xhdpi\\ic_logo.png"
+    },
+    {
+        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_launcher.png",
+        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_logo.png",
+        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\mipmap-xhdpi\\ic_logo.png"
     },
     {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_action_phone.png",
