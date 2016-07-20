@@ -12,13 +12,13 @@ public class RegisterActivity$$ViewBinder<T extends com.hopop.hopop.registration
     target.mobile = finder.castView(view, 2131493011, "field 'mobile'");
     view = finder.findRequiredView(source, 2131493012, "field 'pass'");
     target.pass = finder.castView(view, 2131493012, "field 'pass'");
-    view = finder.findRequiredView(source, 2131493061, "field 'fName'");
-    target.fName = finder.castView(view, 2131493061, "field 'fName'");
-    view = finder.findRequiredView(source, 2131493062, "field 'lName'");
-    target.lName = finder.castView(view, 2131493062, "field 'lName'");
-    view = finder.findRequiredView(source, 2131493063, "field 'email'");
-    target.email = finder.castView(view, 2131493063, "field 'email'");
-    view = finder.findRequiredView(source, 2131493069, "method 'linkedInUser'");
+    view = finder.findRequiredView(source, 2131493051, "field 'fName'");
+    target.fName = finder.castView(view, 2131493051, "field 'fName'");
+    view = finder.findRequiredView(source, 2131493052, "field 'lName'");
+    target.lName = finder.castView(view, 2131493052, "field 'lName'");
+    view = finder.findRequiredView(source, 2131493053, "field 'email'");
+    target.email = finder.castView(view, 2131493053, "field 'email'");
+    view = finder.findRequiredView(source, 2131493059, "method 'linkedInUser'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -27,7 +27,7 @@ public class RegisterActivity$$ViewBinder<T extends com.hopop.hopop.registration
           target.linkedInUser(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131493068, "method 'signUpUser'");
+    view = finder.findRequiredView(source, 2131493058, "method 'signUpUser'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -36,7 +36,7 @@ public class RegisterActivity$$ViewBinder<T extends com.hopop.hopop.registration
           target.signUpUser(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131493067, "method 'onTouch'");
+    view = finder.findRequiredView(source, 2131493057, "method 'onTouch'");
     view.setOnTouchListener(
       new android.view.View.OnTouchListener() {
         @Override public boolean onTouch(

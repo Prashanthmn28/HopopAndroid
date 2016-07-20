@@ -80,6 +80,10 @@
         "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\support_simple_spinner_dropdown_item.xml"
     },
     {
+        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\app_bar_past.xml",
+        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\app_bar_past.xml"
+    },
+    {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_dialog_progress.xml",
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.github.afollestad.material-dialogs\\core\\0.8.5.3\\res\\layout\\md_dialog_progress.xml"
     },
@@ -192,16 +196,16 @@
         "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_activity_chooser_view.xml"
     },
     {
-        "merged": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
-        "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\select_dialog_multichoice_material.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\nav_header_destination.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\layout\\nav_header_destination.xml"
     },
     {
         "merged": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_blue_small.xml",
         "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.12.1\\res\\layout\\messenger_button_send_blue_small.xml"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\nav_header_destination.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\layout\\nav_header_destination.xml"
+        "merged": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
+        "source": "C:\\Users\\girishvinu\\Documents\\GitHub\\Hop\\HopopApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\select_dialog_multichoice_material.xml"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_destination.xml",
@@ -646,6 +650,10 @@
     {
         "merged": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\app_bar_destination.xml",
         "source": "C:\\Users\\HopOp\\Desktop\\Hop\\HopopApp\\app\\src\\main\\res\\layout\\app_bar_destination.xml"
+    },
+    {
+        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_past.xml",
+        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\layout_past.xml"
     },
     {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_menu_item_action_area.xml",

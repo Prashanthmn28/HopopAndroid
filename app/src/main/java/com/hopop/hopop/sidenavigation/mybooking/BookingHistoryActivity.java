@@ -1,93 +1,120 @@
 package com.hopop.hopop.sidenavigation.mybooking;
 
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.widget.EditText;
-import android.widget.TextView;
+import android.util.Log;
+import android.view.View;
 
 import com.hopop.hopop.communicators.CommunicatorClass;
+import com.hopop.hopop.database.BookingHistory;
 import com.hopop.hopop.login.activity.LoginActivity;
 import com.hopop.hopop.login.activity.R;
 import com.hopop.hopop.login.data.LoginUser;
+import com.hopop.hopop.payment.activity.PaymentActivity;
+import com.hopop.hopop.sidenavigation.mybooking.adapter.PastRecyclerAdapter;
+import com.hopop.hopop.source.activity.SourceActivity;
+import com.orm.query.Select;
 
-import java.sql.Time;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.util.ArrayList;
+import java.util.List;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class BookingHistoryActivity extends AppCompatActivity {
+
+    @Bind(R.id.past_list)
+    RecyclerView past_list;
+    List<BookingHistory> pastList = new ArrayList<BookingHistory>();
+    List<BookingHistory> srcList = new ArrayList<BookingHistory>();
+    List<BookingHistory> destList = new ArrayList<BookingHistory>();
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_past);
+        ButterKnife.bind(this);
         setTitle("Booking History");
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_keyboard_backspace_white_48px));
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-/*
+
+        final LinearLayoutManager layoutManager = new LinearLayoutManager(this.getApplicationContext());
+        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        past_list.setLayoutManager(layoutManager);
+        past_list.setItemAnimator(new DefaultItemAnimator());
+
 
         String mob = LoginActivity.usrMobileNum;
-
         LoginUser loginUser = new LoginUser();
-
         loginUser.setMobile_number(mob);
-
         CommunicatorClass.getRegisterClass().bookingHis(loginUser).enqueue(new Callback<BookingHisInfo>() {
             @Override
             public void onResponse(Call<BookingHisInfo> call, Response<BookingHisInfo> response) {
 
                 BookingHisInfo bookingHisInfo = response.body();
 
+                for (BookingHistory bookingHistory : bookingHisInfo.getBookingHistory()) {
 
-                for(BookingHistory bookingHistory:bookingHisInfo.getBookingHistory())
-                {
-                    EditText etDaate = (EditText)findViewById(R.id.editText_date);
-
-                    SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
-                    SimpleDateFormat sdfD = new SimpleDateFormat("dd:mm:yyyy");
-                    String systime = sdf.format(new Date());
-                    String sysDate = sdfD.format(new Date());
-
-
-                    etDaate.setText(sysDate);
-
-                    EditText etFrm = (EditText)findViewById(R.id.editText_Src);
-
-
-                    etFrm.setText("");
-
-                    EditText etTo = (EditText)findViewById(R.id.editText_Drp);
-
-                    etTo.setText(bookingHistory.getToLocation().toString());
-
-                    TextView etTime = (TextView) findViewById(R.id.textView_time);
-
-
-                    etTime.setText(systime);
-
+                    if (BookingHistory.isNew(bookingHistory.getRoute())) {
+                        bookingHistory.save();
+                    }
 
 
                 }
+                pastList = Select.from(BookingHistory.class).list();
+                for(BookingHistory bookingHistory:pastList){
+                }
+                for(BookingHistory bookingHistory: pastList){
+                    Log.i(getClass().getSimpleName(),"the src points are "+bookingHistory.getFromLocation());
+                    Log.i(getClass().getSimpleName(),"the dest points are "+bookingHistory.getToLocation());
+                }
+
+
+                displayThePastList(pastList);
             }
+
 
             @Override
             public void onFailure(Call<BookingHisInfo> call, Throwable t) {
 
             }
         });
-*/
-
-
-
-
-
     }
 
+    private void displayThePastList(final List<BookingHistory> pastList) {
 
+        PastRecyclerAdapter pastRecycAda = new PastRecyclerAdapter(pastList, getApplicationContext());
+        past_list.setAdapter(pastRecycAda);
+
+        ((PastRecyclerAdapter) pastRecycAda).setOnItemClickListener(new PastRecyclerAdapter.ItemClickListenr() {
+
+            @Override
+            public void onItemClick(int position, View v) {
+
+                Intent reIntent = new Intent(BookingHistoryActivity.this, PaymentActivity.class);
+                startActivity(reIntent);
+
+
+            }
+
+        });
+    }
 }

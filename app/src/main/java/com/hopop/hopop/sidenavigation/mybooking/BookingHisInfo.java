@@ -4,12 +4,15 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 import com.google.gson.annotations.SerializedName;
+import com.hopop.hopop.database.BookingHistory;
 
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Created by girishvinu on 7/15/2016.
+ */
 public class BookingHisInfo implements Parcelable {
-
 
     @SerializedName("booking_history")
     private List<BookingHistory> bookingHistory = new ArrayList<BookingHistory>();
