@@ -1,7 +1,6 @@
 package com.hopop.hopop.sidenavigation.mybooking.adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,10 +12,8 @@ import android.widget.TextView;
 
 import com.hopop.hopop.login.activity.R;
 import com.hopop.hopop.database.BookingHistory;
-import com.hopop.hopop.source.activity.SourceActivity;
 
 import java.text.DateFormat;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;

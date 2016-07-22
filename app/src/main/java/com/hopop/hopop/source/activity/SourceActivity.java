@@ -27,13 +27,13 @@ import com.hopop.hopop.database.FromRoute;
 import com.hopop.hopop.destination.activity.DestinationActivity;
 import com.hopop.hopop.login.activity.LoginActivity;
 import com.hopop.hopop.login.activity.R;
-import com.hopop.hopop.sidenavigation.aboutus.AboutUs;
-import com.hopop.hopop.sidenavigation.feedback.FeedBack;
-import com.hopop.hopop.sidenavigation.mybooking.MyBooking;
-import com.hopop.hopop.sidenavigation.notifications.Notifications;
-import com.hopop.hopop.sidenavigation.profile.Profile;
+import com.hopop.hopop.sidenavigation.aboutus.activity.AboutUs;
+import com.hopop.hopop.sidenavigation.feedback.Activity.FeedBack;
+import com.hopop.hopop.sidenavigation.mybooking.Activity.MyBooking;
+import com.hopop.hopop.sidenavigation.notifications.Activity.Notifications;
+import com.hopop.hopop.sidenavigation.profile.Activity.Profile;
 import com.hopop.hopop.sidenavigation.suggestedroute.activity.SuggestedRoute;
-import com.hopop.hopop.sidenavigation.wallet.Wallet;
+import com.hopop.hopop.sidenavigation.wallet.Activity.Wallet;
 import com.hopop.hopop.source.adapter.SrcRecyclerAdapter;
 import com.hopop.hopop.source.data.SourceList;
 import com.orm.query.Condition;
@@ -55,7 +55,7 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
     Toolbar toolbar;
     private static final int TIME_DELAY = 3000;
     private static long back_pressed;
-    public static String src = null,srcRId=null;
+    public static String srcSelected = null,srcRId=null;
     @Bind(R.id.source_list)
     RecyclerView source_list;
     SrcRecyclerAdapter recyclerAdapter;
@@ -125,8 +125,8 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
             @Override
             public void onItemClick(int position, View v) {
                 Log.i(getClass().getSimpleName(),"the item clicked is "+fromRoutes.get(position).getStopLocation());
-                src = recyclerAdapter.getFilteredItem(position).getStopLocation();
-                startingPoint = Select.from(FromRoute.class).where(Condition.prop("stop_location").eq(src)).list();
+                srcSelected = recyclerAdapter.getFilteredItem(position).getStopLocation();
+                startingPoint = Select.from(FromRoute.class).where(Condition.prop("stop_location").eq(srcSelected)).list();
                 for (FromRoute fromRoute: startingPoint) {
                     Log.i(getClass().getSimpleName(),"starting point:" + fromRoute.getRouteId());
                 }
@@ -138,7 +138,7 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
                     Log.i(getClass().getSimpleName(), "the destination point are "+fromRoute.getStopLocation());
                 }
                 Intent intentSrc = new Intent(SourceActivity.this, DestinationActivity.class);
-                intentSrc.putExtra("src", src);
+                intentSrc.putExtra("src", srcSelected);
                 Bundle bundle = new Bundle();
                 bundle.putParcelableArrayList("mylist", (ArrayList<? extends Parcelable>) destinationPoint);
                 intentSrc.putExtras(bundle);
@@ -150,7 +150,7 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
     private void destList(List<FromRoute> destinationPoint) {
 
         for(FromRoute fromRoute:startingPoint) {
-            tempDestList = FromRoute.findWithQuery(FromRoute.class, "Select * from FROM_ROUTE where route_id = ? AND stop_location != ? Group By stop_location", fromRoute.getRouteId(), src);
+            tempDestList = FromRoute.findWithQuery(FromRoute.class, "Select * from FROM_ROUTE where route_id = ? AND stop_location != ? Group By stop_location", fromRoute.getRouteId(), srcSelected);
             if (destinationPoint.isEmpty()) {
                 destinationPoint.addAll(tempDestList);
             } else {

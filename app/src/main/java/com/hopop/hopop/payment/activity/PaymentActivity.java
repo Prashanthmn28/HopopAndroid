@@ -34,11 +34,13 @@ import com.hopop.hopop.payment.data.BookIdInfo;
 import com.hopop.hopop.payment.data.ForBookId;
 import com.hopop.hopop.payment.data.WalletInfo;
 import com.hopop.hopop.ply.activity.PlyActivity;
-import com.hopop.hopop.sidenavigation.aboutus.AboutUs;
-import com.hopop.hopop.sidenavigation.feedback.FeedBack;
-import com.hopop.hopop.sidenavigation.mybooking.MyBooking;
-import com.hopop.hopop.sidenavigation.notifications.Notifications;
-import com.hopop.hopop.sidenavigation.profile.Profile;
+import com.hopop.hopop.sidenavigation.aboutus.activity.AboutUs;
+import com.hopop.hopop.sidenavigation.feedback.Activity.FeedBack;
+
+import com.hopop.hopop.sidenavigation.mybooking.Activity.MyBooking;
+import com.hopop.hopop.sidenavigation.notifications.Activity.Notifications;
+
+import com.hopop.hopop.sidenavigation.profile.Activity.Profile;
 import com.hopop.hopop.sidenavigation.suggestedroute.activity.SuggestedRoute;
 import com.hopop.hopop.source.activity.SourceActivity;
 import com.hopop.hopop.login.activity.LoginActivity;
@@ -169,7 +171,7 @@ public class PaymentActivity extends AppCompatActivity
 
         String userMobileNum = LoginActivity.usrMobileNum;
         //   Log.i(getClass().getSimpleName(),"UserLogin Mobile Number:"+userMobileNum);
-        String frmRoute = SourceActivity.src;
+        String frmRoute = SourceActivity.srcSelected;
         // Log.i(getClass().getSimpleName(),"Source Point:"+frmRoute);
         String toRoute = DestinationActivity.destSelect;
         // Log.i(getClass().getSimpleName(),"Stop Point:"+toRoute);
@@ -279,7 +281,7 @@ public class PaymentActivity extends AppCompatActivity
 
         } else if (id == R.id.wallet) {
 
-            Intent walletintent = new Intent(PaymentActivity.this, com.hopop.hopop.sidenavigation.wallet.Wallet.class);
+            Intent walletintent = new Intent(PaymentActivity.this, com.hopop.hopop.sidenavigation.wallet.Activity.Wallet.class);
             startActivity(walletintent);
 
         } else if (id == R.id.route) {
