@@ -69,31 +69,31 @@
             android:name="com.hopop.hopop.payment.activity.PaymentActivity"
             android:label="@string/title_activity_payment"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.hopop.hopop.sidenavigation.aboutus.activity.AboutUs"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
         <activity
-            android:name="com.hopop.hopop.sidenavigation.aboutus.AboutUs"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name="com.hopop.hopop.sidenavigation.feedback.FeedBack"
+            android:name="com.hopop.hopop.sidenavigation.feedback.Activity.FeedBack"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <activity
-            android:name="com.hopop.hopop.sidenavigation.mybooking.MyBooking"
+            android:name="com.hopop.hopop.sidenavigation.mybooking.Activity.MyBooking"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.hopop.hopop.sidenavigation.mybooking.BookingHistoryActivity"
+            android:name="com.hopop.hopop.sidenavigation.mybooking.Activity.BookingHistoryActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.hopop.hopop.sidenavigation.notifications.Notifications"
+            android:name="com.hopop.hopop.sidenavigation.notifications.Activity.Notifications"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <activity
-            android:name="com.hopop.hopop.sidenavigation.profile.Profile"
+            android:name="com.hopop.hopop.sidenavigation.profile.Activity.Profile"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="com.hopop.hopop.sidenavigation.suggestedroute.activity.SuggestedRoute"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.hopop.hopop.sidenavigation.wallet.Wallet"
+            android:name="com.hopop.hopop.sidenavigation.wallet.Activity.Wallet"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="com.facebook.FacebookActivity"

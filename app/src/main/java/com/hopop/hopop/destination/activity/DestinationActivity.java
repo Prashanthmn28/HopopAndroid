@@ -27,11 +27,11 @@ import com.hopop.hopop.database.FromRoute;
 import com.hopop.hopop.destination.adapter.DestRecyclerAdapter;
 import com.hopop.hopop.login.activity.R;
 import com.hopop.hopop.ply.activity.PlyActivity;
-import com.hopop.hopop.sidenavigation.aboutus.AboutUs;
-import com.hopop.hopop.sidenavigation.feedback.FeedBack;
-import com.hopop.hopop.sidenavigation.mybooking.MyBooking;
-import com.hopop.hopop.sidenavigation.notifications.Notifications;
-import com.hopop.hopop.sidenavigation.profile.Profile;
+import com.hopop.hopop.sidenavigation.aboutus.activity.AboutUs;
+import com.hopop.hopop.sidenavigation.feedback.Activity.FeedBack;
+import com.hopop.hopop.sidenavigation.mybooking.Activity.MyBooking;
+import com.hopop.hopop.sidenavigation.notifications.Activity.Notifications;
+import com.hopop.hopop.sidenavigation.profile.Activity.Profile;
 import com.hopop.hopop.sidenavigation.suggestedroute.activity.SuggestedRoute;
 
 import java.util.ArrayList;
@@ -141,7 +141,7 @@ public class DestinationActivity extends AppCompatActivity implements Navigation
 
         } else if (id == R.id.wallet) {
 
-            Intent walletintent = new Intent(DestinationActivity.this, com.hopop.hopop.sidenavigation.wallet.Wallet.class);
+            Intent walletintent = new Intent(DestinationActivity.this, com.hopop.hopop.sidenavigation.wallet.Activity.Wallet.class);
             startActivity(walletintent);
 
         } else if (id == R.id.route) {

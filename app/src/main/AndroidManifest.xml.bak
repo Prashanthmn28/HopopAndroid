@@ -57,7 +57,7 @@
             android:label="@string/title_activity_payment"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity
-            android:name="com.hopop.hopop.sidenavigation.aboutus.AboutUs"
+            android:name="com.hopop.hopop.sidenavigation.aboutus.Activity.AboutUs"
             android:label="@string/title_activity_payment"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity

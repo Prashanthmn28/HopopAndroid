@@ -116,6 +116,19 @@ public class BookingHistory extends SugarRecord implements Parcelable {
     }
 
 
+    public static boolean isExisting(String mobileNumber){
+
+        long count = Select.from(BookingHistory.class).where(Condition.prop("mobile_number").eq(mobileNumber)).count();
+
+        if (count>0)
+        {
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+
     protected BookingHistory(Parcel in) {
         this.mobileNumber = in.readString();
         this.fromLocation = in.readString();

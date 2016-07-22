@@ -192,54 +192,54 @@ ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:68:9-71:
 		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:71:13-56
 	android:name
 		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:69:13-76
-activity#com.hopop.hopop.sidenavigation.aboutus.AboutUs
-ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:72:9-74:59
+activity#com.hopop.hopop.sidenavigation.aboutus.activity.AboutUs
+ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:72:9-73:58
 	android:theme
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:74:13-56
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:73:13-56
 	android:name
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:73:13-74
-activity#com.hopop.hopop.sidenavigation.feedback.FeedBack
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:72:19-89
+activity#com.hopop.hopop.sidenavigation.feedback.Activity.FeedBack
 ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:75:9-77:59
 	android:theme
 		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:77:13-56
 	android:name
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:76:13-76
-activity#com.hopop.hopop.sidenavigation.mybooking.MyBooking
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:76:13-85
+activity#com.hopop.hopop.sidenavigation.mybooking.Activity.MyBooking
 ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:79:9-81:59
 	android:theme
 		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:81:13-56
 	android:name
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:80:13-78
-activity#com.hopop.hopop.sidenavigation.mybooking.BookingHistoryActivity
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:80:13-87
+activity#com.hopop.hopop.sidenavigation.mybooking.Activity.BookingHistoryActivity
 ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:82:9-84:59
 	android:theme
 		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:84:13-56
 	android:name
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:83:13-91
-activity#com.hopop.hopop.sidenavigation.notifications.Notifications
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:83:13-100
+activity#com.hopop.hopop.sidenavigation.notifications.Activity.Notifications
 ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:85:9-87:59
 	android:theme
 		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:87:13-56
 	android:name
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:86:13-86
-activity#com.hopop.hopop.sidenavigation.profile.Profile
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:86:13-95
+activity#com.hopop.hopop.sidenavigation.profile.Activity.Profile
 ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:89:9-91:59
 	android:theme
 		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:91:13-56
 	android:name
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:90:13-74
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:90:13-83
 activity#com.hopop.hopop.sidenavigation.suggestedroute.activity.SuggestedRoute
 ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:92:9-94:59
 	android:theme
 		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:94:13-56
 	android:name
 		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:93:13-97
-activity#com.hopop.hopop.sidenavigation.wallet.Wallet
+activity#com.hopop.hopop.sidenavigation.wallet.Activity.Wallet
 ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:95:9-97:59
 	android:theme
 		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:97:13-56
 	android:name
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:96:13-72
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:96:13-81
 activity#com.facebook.FacebookActivity
 ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:98:9-102:75
 MERGED from [com.facebook.android:facebook-android-sdk:4.14.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.14.0\AndroidManifest.xml:29:9-32:75

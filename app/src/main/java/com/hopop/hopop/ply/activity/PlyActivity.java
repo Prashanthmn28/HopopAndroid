@@ -29,15 +29,15 @@ import com.hopop.hopop.login.activity.R;
 import com.hopop.hopop.payment.activity.PaymentActivity;
 import com.hopop.hopop.ply.adapter.DataAdapter;
 import com.hopop.hopop.ply.data.SeatTimeInfo;
-import com.hopop.hopop.sidenavigation.aboutus.AboutUs;
-import com.hopop.hopop.sidenavigation.feedback.FeedBack;
-import com.hopop.hopop.sidenavigation.mybooking.MyBooking;
-import com.hopop.hopop.sidenavigation.notifications.Notifications;
-import com.hopop.hopop.sidenavigation.profile.Profile;
+import com.hopop.hopop.sidenavigation.aboutus.activity.AboutUs;
+import com.hopop.hopop.sidenavigation.feedback.Activity.FeedBack;
+import com.hopop.hopop.sidenavigation.mybooking.Activity.MyBooking;
+import com.hopop.hopop.sidenavigation.notifications.Activity.Notifications;
+import com.hopop.hopop.sidenavigation.profile.Activity.Profile;
 import com.hopop.hopop.sidenavigation.suggestedroute.activity.SuggestedRoute;
 import com.hopop.hopop.sidenavigation.suggestedroute.data.ForSuggestedRoute;
 import com.hopop.hopop.sidenavigation.suggestedroute.data.SuggestedInfo;
-import com.hopop.hopop.sidenavigation.wallet.Wallet;
+import com.hopop.hopop.sidenavigation.wallet.Activity.Wallet;
 import com.hopop.hopop.source.activity.SourceActivity;
 
 import java.text.SimpleDateFormat;
@@ -72,10 +72,16 @@ public class PlyActivity extends AppCompatActivity implements NavigationView.OnN
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
         //-----------post the parameters of from and to locations to server-----------------
-        String src_point = SourceActivity.src;
+        String src_point = SourceActivity.srcSelected;
         String src_pointId = SourceActivity.srcRId;
         String dest_point = DestinationActivity.destSelect;
         String dest_pointId = DestinationActivity.destSelectId;
+
+
+        Intent bookinHistIntent = getIntent();
+        src_point = bookinHistIntent.getExtras().getString("src");
+        dest_point = bookinHistIntent.getExtras().getString("dest");
+
 
         SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
         String systime = sdf.format(new Date());
@@ -86,6 +92,7 @@ public class PlyActivity extends AppCompatActivity implements NavigationView.OnN
         forSeats.setSrc_stop(src_point);
         forSeats.setDest_stop(dest_point);
         forSeats.setUser_time(systime);
+
         CommunicatorClass.getRegisterClass().forSeatAvailiability(forSeats).enqueue(new Callback<SeatTimeInfo>() {
             @Override
             public void onResponse(Call<SeatTimeInfo> call, Response<SeatTimeInfo> response) {
@@ -95,10 +102,25 @@ public class PlyActivity extends AppCompatActivity implements NavigationView.OnN
                 if (sti == null) {
                     srcTxt = (TextView) findViewById(R.id.textView_pickpoint);
                     destTxt = (TextView) findViewById(R.id.textView_droppoint);
-                    String SRC = SourceActivity.src;
+                    String SRC = SourceActivity.srcSelected;
+                    String SRCBH = getIntent().getStringExtra("src");
                     String DST = getIntent().getStringExtra("dest");
-                    srcTxt.setText(SRC);
-                    destTxt.setText(DST);
+
+                    if (SRC.equals(SRCBH)){
+
+                        srcTxt.setText(SRC);
+                        destTxt.setText(DST);
+                    }
+                    else
+                    {
+                        srcTxt.setText(SRCBH);
+                        destTxt.setText(DST);
+                    }
+
+
+
+
+
                     srcTxt.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -217,10 +239,21 @@ public class PlyActivity extends AppCompatActivity implements NavigationView.OnN
         //----------------DISPLAY THE FROM AND TO VALUES IN UI----------------------------------
         srcTxt = (TextView) findViewById(R.id.textView_pickpoint);
         destTxt = (TextView) findViewById(R.id.textView_droppoint);
-        String SRC = SourceActivity.src;
+        String SRC = SourceActivity.srcSelected;
+        String SRCBH = getIntent().getStringExtra("src");
         String DST = getIntent().getStringExtra("dest");
-        srcTxt.setText(SRC);
-        destTxt.setText(DST);
+        if (SRC.equals(SRCBH)){
+
+            srcTxt.setText(SRC);
+            destTxt.setText(DST);
+        }
+        else
+        {
+            srcTxt.setText(SRCBH);
+            destTxt.setText(DST);
+        }
+
+
         srcTxt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
