@@ -1,5 +1,7 @@
 package com.hopop.hopop.destination.activity;
 
+import android.app.ProgressDialog;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -28,10 +30,10 @@ import com.hopop.hopop.destination.adapter.DestRecyclerAdapter;
 import com.hopop.hopop.login.activity.R;
 import com.hopop.hopop.ply.activity.PlyActivity;
 import com.hopop.hopop.sidenavigation.aboutus.activity.AboutUs;
-import com.hopop.hopop.sidenavigation.feedback.Activity.FeedBack;
-import com.hopop.hopop.sidenavigation.mybooking.Activity.MyBooking;
-import com.hopop.hopop.sidenavigation.notifications.Activity.Notifications;
-import com.hopop.hopop.sidenavigation.profile.Activity.Profile;
+import com.hopop.hopop.sidenavigation.feedback.activity.FeedBack;
+import com.hopop.hopop.sidenavigation.mybooking.activity.MyBooking;
+import com.hopop.hopop.sidenavigation.notifications.activity.Notifications;
+import com.hopop.hopop.sidenavigation.profile.activity.Profile;
 import com.hopop.hopop.sidenavigation.suggestedroute.activity.SuggestedRoute;
 
 import java.util.ArrayList;
@@ -41,7 +43,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 public class DestinationActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-
+    private ProgressDialog progressDialog;
 
     EditText destSearch;
     @Bind(R.id.dest_list)
@@ -50,6 +52,7 @@ public class DestinationActivity extends AppCompatActivity implements Navigation
     private static final int TIME_DELAY = 3000;
     private static long back_pressed;
     public static String destSelect = null;
+    public static String srcSelect = null;
     public static String destSelectId = null;
     List<FromRoute> list1;
     DestRecyclerAdapter recyclerAdapter;
@@ -59,6 +62,8 @@ public class DestinationActivity extends AppCompatActivity implements Navigation
         super.onCreate(savedInstanceState);
         Stetho.initializeWithDefaults(this);
         setTitle(R.string.DropHeader);
+        //Initialize a LoadViewTask object and call the execute() method
+        new LoadViewTask().execute();
         setContentView(R.layout.activity_destination);
         ButterKnife.bind(this);
         destSearch = (EditText) findViewById( R.id.destSearch);
@@ -73,6 +78,7 @@ public class DestinationActivity extends AppCompatActivity implements Navigation
         dest_list.setLayoutManager(layoutManager);
         dest_list.setItemAnimator(new DefaultItemAnimator());
         Bundle bundle = getIntent().getExtras();
+        srcSelect = bundle.getString("src");
         ArrayList<FromRoute> stopPoints = bundle.getParcelableArrayList("mylist");
         list1 = stopPoints;
         //--------DISPLAY THE LIST OF STOP POINTS-----
@@ -109,6 +115,7 @@ public class DestinationActivity extends AppCompatActivity implements Navigation
 
                 Intent destIntent = new Intent(DestinationActivity.this, PlyActivity.class);
                 destIntent.putExtra("dest", destSelect);
+                destIntent.putExtra("src",srcSelect);
                 startActivity(destIntent);
             }
         });
@@ -141,7 +148,7 @@ public class DestinationActivity extends AppCompatActivity implements Navigation
 
         } else if (id == R.id.wallet) {
 
-            Intent walletintent = new Intent(DestinationActivity.this, com.hopop.hopop.sidenavigation.wallet.Activity.Wallet.class);
+            Intent walletintent = new Intent(DestinationActivity.this, com.hopop.hopop.sidenavigation.wallet.activity.Wallet.class);
             startActivity(walletintent);
 
         } else if (id == R.id.route) {
@@ -177,6 +184,85 @@ public class DestinationActivity extends AppCompatActivity implements Navigation
             drawer.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
+        }
+    }
+
+    private class LoadViewTask extends AsyncTask<Void, Integer, Void>
+    {
+        //Before running code in separate thread
+        @Override
+        protected void onPreExecute()
+        {
+            //Create a new progress dialog
+            progressDialog = new ProgressDialog(DestinationActivity.this);
+            //Set the dialog title to 'Loading...'
+            //progressDialog.setTitle("Loading...");
+            //Set the dialog message to 'Loading application View, please wait...'
+            progressDialog.setMessage("Loading...");
+            //This dialog can't be canceled by pressing the back key
+            progressDialog.setCancelable(false);
+            //This dialog isn't indeterminate
+            progressDialog.setIndeterminate(true);
+            //The maximum number of items is 100
+            progressDialog.setMax(100);
+            //Set the current progress to zero
+            progressDialog.setProgress(0);
+            //Display the progress dialog
+            progressDialog.show();
+        }
+
+        //The code to be executed in a background thread.
+        @Override
+        protected Void doInBackground(Void... params)
+        {
+            /* This is just a code that delays the thread execution 4 times,
+             * during 850 milliseconds and updates the current progress. This
+             * is where the code that is going to be executed on a background
+             * thread must be placed.
+             */
+            try
+            {
+                //Get the current thread's token
+                synchronized (this)
+                {
+                    //Initialize an integer (that will act as a counter) to zero
+                    int counter = 0;
+                    //While the counter is smaller than four
+                    while(counter <= 4)
+                    {
+                        //Wait 850 milliseconds
+                        this.wait(500);
+                        //Increment the counter
+                        counter++;
+                        //Set the current progress.
+                        //This value is going to be passed to the onProgressUpdate() method.
+                        publishProgress(counter*25);
+                    }
+                }
+            }
+            catch (InterruptedException e)
+            {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+        //Update the progress
+        @Override
+        protected void onProgressUpdate(Integer... values)
+        {
+            //set the current progress of the progress dialog
+            progressDialog.setProgress(values[0]);
+        }
+
+        //after executing the code in the thread
+        @Override
+        protected void onPostExecute(Void result)
+        {
+            //close the progress dialog
+            progressDialog.dismiss();
+            //initialize the View
+            //setContentView(R.layout.content_booking);
         }
     }
 

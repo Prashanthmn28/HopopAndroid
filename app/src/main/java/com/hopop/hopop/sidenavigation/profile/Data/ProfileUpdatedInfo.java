@@ -1,4 +1,4 @@
-package com.hopop.hopop.sidenavigation.profile.Data;
+package com.hopop.hopop.sidenavigation.profile.data;
 
 public class ProfileUpdatedInfo {
 

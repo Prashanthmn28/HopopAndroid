@@ -1,4 +1,4 @@
-package com.hopop.hopop.sidenavigation.profile.Data;
+package com.hopop.hopop.sidenavigation.profile.data;
 
 import android.os.Parcel;
 import android.os.Parcelable;

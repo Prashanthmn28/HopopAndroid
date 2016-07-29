@@ -12,8 +12,7 @@
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
         android:background="#ffffff">
 
         <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -36,7 +35,7 @@
                 android:layout_height="match_parent"
                 android:layout_centerInParent="true"
                 android:layout_gravity="center"
-                android:layout_marginTop="100dp"
+                android:layout_marginTop="70dp"
                 android:background="@color/material_grey_300"
                 card_view:cardCornerRadius="5dp">
 
@@ -44,7 +43,7 @@
                     android:id="@+id/LinearLayout01"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
+                    android:layout_marginBottom="10dp"
                     android:orientation="vertical">
 
                     <EditText
@@ -143,12 +142,65 @@
                         android:layout_marginTop="5dp"
                         android:background="@drawable/ic_visibility_black_18px" />
 
+                    <EditText
+                        android:id="@+id/editText_dob"
+                        android:hint="DOB"
+                        android:inputType="date"
+                        android:ems="10"
+                        android:maxLength="10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="200dp"
+                        android:focusable="false"
+                        android:drawableLeft="@drawable/ic_cake_black_24dp"
+                        android:drawablePadding="5dp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_below="@+id/editText_dob"
+                        android:layout_marginLeft="50dp"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/radioButton_male"
+                            android:text="Male"
+                            android:textSize="13sp"
+                            android:layout_weight="1"
+                           />
+                        <RadioButton
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="13sp"
+                            android:text="Female"
+                            android:id="@+id/radioButton_female"
+                            android:layout_weight="1"
+                            />
+                        <RadioButton
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="13sp"
+                            android:text="Other"
+                            android:layout_weight="1"
+                            android:id="@+id/radioButton_other"
+                            />
+
+                    </RadioGroup>
+
                     <Button
                         android:id="@+id/button_Done"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginTop="205dp"
+                        android:layout_marginTop="280dp"
                         android:text="SIGNUP" />
 
                     <Button
@@ -172,14 +224,14 @@
             </android.support.v7.widget.CardView>
 
             <TextView
-                android:id="@+id/textView_hop2"
+                android:id="@+id/textView_hopop"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:gravity="center"
                 android:text="HopOp"
-                android:textSize="40dp"
+                android:textSize="30dp"
                 android:textStyle="bold" />
 
         </RelativeLayout>

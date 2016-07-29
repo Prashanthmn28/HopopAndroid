@@ -18,7 +18,49 @@ public class RegisterActivity$$ViewBinder<T extends com.hopop.hopop.registration
     target.lName = finder.castView(view, 2131493052, "field 'lName'");
     view = finder.findRequiredView(source, 2131493053, "field 'email'");
     target.email = finder.castView(view, 2131493053, "field 'email'");
-    view = finder.findRequiredView(source, 2131493059, "method 'linkedInUser'");
+    view = finder.findRequiredView(source, 2131493058, "field 'dob' and method 'dobUser'");
+    target.dob = finder.castView(view, 2131493058, "field 'dob'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.dobUser(p0);
+        }
+      });
+    view = finder.findRequiredView(source, 2131493059, "field 'gender'");
+    target.gender = finder.castView(view, 2131493059, "field 'gender'");
+    view = finder.findRequiredView(source, 2131493060, "field 'male' and method 'onRadioButtonClicked'");
+    target.male = finder.castView(view, 2131493060, "field 'male'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.onRadioButtonClicked(finder.<android.widget.RadioButton>castParam(p0, "doClick", 0, "onRadioButtonClicked", 0));
+        }
+      });
+    view = finder.findRequiredView(source, 2131493061, "field 'female' and method 'onRadioButtonClicked'");
+    target.female = finder.castView(view, 2131493061, "field 'female'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.onRadioButtonClicked(finder.<android.widget.RadioButton>castParam(p0, "doClick", 0, "onRadioButtonClicked", 0));
+        }
+      });
+    view = finder.findRequiredView(source, 2131493062, "field 'other' and method 'onRadioButtonClicked'");
+    target.other = finder.castView(view, 2131493062, "field 'other'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.onRadioButtonClicked(finder.<android.widget.RadioButton>castParam(p0, "doClick", 0, "onRadioButtonClicked", 0));
+        }
+      });
+    view = finder.findRequiredView(source, 2131493064, "method 'linkedInUser'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -27,7 +69,7 @@ public class RegisterActivity$$ViewBinder<T extends com.hopop.hopop.registration
           target.linkedInUser(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131493058, "method 'signUpUser'");
+    view = finder.findRequiredView(source, 2131493063, "method 'signUpUser'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -54,5 +96,10 @@ public class RegisterActivity$$ViewBinder<T extends com.hopop.hopop.registration
     target.fName = null;
     target.lName = null;
     target.email = null;
+    target.dob = null;
+    target.gender = null;
+    target.male = null;
+    target.female = null;
+    target.other = null;
   }
 }

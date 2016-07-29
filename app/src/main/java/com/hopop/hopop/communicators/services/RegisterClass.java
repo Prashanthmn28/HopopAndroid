@@ -8,10 +8,12 @@ import com.hopop.hopop.payment.data.WalletInfo;
 import com.hopop.hopop.ply.data.SeatTimeInfo;
 import com.hopop.hopop.registration.data.RegisterUser;
 import com.hopop.hopop.response.Registerresponse;
-import com.hopop.hopop.sidenavigation.mybooking.Data.BookingHisInfo;
+import com.hopop.hopop.sidenavigation.feedback.data.FeedBackField;
+import com.hopop.hopop.sidenavigation.feedback.data.FeedbackInfo;
+import com.hopop.hopop.sidenavigation.mybooking.data.BookingHisInfo;
 import com.hopop.hopop.database.ProfileDetail;
-import com.hopop.hopop.sidenavigation.profile.Data.ProfileDetailsInfo;
-import com.hopop.hopop.sidenavigation.profile.Data.ProfileUpdatedInfo;
+import com.hopop.hopop.sidenavigation.profile.data.ProfileDetailsInfo;
+import com.hopop.hopop.sidenavigation.profile.data.ProfileUpdatedInfo;
 import com.hopop.hopop.sidenavigation.suggestedroute.data.ForSuggestedRoute;
 import com.hopop.hopop.sidenavigation.suggestedroute.data.SuggestedInfo;
 import com.hopop.hopop.source.data.SourceList;
@@ -56,4 +58,6 @@ public interface RegisterClass {
     @POST("booking_history.php")
     Call<BookingHisInfo> bookingHis(@Body LoginUser loginUser);
 
+    @POST("user_feedback.php")
+    Call<FeedbackInfo> feedbackInfo(@Body FeedBackField feedBackField);
 }

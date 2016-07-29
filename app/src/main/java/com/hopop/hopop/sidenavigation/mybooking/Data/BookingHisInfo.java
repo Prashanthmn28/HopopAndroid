@@ -1,4 +1,4 @@
-package com.hopop.hopop.sidenavigation.mybooking.Data;
+package com.hopop.hopop.sidenavigation.mybooking.data;
 
 import android.os.Parcel;
 import android.os.Parcelable;
