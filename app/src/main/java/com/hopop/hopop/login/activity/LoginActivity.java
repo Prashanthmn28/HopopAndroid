@@ -30,6 +30,7 @@ public class LoginActivity extends AppCompatActivity {
 
     public static String usrMobileNum = null;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

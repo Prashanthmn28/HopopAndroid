@@ -1,10 +1,15 @@
 package com.hopop.hopop.source.activity;
 
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
@@ -20,6 +25,7 @@ import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hopop.hopop.communicators.CommunicatorClass;
@@ -27,13 +33,14 @@ import com.hopop.hopop.database.FromRoute;
 import com.hopop.hopop.destination.activity.DestinationActivity;
 import com.hopop.hopop.login.activity.LoginActivity;
 import com.hopop.hopop.login.activity.R;
+import com.hopop.hopop.registration.activity.RegisterActivity;
 import com.hopop.hopop.sidenavigation.aboutus.activity.AboutUs;
-import com.hopop.hopop.sidenavigation.feedback.Activity.FeedBack;
-import com.hopop.hopop.sidenavigation.mybooking.Activity.MyBooking;
-import com.hopop.hopop.sidenavigation.notifications.Activity.Notifications;
-import com.hopop.hopop.sidenavigation.profile.Activity.Profile;
+import com.hopop.hopop.sidenavigation.feedback.activity.FeedBack;
+import com.hopop.hopop.sidenavigation.mybooking.activity.MyBooking;
+import com.hopop.hopop.sidenavigation.notifications.activity.Notifications;
+import com.hopop.hopop.sidenavigation.profile.activity.Profile;
 import com.hopop.hopop.sidenavigation.suggestedroute.activity.SuggestedRoute;
-import com.hopop.hopop.sidenavigation.wallet.Activity.Wallet;
+import com.hopop.hopop.sidenavigation.wallet.activity.Wallet;
 import com.hopop.hopop.source.adapter.SrcRecyclerAdapter;
 import com.hopop.hopop.source.data.SourceList;
 import com.orm.query.Condition;
@@ -43,6 +50,8 @@ import com.orm.query.Select;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.annotation.Nullable;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import retrofit2.Call;
@@ -50,19 +59,26 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class SourceActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+    private ProgressDialog progressDialog;
 
-    EditText search;
+
     Toolbar toolbar;
     private static final int TIME_DELAY = 3000;
     private static long back_pressed;
     public static String srcSelected = null,srcRId=null;
-    @Bind(R.id.source_list)
-    RecyclerView source_list;
     SrcRecyclerAdapter recyclerAdapter;
     public List<FromRoute> list1 = new ArrayList<>();
     public List<FromRoute> listItems = new ArrayList<>();
-
     List<FromRoute> tempDestList;
+
+    @Bind(R.id.source_list)
+     RecyclerView source_list;
+    @Nullable @Bind(R.id.search)
+    EditText search;
+   @Nullable @Bind(R.id.textView_num)
+    TextView number;
+    @Nullable @Bind(R.id.textView_name)
+    TextView name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,9 +86,10 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
         setTitle(R.string.PickHeader);
         setContentView(R.layout.activity_source);
         ButterKnife.bind(this);
+        //Initialize a LoadViewTask object and call the execute() method
+        new LoadViewTask().execute();
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        search = (EditText) findViewById( R.id.search);
         source_list = (RecyclerView) findViewById(R.id.source_list);
         final Call<SourceList> sourceList1 = CommunicatorClass.getRegisterClass().groupListSrc();
         final LinearLayoutManager layoutManager = new LinearLayoutManager(this.getApplicationContext());
@@ -82,7 +99,7 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
         sourceList1.enqueue(new Callback<SourceList>() {
             @Override
             public void onResponse(Call<SourceList> call, Response<SourceList> response) {
-                Toast.makeText(SourceActivity.this, "In source Activity Login SuccessFully", Toast.LENGTH_SHORT).show();
+               // Toast.makeText(SourceActivity.this, "In source Activity Login SuccessFully", Toast.LENGTH_SHORT).show();
                 SourceList sl = response.body();
                 for(FromRoute fromRoute: sl.getFromRoutes()){
                     if(FromRoute.isNew(fromRoute.getStopId())) {
@@ -113,6 +130,24 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
         //  drawer.addDrawerListener(toggle);
         toggle.syncState();
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+
+        View headView = navigationView.getHeaderView(0);
+
+        TextView name = (TextView) headView.findViewById(R.id.textView_name);
+
+        SharedPreferences prfs = getSharedPreferences("AUTHENTICATION_FILE_NAME", Context.MODE_PRIVATE);
+        String uname = prfs.getString("userName", "");
+
+        Log.i(getClass().getSimpleName(),"uname:"+uname);
+
+        name.setText(uname);
+
+
+
+        TextView mob = (TextView) headView.findViewById(R.id.textView_num);
+
+        mob.setText(LoginActivity.usrMobileNum);
+
         navigationView.setNavigationItemSelectedListener(this);
     }
 
@@ -232,6 +267,7 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
+
         int id = item.getItemId();
 
         if (id == R.id.profile) {
@@ -274,6 +310,85 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private class LoadViewTask extends AsyncTask<Void, Integer, Void>
+    {
+        //Before running code in separate thread
+        @Override
+        protected void onPreExecute()
+        {
+            //Create a new progress dialog
+            progressDialog = new ProgressDialog(SourceActivity.this);
+            //Set the dialog title to 'Loading...'
+            //progressDialog.setTitle("Loading...");
+            //Set the dialog message to 'Loading application View, please wait...'
+            progressDialog.setMessage("Loading...");
+            //This dialog can't be canceled by pressing the back key
+            progressDialog.setCancelable(false);
+            //This dialog isn't indeterminate
+            progressDialog.setIndeterminate(true);
+            //The maximum number of items is 100
+            progressDialog.setMax(100);
+            //Set the current progress to zero
+            progressDialog.setProgress(0);
+            //Display the progress dialog
+            progressDialog.show();
+        }
+
+        //The code to be executed in a background thread.
+        @Override
+        protected Void doInBackground(Void... params)
+        {
+            /* This is just a code that delays the thread execution 4 times,
+             * during 850 milliseconds and updates the current progress. This
+             * is where the code that is going to be executed on a background
+             * thread must be placed.
+             */
+            try
+            {
+                //Get the current thread's token
+                synchronized (this)
+                {
+                    //Initialize an integer (that will act as a counter) to zero
+                    int counter = 0;
+                    //While the counter is smaller than four
+                    while(counter <= 4)
+                    {
+                        //Wait 850 milliseconds
+                        this.wait(500);
+                        //Increment the counter
+                        counter++;
+                        //Set the current progress.
+                        //This value is going to be passed to the onProgressUpdate() method.
+                        publishProgress(counter*25);
+                    }
+                }
+            }
+            catch (InterruptedException e)
+            {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+        //Update the progress
+        @Override
+        protected void onProgressUpdate(Integer... values)
+        {
+            //set the current progress of the progress dialog
+            progressDialog.setProgress(values[0]);
+        }
+
+        //after executing the code in the thread
+        @Override
+        protected void onPostExecute(Void result)
+        {
+            //close the progress dialog
+            progressDialog.dismiss();
+            //initialize the View
+            //setContentView(R.layout.content_booking);
+        }
     }
 
     @Override

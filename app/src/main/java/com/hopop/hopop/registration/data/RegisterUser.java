@@ -7,6 +7,48 @@ public class RegisterUser {
     private String mail_id;
     private String password;
 
+    private String dob;
+    private String gender;
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getDob() {
+        return dob;
+    }
+
+    public void setDob(String dob) {
+        this.dob = dob;
+    }
+
+  /*  public String getFemaleSex() {
+        return femaleSex;
+    }
+
+    public void setFemaleSex(String femaleSex) {
+        this.femaleSex = femaleSex;
+    }
+
+    public String getMaleSex() {
+        return maleSex;
+    }
+
+    public void setMaleSex(String maleSex) {
+        this.maleSex = maleSex;
+    }
+
+    public String getOthers() {
+        return others;
+    }
+
+    public void setOthers(String others) {
+        this.others = others;
+    }*/
     public String getMobile_number() {
         return mobile_number;
     }

@@ -1,5 +1,10 @@
 package com.hopop.hopop.registration.activity;
 
+import android.annotation.SuppressLint;
+import android.app.DatePickerDialog;
+import android.app.Dialog;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -14,7 +19,10 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.content.Intent;
@@ -30,6 +38,7 @@ import com.facebook.appevents.AppEventsLogger;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 import com.facebook.stetho.Stetho;
+import com.hopop.hopop.login.activity.LoginActivity;
 import com.hopop.hopop.login.activity.R;
 import com.hopop.hopop.source.activity.SourceActivity;
 import com.hopop.hopop.communicators.CommunicatorClass;
@@ -47,9 +56,13 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnCheckedChanged;
 import butterknife.OnClick;
 import butterknife.OnTouch;
 import retrofit2.Call;
@@ -59,12 +72,20 @@ import retrofit2.Response;
 public class RegisterActivity extends AppCompatActivity {
     private static final String TAG = RegisterActivity.class.getSimpleName();
     public static final String PACKAGE = "com.hopop.hopop.login.activity";
-
+	
+	static final int DATE_DIALOG_ID = 0;
+    private int mYear,mMonth,mDay;
+    public static String userName = null;
+    public static String userMobNum = null;
     private CallbackManager callbackManager;
     private AccessTokenTracker accessTokenTracker;
     private ProfileTracker profileTracker;
     private Callback callback;
     TextView textView;
+    final RegisterUser registerUser = new RegisterUser();
+	
+	@SuppressWarnings("deprecation")
+    @SuppressLint("SimpleDateFormat")
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -128,6 +149,8 @@ public class RegisterActivity extends AppCompatActivity {
 
             @Override
             public void onCancel() {
+                Intent cancelIntent = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(cancelIntent);
 
             }
 
@@ -212,6 +235,28 @@ public class RegisterActivity extends AppCompatActivity {
         } catch (NoSuchAlgorithmException e) {
             Log.d(TAG, e.getMessage(), e);
         }
+
+	
+	Calendar c=Calendar.getInstance();
+        mYear=c.get(Calendar.YEAR);
+        mMonth=c.get(Calendar.MONTH);
+        mDay=c.get(Calendar.DAY_OF_MONTH);
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        dob.setText( sdf.format(c.getTime()));
+        
+        
+
+        dob.setOnClickListener(new View.OnClickListener() {
+
+
+
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                showDialog(DATE_DIALOG_ID);
+
+            }
+        });
     }
 
     @Bind(R.id.editText_mn)
@@ -224,16 +269,104 @@ public class RegisterActivity extends AppCompatActivity {
     EditText lName;
     @Bind(R.id.editText_email)
     EditText email;
+    @Bind(R.id.editText_dob)
+    EditText dob;
+    @Bind(R.id.radioGroup)
+    RadioGroup gender;
+    @Bind(R.id.radioButton_male)
+    RadioButton male;
+    @Bind(R.id.radioButton_female)
+    RadioButton female;
+    @Bind(R.id.radioButton_other)
+    RadioButton other;
+    private DatePickerDialog fromDatePickerDialog;
+    private SimpleDateFormat dateFormatter;
+    @OnClick(R.id.editText_dob)
+    public void dobUser(View view)
+    {
+        final Calendar myCalendar = Calendar.getInstance();
+        DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+                // TODO Auto-generated method stub
+                myCalendar.set(Calendar.YEAR, year);
+                myCalendar.set(Calendar.MONTH, monthOfYear);
+                myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+                String myFormat = "dd-MM-yyyy"; // your format
+                SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.getDefault());
+
+                dob.setText(sdf.format(myCalendar.getTime()));
+                Log.i(getClass().getSimpleName(),"dob:"+myCalendar.getTime());
+            }
+
+        };
+        new DatePickerDialog(RegisterActivity.this, date, myCalendar.get(Calendar.YEAR), myCalendar.get(Calendar.MONTH), myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+
+    }
+
+  /*  @OnCheckedChanged(R.id.radioGroup) void onChecked(boolean checked) {
+        // Toast.makeText(this, checked ? "Checked!" : "Unchecked!", Toast.LENGTH_SHORT).show();
+
+        switch (gender.getId()) {
+            case R.id.radioButton_male:
+                if (checked)
+                    registerUser.setGender(male.getText().toString().trim());
+                break;
+            case R.id.radioButton_female:
+                if (checked)
+                registerUser.setGender(female.getText().toString().trim());
+                break;
+            case R.id.radioButton_other:
+                if (checked)
+                registerUser.setGender(other.getText().toString().trim());
+                break;
+        }
+    }
+*/
+  String sex = null;
+
+    @OnClick({ R.id.radioButton_male, R.id.radioButton_female,R.id.radioButton_other }) public void onRadioButtonClicked(RadioButton radioButton) {
+        // Is the button now checked?
+        boolean checked = radioButton.isChecked();
+
+        // Check which radio button was clicked
+        switch (radioButton.getId()) {
+            case R.id.radioButton_male:
+                if (checked) {
+
+                     sex = male.getText().toString();
+                }
+                break;
+            case R.id.radioButton_female:
+                if (checked) {
+                    sex = female.getText().toString();
+                }
+            case R.id.radioButton_other:
+                if(checked)
+                {
+                    sex = other.getText().toString();
+                }
+                break;
+        }
+    }
+
+
+
+
+
 
     @OnClick(R.id.button_Done)
     public void signUpUser(View view) {
         if (checkFieldValidation()) {
-            RegisterUser registerUser = new RegisterUser();
+           // final RegisterUser registerUser = new RegisterUser();
             registerUser.setFirst_name(fName.getText().toString().trim());
             registerUser.setLast_name(lName.getText().toString().trim());
             registerUser.setMail_id(email.getText().toString().trim());
             registerUser.setMobile_number(mobile.getText().toString().trim());
             registerUser.setPassword(pass.getText().toString().trim());
+            registerUser.setDob(dob.getText().toString().trim());
+            registerUser.setGender(sex);
+
             Log.d("RANDOM TAG", "on submit button pressed");
             CommunicatorClass.getRegisterClass().groupListReg(registerUser).enqueue(new Callback<Registerresponse>() {
                 @Override
@@ -243,6 +376,14 @@ public class RegisterActivity extends AppCompatActivity {
                     Intent register = new Intent(RegisterActivity.this, SourceActivity.class);
                     startActivity(register);
                     Log.e(getClass().getSimpleName(), "successful");
+
+                    SharedPreferences preferences = getSharedPreferences("AUTHENTICATION_FILE_NAME", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putString("userName", fName.getText().toString());
+                    editor.putString("userMob",mobile.getText().toString());
+                    editor.commit();
+
+
 
                 }
 
@@ -284,11 +425,12 @@ public class RegisterActivity extends AppCompatActivity {
         String emailValidation = email.getText().toString();
         String mobileValidation = mobile.getText().toString();
         String passwordValidation = pass.getText().toString();
+        String dobValidation = dob.getText().toString();
 
-        if (fName.length() == 0)
+        if (fNameValidation.isEmpty() || fNameValidation.length() < 3)
         {
             fName.requestFocus();
-            fName.setError("First Name is compulsory.");
+            fName.setError("at least 3 characters");
             valid=false;
         }
         else if (!fNameValidation.matches("[a-zA-Z ]+"))
@@ -297,10 +439,10 @@ public class RegisterActivity extends AppCompatActivity {
             fName.setError("Enter Only Alphabetical Character.");
             valid=false;
         }
-        else if (lName.length() == 0)
+        else if (lNameValidation.isEmpty() || lNameValidation.length() < 1)
         {
             lName.requestFocus();
-            lName.setError("Last Name is compulsory.");
+            lName.setError("at least 1 characters");
             valid=false;
         }
         else if (!lNameValidation.matches("[a-zA-Z ]+"))
@@ -334,10 +476,22 @@ public class RegisterActivity extends AppCompatActivity {
             mobile.setError("Enter Valid Mobile Number.");
             valid=false;
         }
-        else if (pass.length() == 0)
+        else if (passwordValidation.isEmpty() || passwordValidation.length() < 6 || passwordValidation.length() > 10)
         {
             pass.requestFocus();
-            pass.setError("Password is compulsory.");
+            pass.setError("between 6 and 10 alphanumeric characters");
+            valid=false;
+        }
+        else if (dob.length() == 0)
+        {
+            dob.requestFocus();
+            dob.setError("Date of Birth is compulsory.");
+            valid=false;
+        }
+        else if (gender.getCheckedRadioButtonId() == -1)
+        {
+
+            Toast.makeText(RegisterActivity.this,"Pls Select gender",Toast.LENGTH_SHORT).show();
             valid=false;
         }
         else

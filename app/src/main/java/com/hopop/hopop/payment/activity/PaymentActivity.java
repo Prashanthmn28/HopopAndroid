@@ -4,11 +4,13 @@ import android.app.AlertDialog;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.NotificationCompat;
 import android.util.Log;
@@ -35,12 +37,12 @@ import com.hopop.hopop.payment.data.ForBookId;
 import com.hopop.hopop.payment.data.WalletInfo;
 import com.hopop.hopop.ply.activity.PlyActivity;
 import com.hopop.hopop.sidenavigation.aboutus.activity.AboutUs;
-import com.hopop.hopop.sidenavigation.feedback.Activity.FeedBack;
+import com.hopop.hopop.sidenavigation.feedback.activity.FeedBack;
 
-import com.hopop.hopop.sidenavigation.mybooking.Activity.MyBooking;
-import com.hopop.hopop.sidenavigation.notifications.Activity.Notifications;
+import com.hopop.hopop.sidenavigation.mybooking.activity.MyBooking;
+import com.hopop.hopop.sidenavigation.notifications.activity.Notifications;
 
-import com.hopop.hopop.sidenavigation.profile.Activity.Profile;
+import com.hopop.hopop.sidenavigation.profile.activity.Profile;
 import com.hopop.hopop.sidenavigation.suggestedroute.activity.SuggestedRoute;
 import com.hopop.hopop.source.activity.SourceActivity;
 import com.hopop.hopop.login.activity.LoginActivity;
@@ -55,6 +57,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 public class PaymentActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    private ProgressDialog progressDialog;
 
     Toolbar toolbar;
     String[] bookidNum = {null};
@@ -79,6 +82,8 @@ public class PaymentActivity extends AppCompatActivity
         catch (Exception e) {
             e.printStackTrace();
         }
+        //Initialize a LoadViewTask object and call the execute() method
+        new LoadViewTask().execute();
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         //Read the wallet amount from the server and display it
@@ -281,7 +286,7 @@ public class PaymentActivity extends AppCompatActivity
 
         } else if (id == R.id.wallet) {
 
-            Intent walletintent = new Intent(PaymentActivity.this, com.hopop.hopop.sidenavigation.wallet.Activity.Wallet.class);
+            Intent walletintent = new Intent(PaymentActivity.this, com.hopop.hopop.sidenavigation.wallet.activity.Wallet.class);
             startActivity(walletintent);
 
         } else if (id == R.id.route) {
@@ -348,6 +353,85 @@ public class PaymentActivity extends AppCompatActivity
 
         NotificationManager notificationManager = (NotificationManager) ctx.getSystemService(Context.NOTIFICATION_SERVICE);
         notificationManager.notify(1, b.build());
+    }
+
+    private class LoadViewTask extends AsyncTask<Void, Integer, Void>
+    {
+        //Before running code in separate thread
+        @Override
+        protected void onPreExecute()
+        {
+            //Create a new progress dialog
+            progressDialog = new ProgressDialog(PaymentActivity.this);
+            //Set the dialog title to 'Loading...'
+            //progressDialog.setTitle("Loading...");
+            //Set the dialog message to 'Loading application View, please wait...'
+            progressDialog.setMessage("Loading...");
+            //This dialog can't be canceled by pressing the back key
+            progressDialog.setCancelable(false);
+            //This dialog isn't indeterminate
+            progressDialog.setIndeterminate(true);
+            //The maximum number of items is 100
+            progressDialog.setMax(100);
+            //Set the current progress to zero
+            progressDialog.setProgress(0);
+            //Display the progress dialog
+            progressDialog.show();
+        }
+
+        //The code to be executed in a background thread.
+        @Override
+        protected Void doInBackground(Void... params)
+        {
+            /* This is just a code that delays the thread execution 4 times,
+             * during 850 milliseconds and updates the current progress. This
+             * is where the code that is going to be executed on a background
+             * thread must be placed.
+             */
+            try
+            {
+                //Get the current thread's token
+                synchronized (this)
+                {
+                    //Initialize an integer (that will act as a counter) to zero
+                    int counter = 0;
+                    //While the counter is smaller than four
+                    while(counter <= 4)
+                    {
+                        //Wait 850 milliseconds
+                        this.wait(500);
+                        //Increment the counter
+                        counter++;
+                        //Set the current progress.
+                        //This value is going to be passed to the onProgressUpdate() method.
+                        publishProgress(counter*25);
+                    }
+                }
+            }
+            catch (InterruptedException e)
+            {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+        //Update the progress
+        @Override
+        protected void onProgressUpdate(Integer... values)
+        {
+            //set the current progress of the progress dialog
+            progressDialog.setProgress(values[0]);
+        }
+
+        //after executing the code in the thread
+        @Override
+        protected void onPostExecute(Void result)
+        {
+            //close the progress dialog
+            progressDialog.dismiss();
+            //initialize the View
+            //setContentView(R.layout.content_booking);
+        }
     }
 
 
