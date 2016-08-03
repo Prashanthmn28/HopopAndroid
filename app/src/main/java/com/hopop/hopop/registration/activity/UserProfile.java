@@ -111,9 +111,9 @@ public class UserProfile extends AppCompatActivity
         View header = LayoutInflater.from(this).inflate(R.layout.nav_header_source, null);
         navigation_view.addHeaderView(header);
 
-        user_name = (TextView) header.findViewById(R.id.textView_userName);
+      /*  user_name = (TextView) header.findViewById(R.id.textView_userName);
         profile_pic = (ImageView) header.findViewById(R.id.profile_image);
-        user_mobile = (TextView) header.findViewById(R.id.textView_mobile);
+        user_mobile = (TextView) header.findViewById(R.id.textView_mobile);*/
     }
 
     /*

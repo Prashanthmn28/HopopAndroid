@@ -21,7 +21,6 @@ public class BookingHistory extends SugarRecord implements Parcelable {
     private String fromLocation;
     @SerializedName("to_location")
     private String toLocation;
-
     @SerializedName("route")
     private String route;
     @SerializedName("trip_id")

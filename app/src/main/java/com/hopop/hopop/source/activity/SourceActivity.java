@@ -25,14 +25,17 @@ import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hopop.hopop.communicators.CommunicatorClass;
 import com.hopop.hopop.database.FromRoute;
+import com.hopop.hopop.database.ProfileInfo;
 import com.hopop.hopop.destination.activity.DestinationActivity;
 import com.hopop.hopop.login.activity.LoginActivity;
 import com.hopop.hopop.login.activity.R;
+import com.hopop.hopop.login.data.LoginUser;
 import com.hopop.hopop.registration.activity.RegisterActivity;
 import com.hopop.hopop.sidenavigation.aboutus.activity.AboutUs;
 import com.hopop.hopop.sidenavigation.feedback.activity.FeedBack;
@@ -42,6 +45,8 @@ import com.hopop.hopop.sidenavigation.profile.activity.Profile;
 import com.hopop.hopop.sidenavigation.suggestedroute.activity.SuggestedRoute;
 import com.hopop.hopop.sidenavigation.wallet.activity.Wallet;
 import com.hopop.hopop.source.adapter.SrcRecyclerAdapter;
+import com.hopop.hopop.source.data.ForProfileHeader;
+import com.hopop.hopop.source.data.HeaderProfile;
 import com.hopop.hopop.source.data.SourceList;
 import com.orm.query.Condition;
 import com.orm.query.Select;
@@ -66,6 +71,7 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
     private static final int TIME_DELAY = 3000;
     private static long back_pressed;
     public static String srcSelected = null,srcRId=null;
+
     SrcRecyclerAdapter recyclerAdapter;
     public List<FromRoute> list1 = new ArrayList<>();
     public List<FromRoute> listItems = new ArrayList<>();
@@ -75,10 +81,11 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
      RecyclerView source_list;
     @Nullable @Bind(R.id.search)
     EditText search;
-   @Nullable @Bind(R.id.textView_num)
+   @Nullable @Bind(R.id.textView_sMobile)
     TextView number;
-    @Nullable @Bind(R.id.textView_name)
+    @Nullable @Bind(R.id.textView_sName)
     TextView name;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -129,25 +136,84 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
         drawer.setDrawerListener(toggle);
         //  drawer.addDrawerListener(toggle);
         toggle.syncState();
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        final NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
 
-        View headView = navigationView.getHeaderView(0);
+        String lMob = LoginActivity.usrMobileNum;
 
-        TextView name = (TextView) headView.findViewById(R.id.textView_name);
+        if(lMob == null)
+        {
+            String rMob = RegisterActivity.userMobNum;
+            Log.i(getClass().getSimpleName(),"register Mobile Num:"+rMob);
+            final ForProfileHeader forProfileHeader =new ForProfileHeader();
 
-        SharedPreferences prfs = getSharedPreferences("AUTHENTICATION_FILE_NAME", Context.MODE_PRIVATE);
-        String uname = prfs.getString("userName", "");
-
-        Log.i(getClass().getSimpleName(),"uname:"+uname);
-
-        name.setText(uname);
-
+            forProfileHeader.setMobile_number(rMob);
 
 
-        TextView mob = (TextView) headView.findViewById(R.id.textView_num);
+            CommunicatorClass.getRegisterClass().headerProfile(forProfileHeader).enqueue(new Callback<HeaderProfile>() {
+                @Override
+                public void onResponse(Call<HeaderProfile> call, Response<HeaderProfile> response) {
 
-        mob.setText(LoginActivity.usrMobileNum);
+                    HeaderProfile headerProfile = response.body();
 
+                    for(ProfileInfo profileInfo:headerProfile.getProfileInfo())
+                    {
+                        View headView = navigationView.getHeaderView(0);
+                        TextView name = (TextView) headView.findViewById(R.id.textView_sName);
+                        TextView mob = (TextView) headView.findViewById(R.id.textView_sMobile);
+                        name.setText(profileInfo.getMobile_number());
+                        mob.setText(profileInfo.getUser_name());
+
+                    }
+
+
+
+                }
+
+                @Override
+                public void onFailure(Call<HeaderProfile> call, Throwable t) {
+
+                    Log.i(getClass().getSimpleName(),"Failure Header Profile");
+
+                }
+            });
+
+        }
+        else {
+
+            final ForProfileHeader forProfileHeader =new ForProfileHeader();
+
+            forProfileHeader.setMobile_number(lMob);
+
+
+            CommunicatorClass.getRegisterClass().headerProfile(forProfileHeader).enqueue(new Callback<HeaderProfile>() {
+                @Override
+                public void onResponse(Call<HeaderProfile> call, Response<HeaderProfile> response) {
+
+                    HeaderProfile headerProfile = response.body();
+
+                    for(ProfileInfo profileInfo:headerProfile.getProfileInfo())
+                    {
+                        View headView = navigationView.getHeaderView(0);
+                        TextView name = (TextView) headView.findViewById(R.id.textView_sName);
+                        TextView mob = (TextView) headView.findViewById(R.id.textView_sMobile);
+                        mob.setText(profileInfo.getMobile_number());
+                        name.setText(profileInfo.getUser_name());
+
+                    }
+
+
+
+                }
+
+                @Override
+                public void onFailure(Call<HeaderProfile> call, Throwable t) {
+
+                    Log.i(getClass().getSimpleName(),"Failure Header Profile");
+
+                }
+            });
+
+        }
         navigationView.setNavigationItemSelectedListener(this);
     }
 

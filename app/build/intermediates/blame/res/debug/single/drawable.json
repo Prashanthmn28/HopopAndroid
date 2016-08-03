@@ -284,12 +284,12 @@
         "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\drawable\\selector.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\rectangle4.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\drawable\\rectangle4.xml"
-    },
-    {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\person.png",
         "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\drawable\\person.png"
+    },
+    {
+        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\rectangle4.xml",
+        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\drawable\\rectangle4.xml"
     },
     {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_like_background.xml",

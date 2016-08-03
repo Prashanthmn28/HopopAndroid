@@ -64,23 +64,25 @@ public class FeedBack extends AppCompatActivity {
 
         if(checkFieldValidation())
         {
-            final FeedBackField feedbackField = new FeedBackField();
+            final FeedBackField feedBackField = new FeedBackField();
 
-            feedbackField.setRating(ratingBar.getRating());
-            feedbackField.setComment(comments.getText().toString());
-            feedbackField.setIs_on("f");
-            feedbackField.setMobile_number(LoginActivity.usrMobileNum);
+            String mob = LoginActivity.usrMobileNum;
+            feedBackField.setRating(ratingBar.getRating());
+            feedBackField.setComment(comments.getText().toString());
+            feedBackField.setIs_on("f");
+            feedBackField.setMobile_number(mob);
 
-            CommunicatorClass.getRegisterClass().feedbackInfo(feedbackField).enqueue(new Callback<FeedbackInfo>() {
+            CommunicatorClass.getRegisterClass().feedbackInfo(feedBackField).enqueue(new Callback<FeedbackInfo>() {
                 @Override
                 public void onResponse(Call<FeedbackInfo> call, Response<FeedbackInfo> response) {
-                    Toast.makeText(FeedBack.this,"Your Feedback has been sent",Toast.LENGTH_SHORT).show();
+                Toast.makeText(FeedBack.this,"Your Feedback has been sent",Toast.LENGTH_SHORT).show();
+                onBackPressed();
                 }
 
                 @Override
                 public void onFailure(Call<FeedbackInfo> call, Throwable t) {
 
-                   // Toast.makeText(FeedBack.this,"Failed to send your feedback",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(FeedBack.this,"Failed to send your feedback",Toast.LENGTH_SHORT).show();
 
                 }
             });

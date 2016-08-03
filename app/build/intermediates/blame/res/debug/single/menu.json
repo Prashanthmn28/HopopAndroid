@@ -28,6 +28,10 @@
         "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\menu\\activity_destination_drawer.xml"
     },
     {
+        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\menu\\payment_activity1.xml",
+        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\menu\\payment_activity1.xml"
+    },
+    {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\menu\\destination_activity.xml",
         "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\menu\\destination_activity.xml"
     }

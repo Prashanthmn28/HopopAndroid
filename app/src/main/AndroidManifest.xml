@@ -65,17 +65,16 @@
             android:name="com.hopop.hopop.ply.activity.PlyActivity"
             android:label="STUTTLE"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name="com.hopop.hopop.payment.activity.PaymentActivity"
-            android:label="@string/title_activity_payment"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name="com.hopop.hopop.sidenavigation.aboutus.activity.AboutUs"
+        <activity android:name="com.hopop.hopop.payment.activity.PaymentActivity"
+            android:label="PaymentActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
 
         <activity
+            android:name="com.hopop.hopop.sidenavigation.aboutus.activity.AboutUs"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name="com.hopop.hopop.sidenavigation.feedback.activity.FeedBack"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
             android:name="com.hopop.hopop.sidenavigation.mybooking.activity.MyBooking"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -85,7 +84,6 @@
         <activity
             android:name="com.hopop.hopop.sidenavigation.notifications.activity.Notifications"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <activity
             android:name="com.hopop.hopop.sidenavigation.profile.activity.Profile"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -112,6 +110,7 @@
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>

@@ -1,6 +1,8 @@
 package com.hopop.hopop.login.activity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -63,10 +65,27 @@ public class LoginActivity extends AppCompatActivity {
             CommunicatorClass.getRegisterClass().groupListLogin(loginUser).enqueue(new Callback<Registerresponse>() {
                 @Override
                 public void onResponse(Call<Registerresponse> call, Response<Registerresponse> response) {
-                    Toast.makeText(LoginActivity.this, "Login SuccessFully", Toast.LENGTH_SHORT).show();
-                    Intent searchIntent = new Intent(LoginActivity.this, SourceActivity.class);
-                    startActivity(searchIntent);
+                  //  Toast.makeText(LoginActivity.this, "Login SuccessFully", Toast.LENGTH_SHORT).show();
                     usrMobileNum = loginUser.getMobile_number();
+
+                    SharedPreferences prfs = getSharedPreferences("AUTHENTICATION_FILE_NAME", Context.MODE_PRIVATE);
+
+
+                        String uname = prfs.getString("uname", "");
+
+                        Log.i(getClass().getSimpleName(),"uname:"+uname);
+
+
+                    String mobile = prfs.getString("userMob","");
+
+                    Intent searchIntent = new Intent(LoginActivity.this, SourceActivity.class);
+
+                    searchIntent.putExtra("uname",uname);//.putString("uname",uname);
+                    searchIntent.putExtra("mobile",mobile);
+
+
+
+                    startActivity(searchIntent);
                     Log.e(getClass().getSimpleName(), "successful");
 
                 }
