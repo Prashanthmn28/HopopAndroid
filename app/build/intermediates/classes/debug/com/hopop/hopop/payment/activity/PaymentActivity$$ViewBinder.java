@@ -8,8 +8,8 @@ import butterknife.ButterKnife.ViewBinder;
 public class PaymentActivity$$ViewBinder<T extends com.hopop.hopop.payment.activity.PaymentActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131493023, "method 'mePlusUser'");
-    target.MePlus = finder.castView(view, 2131493023, "field 'MePlus'");
+    view = finder.findRequiredView(source, 2131493025, "method 'mePlusUser'");
+    target.MePlus = finder.castView(view, 2131493025, "field 'MePlus'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -18,8 +18,8 @@ public class PaymentActivity$$ViewBinder<T extends com.hopop.hopop.payment.activ
           target.mePlusUser(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131493024, "method 'mePlusUser1'");
-    target.MePlus1 = finder.castView(view, 2131493024, "field 'MePlus1'");
+    view = finder.findRequiredView(source, 2131493026, "method 'mePlusUser1'");
+    target.MePlus1 = finder.castView(view, 2131493026, "field 'MePlus1'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -28,8 +28,8 @@ public class PaymentActivity$$ViewBinder<T extends com.hopop.hopop.payment.activ
           target.mePlusUser1(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131493025, "method 'mePlusUser2'");
-    target.MePlus2 = finder.castView(view, 2131493025, "field 'MePlus2'");
+    view = finder.findRequiredView(source, 2131493027, "method 'mePlusUser2'");
+    target.MePlus2 = finder.castView(view, 2131493027, "field 'MePlus2'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -38,8 +38,8 @@ public class PaymentActivity$$ViewBinder<T extends com.hopop.hopop.payment.activ
           target.mePlusUser2(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131493026, "method 'mePlusUser3'");
-    target.MePlus3 = finder.castView(view, 2131493026, "field 'MePlus3'");
+    view = finder.findRequiredView(source, 2131493028, "method 'mePlusUser3'");
+    target.MePlus3 = finder.castView(view, 2131493028, "field 'MePlus3'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -48,13 +48,13 @@ public class PaymentActivity$$ViewBinder<T extends com.hopop.hopop.payment.activ
           target.mePlusUser3(p0);
         }
       });
-    view = finder.findOptionalView(source, 2131493031, null);
-    target.numofSeats = finder.castView(view, 2131493031, "field 'numofSeats'");
-    view = finder.findOptionalView(source, 2131493036, null);
-    target.rideshareCalc = finder.castView(view, 2131493036, "field 'rideshareCalc'");
-    view = finder.findOptionalView(source, 2131493037, null);
-    target.rideshareAmt = finder.castView(view, 2131493037, "field 'rideshareAmt'");
-    view = finder.findRequiredView(source, 2131493039, "method 'payUser'");
+    view = finder.findOptionalView(source, 2131493033, null);
+    target.numofSeats = finder.castView(view, 2131493033, "field 'numofSeats'");
+    view = finder.findOptionalView(source, 2131493038, null);
+    target.rideshareCalc = finder.castView(view, 2131493038, "field 'rideshareCalc'");
+    view = finder.findOptionalView(source, 2131493039, null);
+    target.rideshareAmt = finder.castView(view, 2131493039, "field 'rideshareAmt'");
+    view = finder.findRequiredView(source, 2131493041, "method 'payUser'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(

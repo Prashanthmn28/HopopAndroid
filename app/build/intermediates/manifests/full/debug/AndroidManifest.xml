@@ -73,7 +73,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="com.hopop.hopop.payment.activity.PaymentActivity"
-            android:label="@string/title_activity_payment"
+            android:label="PaymentActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="com.hopop.hopop.sidenavigation.aboutus.activity.AboutUs"

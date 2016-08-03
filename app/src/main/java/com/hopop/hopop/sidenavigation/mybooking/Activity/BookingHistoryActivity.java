@@ -82,7 +82,6 @@ public class BookingHistoryActivity extends AppCompatActivity {
 
                     }
 
-
                 }
                 pastList = Select.from(BookingHistory.class).list();
                 displayThePastList(pastList);

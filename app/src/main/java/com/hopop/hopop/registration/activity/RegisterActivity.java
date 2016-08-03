@@ -292,7 +292,8 @@ public class RegisterActivity extends AppCompatActivity {
                 myCalendar.set(Calendar.YEAR, year);
                 myCalendar.set(Calendar.MONTH, monthOfYear);
                 myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
-                String myFormat = "dd-MM-yyyy"; // your format
+            //    String myFormat = "dd-MM-yyyy"; // your format
+                String myFormat = "yyyy-MM-dd"; // your format
                 SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.getDefault());
 
                 dob.setText(sdf.format(myCalendar.getTime()));
@@ -304,25 +305,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     }
 
-  /*  @OnCheckedChanged(R.id.radioGroup) void onChecked(boolean checked) {
-        // Toast.makeText(this, checked ? "Checked!" : "Unchecked!", Toast.LENGTH_SHORT).show();
 
-        switch (gender.getId()) {
-            case R.id.radioButton_male:
-                if (checked)
-                    registerUser.setGender(male.getText().toString().trim());
-                break;
-            case R.id.radioButton_female:
-                if (checked)
-                registerUser.setGender(female.getText().toString().trim());
-                break;
-            case R.id.radioButton_other:
-                if (checked)
-                registerUser.setGender(other.getText().toString().trim());
-                break;
-        }
-    }
-*/
   String sex = null;
 
     @OnClick({ R.id.radioButton_male, R.id.radioButton_female,R.id.radioButton_other }) public void onRadioButtonClicked(RadioButton radioButton) {
@@ -340,21 +323,20 @@ public class RegisterActivity extends AppCompatActivity {
             case R.id.radioButton_female:
                 if (checked) {
                     sex = female.getText().toString();
+                    Log.i(getClass().getSimpleName(),"female name:"+sex);
                 }
+                break;
             case R.id.radioButton_other:
                 if(checked)
                 {
                     sex = other.getText().toString();
+                    Log.i(getClass().getSimpleName(),"other name:"+sex);
                 }
                 break;
+            default:
+                Log.i(getClass().getSimpleName(),"No one selected");
         }
     }
-
-
-
-
-
-
     @OnClick(R.id.button_Done)
     public void signUpUser(View view) {
         if (checkFieldValidation()) {
@@ -367,6 +349,8 @@ public class RegisterActivity extends AppCompatActivity {
             registerUser.setDob(dob.getText().toString().trim());
             registerUser.setGender(sex);
 
+            userMobNum = registerUser.getMobile_number();
+
             Log.d("RANDOM TAG", "on submit button pressed");
             CommunicatorClass.getRegisterClass().groupListReg(registerUser).enqueue(new Callback<Registerresponse>() {
                 @Override
@@ -374,14 +358,24 @@ public class RegisterActivity extends AppCompatActivity {
 
                     Toast.makeText(RegisterActivity.this, "Registration Successful", Toast.LENGTH_LONG).show();
                     Intent register = new Intent(RegisterActivity.this, SourceActivity.class);
+
+                 /*  SharedPreferences preferences = getSharedPreferences("AUTHENTICATION_FILE_NAME", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putString("uname", fName.getText().toString());
+                    editor.putString("userMob",mobile.getText().toString());
+
+                    editor.commit();
+
+                    Bundle b = new Bundle();
+
+                    b.putString("uname", fName.getText().toString());
+                    b.putString("mobile",mobile.getText().toString());
+
+                    register.putExtras(b);
+*/
                     startActivity(register);
                     Log.e(getClass().getSimpleName(), "successful");
 
-                    SharedPreferences preferences = getSharedPreferences("AUTHENTICATION_FILE_NAME", Context.MODE_PRIVATE);
-                    SharedPreferences.Editor editor = preferences.edit();
-                    editor.putString("userName", fName.getText().toString());
-                    editor.putString("userMob",mobile.getText().toString());
-                    editor.commit();
 
 
 

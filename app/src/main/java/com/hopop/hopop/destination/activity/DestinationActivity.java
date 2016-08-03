@@ -22,25 +22,35 @@ import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.view.WindowManager;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.facebook.stetho.Stetho;
+import com.hopop.hopop.communicators.CommunicatorClass;
 import com.hopop.hopop.database.FromRoute;
 
+import com.hopop.hopop.database.ProfileInfo;
 import com.hopop.hopop.destination.adapter.DestRecyclerAdapter;
+import com.hopop.hopop.login.activity.LoginActivity;
 import com.hopop.hopop.login.activity.R;
 import com.hopop.hopop.ply.activity.PlyActivity;
+import com.hopop.hopop.registration.activity.RegisterActivity;
 import com.hopop.hopop.sidenavigation.aboutus.activity.AboutUs;
 import com.hopop.hopop.sidenavigation.feedback.activity.FeedBack;
 import com.hopop.hopop.sidenavigation.mybooking.activity.MyBooking;
 import com.hopop.hopop.sidenavigation.notifications.activity.Notifications;
 import com.hopop.hopop.sidenavigation.profile.activity.Profile;
 import com.hopop.hopop.sidenavigation.suggestedroute.activity.SuggestedRoute;
+import com.hopop.hopop.source.data.ForProfileHeader;
+import com.hopop.hopop.source.data.HeaderProfile;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class DestinationActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private ProgressDialog progressDialog;
@@ -90,16 +100,81 @@ public class DestinationActivity extends AppCompatActivity implements Navigation
         //-----------EOF SEARCH--------
 
         //-----------------SIDE NAVIGATION WORK-------------------------------
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout_dest);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        final NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view_dest);
+
+        String lMob = LoginActivity.usrMobileNum;
+
+        if(lMob == null)
+        {
+            String rMob = RegisterActivity.userMobNum;
+            Log.i(getClass().getSimpleName(),"register Mobile Num:"+rMob);
+            final ForProfileHeader forProfileHeader =new ForProfileHeader();
+
+            forProfileHeader.setMobile_number(rMob);
+
+
+            CommunicatorClass.getRegisterClass().headerProfile(forProfileHeader).enqueue(new Callback<HeaderProfile>() {
+                @Override
+                public void onResponse(Call<HeaderProfile> call, Response<HeaderProfile> response) {
+
+                    HeaderProfile headerProfile = response.body();
+
+                    for(ProfileInfo profileInfo:headerProfile.getProfileInfo())
+                    {
+                        View headView = navigationView.getHeaderView(0);
+                        TextView name = (TextView) headView.findViewById(R.id.textView_dName);
+                        TextView mob = (TextView) headView.findViewById(R.id.textView_dMobile);
+                        name.setText(profileInfo.getMobile_number());
+                        mob.setText(profileInfo.getUser_name());
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<HeaderProfile> call, Throwable t) {
+
+                    Log.i(getClass().getSimpleName(),"Failure Header Profile");
+
+                }
+            });
+
+        }
+        else {
+
+            final ForProfileHeader forProfileHeader =new ForProfileHeader();
+            forProfileHeader.setMobile_number(lMob);
+            CommunicatorClass.getRegisterClass().headerProfile(forProfileHeader).enqueue(new Callback<HeaderProfile>() {
+                @Override
+                public void onResponse(Call<HeaderProfile> call, Response<HeaderProfile> response) {
+
+                    HeaderProfile headerProfile = response.body();
+
+                    for(ProfileInfo profileInfo:headerProfile.getProfileInfo())
+                    {
+                        View headView = navigationView.getHeaderView(0);
+                        TextView name = (TextView) headView.findViewById(R.id.textView_dName);
+                        TextView mob = (TextView) headView.findViewById(R.id.textView_dMobile);
+                        name.setText(profileInfo.getUser_name());
+                        mob.setText(profileInfo.getMobile_number());
+
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<HeaderProfile> call, Throwable t) {
+
+                    Log.i(getClass().getSimpleName(),"Failure Header Profile");
+
+                }
+            });
+
+        }
         navigationView.setNavigationItemSelectedListener(this);
     }
-
-
     private void displayTheList(final List<FromRoute> fromRoutes){
         recyclerAdapter = new DestRecyclerAdapter(fromRoutes, this);
         dest_list.setAdapter(recyclerAdapter);
@@ -179,12 +254,13 @@ public class DestinationActivity extends AppCompatActivity implements Navigation
     }
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+       /* DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
-        }
+        }*/
+        super.onBackPressed();
     }
 
     private class LoadViewTask extends AsyncTask<Void, Integer, Void>

@@ -16,6 +16,8 @@ import com.hopop.hopop.sidenavigation.profile.data.ProfileDetailsInfo;
 import com.hopop.hopop.sidenavigation.profile.data.ProfileUpdatedInfo;
 import com.hopop.hopop.sidenavigation.suggestedroute.data.ForSuggestedRoute;
 import com.hopop.hopop.sidenavigation.suggestedroute.data.SuggestedInfo;
+import com.hopop.hopop.source.data.ForProfileHeader;
+import com.hopop.hopop.source.data.HeaderProfile;
 import com.hopop.hopop.source.data.SourceList;
 
 import retrofit2.Call;
@@ -60,4 +62,7 @@ public interface RegisterClass {
 
     @POST("user_feedback.php")
     Call<FeedbackInfo> feedbackInfo(@Body FeedBackField feedBackField);
+
+    @POST("profile_info.php")
+    Call<HeaderProfile> headerProfile(@Body ForProfileHeader forProfileHeader);
 }

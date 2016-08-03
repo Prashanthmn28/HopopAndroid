@@ -488,6 +488,7 @@
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_payment">PaymentActivity</string>
+    <string name="title_activity_payment1">PaymentActivity1</string>
     <string name="title_activity_payment_activty">PaymentActivty</string>
     <string name="title_activity_ply">PlyActivity</string>
     <string name="title_activity_search">SearchActivity</string>
