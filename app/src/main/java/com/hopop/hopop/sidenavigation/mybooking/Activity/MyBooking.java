@@ -50,7 +50,6 @@ public class MyBooking extends AppCompatActivity {
     @OnClick(R.id.button_history)
     public void pastUser (View view){
 
-
         Intent bhIntent = new Intent(MyBooking.this,BookingHistoryActivity.class);
         startActivity(bhIntent);
 
@@ -84,11 +83,6 @@ public class MyBooking extends AppCompatActivity {
         @Override
         protected Void doInBackground(Void... params)
         {
-            /* This is just a code that delays the thread execution 4 times,
-             * during 850 milliseconds and updates the current progress. This
-             * is where the code that is going to be executed on a background
-             * thread must be placed.
-             */
             try
             {
                 //Get the current thread's token

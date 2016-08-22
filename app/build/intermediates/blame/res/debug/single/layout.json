@@ -12,6 +12,10 @@
         "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_media_cancel_action.xml"
     },
     {
+        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_profilepic.xml",
+        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\content_profilepic.xml"
+    },
+    {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_dialog_progress_indeterminate_horizontal.xml",
         "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.github.afollestad.material-dialogs\\core\\0.8.5.3\\res\\layout\\md_dialog_progress_indeterminate_horizontal.xml"
     },
@@ -49,7 +53,7 @@
     },
     {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_white_round.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.0\\res\\layout\\messenger_button_send_white_round.xml"
+        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\layout\\messenger_button_send_white_round.xml"
     },
     {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
@@ -93,7 +97,7 @@
     },
     {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_blue_round.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.0\\res\\layout\\messenger_button_send_blue_round.xml"
+        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\layout\\messenger_button_send_blue_round.xml"
     },
     {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
@@ -145,7 +149,7 @@
     },
     {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_white_large.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.0\\res\\layout\\messenger_button_send_white_large.xml"
+        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\layout\\messenger_button_send_white_large.xml"
     },
     {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar.xml",
@@ -161,7 +165,7 @@
     },
     {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_facebook_tooltip_bubble.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.0\\res\\layout\\com_facebook_tooltip_bubble.xml"
+        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\layout\\com_facebook_tooltip_bubble.xml"
     },
     {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
@@ -221,7 +225,7 @@
     },
     {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_blue_large.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.0\\res\\layout\\messenger_button_send_blue_large.xml"
+        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\layout\\messenger_button_send_blue_large.xml"
     },
     {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_feedback.xml",
@@ -253,11 +257,11 @@
     },
     {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_facebook_login_fragment.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.0\\res\\layout\\com_facebook_login_fragment.xml"
+        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\layout\\com_facebook_login_fragment.xml"
     },
     {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_facebook_activity_layout.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.0\\res\\layout\\com_facebook_activity_layout.xml"
+        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\layout\\com_facebook_activity_layout.xml"
     },
     {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_stub_titleframe.xml",
@@ -377,7 +381,7 @@
     },
     {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_white_small.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.0\\res\\layout\\messenger_button_send_white_small.xml"
+        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\layout\\messenger_button_send_white_small.xml"
     },
     {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
@@ -417,7 +421,7 @@
     },
     {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_blue_small.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.0\\res\\layout\\messenger_button_send_blue_small.xml"
+        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\layout\\messenger_button_send_blue_small.xml"
     },
     {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\app_bar_source.xml",
@@ -426,6 +430,10 @@
     {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
         "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_media.xml"
+    },
+    {
+        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_profilepic.xml",
+        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\activity_profilepic.xml"
     },
     {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_profile.xml",
@@ -449,7 +457,7 @@
     },
     {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_facebook_device_auth_dialog_fragment.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.0\\res\\layout\\com_facebook_device_auth_dialog_fragment.xml"
+        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.14.1\\res\\layout\\com_facebook_device_auth_dialog_fragment.xml"
     },
     {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_listitem_multichoice.xml",

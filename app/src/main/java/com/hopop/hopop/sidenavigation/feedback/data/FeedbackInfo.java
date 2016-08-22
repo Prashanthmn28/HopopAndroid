@@ -8,16 +8,14 @@ import com.facebook.stetho.json.annotation.JsonProperty;
 
 public class FeedbackInfo  {
 
-    private String success;
+    public String success;
 
-   /* public String getSuccess() {
+    public String getSuccess() {
         return success;
     }
 
     public void setSuccess(String success) {
         this.success = success;
     }
-
-*/
 
 }

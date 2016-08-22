@@ -94,6 +94,9 @@
             android:name="com.hopop.hopop.sidenavigation.profile.activity.Profile"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
+            android:name="com.hopop.hopop.sidenavigation.profile.activity.GridImgActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name="com.hopop.hopop.sidenavigation.suggestedroute.activity.SuggestedRoute"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity

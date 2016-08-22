@@ -27,7 +27,9 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class FeedBack extends AppCompatActivity {
+
     private ProgressDialog progressDialog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,7 +50,6 @@ public class FeedBack extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
         information.setText("Please provide additional information or suggestions for improvement");
-
     }
 
     @Bind(R.id.textView_rate) TextView trip;
@@ -56,21 +57,17 @@ public class FeedBack extends AppCompatActivity {
     @Bind(R.id.textView_information) TextView information;
     @Bind(R.id.edittText_comment) EditText comments;
 
-
-
-
     @OnClick(R.id.button_send)
     public void sendUser (View view){
 
         if(checkFieldValidation())
         {
             final FeedBackField feedBackField = new FeedBackField();
-
             String mob = LoginActivity.usrMobileNum;
-            feedBackField.setRating(ratingBar.getRating());
-            feedBackField.setComment(comments.getText().toString());
-            feedBackField.setIs_on("f");
             feedBackField.setMobile_number(mob);
+            feedBackField.setIs_on("f");
+            feedBackField.setComment(comments.getText().toString().trim());
+            feedBackField.setRating(ratingBar.getRating());
 
             CommunicatorClass.getRegisterClass().feedbackInfo(feedBackField).enqueue(new Callback<FeedbackInfo>() {
                 @Override
@@ -88,18 +85,11 @@ public class FeedBack extends AppCompatActivity {
             });
 
         }
-
-
-
     }
-
-
 
     @OnClick(R.id.button_cancel)
     public void cancelUser (View view){
-
         onBackPressed();
-
     }
 
     private boolean checkFieldValidation() {
@@ -115,8 +105,6 @@ public class FeedBack extends AppCompatActivity {
         else {
             valid = true;
         }
-
-
         return valid;
     }
 
@@ -148,12 +136,7 @@ public class FeedBack extends AppCompatActivity {
         @Override
         protected Void doInBackground(Void... params)
         {
-            /* This is just a code that delays the thread execution 4 times,
-             * during 850 milliseconds and updates the current progress. This
-             * is where the code that is going to be executed on a background
-             * thread must be placed.
-             */
-            try
+           try
             {
                 //Get the current thread's token
                 synchronized (this)
@@ -198,6 +181,4 @@ public class FeedBack extends AppCompatActivity {
             //setContentView(R.layout.content_booking);
         }
     }
-
-
 }

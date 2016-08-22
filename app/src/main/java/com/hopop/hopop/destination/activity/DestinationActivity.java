@@ -22,6 +22,7 @@ import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.view.WindowManager;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.facebook.stetho.Stetho;
@@ -39,6 +40,7 @@ import com.hopop.hopop.sidenavigation.feedback.activity.FeedBack;
 import com.hopop.hopop.sidenavigation.mybooking.activity.MyBooking;
 import com.hopop.hopop.sidenavigation.notifications.activity.Notifications;
 import com.hopop.hopop.sidenavigation.profile.activity.Profile;
+import com.hopop.hopop.sidenavigation.profile.adapter.ProfilePicAdapter;
 import com.hopop.hopop.sidenavigation.suggestedroute.activity.SuggestedRoute;
 import com.hopop.hopop.source.data.ForProfileHeader;
 import com.hopop.hopop.source.data.HeaderProfile;
@@ -67,6 +69,7 @@ public class DestinationActivity extends AppCompatActivity implements Navigation
     List<FromRoute> list1;
     DestRecyclerAdapter recyclerAdapter;
 
+    int pos_desPic;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -93,12 +96,8 @@ public class DestinationActivity extends AppCompatActivity implements Navigation
         list1 = stopPoints;
         //--------DISPLAY THE LIST OF STOP POINTS-----
         displayTheList(stopPoints);
-        //--------EOF --------------------------------
-
-        //------------FOR SEARCH--------
+       //------------FOR SEARCH Bar----
         addTextListener();
-        //-----------EOF SEARCH--------
-
         //-----------------SIDE NAVIGATION WORK-------------------------------
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout_dest);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -106,6 +105,18 @@ public class DestinationActivity extends AppCompatActivity implements Navigation
         drawer.setDrawerListener(toggle);
         toggle.syncState();
         final NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view_dest);
+        final View headView = navigationView.getHeaderView(0);
+
+        final ImageView imgView = (ImageView) headView.findViewById(R.id.imageView);
+         // get intent data
+        Intent i = getIntent();
+
+        // Selected image id
+         pos_desPic = i.getExtras().getInt("prfPic");
+        Log.i(getClass().getSimpleName(),"ImgPosition:"+pos_desPic);
+        ProfilePicAdapter imageAdapter = new ProfilePicAdapter(this);
+        imgView.setImageResource(imageAdapter.picArry[pos_desPic]);
+
 
         String lMob = LoginActivity.usrMobileNum;
 
@@ -129,8 +140,8 @@ public class DestinationActivity extends AppCompatActivity implements Navigation
                         View headView = navigationView.getHeaderView(0);
                         TextView name = (TextView) headView.findViewById(R.id.textView_dName);
                         TextView mob = (TextView) headView.findViewById(R.id.textView_dMobile);
-                        name.setText(profileInfo.getMobile_number());
-                        mob.setText(profileInfo.getUser_name());
+                        name.setText(profileInfo.getUser_name());
+                        mob.setText(profileInfo.getMobile_number());
                     }
                 }
 
@@ -191,6 +202,7 @@ public class DestinationActivity extends AppCompatActivity implements Navigation
                 Intent destIntent = new Intent(DestinationActivity.this, PlyActivity.class);
                 destIntent.putExtra("dest", destSelect);
                 destIntent.putExtra("src",srcSelect);
+                destIntent.putExtra("prfPic",pos_desPic);
                 startActivity(destIntent);
             }
         });

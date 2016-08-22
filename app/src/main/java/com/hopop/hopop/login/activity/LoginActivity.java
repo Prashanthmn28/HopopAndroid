@@ -67,42 +67,24 @@ public class LoginActivity extends AppCompatActivity {
                 public void onResponse(Call<Registerresponse> call, Response<Registerresponse> response) {
                   //  Toast.makeText(LoginActivity.this, "Login SuccessFully", Toast.LENGTH_SHORT).show();
                     usrMobileNum = loginUser.getMobile_number();
-
                     SharedPreferences prfs = getSharedPreferences("AUTHENTICATION_FILE_NAME", Context.MODE_PRIVATE);
-
-
-                        String uname = prfs.getString("uname", "");
-
-                        Log.i(getClass().getSimpleName(),"uname:"+uname);
-
-
+                    String uname = prfs.getString("uname", "");
+                    Log.i(getClass().getSimpleName(),"uname:"+uname);
                     String mobile = prfs.getString("userMob","");
-
                     Intent searchIntent = new Intent(LoginActivity.this, SourceActivity.class);
-
                     searchIntent.putExtra("uname",uname);//.putString("uname",uname);
                     searchIntent.putExtra("mobile",mobile);
-
-
-
                     startActivity(searchIntent);
                     Log.e(getClass().getSimpleName(), "successful");
-
                 }
-
                 @Override
                 public void onFailure(Call<Registerresponse> call, Throwable t) {
                     Log.e(getClass().getSimpleName(), "failure");
                     Toast.makeText(LoginActivity.this, "Invalid Mobile Number/Password", Toast.LENGTH_SHORT).show();
                     Log.e(getClass().getSimpleName(), "failure");
-
                 }
-
-
             });
         }
-
-
     }
 
     @OnClick (R.id.button_signup)
