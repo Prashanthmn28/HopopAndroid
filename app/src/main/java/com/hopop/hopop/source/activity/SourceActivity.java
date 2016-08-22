@@ -1,47 +1,44 @@
 package com.hopop.hopop.source.activity;
 
 import android.app.ProgressDialog;
-import android.content.Context;
-import android.content.SharedPreferences;
+import android.content.Intent;
+import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.MenuItem;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.content.Intent;
-import android.content.pm.ActivityInfo;
-import android.content.res.Configuration;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Switch;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.hopop.hopop.communicators.CommunicatorClass;
 import com.hopop.hopop.database.FromRoute;
 import com.hopop.hopop.database.ProfileInfo;
 import com.hopop.hopop.destination.activity.DestinationActivity;
 import com.hopop.hopop.login.activity.LoginActivity;
 import com.hopop.hopop.login.activity.R;
-import com.hopop.hopop.login.data.LoginUser;
 import com.hopop.hopop.registration.activity.RegisterActivity;
 import com.hopop.hopop.sidenavigation.aboutus.activity.AboutUs;
 import com.hopop.hopop.sidenavigation.feedback.activity.FeedBack;
 import com.hopop.hopop.sidenavigation.mybooking.activity.MyBooking;
 import com.hopop.hopop.sidenavigation.notifications.activity.Notifications;
+import com.hopop.hopop.sidenavigation.profile.activity.GridImgActivity;
 import com.hopop.hopop.sidenavigation.profile.activity.Profile;
+import com.hopop.hopop.sidenavigation.profile.adapter.ProfilePicAdapter;
 import com.hopop.hopop.sidenavigation.suggestedroute.activity.SuggestedRoute;
 import com.hopop.hopop.sidenavigation.wallet.activity.Wallet;
 import com.hopop.hopop.source.adapter.SrcRecyclerAdapter;
@@ -50,13 +47,9 @@ import com.hopop.hopop.source.data.HeaderProfile;
 import com.hopop.hopop.source.data.SourceList;
 import com.orm.query.Condition;
 import com.orm.query.Select;
-
-
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.annotation.Nullable;
-
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import retrofit2.Call;
@@ -64,28 +57,26 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class SourceActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+
     private ProgressDialog progressDialog;
-
-
     Toolbar toolbar;
     private static final int TIME_DELAY = 3000;
     private static long back_pressed;
     public static String srcSelected = null,srcRId=null;
-
     SrcRecyclerAdapter recyclerAdapter;
     public List<FromRoute> list1 = new ArrayList<>();
     public List<FromRoute> listItems = new ArrayList<>();
     List<FromRoute> tempDestList;
 
     @Bind(R.id.source_list)
-     RecyclerView source_list;
+    RecyclerView source_list;
     @Nullable @Bind(R.id.search)
     EditText search;
-   @Nullable @Bind(R.id.textView_sMobile)
+    @Nullable @Bind(R.id.textView_sMobile)
     TextView number;
     @Nullable @Bind(R.id.textView_sName)
     TextView name;
-
+    int pos_prfPic;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -120,7 +111,6 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
                 for(FromRoute fromRoute: listItems){
                     Log.i(getClass().getSimpleName(),"the stops are "+fromRoute.getStopLocation());
                 }
-
                 displayTheList(listItems);
                 addTextListener();
             }
@@ -137,60 +127,59 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
         //  drawer.addDrawerListener(toggle);
         toggle.syncState();
         final NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        final View headView = navigationView.getHeaderView(0);
+        final ImageView imgView = (ImageView) headView.findViewById(R.id.imageView);
+        imgView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent gridIntent = new Intent(getApplicationContext(),GridImgActivity.class);
+                startActivity(gridIntent);
+            }
+        });
+//---------for profilePic------------------
+        if(getIntent().getExtras()!=null) {
+            pos_prfPic = getIntent().getExtras().getInt("id");
 
+
+
+            Log.i(getClass().getSimpleName(),"srcImgPrf:"+pos_prfPic);
+            ProfilePicAdapter imageAdapter = new ProfilePicAdapter(this);
+            imgView.setImageResource(imageAdapter.picArry[pos_prfPic]);
+        }
+
+//-------------------for profileName nd Number-------------
         String lMob = LoginActivity.usrMobileNum;
-
         if(lMob == null)
         {
             String rMob = RegisterActivity.userMobNum;
             Log.i(getClass().getSimpleName(),"register Mobile Num:"+rMob);
             final ForProfileHeader forProfileHeader =new ForProfileHeader();
-
             forProfileHeader.setMobile_number(rMob);
-
-
             CommunicatorClass.getRegisterClass().headerProfile(forProfileHeader).enqueue(new Callback<HeaderProfile>() {
                 @Override
                 public void onResponse(Call<HeaderProfile> call, Response<HeaderProfile> response) {
-
                     HeaderProfile headerProfile = response.body();
-
                     for(ProfileInfo profileInfo:headerProfile.getProfileInfo())
                     {
-                        View headView = navigationView.getHeaderView(0);
                         TextView name = (TextView) headView.findViewById(R.id.textView_sName);
                         TextView mob = (TextView) headView.findViewById(R.id.textView_sMobile);
-                        name.setText(profileInfo.getMobile_number());
-                        mob.setText(profileInfo.getUser_name());
-
+                        name.setText(profileInfo.getUser_name());
+                        mob.setText(profileInfo.getMobile_number());
                     }
-
-
-
                 }
-
                 @Override
                 public void onFailure(Call<HeaderProfile> call, Throwable t) {
-
                     Log.i(getClass().getSimpleName(),"Failure Header Profile");
-
                 }
             });
-
         }
         else {
-
             final ForProfileHeader forProfileHeader =new ForProfileHeader();
-
             forProfileHeader.setMobile_number(lMob);
-
-
             CommunicatorClass.getRegisterClass().headerProfile(forProfileHeader).enqueue(new Callback<HeaderProfile>() {
                 @Override
                 public void onResponse(Call<HeaderProfile> call, Response<HeaderProfile> response) {
-
                     HeaderProfile headerProfile = response.body();
-
                     for(ProfileInfo profileInfo:headerProfile.getProfileInfo())
                     {
                         View headView = navigationView.getHeaderView(0);
@@ -198,24 +187,16 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
                         TextView mob = (TextView) headView.findViewById(R.id.textView_sMobile);
                         mob.setText(profileInfo.getMobile_number());
                         name.setText(profileInfo.getUser_name());
-
                     }
-
-
-
-                }
-
+               }
                 @Override
                 public void onFailure(Call<HeaderProfile> call, Throwable t) {
-
                     Log.i(getClass().getSimpleName(),"Failure Header Profile");
-
                 }
             });
-
         }
         navigationView.setNavigationItemSelectedListener(this);
-    }
+    }//eof onCreate()
 
     List<FromRoute> startingPoint = null;
     private void displayTheList(final List<FromRoute> fromRoutes){
@@ -231,7 +212,6 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
                 for (FromRoute fromRoute: startingPoint) {
                     Log.i(getClass().getSimpleName(),"starting point:" + fromRoute.getRouteId());
                 }
-
                 //to get the stop points with the rout id(s) and the item not equal to the selected stop point
                 List<FromRoute> destinationPoint = new ArrayList<FromRoute>();
                 destList(destinationPoint);
@@ -240,17 +220,17 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
                 }
                 Intent intentSrc = new Intent(SourceActivity.this, DestinationActivity.class);
                 intentSrc.putExtra("src", srcSelected);
+                intentSrc.putExtra("prfPic",pos_prfPic);
                 Bundle bundle = new Bundle();
                 bundle.putParcelableArrayList("mylist", (ArrayList<? extends Parcelable>) destinationPoint);
                 intentSrc.putExtras(bundle);
                 startActivity(intentSrc);
             }
         });
-    }
+    }//eof displayTheList
 
     private void destList(List<FromRoute> destinationPoint) {
-
-        for(FromRoute fromRoute:startingPoint) {
+       for(FromRoute fromRoute:startingPoint) {
             tempDestList = FromRoute.findWithQuery(FromRoute.class, "Select * from FROM_ROUTE where route_id = ? AND stop_location != ? Group By stop_location", fromRoute.getRouteId(), srcSelected);
             if (destinationPoint.isEmpty()) {
                 destinationPoint.addAll(tempDestList);
@@ -275,34 +255,30 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
                 }
             }
         }
-
-    }
+    }//eof destList()
 
     public void addTextListener(){
-
-        search.addTextChangedListener(new TextWatcher() {
-
-            public void afterTextChanged(Editable s) {}
-
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
-
-            public void onTextChanged(CharSequence query, int start, int before, int count) {
-
-                query = query.toString().toLowerCase();
-                final List<FromRoute> fromRoutes = new ArrayList<>();
-                for (int i = 0; i < listItems.size(); i++) {
-                    final String text = listItems.get(i).toString().toLowerCase();
-                    if (text.contains(query)) {
-                        fromRoutes.add(listItems.get(i));
+        if (search != null) {
+            search.addTextChangedListener(new TextWatcher() {
+                public void afterTextChanged(Editable s) {}
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+                public void onTextChanged(CharSequence query, int start, int before, int count) {
+                    query = query.toString().toLowerCase();
+                    final List<FromRoute> fromRoutes = new ArrayList<>();
+                    for (int i = 0; i < listItems.size(); i++) {
+                        final String text = listItems.get(i).toString().toLowerCase();
+                        if (text.contains(query)) {
+                            fromRoutes.add(listItems.get(i));
+                        }
                     }
+                    source_list.setLayoutManager(new LinearLayoutManager(SourceActivity.this));
+                    recyclerAdapter = new SrcRecyclerAdapter(fromRoutes, SourceActivity.this);
+                    source_list.setAdapter(recyclerAdapter);
+                    recyclerAdapter.notifyDataSetChanged();  // data set changed
                 }
-                source_list.setLayoutManager(new LinearLayoutManager(SourceActivity.this));
-                recyclerAdapter = new SrcRecyclerAdapter(fromRoutes, SourceActivity.this);
-                source_list.setAdapter(recyclerAdapter);
-                recyclerAdapter.notifyDataSetChanged();  // data set changed
-            }
-        });
-    }
+            });
+        }
+    }//eof addTextListener
 
     @Override
     public void onBackPressed() {
@@ -319,64 +295,44 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
                     Toast.LENGTH_SHORT).show();
         }
         back_pressed = System.currentTimeMillis();
-
         Intent intent = new Intent(SourceActivity.this, LoginActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK); // clears all previous activities task
         finish(); // destroy current activity
         startActivity(intent); // starts new activity
-
-    }
-
+    }//eof onBackPressed
 
     //@SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
-
         int id = item.getItemId();
-
         if (id == R.id.profile) {
-
             Intent profileintent = new Intent(SourceActivity.this, Profile.class);
             startActivity(profileintent);
-
         } else if (id == R.id.booking) {
-
             Intent bookingintent = new Intent(SourceActivity.this, MyBooking.class);
             startActivity(bookingintent);
-
         } else if (id == R.id.wallet) {
-
             Intent walletintent = new Intent(SourceActivity.this, Wallet.class);
             startActivity(walletintent);
-
         } else if (id == R.id.route) {
-
             Intent routeintent = new Intent(SourceActivity.this, SuggestedRoute.class);
             startActivity(routeintent);
-
         } else if (id == R.id.notification) {
-
             Intent notifyintent = new Intent(SourceActivity.this, Notifications.class);
             startActivity(notifyintent);
-
         } else if (id == R.id.feedback) {
-
             Intent feedbackintent = new Intent(SourceActivity.this, FeedBack.class);
             startActivity(feedbackintent);
-
         } else if (id == R.id.about) {
-
             Intent aboutintent = new Intent(SourceActivity.this, AboutUs.class);
             startActivity(aboutintent);
-
         }
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
-    }
+    }//eof onNavigationItemSelected
 
     private class LoadViewTask extends AsyncTask<Void, Integer, Void>
     {
@@ -406,12 +362,7 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
         @Override
         protected Void doInBackground(Void... params)
         {
-            /* This is just a code that delays the thread execution 4 times,
-             * during 850 milliseconds and updates the current progress. This
-             * is where the code that is going to be executed on a background
-             * thread must be placed.
-             */
-            try
+           try
             {
                 //Get the current thread's token
                 synchronized (this)
@@ -460,7 +411,6 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
-
         // Checks the orientation of the screen for landscape and portrait and set portrait mode always
         if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
             setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);

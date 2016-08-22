@@ -22,6 +22,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -44,6 +45,7 @@ import com.hopop.hopop.sidenavigation.feedback.activity.FeedBack;
 import com.hopop.hopop.sidenavigation.mybooking.activity.MyBooking;
 import com.hopop.hopop.sidenavigation.notifications.activity.Notifications;
 import com.hopop.hopop.sidenavigation.profile.activity.Profile;
+import com.hopop.hopop.sidenavigation.profile.adapter.ProfilePicAdapter;
 import com.hopop.hopop.sidenavigation.suggestedroute.activity.SuggestedRoute;
 import com.hopop.hopop.source.activity.SourceActivity;
 import com.hopop.hopop.source.data.ForProfileHeader;
@@ -74,6 +76,8 @@ public class PaymentActivity extends AppCompatActivity
     @Nullable @Bind(R.id.textView_NumofSeats) TextView numofSeats;
     @Nullable @Bind(R.id.textView_rideshareCalc) TextView rideshareCalc;
     @Nullable @Bind(R.id.textView_rideshareAmt) TextView rideshareAmt;
+
+    int pos_PrfPay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -128,6 +132,20 @@ public class PaymentActivity extends AppCompatActivity
         toggle.syncState();
 
         final NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+
+
+        final View headView = navigationView.getHeaderView(0);
+
+        final ImageView imgView = (ImageView) headView.findViewById(R.id.imageView);
+        // get intent data
+        Intent i = getIntent();
+
+        // Selected image id
+        pos_PrfPay = i.getExtras().getInt("prfPic");
+        Log.i(getClass().getSimpleName(),"ImgPosition:"+pos_PrfPay);
+        ProfilePicAdapter imageAdapter = new ProfilePicAdapter(this);
+        imgView.setImageResource(imageAdapter.picArry[pos_PrfPay]);
+
 
         String lMob = LoginActivity.usrMobileNum;
 
@@ -187,8 +205,8 @@ public class PaymentActivity extends AppCompatActivity
                         View headView = navigationView.getHeaderView(0);
                         TextView name = (TextView) headView.findViewById(R.id.textView_pmName);
                         TextView mob = (TextView) headView.findViewById(R.id.textView_pmMobile);
-                        name.setText(profileInfo.getMobile_number());
-                        mob.setText(profileInfo.getUser_name());
+                        name.setText(profileInfo.getUser_name());
+                        mob.setText(profileInfo.getMobile_number());
 
                     }
 
@@ -322,9 +340,6 @@ public class PaymentActivity extends AppCompatActivity
 
                     showNotification(PaymentActivity.this);
 
-
-
-
                 }
 
             }
@@ -340,13 +355,7 @@ public class PaymentActivity extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-       /* DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
-        }*/
-        super.onBackPressed();
+       super.onBackPressed();
     }
 
     @SuppressWarnings("StatementWithEmptyBody")

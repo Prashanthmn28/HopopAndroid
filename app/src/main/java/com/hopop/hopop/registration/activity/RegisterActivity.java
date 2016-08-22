@@ -99,13 +99,9 @@ public class RegisterActivity extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
         Button button_Lin;
-
-
         callbackManager = CallbackManager.Factory.create();
-
         LoginButton loginButton = (LoginButton) findViewById(R.id.fb_login_button);
         loginButton.setReadPermissions("public_profile", "email", "user_friends");
-
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
@@ -114,9 +110,7 @@ public class RegisterActivity extends AppCompatActivity {
                 Log.e("ln: ", "--------------------------");
                 Log.e("ln: ", loginResult.getAccessToken().getUserId());
                 Log.e("ln: ", loginResult.getAccessToken().getToken());
-
-
-                GraphRequest request = GraphRequest.newMeRequest(
+               GraphRequest request = GraphRequest.newMeRequest(
                         loginResult.getAccessToken(),
                         new GraphRequest.GraphJSONObjectCallback() {
                             @Override
@@ -141,22 +135,17 @@ public class RegisterActivity extends AppCompatActivity {
                 parameters.putString("fields", "id,name,email,gender, birthday,picture.type(small)");
                 request.setParameters(parameters);
                 request.executeAsync();
-
                 Intent intent = new Intent(RegisterActivity.this, SourceActivity.class);
                 startActivity(intent);
-
             }
 
             @Override
             public void onCancel() {
                 Intent cancelIntent = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity(cancelIntent);
-
             }
-
             @Override
             public void onError(FacebookException error) {
-
             }
         });
     }
@@ -371,8 +360,8 @@ public class RegisterActivity extends AppCompatActivity {
                     b.putString("uname", fName.getText().toString());
                     b.putString("mobile",mobile.getText().toString());
 
-                    register.putExtras(b);
-*/
+                    register.putExtras(b);*/
+
                     startActivity(register);
                     Log.e(getClass().getSimpleName(), "successful");
 
