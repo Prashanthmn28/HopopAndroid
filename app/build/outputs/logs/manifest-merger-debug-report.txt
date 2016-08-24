@@ -65,11 +65,11 @@ MERGED from [com.android.support:support-v4:23.4.0] D:\Android App\HopopAndroid\
 MERGED from [com.android.support:cardview-v7:23.4.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.4.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.4.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.4.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
-MERGED from [com.facebook.android:facebook-android-sdk:4.14.1] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.14.1\AndroidManifest.xml:28:5-37:19
+MERGED from [com.facebook.android:facebook-android-sdk:4.15.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.15.0\AndroidManifest.xml:28:5-38:19
+MERGED from [com.android.support:cardview-v7:23.4.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.4.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.4.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:customtabs:23.4.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.android.support\customtabs\23.4.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.4.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.4.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:cardview-v7:23.4.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.4.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.4.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
 MERGED from [HopopAndroid:linkedin-sdk:unspecified] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\HopopAndroid\linkedin-sdk\unspecified\AndroidManifest.xml:13:5-20
 MERGED from [com.android.support:support-v4:23.4.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
@@ -248,7 +248,7 @@ ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:95:9-97:
 		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:96:13-81
 activity#com.facebook.FacebookActivity
 ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:98:9-102:75
-MERGED from [com.facebook.android:facebook-android-sdk:4.14.1] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.14.1\AndroidManifest.xml:29:9-32:75
+MERGED from [com.facebook.android:facebook-android-sdk:4.15.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.15.0\AndroidManifest.xml:29:9-32:75
 	android:label
 		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:101:13-45
 	android:configChanges
@@ -259,7 +259,7 @@ MERGED from [com.facebook.android:facebook-android-sdk:4.14.1] D:\Android App\Ho
 		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:99:13-57
 activity#com.facebook.CustomTabActivity
 ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:103:9-114:20
-MERGED from [com.facebook.android:facebook-android-sdk:4.14.1] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.14.1\AndroidManifest.xml:33:9-36:20
+MERGED from [com.facebook.android:facebook-android-sdk:4.15.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.15.0\AndroidManifest.xml:33:9-36:20
 	android:exported
 		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:105:13-36
 	android:name
@@ -327,11 +327,11 @@ MERGED from [com.android.support:recyclerview-v7:23.4.0] D:\Android App\HopopAnd
 MERGED from [com.android.support:support-v4:23.4.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:20:5-43
 MERGED from [com.github.satyan:sugar:1.4] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.github.satyan\sugar\1.4\AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:support-v4:23.4.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:20:5-43
-MERGED from [com.facebook.android:facebook-android-sdk:4.14.1] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.14.1\AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-android-sdk:4.15.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.15.0\AndroidManifest.xml:24:5-26:41
+MERGED from [com.android.support:cardview-v7:23.4.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.4.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.4.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:customtabs:23.4.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.android.support\customtabs\23.4.0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-v4:23.4.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.4.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:cardview-v7:23.4.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.4.0\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-v4:23.4.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:20:5-43
 MERGED from [HopopAndroid:linkedin-sdk:unspecified] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\HopopAndroid\linkedin-sdk\unspecified\AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:support-v4:23.4.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:20:5-43
@@ -344,3 +344,7 @@ MERGED from [de.hdodenhof:circleimageview:1.3.0] D:\Android App\HopopAndroid\app
 	android:minSdkVersion
 		INJECTED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml
 		INJECTED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml
+activity#com.facebook.CustomTabMainActivity
+ADDED from [com.facebook.android:facebook-android-sdk:4.15.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.15.0\AndroidManifest.xml:37:9-71
+	android:name
+		ADDED from [com.facebook.android:facebook-android-sdk:4.15.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.15.0\AndroidManifest.xml:37:19-68

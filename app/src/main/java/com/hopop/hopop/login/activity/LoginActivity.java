@@ -45,10 +45,10 @@ public class LoginActivity extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 
-        if (BuildConfig.DEBUG){
+      /*  if (BuildConfig.DEBUG){
             mobile.setText("9844425308");
             pass.setText("swaroop");
-        }
+        }*/
     }
 
     @Bind(R.id.editText_mn) EditText mobile;
