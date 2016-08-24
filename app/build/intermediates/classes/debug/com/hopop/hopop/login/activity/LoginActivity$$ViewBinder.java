@@ -8,11 +8,11 @@ import butterknife.ButterKnife.ViewBinder;
 public class LoginActivity$$ViewBinder<T extends com.hopop.hopop.login.activity.LoginActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131493013, "field 'mobile'");
-    target.mobile = finder.castView(view, 2131493013, "field 'mobile'");
-    view = finder.findRequiredView(source, 2131493014, "field 'pass'");
-    target.pass = finder.castView(view, 2131493014, "field 'pass'");
-    view = finder.findRequiredView(source, 2131493015, "method 'loginUser'");
+    view = finder.findRequiredView(source, 2131493012, "field 'mobile'");
+    target.mobile = finder.castView(view, 2131493012, "field 'mobile'");
+    view = finder.findRequiredView(source, 2131493013, "field 'pass'");
+    target.pass = finder.castView(view, 2131493013, "field 'pass'");
+    view = finder.findRequiredView(source, 2131493014, "method 'loginUser'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -21,7 +21,7 @@ public class LoginActivity$$ViewBinder<T extends com.hopop.hopop.login.activity.
           target.loginUser(p0);
         }
       });
-    view = finder.findRequiredView(source, 2131493016, "method 'signupUser'");
+    view = finder.findRequiredView(source, 2131493015, "method 'signupUser'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(

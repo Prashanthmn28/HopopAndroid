@@ -8,14 +8,14 @@ import butterknife.ButterKnife.ViewBinder;
 public class SourceActivity$$ViewBinder<T extends com.hopop.hopop.source.activity.SourceActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131493070, "field 'source_list'");
-    target.source_list = finder.castView(view, 2131493070, "field 'source_list'");
-    view = finder.findOptionalView(source, 2131493071, null);
-    target.search = finder.castView(view, 2131493071, "field 'search'");
-    view = finder.findOptionalView(source, 2131493128, null);
-    target.number = finder.castView(view, 2131493128, "field 'number'");
+    view = finder.findRequiredView(source, 2131493069, "field 'source_list'");
+    target.source_list = finder.castView(view, 2131493069, "field 'source_list'");
+    view = finder.findOptionalView(source, 2131493070, null);
+    target.search = finder.castView(view, 2131493070, "field 'search'");
     view = finder.findOptionalView(source, 2131493127, null);
-    target.name = finder.castView(view, 2131493127, "field 'name'");
+    target.number = finder.castView(view, 2131493127, "field 'number'");
+    view = finder.findOptionalView(source, 2131493126, null);
+    target.name = finder.castView(view, 2131493126, "field 'name'");
   }
 
   @Override public void unbind(T target) {

@@ -139,9 +139,6 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
 //---------for profilePic------------------
         if(getIntent().getExtras()!=null) {
             pos_prfPic = getIntent().getExtras().getInt("id");
-
-
-
             Log.i(getClass().getSimpleName(),"srcImgPrf:"+pos_prfPic);
             ProfilePicAdapter imageAdapter = new ProfilePicAdapter(this);
             imgView.setImageResource(imageAdapter.picArry[pos_prfPic]);
@@ -311,6 +308,7 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
             Intent profileintent = new Intent(SourceActivity.this, Profile.class);
             startActivity(profileintent);
         } else if (id == R.id.booking) {
+
             Intent bookingintent = new Intent(SourceActivity.this, MyBooking.class);
             startActivity(bookingintent);
         } else if (id == R.id.wallet) {
