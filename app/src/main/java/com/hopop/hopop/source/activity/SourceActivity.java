@@ -308,7 +308,6 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
             Intent profileintent = new Intent(SourceActivity.this, Profile.class);
             startActivity(profileintent);
         } else if (id == R.id.booking) {
-
             Intent bookingintent = new Intent(SourceActivity.this, MyBooking.class);
             startActivity(bookingintent);
         } else if (id == R.id.wallet) {
