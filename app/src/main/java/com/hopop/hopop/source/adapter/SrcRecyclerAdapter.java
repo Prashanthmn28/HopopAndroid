@@ -37,27 +37,22 @@ public class SrcRecyclerAdapter extends RecyclerView.Adapter<SrcRecyclerAdapter.
         return fromRoutes.size();
     }
 
-
     @Override
     public Filter getFilter() {
         return searchFilter;
     }
 
-
     @Override
     public DataObjectHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View view = LayoutInflater.from(viewGroup.getContext())
                 .inflate(R.layout.route_item, viewGroup, false);
-
         DataObjectHolder dataObjectHolder = new DataObjectHolder(view);
         return dataObjectHolder;
     }
 
     @Override
     public void onBindViewHolder(DataObjectHolder dataObjectHolder, int position) {
-
         dataObjectHolder.tv_entity_name.setText(fromRoutes.get(position).getStopLocation());
-
     }
 
     public FromRoute getFilteredItem(int position) {
@@ -67,7 +62,6 @@ public class SrcRecyclerAdapter extends RecyclerView.Adapter<SrcRecyclerAdapter.
         }
         return filteredList.get(position);
     }
-
 
     public static class DataObjectHolder extends RecyclerView.ViewHolder
             implements View
@@ -86,8 +80,6 @@ public class SrcRecyclerAdapter extends RecyclerView.Adapter<SrcRecyclerAdapter.
         public void onClick(View view) {
             Log.d(TAG, "onClick " + getPosition() + " " + fromRoutes);
             if (itemClickListenr != null)  itemClickListenr.onItemClick(getAdapterPosition(),view);
-
-
         }
     }
 

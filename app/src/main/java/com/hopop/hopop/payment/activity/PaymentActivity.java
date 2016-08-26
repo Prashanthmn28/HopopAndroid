@@ -62,9 +62,7 @@ import retrofit2.Response;
 
 public class PaymentActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
     private ProgressDialog progressDialog;
-
     Toolbar toolbar;
     String[] bookidNum = {null};
     @Nullable
@@ -76,7 +74,6 @@ public class PaymentActivity extends AppCompatActivity
     @Nullable @Bind(R.id.textView_NumofSeats) TextView numofSeats;
     @Nullable @Bind(R.id.textView_rideshareCalc) TextView rideshareCalc;
     @Nullable @Bind(R.id.textView_rideshareAmt) TextView rideshareAmt;
-
     int pos_PrfPay;
 
     @Override
@@ -90,11 +87,9 @@ public class PaymentActivity extends AppCompatActivity
         catch (Exception e) {
             e.printStackTrace();
         }
-        //Initialize a LoadViewTask object and call the execute() method
         new LoadViewTask().execute();
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        //Read the wallet amount from the server and display it
         String userMobileNum = LoginActivity.usrMobileNum;
         Log.i(getClass().getSimpleName(),"UserLogin Mobile Number:"+userMobileNum);
         LoginUser loginUser  = new LoginUser();
@@ -103,18 +98,13 @@ public class PaymentActivity extends AppCompatActivity
             @Override
             public void onResponse(Call<WalletInfo> call, Response<WalletInfo> response) {
                 Toast.makeText(PaymentActivity.this,"Payment Activity Successfully",Toast.LENGTH_SHORT).show();
-
                 Log.e(getClass().getSimpleName(),"Successfull");
-
                 WalletInfo walletInfo = response.body();
                 for (Wallet wallet:walletInfo.getWallet())
                 {
                     Log.i(getClass().getSimpleName(),"user wallet is:"+wallet.getBalance().toString());
-
                     TextView balance = (TextView) findViewById(R.id.textView_BalanceAmt);
-
                     String bal = wallet.getBalance().toString();
-
                     balance.setText(bal+"Rs");
                 }
             }
@@ -123,47 +113,30 @@ public class PaymentActivity extends AppCompatActivity
                 Log.i(getClass().getSimpleName(),"Failure");
             }
         });
-        //--------eof-----------------
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
-
         final NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-
-
         final View headView = navigationView.getHeaderView(0);
-
         final ImageView imgView = (ImageView) headView.findViewById(R.id.imageView);
-        // get intent data
         Intent i = getIntent();
-
-        // Selected image id
         pos_PrfPay = i.getExtras().getInt("prfPic");
         Log.i(getClass().getSimpleName(),"ImgPosition:"+pos_PrfPay);
         ProfilePicAdapter imageAdapter = new ProfilePicAdapter(this);
         imgView.setImageResource(imageAdapter.picArry[pos_PrfPay]);
-
-
         String lMob = LoginActivity.usrMobileNum;
-
         if(lMob == null)
         {
             String rMob = RegisterActivity.userMobNum;
             Log.i(getClass().getSimpleName(),"register Mobile Num:"+rMob);
             final ForProfileHeader forProfileHeader =new ForProfileHeader();
-
             forProfileHeader.setMobile_number(rMob);
-
-
             CommunicatorClass.getRegisterClass().headerProfile(forProfileHeader).enqueue(new Callback<HeaderProfile>() {
                 @Override
                 public void onResponse(Call<HeaderProfile> call, Response<HeaderProfile> response) {
-
                     HeaderProfile headerProfile = response.body();
-
                     for(ProfileInfo profileInfo:headerProfile.getProfileInfo())
                     {
                         View headView = navigationView.getHeaderView(0);
@@ -171,35 +144,21 @@ public class PaymentActivity extends AppCompatActivity
                         TextView mob = (TextView) headView.findViewById(R.id.textView_pmMobile);
                         name.setText(profileInfo.getUser_name());
                         mob.setText(profileInfo.getMobile_number());
-
                     }
-
-
-
                 }
-
                 @Override
                 public void onFailure(Call<HeaderProfile> call, Throwable t) {
-
                     Log.i(getClass().getSimpleName(),"Failure Header Profile");
-
                 }
             });
-
         }
         else {
-
             final ForProfileHeader forProfileHeader =new ForProfileHeader();
-
             forProfileHeader.setMobile_number(lMob);
-
-
             CommunicatorClass.getRegisterClass().headerProfile(forProfileHeader).enqueue(new Callback<HeaderProfile>() {
                 @Override
                 public void onResponse(Call<HeaderProfile> call, Response<HeaderProfile> response) {
-
                     HeaderProfile headerProfile = response.body();
-
                     for(ProfileInfo profileInfo:headerProfile.getProfileInfo())
                     {
                         View headView = navigationView.getHeaderView(0);
@@ -207,21 +166,13 @@ public class PaymentActivity extends AppCompatActivity
                         TextView mob = (TextView) headView.findViewById(R.id.textView_pmMobile);
                         name.setText(profileInfo.getUser_name());
                         mob.setText(profileInfo.getMobile_number());
-
                     }
-
-
-
                 }
-
                 @Override
                 public void onFailure(Call<HeaderProfile> call, Throwable t) {
-
                     Log.i(getClass().getSimpleName(),"Failure Header Profile");
-
                 }
             });
-
         }
         navigationView.setNavigationItemSelectedListener(this);
     }
@@ -268,63 +219,34 @@ public class PaymentActivity extends AppCompatActivity
 
     @OnClick(R.id.button_Pay)
     public void payUser(View view){
-
         final ForBookId forBookId = new ForBookId();
-        // forBookId.setUser_id("");
-
         String userMobileNum = LoginActivity.usrMobileNum;
-        //   Log.i(getClass().getSimpleName(),"UserLogin Mobile Number:"+userMobileNum);
         String frmRoute = SourceActivity.srcSelected;
-        // Log.i(getClass().getSimpleName(),"Source Point:"+frmRoute);
         String toRoute = DestinationActivity.destSelect;
-        // Log.i(getClass().getSimpleName(),"Stop Point:"+toRoute);
         String rid = PlyActivity.routeId;
-        //Log.i(getClass().getSimpleName(),"routeId:"+rid);
         String tid = PlyActivity.tripId;
-        //Log.i(getClass().getSimpleName(),"tripId:"+tid);
-        // String num_seats = PlyActivity.seats;
-
         String num_seats = numofSeats.getText().toString();
         Log.i(getClass().getSimpleName(),"SeatsNumber:"+num_seats);
-
-
         forBookId.setUser_mobile(userMobileNum);
         forBookId.setFrom_route(frmRoute);
         forBookId.setTo_route(toRoute);
         forBookId.setRoute_id(rid);
         forBookId.setTrip_id(tid);
         forBookId.setTotal_seats(num_seats);
-
-
         CommunicatorClass.getRegisterClass().forBookIdInfo(forBookId).enqueue(new Callback<BookIdInfo>() {
             @Override
             public void onResponse(Call<BookIdInfo> call, Response<BookIdInfo> response) {
                 Log.e(getClass().getSimpleName(), "successful bookid");
-
                 BookIdInfo bookIdInfo = response.body();
                 for (BookId bookId: bookIdInfo.getBookId())
                 {
-                    //Log.i(getClass().getSimpleName(),"user BookId is:"+bookId.getBookId().toString());
-
                     bookidNum[0] = bookId.getBookId().toString();
                     Log.i(getClass().getSimpleName(),"user BookId is:"+bookidNum[0]);
-
-                    //-----------------------------
-
                     AlertDialog alertDialog = new AlertDialog.Builder(
                             PaymentActivity.this).create();
-
-                    // Setting Dialog Title
                     alertDialog.setTitle("Ticket Confirmed");
-
-                    // Setting Dialog Message
-
                     alertDialog.setMessage("Booking Id:"+  bookidNum[0]);
-
-                    // Setting Icon to Dialog
                     alertDialog.setIcon(R.drawable.tick);
-
-                    // Setting OK Button
                     alertDialog.setButton("OK",
                             new DialogInterface.OnClickListener() {
 
@@ -334,73 +256,47 @@ public class PaymentActivity extends AppCompatActivity
                                     startActivity(intent_1);
                                 }
                             });
-
-                    // Showing Alert Message
                     alertDialog.show();
-
                     showNotification(PaymentActivity.this);
-
                 }
-
             }
-
             @Override
             public void onFailure(Call<BookIdInfo> call, Throwable t) {
-
             }
         });
-
-
     }
 
     @Override
     public void onBackPressed() {
-       super.onBackPressed();
+        super.onBackPressed();
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
         int id = item.getItemId();
-
         if (id == R.id.profile) {
-
             Intent profileintent = new Intent(PaymentActivity.this, Profile.class);
             startActivity(profileintent);
-
         } else if (id == R.id.booking) {
-
             Intent bookingintent = new Intent(PaymentActivity.this, MyBooking.class);
             startActivity(bookingintent);
-
         } else if (id == R.id.wallet) {
-
             Intent walletintent = new Intent(PaymentActivity.this, com.hopop.hopop.sidenavigation.wallet.activity.Wallet.class);
             startActivity(walletintent);
-
         } else if (id == R.id.route) {
-
             Intent routeintent = new Intent(PaymentActivity.this, SuggestedRoute.class);
             startActivity(routeintent);
-
         } else if (id == R.id.notification) {
-
             Intent notifyintent = new Intent(PaymentActivity.this, Notifications.class);
             startActivity(notifyintent);
-
         } else if (id == R.id.feedback) {
-
             Intent feedbackintent = new Intent(PaymentActivity.this, FeedBack.class);
             startActivity(feedbackintent);
-
         } else if (id == R.id.about) {
-
             Intent aboutintent = new Intent(PaymentActivity.this, AboutUs.class);
             startActivity(aboutintent);
-
         }
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
@@ -418,16 +314,11 @@ public class PaymentActivity extends AppCompatActivity
         String msg = "Its time to be there in boarding Point."
                 + "\nBoarding pass:- KA0103020830AZH" + "\nSeat position:- 3S-W\n" +
                 "Happy Journey!!!.Have a nice day.";
-
         Intent intent = new Intent(ctx, LoginActivity.class);
         PendingIntent contentIntent = PendingIntent.getActivity(ctx, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
-
         NotificationCompat.Builder b = new NotificationCompat.Builder(ctx);
-
-        // Add Big View Specific Configuration
         NotificationCompat.BigTextStyle bigTextStyle = new NotificationCompat.BigTextStyle();
         bigTextStyle.bigText(msg).setBigContentTitle("Hopper").setSummaryText("Ticket confirmed");
-
         b.setAutoCancel(true)
                 .setDefaults(Notification.DEFAULT_ALL)
                 .setWhen(System.currentTimeMillis())
@@ -436,63 +327,37 @@ public class PaymentActivity extends AppCompatActivity
                 .setContentTitle("Hopper")
                 .setContentText(msg)
                 .setDefaults(Notification.DEFAULT_LIGHTS | Notification.DEFAULT_SOUND)
-                //.setContentIntent(contentIntent)
                 .setStyle(bigTextStyle);
-        //.setContentInfo("Info");
-
         NotificationManager notificationManager = (NotificationManager) ctx.getSystemService(Context.NOTIFICATION_SERVICE);
         notificationManager.notify(1, b.build());
     }
 
     private class LoadViewTask extends AsyncTask<Void, Integer, Void>
     {
-        //Before running code in separate thread
         @Override
         protected void onPreExecute()
         {
-            //Create a new progress dialog
             progressDialog = new ProgressDialog(PaymentActivity.this);
-            //Set the dialog title to 'Loading...'
-            //progressDialog.setTitle("Loading...");
-            //Set the dialog message to 'Loading application View, please wait...'
             progressDialog.setMessage("Loading...");
-            //This dialog can't be canceled by pressing the back key
             progressDialog.setCancelable(false);
-            //This dialog isn't indeterminate
             progressDialog.setIndeterminate(true);
-            //The maximum number of items is 100
             progressDialog.setMax(100);
-            //Set the current progress to zero
             progressDialog.setProgress(0);
-            //Display the progress dialog
             progressDialog.show();
         }
 
-        //The code to be executed in a background thread.
         @Override
         protected Void doInBackground(Void... params)
         {
-            /* This is just a code that delays the thread execution 4 times,
-             * during 850 milliseconds and updates the current progress. This
-             * is where the code that is going to be executed on a background
-             * thread must be placed.
-             */
             try
             {
-                //Get the current thread's token
                 synchronized (this)
                 {
-                    //Initialize an integer (that will act as a counter) to zero
                     int counter = 0;
-                    //While the counter is smaller than four
                     while(counter <= 4)
                     {
-                        //Wait 850 milliseconds
                         this.wait(500);
-                        //Increment the counter
                         counter++;
-                        //Set the current progress.
-                        //This value is going to be passed to the onProgressUpdate() method.
                         publishProgress(counter*25);
                     }
                 }
@@ -504,31 +369,22 @@ public class PaymentActivity extends AppCompatActivity
             return null;
         }
 
-        //Update the progress
         @Override
         protected void onProgressUpdate(Integer... values)
         {
-            //set the current progress of the progress dialog
             progressDialog.setProgress(values[0]);
         }
 
-        //after executing the code in the thread
         @Override
         protected void onPostExecute(Void result)
         {
-            //close the progress dialog
             progressDialog.dismiss();
-            //initialize the View
-            //setContentView(R.layout.content_booking);
         }
     }
-
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
-
-        // Checks the orientation of the screen for landscape and portrait and set portrait mode always
         if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
             setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT){
@@ -536,4 +392,3 @@ public class PaymentActivity extends AppCompatActivity
         }
     }
 }
-

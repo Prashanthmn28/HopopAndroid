@@ -10,7 +10,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class WalletInfo implements Parcelable {
-
     @JsonProperty
     private List<Wallet> wallet = new ArrayList<Wallet>();
 
@@ -21,7 +20,6 @@ public class WalletInfo implements Parcelable {
     public void setWallet(List<Wallet> wallet) {
         this.wallet = wallet;
     }
-
 
     @Override
     public int describeContents() {
@@ -45,7 +43,6 @@ public class WalletInfo implements Parcelable {
         public WalletInfo createFromParcel(Parcel source) {
             return new WalletInfo(source);
         }
-
         @Override
         public WalletInfo[] newArray(int size) {
             return new WalletInfo[size];

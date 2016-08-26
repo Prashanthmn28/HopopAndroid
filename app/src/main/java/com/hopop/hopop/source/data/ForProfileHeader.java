@@ -13,6 +13,4 @@ public class ForProfileHeader {
     public void setMobile_number(String mobile_number) {
         this.mobile_number = mobile_number;
     }
-
-
 }

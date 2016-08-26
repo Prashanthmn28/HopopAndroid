@@ -11,7 +11,6 @@ import java.util.List;
 
 public class SourceList implements Parcelable {
 
-
     @SerializedName("From_Routes")
     private ArrayList<FromRoute> fromRoutes = new ArrayList<FromRoute>();
     private Integer success;
@@ -63,7 +62,6 @@ public class SourceList implements Parcelable {
         public SourceList createFromParcel(Parcel source) {
             return new SourceList(source);
         }
-
         @Override
         public SourceList[] newArray(int size) {
             return new SourceList[size];

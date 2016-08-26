@@ -10,9 +10,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BookIdInfo implements Parcelable {
-
     @SerializedName("book_id")
     private List<BookId> bookId = new ArrayList<BookId>();
+
     public List<BookId> getBookId() {
         return bookId;
     }
@@ -20,7 +20,6 @@ public class BookIdInfo implements Parcelable {
     public void setBookId(List<BookId> bookId) {
         this.bookId = bookId;
     }
-
 
     @Override
     public int describeContents() {
@@ -44,7 +43,6 @@ public class BookIdInfo implements Parcelable {
         public BookIdInfo createFromParcel(Parcel source) {
             return new BookIdInfo(source);
         }
-
         @Override
         public BookIdInfo[] newArray(int size) {
             return new BookIdInfo[size];
