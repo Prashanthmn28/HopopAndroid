@@ -168,8 +168,13 @@ public class RegisterActivity extends AppCompatActivity {
             }
             @Override
             public void onCancel() {
+
                 Intent cancelIntent = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity(cancelIntent);
+
+                Intent cancelintent = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(cancelintent);
+
             }
             @Override
             public void onError(FacebookException error) {

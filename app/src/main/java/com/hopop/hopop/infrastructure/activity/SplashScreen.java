@@ -1,10 +1,13 @@
 package com.hopop.hopop.infrastructure.activity;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.Handler;
+import android.preference.PreferenceManager;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ProgressBar;
@@ -12,8 +15,14 @@ import android.widget.TextView;
 
 import com.hopop.hopop.login.activity.LoginActivity;
 import com.hopop.hopop.login.activity.R;
+import com.hopop.hopop.network.User;
+import com.hopop.hopop.source.activity.SourceActivity;
 
 public class SplashScreen extends Activity {
+    SharedPreferences sharedPreferences;
+    String authenticationToken;
+
+    Context context;
     private ProgressBar progressBar;
     private int progressStatus = 0;
     private TextView hopop, pc;
@@ -58,5 +67,29 @@ public class SplashScreen extends Activity {
                 }
             }
         }).start();
+
+
+    /*context = SplashScreen.this.getApplicationContext();
+
+    sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+    authenticationToken = sharedPreferences.getString(User.AUTHENTICATION_KEY, "NA");
+
+    *//**
+     * Authentication Token is checked,
+     * if NA(Not Available) User will have to login
+     * else User Redirected to Dashboard
+     *//*
+    if (authenticationToken.equals("NA")) {
+        //if authentication key is not present
+        startActivity(new Intent(SplashScreen.this, LoginActivity.class));
+    } else {
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+
+        //if authentication key is present open dashboard
+        startActivity(new Intent(SplashScreen.this, SourceActivity.class));
     }
+
+    finish();
+*/
+}
 }

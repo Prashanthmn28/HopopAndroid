@@ -20,6 +20,7 @@
     <string name="title_activity_payment">PaymentActivity</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="facebook_app_id">256899051334774</string>
+    <string name="ACCOUNT_KIT_CLIENT_TOKEN">788ff2ab855b8818c12b329ebbb0132d</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

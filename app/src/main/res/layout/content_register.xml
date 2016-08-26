@@ -175,7 +175,8 @@
                             android:text="Male"
                             android:textSize="13sp"
                             android:layout_weight="1"
-                           />
+                            android:onClick="oneRadioButtonClicked" />
+
                         <RadioButton
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
@@ -183,7 +184,7 @@
                             android:text="Female"
                             android:id="@+id/radioButton_female"
                             android:layout_weight="1"
-                            />
+                            android:onClick="oneRadioButtonClicked" />
                         <RadioButton
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
@@ -191,7 +192,7 @@
                             android:text="Other"
                             android:layout_weight="1"
                             android:id="@+id/radioButton_other"
-                            />
+                            android:onClick="oneRadioButtonClicked" />
 
                     </RadioGroup>
 
