@@ -176,12 +176,12 @@
         "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_phone_iphone_black_18px.png"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4\\ic_person_white_24px.png",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_person_white_24px.png"
-    },
-    {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4\\ic_person_black_18px.png",
         "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_person_black_18px.png"
+    },
+    {
+        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4\\ic_person_white_24px.png",
+        "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_person_white_24px.png"
     },
     {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png",

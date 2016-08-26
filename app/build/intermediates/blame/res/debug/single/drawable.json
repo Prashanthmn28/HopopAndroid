@@ -40,12 +40,12 @@
         "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\drawable\\male.png"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\spinnerblue.gif",
-        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\drawable\\spinnerblue.gif"
-    },
-    {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_icon.xml",
         "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\drawable\\com_facebook_button_icon.xml"
+    },
+    {
+        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\spinnerblue.gif",
+        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\drawable\\spinnerblue.gif"
     },
     {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cell_shape.xml",
@@ -96,12 +96,12 @@
         "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\drawable\\joseph_strauss.png"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\md_btn_selector.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.github.afollestad.material-dialogs\\core\\0.8.5.3\\res\\drawable\\md_btn_selector.xml"
-    },
-    {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\messenger_button_blue_bg_selector.xml",
         "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\drawable\\messenger_button_blue_bg_selector.xml"
+    },
+    {
+        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\md_btn_selector.xml",
+        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.github.afollestad.material-dialogs\\core\\0.8.5.3\\res\\drawable\\md_btn_selector.xml"
     },
     {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\greenbus.png",
