@@ -24,7 +24,6 @@ public class HeaderProfile implements Parcelable {
         this.profileInfo = profileInfo;
     }
 
-
     @Override
     public int describeContents() {
         return 0;
@@ -47,7 +46,6 @@ public class HeaderProfile implements Parcelable {
         public HeaderProfile createFromParcel(Parcel source) {
             return new HeaderProfile(source);
         }
-
         @Override
         public HeaderProfile[] newArray(int size) {
             return new HeaderProfile[size];

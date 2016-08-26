@@ -1,7 +1,6 @@
 package com.hopop.hopop.payment.data;
 
 public class ForBookId {
-
     public String user_id;
     public String user_mobile;
     public String from_route;
@@ -19,8 +18,6 @@ public class ForBookId {
     public void setSys_time(String sys_time) {
         this.sys_time = sys_time;
     }
-
-
 
     public String getFrom_route() {
         return from_route;
@@ -85,6 +82,4 @@ public class ForBookId {
     public void setVechicle_num(String vechicle_num) {
         this.vechicle_num = vechicle_num;
     }
-
-
 }

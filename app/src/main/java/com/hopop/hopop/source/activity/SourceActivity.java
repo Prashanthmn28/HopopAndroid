@@ -67,7 +67,6 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
     public List<FromRoute> list1 = new ArrayList<>();
     public List<FromRoute> listItems = new ArrayList<>();
     List<FromRoute> tempDestList;
-
     @Bind(R.id.source_list)
     RecyclerView source_list;
     @Nullable @Bind(R.id.search)
@@ -84,7 +83,6 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
         setTitle(R.string.PickHeader);
         setContentView(R.layout.activity_source);
         ButterKnife.bind(this);
-        //Initialize a LoadViewTask object and call the execute() method
         new LoadViewTask().execute();
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -97,7 +95,6 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
         sourceList1.enqueue(new Callback<SourceList>() {
             @Override
             public void onResponse(Call<SourceList> call, Response<SourceList> response) {
-               // Toast.makeText(SourceActivity.this, "In source Activity Login SuccessFully", Toast.LENGTH_SHORT).show();
                 SourceList sl = response.body();
                 for(FromRoute fromRoute: sl.getFromRoutes()){
                     if(FromRoute.isNew(fromRoute.getStopId())) {
@@ -143,7 +140,6 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
             ProfilePicAdapter imageAdapter = new ProfilePicAdapter(this);
             imgView.setImageResource(imageAdapter.picArry[pos_prfPic]);
         }
-
 //-------------------for profileName nd Number-------------
         String lMob = LoginActivity.usrMobileNum;
         if(lMob == null)
@@ -185,7 +181,7 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
                         mob.setText(profileInfo.getMobile_number());
                         name.setText(profileInfo.getUser_name());
                     }
-               }
+                }
                 @Override
                 public void onFailure(Call<HeaderProfile> call, Throwable t) {
                     Log.i(getClass().getSimpleName(),"Failure Header Profile");
@@ -227,7 +223,7 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
     }//eof displayTheList
 
     private void destList(List<FromRoute> destinationPoint) {
-       for(FromRoute fromRoute:startingPoint) {
+        for(FromRoute fromRoute:startingPoint) {
             tempDestList = FromRoute.findWithQuery(FromRoute.class, "Select * from FROM_ROUTE where route_id = ? AND stop_location != ? Group By stop_location", fromRoute.getRouteId(), srcSelected);
             if (destinationPoint.isEmpty()) {
                 destinationPoint.addAll(tempDestList);
@@ -302,7 +298,6 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
     //@SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
         int id = item.getItemId();
         if (id == R.id.profile) {
             Intent profileintent = new Intent(SourceActivity.this, Profile.class);
@@ -333,48 +328,30 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
 
     private class LoadViewTask extends AsyncTask<Void, Integer, Void>
     {
-        //Before running code in separate thread
         @Override
         protected void onPreExecute()
         {
-            //Create a new progress dialog
             progressDialog = new ProgressDialog(SourceActivity.this);
-            //Set the dialog title to 'Loading...'
-            //progressDialog.setTitle("Loading...");
-            //Set the dialog message to 'Loading application View, please wait...'
             progressDialog.setMessage("Loading...");
-            //This dialog can't be canceled by pressing the back key
             progressDialog.setCancelable(false);
-            //This dialog isn't indeterminate
             progressDialog.setIndeterminate(true);
-            //The maximum number of items is 100
             progressDialog.setMax(100);
-            //Set the current progress to zero
             progressDialog.setProgress(0);
-            //Display the progress dialog
             progressDialog.show();
         }
 
-        //The code to be executed in a background thread.
         @Override
         protected Void doInBackground(Void... params)
         {
-           try
+            try
             {
-                //Get the current thread's token
                 synchronized (this)
                 {
-                    //Initialize an integer (that will act as a counter) to zero
                     int counter = 0;
-                    //While the counter is smaller than four
                     while(counter <= 4)
                     {
-                        //Wait 850 milliseconds
                         this.wait(500);
-                        //Increment the counter
                         counter++;
-                        //Set the current progress.
-                        //This value is going to be passed to the onProgressUpdate() method.
                         publishProgress(counter*25);
                     }
                 }
@@ -386,29 +363,22 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
             return null;
         }
 
-        //Update the progress
         @Override
         protected void onProgressUpdate(Integer... values)
         {
-            //set the current progress of the progress dialog
             progressDialog.setProgress(values[0]);
         }
 
-        //after executing the code in the thread
         @Override
         protected void onPostExecute(Void result)
         {
-            //close the progress dialog
             progressDialog.dismiss();
-            //initialize the View
-            //setContentView(R.layout.content_booking);
         }
     }
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
-        // Checks the orientation of the screen for landscape and portrait and set portrait mode always
         if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
             setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT){
