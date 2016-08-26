@@ -1,466 +1,670 @@
 [
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_screen_simple.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_payment.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\activity_payment.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\nav_header_ply.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\layout\\nav_header_ply.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_cancel_action.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_media_cancel_action.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_facebook_tooltip_bubble.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\layout\\com_facebook_tooltip_bubble.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_profilepic.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\content_profilepic.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_popup_menu_item_layout.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_dialog_progress_indeterminate_horizontal.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.github.afollestad.material-dialogs\\core\\0.8.5.3\\res\\layout\\md_dialog_progress_indeterminate_horizontal.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_stub_titleframe_lesspadding.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.github.afollestad.material-dialogs\\core\\0.8.5.3\\res\\layout\\md_stub_titleframe_lesspadding.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_list_menu_item_icon.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_accountkit_fragment_action_bar.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\layout\\com_accountkit_fragment_action_bar.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_destination.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\activity_destination.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_payment.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\layout\\activity_payment.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_dialog_progress_indeterminate.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.github.afollestad.material-dialogs\\core\\0.8.5.3\\res\\layout\\md_dialog_progress_indeterminate.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_accountkit_fragment_verifying_code_center.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\layout\\com_accountkit_fragment_verifying_code_center.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_separator.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_navigation_item_separator.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_auth0_lock_passwordless_item_country_code.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\layout\\com_auth0_lock_passwordless_item_country_code.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\nav_header_destination.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\nav_header_destination.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar_include.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_layout_snackbar_include.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_search_view.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_auth0_lock_btn_social_small.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\layout\\com_auth0_lock_btn_social_small.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_payment.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\content_payment.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_big_media_narrow.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu_item.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_navigation_menu_item.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_register.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\layout\\activity_register.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_white_round.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\layout\\messenger_button_send_white_round.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_payment.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\layout\\content_payment.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\select_dialog_multichoice_material.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_accountkit_fragment_resend_bottom.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\layout\\com_accountkit_fragment_resend_bottom.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_mode_bar.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_notifications.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\layout\\content_notifications.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\app_bar_ply.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\app_bar_ply.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_past.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\layout\\layout_past.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_dialog_list.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.github.afollestad.material-dialogs\\core\\0.8.5.3\\res\\layout\\md_dialog_list.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_accountkit_fragment_sending_code_center.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\layout\\com_accountkit_fragment_sending_code_center.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\select_dialog_multichoice_material.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_mybooking.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\content_mybooking.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_listitem_singlechoice.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.github.afollestad.material-dialogs\\core\\0.8.5.3\\res\\layout\\md_listitem_singlechoice.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_part_time.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_alert.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\layout\\activity_alert.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_subheader.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_navigation_item_subheader.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_accountkit_phone_country_code_layout.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\layout\\com_accountkit_phone_country_code_layout.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_past.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\content_past.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_white_round.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\layout\\messenger_button_send_white_round.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_mybooking.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\activity_mybooking.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\list_service_item.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\layout\\list_service_item.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_blue_round.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\layout\\messenger_button_send_blue_round.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_stub_titleframe.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.github.afollestad.material-dialogs\\core\\0.8.5.3\\res\\layout\\md_stub_titleframe.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\support_simple_spinner_dropdown_item.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\select_dialog_item_material.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\app_bar_payment.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\app_bar_payment.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_accountkit_fragment_title.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\layout\\com_accountkit_fragment_title.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\app_bar_past.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\app_bar_past.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_past.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\layout\\content_past.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_login.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\activity_login.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_list_menu_item_icon.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_suggestedroute.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\activity_suggestedroute.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_accountkit_fragment_email_login_top.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\layout\\com_accountkit_fragment_email_login_top.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_suggestedroute.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\content_suggestedroute.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_accountkit_fragment_phone_login_top.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\layout\\com_accountkit_fragment_phone_login_top.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_source.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\content_source.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_wallet.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\layout\\activity_wallet.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_navigation_menu.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_expanded_menu_layout.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_dialog_title_material.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_feedback.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\layout\\activity_feedback.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_bar_up_container.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_auth0_lock_activity_lock.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\layout\\com_auth0_lock_activity_lock.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_list_menu_item_layout.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_auth0_lock_checkable_option.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\layout\\com_auth0_lock_checkable_option.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_lines.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_header.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_navigation_item_header.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_white_large.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\layout\\messenger_button_send_white_large.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\route_item.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\layout\\route_item.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_layout_snackbar.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_auth0_lock_login_form_view.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\layout\\com_auth0_lock_login_form_view.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_icon.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_layout_tab_icon.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_mode_close_item_material.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_past.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\activity_past.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_action.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_media_action.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_facebook_tooltip_bubble.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\layout\\com_facebook_tooltip_bubble.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_wallet.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\layout\\content_wallet.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_menu_layout.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_dialog_progress_indeterminate.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.github.afollestad.material-dialogs\\core\\0.8.5.3\\res\\layout\\md_dialog_progress_indeterminate.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_listitem.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.github.afollestad.material-dialogs\\core\\0.8.5.3\\res\\layout\\md_listitem.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\app_bar_past.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\layout\\app_bar_past.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\route_item.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\route_item.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_search_view.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_bar_title_item.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\app_bar_payment.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\layout\\app_bar_payment.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_listitem_singlechoice.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.github.afollestad.material-dialogs\\core\\0.8.5.3\\res\\layout\\md_listitem_singlechoice.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_dialog_progress_indeterminate_horizontal.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.github.afollestad.material-dialogs\\core\\0.8.5.3\\res\\layout\\md_dialog_progress_indeterminate_horizontal.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_facebook_device_auth_dialog_fragment.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\layout\\com_facebook_device_auth_dialog_fragment.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_expanded_menu_layout.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_register.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\layout\\content_register.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_stub_actionbuttons.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.github.afollestad.material-dialogs\\core\\0.8.5.3\\res\\layout\\md_stub_actionbuttons.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_suggestedroute.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\layout\\activity_suggestedroute.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_text.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_layout_tab_text.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_auth0_lock_passwordless_activity_country_code.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\layout\\com_auth0_lock_passwordless_activity_country_code.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_dialog_input.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.github.afollestad.material-dialogs\\core\\0.8.5.3\\res\\layout\\md_dialog_input.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\app_bar_source.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\layout\\app_bar_source.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_list_menu_item_checkbox.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_blue_small.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\layout\\messenger_button_send_blue_small.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\nav_header_source.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\nav_header_source.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_menu_item_layout.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_notifications.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\activity_notifications.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_listitem.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.github.afollestad.material-dialogs\\core\\0.8.5.3\\res\\layout\\md_listitem.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_register.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\content_register.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_auth0_lock_activity_web_auth.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\auth0\\1.0.0-beta.2\\res\\layout\\com_auth0_lock_activity_web_auth.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_blue_large.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\layout\\messenger_button_send_blue_large.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_auth0_lock_action_button.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\layout\\com_auth0_lock_action_button.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_feedback.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\content_feedback.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_navigation_item.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_stub_titleframe_lesspadding.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.github.afollestad.material-dialogs\\core\\0.8.5.3\\res\\layout\\md_stub_titleframe_lesspadding.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_white_large.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\layout\\messenger_button_send_white_large.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_alert_dialog_material.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_accountkit_activity_layout.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\layout\\com_accountkit_activity_layout.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_notifications.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\content_notifications.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_ply.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\layout\\content_ply.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_past.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\layout_past.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_activity_chooser_view.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_navigation_item.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_part_chronometer.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_menu_item_action_area.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_menu_item_action_area.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_feedback.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\layout\\content_feedback.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_facebook_login_fragment.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\layout\\com_facebook_login_fragment.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_auth0_lock_custom_fields_form_view.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\layout\\com_auth0_lock_custom_fields_form_view.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_facebook_activity_layout.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\layout\\com_facebook_activity_layout.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_accountkit_fragment_static_content.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\layout\\com_accountkit_fragment_static_content.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_stub_titleframe.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.github.afollestad.material-dialogs\\core\\0.8.5.3\\res\\layout\\md_stub_titleframe.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\nav_header_destination.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\layout\\nav_header_destination.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\select_dialog_item_material.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_auth0_lock_terms_layout.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\layout\\com_auth0_lock_terms_layout.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_screen_toolbar.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\nav_header_payment.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\layout\\nav_header_payment.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_dialog_custom.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.github.afollestad.material-dialogs\\core\\0.8.5.3\\res\\layout\\md_dialog_custom.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_destination.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\layout\\content_destination.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\nav_header_ply.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\nav_header_ply.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_stub_actionbuttons.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.github.afollestad.material-dialogs\\core\\0.8.5.3\\res\\layout\\md_stub_actionbuttons.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_login.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\content_login.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_accountkit_fragment_email_login_bottom.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\layout\\com_accountkit_fragment_email_login_bottom.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_ply.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\content_ply.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_blue_round.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\layout\\messenger_button_send_blue_round.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_action.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_media_action.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_accountkit_fragment_verified_code_bottom.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\layout\\com_accountkit_fragment_verified_code_bottom.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_register.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\activity_register.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_suggestedroute.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\layout\\content_suggestedroute.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_wallet.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\activity_wallet.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\app_bar_destination.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\layout\\app_bar_destination.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_popup_menu_item_layout.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_select_dialog_material.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_header.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_navigation_item_header.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_profile.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\layout\\content_profile.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_login.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\layout\\activity_login.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_feedback.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\activity_feedback.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_navigation_menu.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_alert.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\activity_alert.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\select_dialog_singlechoice_material.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_menu_item_layout.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_dialog_custom.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.github.afollestad.material-dialogs\\core\\0.8.5.3\\res\\layout\\md_dialog_custom.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_big_media.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\splash.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\layout\\splash.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_part_chronometer.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_aboutus.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\layout\\content_aboutus.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_ply.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\activity_ply.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_auth0_lock_signup_form_view.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\layout\\com_auth0_lock_signup_form_view.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_mode_close_item_material.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_subheader.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_navigation_item_subheader.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_dialog_progress.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.github.afollestad.material-dialogs\\core\\0.8.5.3\\res\\layout\\md_dialog_progress.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_auth0_lock_sso_layout.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\layout\\com_auth0_lock_sso_layout.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_bottom_sheet_dialog.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_bottom_sheet_dialog.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_auth0_lock_passwordless_request_code_form_view.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\layout\\com_auth0_lock_passwordless_request_code_form_view.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_aboutus.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\content_aboutus.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_accountkit_fragment_phone_login_bottom.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\layout\\com_accountkit_fragment_phone_login_bottom.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_wallet.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\content_wallet.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_accountkit_fragment_confirmation_code_center.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\layout\\com_accountkit_fragment_confirmation_code_center.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\splash.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\splash.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_dialog_list.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.github.afollestad.material-dialogs\\core\\0.8.5.3\\res\\layout\\md_dialog_list.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_big_media_narrow.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_dialog_input.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.github.afollestad.material-dialogs\\core\\0.8.5.3\\res\\layout\\md_dialog_input.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar_include.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_layout_snackbar_include.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_accountkit_fragment_confirmation_code_bottom.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\layout\\com_accountkit_fragment_confirmation_code_bottom.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_source.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\activity_source.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_bar_up_container.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\list_service_item.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\list_service_item.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_accountkit_fragment_confirmation_code_top.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\layout\\com_accountkit_fragment_confirmation_code_top.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_white_small.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\layout\\messenger_button_send_white_small.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_source.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\layout\\activity_source.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_select_dialog_material.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_menu_item_action_area.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_menu_item_action_area.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_activity_chooser_view_list_item.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_listitem_multichoice.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.github.afollestad.material-dialogs\\core\\0.8.5.3\\res\\layout\\md_listitem_multichoice.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\select_dialog_singlechoice_material.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_profilepic.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\layout\\content_profilepic.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_destination.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\content_destination.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_blue_large.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\layout\\messenger_button_send_blue_large.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\nav_header_payment.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\nav_header_payment.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_cancel_action.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_media_cancel_action.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\app_bar_destination.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\app_bar_destination.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_list_menu_item_layout.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_facebook_login_fragment.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\layout\\com_facebook_login_fragment.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_activity_chooser_view.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_facebook_activity_layout.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\layout\\com_facebook_activity_layout.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_dialog_basic.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.github.afollestad.material-dialogs\\core\\0.8.5.3\\res\\layout\\md_dialog_basic.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_blue_small.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\layout\\messenger_button_send_blue_small.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_auth0_lock_password_strength.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\layout\\com_auth0_lock_password_strength.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\app_bar_source.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\app_bar_source.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_accountkit_fragment_phone_login_center.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\layout\\com_accountkit_fragment_phone_login_center.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_media.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_accountkit_fragment_sent_code_center.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\layout\\com_accountkit_fragment_sent_code_center.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_profilepic.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\activity_profilepic.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_profilepic.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\layout\\activity_profilepic.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_profile.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\activity_profile.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_destination.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\layout\\activity_destination.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_list_menu_item_radio.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_source.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\layout\\content_source.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_aboutus.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\activity_aboutus.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_auth0_lock_activity_lock_passwordless.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\layout\\com_auth0_lock_activity_lock_passwordless.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_profile.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\layout\\content_profile.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_auth0_lock_passwordless_country_code_selector.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\layout\\com_auth0_lock_passwordless_country_code_selector.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_screen_content_include.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_screen_simple.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_facebook_device_auth_dialog_fragment.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\layout\\com_facebook_device_auth_dialog_fragment.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_lines.xml"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_listitem_multichoice.xml",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.github.afollestad.material-dialogs\\core\\0.8.5.3\\res\\layout\\md_listitem_multichoice.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_accountkit_fragment_error_center.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\layout\\com_accountkit_fragment_error_center.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_screen_content_include.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_past.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\layout\\activity_past.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_auth0_lock_passwordless_input_code_form_view.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\layout\\com_auth0_lock_passwordless_input_code_form_view.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_accountkit_fragment_phone_login_text.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\layout\\com_accountkit_fragment_phone_login_text.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_layout_snackbar.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_profile.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\layout\\activity_profile.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_auth0_lock_mode_selection_layout.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\layout\\com_auth0_lock_mode_selection_layout.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_accountkit_fragment_email_verify_bottom.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\layout\\com_accountkit_fragment_email_verify_bottom.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_media.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu_item.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_navigation_menu_item.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_mybooking.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\layout\\activity_mybooking.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_icon.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_layout_tab_icon.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_accountkit_fragment_error_bottom.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\layout\\com_accountkit_fragment_error_bottom.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_aboutus.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\layout\\activity_aboutus.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_login.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\layout\\content_login.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_accountkit_phone_country_code_item_layout.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\layout\\com_accountkit_phone_country_code_item_layout.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_auth0_lock_header.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\layout\\com_auth0_lock_header.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_auth0_lock_validated_input_view.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\layout\\com_auth0_lock_validated_input_view.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_mybooking.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\layout\\content_mybooking.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_dialog_progress.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.github.afollestad.material-dialogs\\core\\0.8.5.3\\res\\layout\\md_dialog_progress.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_separator.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_navigation_item_separator.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_big_media.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_ply.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\layout\\activity_ply.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_notifications.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\layout\\activity_notifications.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\app_bar_ply.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\layout\\app_bar_ply.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_auth0_lock_changepwd_form_view.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\layout\\com_auth0_lock_changepwd_form_view.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_accountkit_fragment_email_verify_center.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\layout\\com_accountkit_fragment_email_verify_center.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_accountkit_fragment_email_login_text.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\layout\\com_accountkit_fragment_email_login_text.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\md_dialog_basic.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.github.afollestad.material-dialogs\\core\\0.8.5.3\\res\\layout\\md_dialog_basic.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_accountkit_confirmation_code_input.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\layout\\com_accountkit_confirmation_code_input.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_bottom_sheet_dialog.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_bottom_sheet_dialog.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_white_small.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\layout\\messenger_button_send_white_small.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\nav_header_source.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\layout\\nav_header_source.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_text.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_layout_tab_text.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_auth0_lock_mfa_input_code_form_view.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\layout\\com_auth0_lock_mfa_input_code_form_view.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_auth0_lock_btn_social_large.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\layout\\com_auth0_lock_btn_social_large.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_part_time.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_accountkit_fragment_email_login_center.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\layout\\com_accountkit_fragment_email_login_center.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\layout\\com_accountkit_fragment_verified_code_center.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\layout\\com_accountkit_fragment_verified_code_center.xml"
     }
 ]

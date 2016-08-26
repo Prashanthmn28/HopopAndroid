@@ -1,17 +1,38 @@
 [
     {
-        "outputFile": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\values-zh-rHK\\values-zh-rHK.xml",
+        "outputFile": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\values-zh-rHK\\values-zh-rHK.xml",
         "map": [
             {
                 "to": {
                     "startLine": 2,
                     "startColumn": 4,
                     "startOffset": 55,
-                    "endColumn": 94,
-                    "endOffset": 145
+                    "endLine": 238,
+                    "endColumn": 19,
+                    "endOffset": 7719
                 },
                 "from": {
-                    "file": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endLine": 238,
+                        "endColumn": 19,
+                        "endOffset": 7719
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 239,
+                    "startColumn": 4,
+                    "startOffset": 7724,
+                    "endColumn": 94,
+                    "endOffset": 7814
+                },
+                "from": {
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -23,14 +44,14 @@
             },
             {
                 "to": {
-                    "startLine": 3,
+                    "startLine": 240,
                     "startColumn": 4,
-                    "startOffset": 150,
+                    "startOffset": 7819,
                     "endColumn": 106,
-                    "endOffset": 252
+                    "endOffset": 7921
                 },
                 "from": {
-                    "file": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -42,14 +63,14 @@
             },
             {
                 "to": {
-                    "startLine": 4,
+                    "startLine": 241,
                     "startColumn": 4,
-                    "startOffset": 257,
+                    "startOffset": 7926,
                     "endColumn": 122,
-                    "endOffset": 375
+                    "endOffset": 8044
                 },
                 "from": {
-                    "file": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -61,14 +82,14 @@
             },
             {
                 "to": {
-                    "startLine": 5,
+                    "startLine": 242,
                     "startColumn": 4,
-                    "startOffset": 380,
+                    "startOffset": 8049,
                     "endColumn": 92,
-                    "endOffset": 468
+                    "endOffset": 8137
                 },
                 "from": {
-                    "file": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -80,14 +101,14 @@
             },
             {
                 "to": {
-                    "startLine": 6,
+                    "startLine": 243,
                     "startColumn": 4,
-                    "startOffset": 473,
+                    "startOffset": 8142,
                     "endColumn": 99,
-                    "endOffset": 568
+                    "endOffset": 8237
                 },
                 "from": {
-                    "file": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -99,14 +120,14 @@
             },
             {
                 "to": {
-                    "startLine": 7,
+                    "startLine": 244,
                     "startColumn": 4,
-                    "startOffset": 573,
+                    "startOffset": 8242,
                     "endColumn": 81,
-                    "endOffset": 650
+                    "endOffset": 8319
                 },
                 "from": {
-                    "file": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -118,14 +139,14 @@
             },
             {
                 "to": {
-                    "startLine": 8,
+                    "startLine": 245,
                     "startColumn": 4,
-                    "startOffset": 655,
+                    "startOffset": 8324,
                     "endColumn": 96,
-                    "endOffset": 747
+                    "endOffset": 8416
                 },
                 "from": {
-                    "file": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -137,14 +158,14 @@
             },
             {
                 "to": {
-                    "startLine": 9,
+                    "startLine": 246,
                     "startColumn": 4,
-                    "startOffset": 752,
+                    "startOffset": 8421,
                     "endColumn": 107,
-                    "endOffset": 855
+                    "endOffset": 8524
                 },
                 "from": {
-                    "file": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -156,14 +177,14 @@
             },
             {
                 "to": {
-                    "startLine": 10,
+                    "startLine": 247,
                     "startColumn": 4,
-                    "startOffset": 860,
+                    "startOffset": 8529,
                     "endColumn": 75,
-                    "endOffset": 931
+                    "endOffset": 8600
                 },
                 "from": {
-                    "file": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -175,14 +196,14 @@
             },
             {
                 "to": {
-                    "startLine": 11,
+                    "startLine": 248,
                     "startColumn": 4,
-                    "startOffset": 936,
+                    "startOffset": 8605,
                     "endColumn": 75,
-                    "endOffset": 1007
+                    "endOffset": 8676
                 },
                 "from": {
-                    "file": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -194,14 +215,14 @@
             },
             {
                 "to": {
-                    "startLine": 12,
+                    "startLine": 249,
                     "startColumn": 4,
-                    "startOffset": 1012,
+                    "startOffset": 8681,
                     "endColumn": 77,
-                    "endOffset": 1085
+                    "endOffset": 8754
                 },
                 "from": {
-                    "file": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -213,14 +234,14 @@
             },
             {
                 "to": {
-                    "startLine": 13,
+                    "startLine": 250,
                     "startColumn": 4,
-                    "startOffset": 1090,
+                    "startOffset": 8759,
                     "endColumn": 95,
-                    "endOffset": 1181
+                    "endOffset": 8850
                 },
                 "from": {
-                    "file": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -232,14 +253,14 @@
             },
             {
                 "to": {
-                    "startLine": 14,
+                    "startLine": 251,
                     "startColumn": 4,
-                    "startOffset": 1186,
+                    "startOffset": 8855,
                     "endColumn": 95,
-                    "endOffset": 1277
+                    "endOffset": 8946
                 },
                 "from": {
-                    "file": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -251,14 +272,14 @@
             },
             {
                 "to": {
-                    "startLine": 15,
+                    "startLine": 252,
                     "startColumn": 4,
-                    "startOffset": 1282,
+                    "startOffset": 8951,
                     "endColumn": 94,
-                    "endOffset": 1372
+                    "endOffset": 9041
                 },
                 "from": {
-                    "file": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -270,14 +291,14 @@
             },
             {
                 "to": {
-                    "startLine": 16,
+                    "startLine": 253,
                     "startColumn": 4,
-                    "startOffset": 1377,
+                    "startOffset": 9046,
                     "endColumn": 96,
-                    "endOffset": 1469
+                    "endOffset": 9138
                 },
                 "from": {
-                    "file": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
@@ -289,14 +310,14 @@
             },
             {
                 "to": {
-                    "startLine": 17,
+                    "startLine": 254,
                     "startColumn": 4,
-                    "startOffset": 1474,
+                    "startOffset": 9143,
                     "endColumn": 94,
-                    "endOffset": 1564
+                    "endOffset": 9233
                 },
                 "from": {
-                    "file": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
@@ -308,14 +329,14 @@
             },
             {
                 "to": {
-                    "startLine": 18,
+                    "startLine": 255,
                     "startColumn": 4,
-                    "startOffset": 1569,
+                    "startOffset": 9238,
                     "endColumn": 97,
-                    "endOffset": 1662
+                    "endOffset": 9331
                 },
                 "from": {
-                    "file": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
@@ -327,14 +348,14 @@
             },
             {
                 "to": {
-                    "startLine": 19,
+                    "startLine": 256,
                     "startColumn": 4,
-                    "startOffset": 1667,
+                    "startOffset": 9336,
                     "endColumn": 112,
-                    "endOffset": 1775
+                    "endOffset": 9444
                 },
                 "from": {
-                    "file": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
@@ -346,14 +367,14 @@
             },
             {
                 "to": {
-                    "startLine": 20,
+                    "startLine": 257,
                     "startColumn": 4,
-                    "startOffset": 1780,
+                    "startOffset": 9449,
                     "endColumn": 93,
-                    "endOffset": 1869
+                    "endOffset": 9538
                 },
                 "from": {
-                    "file": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
@@ -365,14 +386,824 @@
             },
             {
                 "to": {
-                    "startLine": 21,
+                    "startLine": 258,
                     "startColumn": 4,
-                    "startOffset": 1874,
-                    "endColumn": 117,
-                    "endOffset": 1987
+                    "startOffset": 9543,
+                    "endColumn": 58,
+                    "endOffset": 9597
                 },
                 "from": {
-                    "file": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 239,
+                        "startColumn": 4,
+                        "startOffset": 7724,
+                        "endColumn": 58,
+                        "endOffset": 7778
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 259,
+                    "startColumn": 4,
+                    "startOffset": 9602,
+                    "endColumn": 59,
+                    "endOffset": 9657
+                },
+                "from": {
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 240,
+                        "startColumn": 4,
+                        "startOffset": 7783,
+                        "endColumn": 59,
+                        "endOffset": 7838
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 260,
+                    "startColumn": 4,
+                    "startOffset": 9662,
+                    "endColumn": 60,
+                    "endOffset": 9718
+                },
+                "from": {
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 241,
+                        "startColumn": 4,
+                        "startOffset": 7843,
+                        "endColumn": 60,
+                        "endOffset": 7899
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 261,
+                    "startColumn": 4,
+                    "startOffset": 9723,
+                    "endColumn": 61,
+                    "endOffset": 9780
+                },
+                "from": {
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 242,
+                        "startColumn": 4,
+                        "startOffset": 7904,
+                        "endColumn": 61,
+                        "endOffset": 7961
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 262,
+                    "startColumn": 4,
+                    "startOffset": 9785,
+                    "endColumn": 59,
+                    "endOffset": 9840
+                },
+                "from": {
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 243,
+                        "startColumn": 4,
+                        "startOffset": 7966,
+                        "endColumn": 59,
+                        "endOffset": 8021
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 263,
+                    "startColumn": 4,
+                    "startOffset": 9845,
+                    "endColumn": 58,
+                    "endOffset": 9899
+                },
+                "from": {
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 244,
+                        "startColumn": 4,
+                        "startOffset": 8026,
+                        "endColumn": 58,
+                        "endOffset": 8080
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 264,
+                    "startColumn": 4,
+                    "startOffset": 9904,
+                    "endColumn": 55,
+                    "endOffset": 9955
+                },
+                "from": {
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 245,
+                        "startColumn": 4,
+                        "startOffset": 8085,
+                        "endColumn": 55,
+                        "endOffset": 8136
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 265,
+                    "startColumn": 4,
+                    "startOffset": 9960,
+                    "endColumn": 62,
+                    "endOffset": 10018
+                },
+                "from": {
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 246,
+                        "startColumn": 4,
+                        "startOffset": 8141,
+                        "endColumn": 62,
+                        "endOffset": 8199
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 266,
+                    "startColumn": 4,
+                    "startOffset": 10023,
+                    "endColumn": 67,
+                    "endOffset": 10086
+                },
+                "from": {
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 247,
+                        "startColumn": 4,
+                        "startOffset": 8204,
+                        "endColumn": 67,
+                        "endOffset": 8267
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 267,
+                    "startColumn": 4,
+                    "startOffset": 10091,
+                    "endColumn": 57,
+                    "endOffset": 10144
+                },
+                "from": {
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 248,
+                        "startColumn": 4,
+                        "startOffset": 8272,
+                        "endColumn": 57,
+                        "endOffset": 8325
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 268,
+                    "startColumn": 4,
+                    "startOffset": 10149,
+                    "endColumn": 82,
+                    "endOffset": 10227
+                },
+                "from": {
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 249,
+                        "startColumn": 4,
+                        "startOffset": 8330,
+                        "endColumn": 82,
+                        "endOffset": 8408
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 269,
+                    "startColumn": 4,
+                    "startOffset": 10232,
+                    "endColumn": 131,
+                    "endOffset": 10359
+                },
+                "from": {
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 250,
+                        "startColumn": 4,
+                        "startOffset": 8413,
+                        "endColumn": 131,
+                        "endOffset": 8540
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 270,
+                    "startColumn": 4,
+                    "startOffset": 10364,
+                    "endColumn": 58,
+                    "endOffset": 10418
+                },
+                "from": {
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 251,
+                        "startColumn": 4,
+                        "startOffset": 8545,
+                        "endColumn": 58,
+                        "endOffset": 8599
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 271,
+                    "startColumn": 4,
+                    "startOffset": 10423,
+                    "endColumn": 65,
+                    "endOffset": 10484
+                },
+                "from": {
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 252,
+                        "startColumn": 4,
+                        "startOffset": 8604,
+                        "endColumn": 65,
+                        "endOffset": 8665
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 272,
+                    "startColumn": 4,
+                    "startOffset": 10489,
+                    "endColumn": 59,
+                    "endOffset": 10544
+                },
+                "from": {
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 253,
+                        "startColumn": 4,
+                        "startOffset": 8670,
+                        "endColumn": 59,
+                        "endOffset": 8725
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 273,
+                    "startColumn": 4,
+                    "startOffset": 10549,
+                    "endColumn": 61,
+                    "endOffset": 10606
+                },
+                "from": {
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 254,
+                        "startColumn": 4,
+                        "startOffset": 8730,
+                        "endColumn": 61,
+                        "endOffset": 8787
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 274,
+                    "startColumn": 4,
+                    "startOffset": 10611,
+                    "endLine": 276,
+                    "endColumn": 13,
+                    "endOffset": 10811
+                },
+                "from": {
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 255,
+                        "startColumn": 4,
+                        "startOffset": 8792,
+                        "endLine": 257,
+                        "endColumn": 13,
+                        "endOffset": 8992
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 277,
+                    "startColumn": 4,
+                    "startOffset": 10816,
+                    "endLine": 279,
+                    "endColumn": 13,
+                    "endOffset": 11071
+                },
+                "from": {
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 258,
+                        "startColumn": 4,
+                        "startOffset": 8997,
+                        "endLine": 260,
+                        "endColumn": 13,
+                        "endOffset": 9252
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 280,
+                    "startColumn": 4,
+                    "startOffset": 11076,
+                    "endLine": 282,
+                    "endColumn": 13,
+                    "endOffset": 11371
+                },
+                "from": {
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 261,
+                        "startColumn": 4,
+                        "startOffset": 9257,
+                        "endLine": 263,
+                        "endColumn": 13,
+                        "endOffset": 9552
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 283,
+                    "startColumn": 4,
+                    "startOffset": 11376,
+                    "endColumn": 72,
+                    "endOffset": 11444
+                },
+                "from": {
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 264,
+                        "startColumn": 4,
+                        "startOffset": 9557,
+                        "endColumn": 72,
+                        "endOffset": 9625
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 284,
+                    "startColumn": 4,
+                    "startOffset": 11449,
+                    "endColumn": 73,
+                    "endOffset": 11518
+                },
+                "from": {
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 265,
+                        "startColumn": 4,
+                        "startOffset": 9630,
+                        "endColumn": 73,
+                        "endOffset": 9699
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 285,
+                    "startColumn": 4,
+                    "startOffset": 11523,
+                    "endColumn": 69,
+                    "endOffset": 11588
+                },
+                "from": {
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 266,
+                        "startColumn": 4,
+                        "startOffset": 9704,
+                        "endColumn": 69,
+                        "endOffset": 9769
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 286,
+                    "startColumn": 4,
+                    "startOffset": 11593,
+                    "endColumn": 69,
+                    "endOffset": 11658
+                },
+                "from": {
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 267,
+                        "startColumn": 4,
+                        "startOffset": 9774,
+                        "endColumn": 69,
+                        "endOffset": 9839
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 287,
+                    "startColumn": 4,
+                    "startOffset": 11663,
+                    "endColumn": 73,
+                    "endOffset": 11732
+                },
+                "from": {
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 268,
+                        "startColumn": 4,
+                        "startOffset": 9844,
+                        "endColumn": 73,
+                        "endOffset": 9913
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 288,
+                    "startColumn": 4,
+                    "startOffset": 11737,
+                    "endLine": 290,
+                    "endColumn": 13,
+                    "endOffset": 11927
+                },
+                "from": {
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 269,
+                        "startColumn": 4,
+                        "startOffset": 9918,
+                        "endLine": 271,
+                        "endColumn": 13,
+                        "endOffset": 10108
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 291,
+                    "startColumn": 4,
+                    "startOffset": 11932,
+                    "endColumn": 69,
+                    "endOffset": 11997
+                },
+                "from": {
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 272,
+                        "startColumn": 4,
+                        "startOffset": 10113,
+                        "endColumn": 69,
+                        "endOffset": 10178
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 292,
+                    "startColumn": 4,
+                    "startOffset": 12002,
+                    "endColumn": 68,
+                    "endOffset": 12066
+                },
+                "from": {
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 273,
+                        "startColumn": 4,
+                        "startOffset": 10183,
+                        "endColumn": 68,
+                        "endOffset": 10247
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 293,
+                    "startColumn": 4,
+                    "startOffset": 12071,
+                    "endColumn": 83,
+                    "endOffset": 12150
+                },
+                "from": {
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 274,
+                        "startColumn": 4,
+                        "startOffset": 10252,
+                        "endColumn": 83,
+                        "endOffset": 10331
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 294,
+                    "startColumn": 4,
+                    "startOffset": 12155,
+                    "endColumn": 63,
+                    "endOffset": 12214
+                },
+                "from": {
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 275,
+                        "startColumn": 4,
+                        "startOffset": 10336,
+                        "endColumn": 63,
+                        "endOffset": 10395
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 295,
+                    "startColumn": 4,
+                    "startOffset": 12219,
+                    "endColumn": 85,
+                    "endOffset": 12300
+                },
+                "from": {
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 276,
+                        "startColumn": 4,
+                        "startOffset": 10400,
+                        "endColumn": 85,
+                        "endOffset": 10481
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 296,
+                    "startColumn": 4,
+                    "startOffset": 12305,
+                    "endColumn": 72,
+                    "endOffset": 12373
+                },
+                "from": {
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 277,
+                        "startColumn": 4,
+                        "startOffset": 10486,
+                        "endColumn": 72,
+                        "endOffset": 10554
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 297,
+                    "startColumn": 4,
+                    "startOffset": 12378,
+                    "endColumn": 75,
+                    "endOffset": 12449
+                },
+                "from": {
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 278,
+                        "startColumn": 4,
+                        "startOffset": 10559,
+                        "endColumn": 75,
+                        "endOffset": 10630
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 298,
+                    "startColumn": 4,
+                    "startOffset": 12454,
+                    "endLine": 300,
+                    "endColumn": 13,
+                    "endOffset": 12659
+                },
+                "from": {
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 279,
+                        "startColumn": 4,
+                        "startOffset": 10635,
+                        "endLine": 281,
+                        "endColumn": 13,
+                        "endOffset": 10840
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 301,
+                    "startColumn": 4,
+                    "startOffset": 12664,
+                    "endColumn": 69,
+                    "endOffset": 12729
+                },
+                "from": {
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 282,
+                        "startColumn": 4,
+                        "startOffset": 10845,
+                        "endColumn": 69,
+                        "endOffset": 10910
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 302,
+                    "startColumn": 4,
+                    "startOffset": 12734,
+                    "endColumn": 66,
+                    "endOffset": 12796
+                },
+                "from": {
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 283,
+                        "startColumn": 4,
+                        "startOffset": 10915,
+                        "endColumn": 66,
+                        "endOffset": 10977
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 303,
+                    "startColumn": 4,
+                    "startOffset": 12801,
+                    "endColumn": 74,
+                    "endOffset": 12871
+                },
+                "from": {
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 284,
+                        "startColumn": 4,
+                        "startOffset": 10982,
+                        "endColumn": 74,
+                        "endOffset": 11052
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 304,
+                    "startColumn": 4,
+                    "startOffset": 12876,
+                    "endColumn": 66,
+                    "endOffset": 12938
+                },
+                "from": {
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 285,
+                        "startColumn": 4,
+                        "startOffset": 11057,
+                        "endColumn": 66,
+                        "endOffset": 11119
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 305,
+                    "startColumn": 4,
+                    "startOffset": 12943,
+                    "endColumn": 58,
+                    "endOffset": 12997
+                },
+                "from": {
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 286,
+                        "startColumn": 4,
+                        "startOffset": 11124,
+                        "endColumn": 58,
+                        "endOffset": 11178
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 306,
+                    "startColumn": 4,
+                    "startOffset": 13002,
+                    "endColumn": 60,
+                    "endOffset": 13058
+                },
+                "from": {
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 287,
+                        "startColumn": 4,
+                        "startOffset": 11183,
+                        "endColumn": 60,
+                        "endOffset": 11239
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 307,
+                    "startColumn": 4,
+                    "startOffset": 13063,
+                    "endColumn": 64,
+                    "endOffset": 13123
+                },
+                "from": {
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 288,
+                        "startColumn": 4,
+                        "startOffset": 11244,
+                        "endColumn": 64,
+                        "endOffset": 11304
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 308,
+                    "startColumn": 4,
+                    "startOffset": 13128,
+                    "endLine": 310,
+                    "endColumn": 13,
+                    "endOffset": 13231
+                },
+                "from": {
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 289,
+                        "startColumn": 4,
+                        "startOffset": 11309,
+                        "endLine": 291,
+                        "endColumn": 13,
+                        "endOffset": 11412
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 311,
+                    "startColumn": 4,
+                    "startOffset": 13236,
+                    "endColumn": 65,
+                    "endOffset": 13297
+                },
+                "from": {
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "position": {
+                        "startLine": 292,
+                        "startColumn": 4,
+                        "startOffset": 11417,
+                        "endColumn": 65,
+                        "endOffset": 11478
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 312,
+                    "startColumn": 4,
+                    "startOffset": 13302,
+                    "endColumn": 117,
+                    "endOffset": 13415
+                },
+                "from": {
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -384,14 +1215,14 @@
             },
             {
                 "to": {
-                    "startLine": 22,
+                    "startLine": 313,
                     "startColumn": 4,
-                    "startOffset": 1992,
+                    "startOffset": 13420,
                     "endColumn": 84,
-                    "endOffset": 2072
+                    "endOffset": 13500
                 },
                 "from": {
-                    "file": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -403,14 +1234,14 @@
             },
             {
                 "to": {
-                    "startLine": 23,
+                    "startLine": 314,
                     "startColumn": 4,
-                    "startOffset": 2077,
+                    "startOffset": 13505,
                     "endColumn": 99,
-                    "endOffset": 2172
+                    "endOffset": 13600
                 },
                 "from": {
-                    "file": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -422,14 +1253,14 @@
             },
             {
                 "to": {
-                    "startLine": 24,
+                    "startLine": 315,
                     "startColumn": 4,
-                    "startOffset": 2177,
+                    "startOffset": 13605,
                     "endColumn": 91,
-                    "endOffset": 2264
+                    "endOffset": 13692
                 },
                 "from": {
-                    "file": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -441,14 +1272,14 @@
             },
             {
                 "to": {
-                    "startLine": 25,
+                    "startLine": 316,
                     "startColumn": 4,
-                    "startOffset": 2269,
+                    "startOffset": 13697,
                     "endColumn": 62,
-                    "endOffset": 2327
+                    "endOffset": 13755
                 },
                 "from": {
-                    "file": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -460,14 +1291,14 @@
             },
             {
                 "to": {
-                    "startLine": 26,
+                    "startLine": 317,
                     "startColumn": 4,
-                    "startOffset": 2332,
+                    "startOffset": 13760,
                     "endColumn": 65,
-                    "endOffset": 2393
+                    "endOffset": 13821
                 },
                 "from": {
-                    "file": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -479,14 +1310,14 @@
             },
             {
                 "to": {
-                    "startLine": 27,
+                    "startLine": 318,
                     "startColumn": 4,
-                    "startOffset": 2398,
+                    "startOffset": 13826,
                     "endColumn": 53,
-                    "endOffset": 2447
+                    "endOffset": 13875
                 },
                 "from": {
-                    "file": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 4,
@@ -498,14 +1329,14 @@
             },
             {
                 "to": {
-                    "startLine": 28,
+                    "startLine": 319,
                     "startColumn": 4,
-                    "startOffset": 2452,
+                    "startOffset": 13880,
                     "endColumn": 67,
-                    "endOffset": 2515
+                    "endOffset": 13943
                 },
                 "from": {
-                    "file": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 4,
@@ -517,14 +1348,14 @@
             },
             {
                 "to": {
-                    "startLine": 29,
+                    "startLine": 320,
                     "startColumn": 4,
-                    "startOffset": 2520,
+                    "startOffset": 13948,
                     "endColumn": 67,
-                    "endOffset": 2583
+                    "endOffset": 14011
                 },
                 "from": {
-                    "file": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 4,
@@ -536,14 +1367,14 @@
             },
             {
                 "to": {
-                    "startLine": 30,
+                    "startLine": 321,
                     "startColumn": 4,
-                    "startOffset": 2588,
+                    "startOffset": 14016,
                     "endColumn": 84,
-                    "endOffset": 2668
+                    "endOffset": 14096
                 },
                 "from": {
-                    "file": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,
@@ -555,14 +1386,14 @@
             },
             {
                 "to": {
-                    "startLine": 31,
+                    "startLine": 322,
                     "startColumn": 4,
-                    "startOffset": 2673,
+                    "startOffset": 14101,
                     "endColumn": 68,
-                    "endOffset": 2737
+                    "endOffset": 14165
                 },
                 "from": {
-                    "file": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
@@ -574,14 +1405,14 @@
             },
             {
                 "to": {
-                    "startLine": 32,
+                    "startLine": 323,
                     "startColumn": 4,
-                    "startOffset": 2742,
+                    "startOffset": 14170,
                     "endColumn": 68,
-                    "endOffset": 2806
+                    "endOffset": 14234
                 },
                 "from": {
-                    "file": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 4,
@@ -593,14 +1424,14 @@
             },
             {
                 "to": {
-                    "startLine": 33,
+                    "startLine": 324,
                     "startColumn": 4,
-                    "startOffset": 2811,
+                    "startOffset": 14239,
                     "endColumn": 76,
-                    "endOffset": 2883
+                    "endOffset": 14311
                 },
                 "from": {
-                    "file": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 4,
@@ -612,14 +1443,14 @@
             },
             {
                 "to": {
-                    "startLine": 34,
+                    "startLine": 325,
                     "startColumn": 4,
-                    "startOffset": 2888,
+                    "startOffset": 14316,
                     "endColumn": 90,
-                    "endOffset": 2974
+                    "endOffset": 14402
                 },
                 "from": {
-                    "file": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
@@ -631,14 +1462,14 @@
             },
             {
                 "to": {
-                    "startLine": 35,
+                    "startLine": 326,
                     "startColumn": 4,
-                    "startOffset": 2979,
+                    "startOffset": 14407,
                     "endColumn": 60,
-                    "endOffset": 3035
+                    "endOffset": 14463
                 },
                 "from": {
-                    "file": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 4,
@@ -650,14 +1481,14 @@
             },
             {
                 "to": {
-                    "startLine": 36,
+                    "startLine": 327,
                     "startColumn": 4,
-                    "startOffset": 3040,
+                    "startOffset": 14468,
                     "endColumn": 61,
-                    "endOffset": 3097
+                    "endOffset": 14525
                 },
                 "from": {
-                    "file": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 4,
@@ -669,14 +1500,14 @@
             },
             {
                 "to": {
-                    "startLine": 37,
+                    "startLine": 328,
                     "startColumn": 4,
-                    "startOffset": 3102,
+                    "startOffset": 14530,
                     "endColumn": 85,
-                    "endOffset": 3183
+                    "endOffset": 14611
                 },
                 "from": {
-                    "file": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
@@ -688,14 +1519,14 @@
             },
             {
                 "to": {
-                    "startLine": 38,
+                    "startLine": 329,
                     "startColumn": 4,
-                    "startOffset": 3188,
+                    "startOffset": 14616,
                     "endColumn": 57,
-                    "endOffset": 3241
+                    "endOffset": 14669
                 },
                 "from": {
-                    "file": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
@@ -707,14 +1538,14 @@
             },
             {
                 "to": {
-                    "startLine": 39,
+                    "startLine": 330,
                     "startColumn": 4,
-                    "startOffset": 3246,
+                    "startOffset": 14674,
                     "endColumn": 101,
-                    "endOffset": 3343
+                    "endOffset": 14771
                 },
                 "from": {
-                    "file": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "file": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
                     "position": {
                         "startLine": 21,
                         "startColumn": 4,

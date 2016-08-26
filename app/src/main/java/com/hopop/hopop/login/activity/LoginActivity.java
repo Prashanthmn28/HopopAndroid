@@ -46,10 +46,7 @@ public class LoginActivity extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 
-      /*  if (BuildConfig.DEBUG){
-            mobile.setText("9844425308");
-            pass.setText("swaroop");
-        }*/
+
     }
 
     @Bind(R.id.editText_mn) EditText mobile;
@@ -78,6 +75,8 @@ public class LoginActivity extends AppCompatActivity {
                     startActivity(searchIntent);
                     Log.e(getClass().getSimpleName(), "successful");
 					PrefManager.putAuthKey(" pass authKey obtained");
+                    PrefManager.putAuthKey(" pass authKey obtained");
+
                 }
                 @Override
                 public void onFailure(Call<Registerresponse> call, Throwable t) {

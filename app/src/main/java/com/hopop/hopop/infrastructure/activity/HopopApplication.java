@@ -1,13 +1,12 @@
 package com.hopop.hopop.infrastructure.activity;
 
+
 import android.content.Context;
 
-import com.hopop.hopop.communicators.services.RegisterClass;
 import com.orm.SugarApp;
 
 public class HopopApplication extends SugarApp {
 
-    private static Context instance;
     @Override
     public void onCreate() {
         super.onCreate();
@@ -15,6 +14,15 @@ public class HopopApplication extends SugarApp {
     }
 
     public static Context getInstance(){
+    private static HopopApplication instance;
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        this.instance = this;
+    }
+
+    public static HopopApplication getInstance(){
+
         return instance;
     }
 }
