@@ -14,6 +14,7 @@ import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.Toast;
 import com.facebook.stetho.Stetho;
+import com.hopop.hopop.communicators.prefmanager.PrefManager;
 import com.hopop.hopop.registration.activity.RegisterActivity;
 import com.hopop.hopop.communicators.CommunicatorClass;
 import com.hopop.hopop.login.data.LoginUser;
@@ -76,6 +77,7 @@ public class LoginActivity extends AppCompatActivity {
                     searchIntent.putExtra("mobile",mobile);
                     startActivity(searchIntent);
                     Log.e(getClass().getSimpleName(), "successful");
+					PrefManager.putAuthKey(" pass authKey obtained");
                 }
                 @Override
                 public void onFailure(Call<Registerresponse> call, Throwable t) {
