@@ -1,10 +1,13 @@
 package com.hopop.hopop.sidenavigation.suggestedroute.activity;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -16,6 +19,7 @@ import android.widget.Toast;
 import com.hopop.hopop.communicators.CommunicatorClass;
 import com.hopop.hopop.login.activity.LoginActivity;
 import com.hopop.hopop.login.activity.R;
+import com.hopop.hopop.registration.activity.RegisterActivity;
 import com.hopop.hopop.sidenavigation.profile.activity.Profile;
 import com.hopop.hopop.sidenavigation.suggestedroute.data.ForSuggestedRoute;
 import com.hopop.hopop.sidenavigation.suggestedroute.data.SuggestedInfo;
@@ -37,6 +41,9 @@ public class SuggestedRoute extends AppCompatActivity {
     EditText pkupPoint;
     @Bind(R.id.editText_Drp)
     EditText drpPoint;
+    String frmSplMob,lMob,rMob;
+    Context context;
+    SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +64,6 @@ public class SuggestedRoute extends AppCompatActivity {
                 onBackPressed();
             }
         });
-
     }
 
     @OnClick(R.id.button_suggest)
@@ -65,30 +71,72 @@ public class SuggestedRoute extends AppCompatActivity {
     {
         if (checkFieldValidation()) {
             final ForSuggestedRoute forSuggestedRoute = new ForSuggestedRoute();
-            String userMobileNum = LoginActivity.usrMobileNum;
+          //  String userMobileNum = LoginActivity.usrMobileNum;
+            lMob = LoginActivity.usrMobileNum;
+            rMob = RegisterActivity.userMobNum;
+            context = SuggestedRoute.this.getApplicationContext();
+            sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+            frmSplMob = sharedPreferences.getString("lMob",null);
             SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
             String systime = sdf.format(new Date());
+            if(lMob ==null && rMob ==null)
+            {
+                forSuggestedRoute.setMobile_number(frmSplMob);
+                forSuggestedRoute.setFrom_route(pkupPoint.getText().toString());
+                forSuggestedRoute.setTo_route(drpPoint.getText().toString());
+                forSuggestedRoute.getRequeste_on(systime);
+                CommunicatorClass.getRegisterClass().forRoute(forSuggestedRoute).enqueue(new Callback<SuggestedInfo>() {
+                    @Override
+                    public void onResponse(Call<SuggestedInfo> call, Response<SuggestedInfo> response) {
+                        Toast.makeText(SuggestedRoute.this, "The Request has been Accepted", Toast.LENGTH_LONG).show();
+                        Intent suggIntent = new Intent(SuggestedRoute.this, SourceActivity.class);
+                        suggIntent.putExtra("lMob",frmSplMob);
+                        startActivity(suggIntent);
+                    }
+                    @Override
+                    public void onFailure(Call<SuggestedInfo> call, Throwable t) {
+                    }
+                });
+            }
+            else if (lMob ==null)
+            {
+                forSuggestedRoute.setMobile_number(rMob);
+                forSuggestedRoute.setFrom_route(pkupPoint.getText().toString());
+                forSuggestedRoute.setTo_route(drpPoint.getText().toString());
+                forSuggestedRoute.getRequeste_on(systime);
+                CommunicatorClass.getRegisterClass().forRoute(forSuggestedRoute).enqueue(new Callback<SuggestedInfo>() {
+                    @Override
+                    public void onResponse(Call<SuggestedInfo> call, Response<SuggestedInfo> response) {
+                        Toast.makeText(SuggestedRoute.this, "The Request has been Accepted", Toast.LENGTH_LONG).show();
+                        Intent suggIntent = new Intent(SuggestedRoute.this, SourceActivity.class);
+                        suggIntent.putExtra("lMob",frmSplMob);
+                        startActivity(suggIntent);
+                    }
+                    @Override
+                    public void onFailure(Call<SuggestedInfo> call, Throwable t) {
+                    }
+                });
+            }
+            else
+            {
+                forSuggestedRoute.setMobile_number(lMob);
+                forSuggestedRoute.setFrom_route(pkupPoint.getText().toString());
+                forSuggestedRoute.setTo_route(drpPoint.getText().toString());
+                forSuggestedRoute.getRequeste_on(systime);
+                CommunicatorClass.getRegisterClass().forRoute(forSuggestedRoute).enqueue(new Callback<SuggestedInfo>() {
+                    @Override
+                    public void onResponse(Call<SuggestedInfo> call, Response<SuggestedInfo> response) {
+                        Toast.makeText(SuggestedRoute.this, "The Request has been Accepted", Toast.LENGTH_LONG).show();
+                        Intent suggIntent = new Intent(SuggestedRoute.this, SourceActivity.class);
+                        suggIntent.putExtra("lMob",frmSplMob);
+                        startActivity(suggIntent);
+                    }
+                    @Override
+                    public void onFailure(Call<SuggestedInfo> call, Throwable t) {
+                    }
+                });
+            }
 
-            forSuggestedRoute.setMobile_number(userMobileNum);
-            forSuggestedRoute.setFrom_route(pkupPoint.getText().toString());
-            forSuggestedRoute.setTo_route(drpPoint.getText().toString());
-            forSuggestedRoute.getRequeste_on(systime);
-            CommunicatorClass.getRegisterClass().forRoute(forSuggestedRoute).enqueue(new Callback<SuggestedInfo>() {
-
-                @Override
-                public void onResponse(Call<SuggestedInfo> call, Response<SuggestedInfo> response) {
-
-                    Toast.makeText(SuggestedRoute.this, "The Request has been Accepted", Toast.LENGTH_LONG).show();
-
-                    Intent suggIntent = new Intent(SuggestedRoute.this, SourceActivity.class);
-                    startActivity(suggIntent);
-                }
-
-                @Override
-                public void onFailure(Call<SuggestedInfo> call, Throwable t) {
-
-                }
-            });
         }
     }
     boolean valid = true;
@@ -103,59 +151,35 @@ public class SuggestedRoute extends AppCompatActivity {
             drpPoint.setError("Drop Point is required.");
             valid = false;
         }
-
         return valid=true;
     }
 
     private class LoadViewTask extends AsyncTask<Void, Integer, Void>
     {
-        //Before running code in separate thread
         @Override
         protected void onPreExecute()
         {
-            //Create a new progress dialog
             progressDialog = new ProgressDialog(SuggestedRoute.this);
-            //Set the dialog title to 'Loading...'
-            //progressDialog.setTitle("Loading...");
-            //Set the dialog message to 'Loading application View, please wait...'
             progressDialog.setMessage("Loading...");
-            //This dialog can't be canceled by pressing the back key
             progressDialog.setCancelable(false);
-            //This dialog isn't indeterminate
             progressDialog.setIndeterminate(true);
-            //The maximum number of items is 100
             progressDialog.setMax(100);
-            //Set the current progress to zero
             progressDialog.setProgress(0);
-            //Display the progress dialog
             progressDialog.show();
         }
 
-        //The code to be executed in a background thread.
         @Override
         protected Void doInBackground(Void... params)
         {
-            /* This is just a code that delays the thread execution 4 times,
-             * during 850 milliseconds and updates the current progress. This
-             * is where the code that is going to be executed on a background
-             * thread must be placed.
-             */
             try
             {
-                //Get the current thread's token
                 synchronized (this)
                 {
-                    //Initialize an integer (that will act as a counter) to zero
                     int counter = 0;
-                    //While the counter is smaller than four
                     while(counter <= 4)
                     {
-                        //Wait 850 milliseconds
                         this.wait(500);
-                        //Increment the counter
                         counter++;
-                        //Set the current progress.
-                        //This value is going to be passed to the onProgressUpdate() method.
                         publishProgress(counter*25);
                     }
                 }
@@ -167,22 +191,16 @@ public class SuggestedRoute extends AppCompatActivity {
             return null;
         }
 
-        //Update the progress
         @Override
         protected void onProgressUpdate(Integer... values)
         {
-            //set the current progress of the progress dialog
             progressDialog.setProgress(values[0]);
         }
 
-        //after executing the code in the thread
         @Override
         protected void onPostExecute(Void result)
         {
-            //close the progress dialog
             progressDialog.dismiss();
-            //initialize the View
-            //setContentView(R.layout.content_booking);
         }
     }
 }

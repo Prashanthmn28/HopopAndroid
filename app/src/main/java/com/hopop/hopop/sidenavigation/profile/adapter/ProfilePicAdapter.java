@@ -9,9 +9,6 @@ import android.widget.ImageView;
 
 import com.hopop.hopop.login.activity.R;
 
-/**
- * Created by girishvinu on 8/3/2016.
- */
 public class ProfilePicAdapter extends BaseAdapter {
 
     private Context mContex;

@@ -1,10 +1,13 @@
 package com.hopop.hopop.sidenavigation.mybooking.activity;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
@@ -18,6 +21,7 @@ import com.hopop.hopop.login.activity.LoginActivity;
 import com.hopop.hopop.login.activity.R;
 import com.hopop.hopop.login.data.LoginUser;
 import com.hopop.hopop.ply.activity.PlyActivity;
+import com.hopop.hopop.registration.activity.RegisterActivity;
 import com.hopop.hopop.sidenavigation.mybooking.data.BookingHisInfo;
 import com.hopop.hopop.sidenavigation.mybooking.adapter.PastRecyclerAdapter;
 import com.hopop.hopop.source.activity.SourceActivity;
@@ -39,6 +43,10 @@ public class BookingHistoryActivity extends AppCompatActivity {
     List<BookingHistory> pastList = new ArrayList<BookingHistory>();
     List<BookingHistory> srcList = new ArrayList<BookingHistory>();
     List<BookingHistory> destList = new ArrayList<BookingHistory>();
+    String frmSplMob,lMob,rMob;
+    Context context;
+    SharedPreferences sharedPreferences;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,30 +69,91 @@ public class BookingHistoryActivity extends AppCompatActivity {
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         past_list.setLayoutManager(layoutManager);
         past_list.setItemAnimator(new DefaultItemAnimator());
-        String mob = LoginActivity.usrMobileNum;
-        LoginUser loginUser = new LoginUser();
-        loginUser.setMobile_number(mob);
-        CommunicatorClass.getRegisterClass().bookingHis(loginUser).enqueue(new Callback<BookingHisInfo>() {
-            @Override
-            public void onResponse(Call<BookingHisInfo> call, Response<BookingHisInfo> response) {
-                BookingHisInfo bookingHisInfo = response.body();
-                for (BookingHistory bookingHistory : bookingHisInfo.getBookingHistory()) {
-                    if (BookingHistory.isNew(bookingHistory.getRoute())) {
-                        bookingHistory.save();
+      //  String mob = LoginActivity.usrMobileNum;
+        lMob = LoginActivity.usrMobileNum;
+        rMob = RegisterActivity.userMobNum;
+        context = BookingHistoryActivity.this.getApplicationContext();
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+        frmSplMob = sharedPreferences.getString("lMob",null);
+        if(lMob ==null && rMob ==null)
+        {
+            LoginUser loginUser = new LoginUser();
+            loginUser.setMobile_number(frmSplMob);
+            CommunicatorClass.getRegisterClass().bookingHis(loginUser).enqueue(new Callback<BookingHisInfo>() {
+                @Override
+                public void onResponse(Call<BookingHisInfo> call, Response<BookingHisInfo> response) {
+                    BookingHisInfo bookingHisInfo = response.body();
+                    for (BookingHistory bookingHistory : bookingHisInfo.getBookingHistory()) {
+                        if (BookingHistory.isNew(bookingHistory.getRoute())) {
+                            bookingHistory.save();
+                        }
+                    }
+                    pastList = Select.from(BookingHistory.class).list();
+                    displayThePastList(pastList);
+                    for (BookingHistory bookingHistory:bookingHisInfo.getBookingHistory()){
+                        if(BookingHistory.isExisting(bookingHistory.getMobileNumber())){
+                            bookingHistory.delete();
+                        }
                     }
                 }
-                pastList = Select.from(BookingHistory.class).list();
-                displayThePastList(pastList);
-                for (BookingHistory bookingHistory:bookingHisInfo.getBookingHistory()){
-                    if(BookingHistory.isExisting(bookingHistory.getMobileNumber())){
-                        bookingHistory.delete();
+                @Override
+                public void onFailure(Call<BookingHisInfo> call, Throwable t) {
+                }
+            });
+        }
+        else if(lMob == null)
+        {
+            LoginUser loginUser = new LoginUser();
+            loginUser.setMobile_number(rMob);
+            CommunicatorClass.getRegisterClass().bookingHis(loginUser).enqueue(new Callback<BookingHisInfo>() {
+                @Override
+                public void onResponse(Call<BookingHisInfo> call, Response<BookingHisInfo> response) {
+                    BookingHisInfo bookingHisInfo = response.body();
+                    for (BookingHistory bookingHistory : bookingHisInfo.getBookingHistory()) {
+                        if (BookingHistory.isNew(bookingHistory.getRoute())) {
+                            bookingHistory.save();
+                        }
+                    }
+                    pastList = Select.from(BookingHistory.class).list();
+                    displayThePastList(pastList);
+                    for (BookingHistory bookingHistory:bookingHisInfo.getBookingHistory()){
+                        if(BookingHistory.isExisting(bookingHistory.getMobileNumber())){
+                            bookingHistory.delete();
+                        }
                     }
                 }
-            }
-            @Override
-            public void onFailure(Call<BookingHisInfo> call, Throwable t) {
-            }
-        });
+                @Override
+                public void onFailure(Call<BookingHisInfo> call, Throwable t) {
+                }
+            });
+        }
+        else
+        {
+            LoginUser loginUser = new LoginUser();
+            loginUser.setMobile_number(lMob);
+            CommunicatorClass.getRegisterClass().bookingHis(loginUser).enqueue(new Callback<BookingHisInfo>() {
+                @Override
+                public void onResponse(Call<BookingHisInfo> call, Response<BookingHisInfo> response) {
+                    BookingHisInfo bookingHisInfo = response.body();
+                    for (BookingHistory bookingHistory : bookingHisInfo.getBookingHistory()) {
+                        if (BookingHistory.isNew(bookingHistory.getRoute())) {
+                            bookingHistory.save();
+                        }
+                    }
+                    pastList = Select.from(BookingHistory.class).list();
+                    displayThePastList(pastList);
+                    for (BookingHistory bookingHistory:bookingHisInfo.getBookingHistory()){
+                        if(BookingHistory.isExisting(bookingHistory.getMobileNumber())){
+                            bookingHistory.delete();
+                        }
+                    }
+                }
+                @Override
+                public void onFailure(Call<BookingHisInfo> call, Throwable t) {
+                }
+            });
+        }
+
     }
 
     private void displayThePastList(final List<BookingHistory> pastList) {
@@ -99,6 +168,7 @@ public class BookingHistoryActivity extends AppCompatActivity {
                 Intent reIntent = new Intent(BookingHistoryActivity.this, PlyActivity.class);
                 reIntent.putExtra("src",srcPt);
                 reIntent.putExtra("dest",desPt);
+                reIntent.putExtra("lMob",frmSplMob);
                 startActivity(reIntent);
             }
 

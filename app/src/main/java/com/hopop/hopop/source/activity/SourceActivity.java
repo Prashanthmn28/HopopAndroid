@@ -1,7 +1,9 @@
 package com.hopop.hopop.source.activity;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.AsyncTask;
@@ -76,6 +78,8 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
     @Nullable @Bind(R.id.textView_sName)
     TextView name;
     int pos_prfPic;
+    String frmSplMob;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -136,15 +140,40 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
 //---------for profilePic------------------
         if(getIntent().getExtras()!=null) {
             pos_prfPic = getIntent().getExtras().getInt("id");
+            frmSplMob = getIntent().getExtras().getString("lMob");
             Log.i(getClass().getSimpleName(),"srcImgPrf:"+pos_prfPic);
             ProfilePicAdapter imageAdapter = new ProfilePicAdapter(this);
             imgView.setImageResource(imageAdapter.picArry[pos_prfPic]);
         }
 //-------------------for profileName nd Number-------------
         String lMob = LoginActivity.usrMobileNum;
-        if(lMob == null)
+        String rMob = RegisterActivity.userMobNum;
+         if(lMob == null && rMob == null)
         {
-            String rMob = RegisterActivity.userMobNum;
+            final ForProfileHeader forProfileHeader =new ForProfileHeader();
+            forProfileHeader.setMobile_number(frmSplMob);
+            CommunicatorClass.getRegisterClass().headerProfile(forProfileHeader).enqueue(new Callback<HeaderProfile>() {
+                @Override
+                public void onResponse(Call<HeaderProfile> call, Response<HeaderProfile> response) {
+                    HeaderProfile headerProfile = response.body();
+                    for(ProfileInfo profileInfo:headerProfile.getProfileInfo())
+                    {
+                        View headView = navigationView.getHeaderView(0);
+                        TextView name = (TextView) headView.findViewById(R.id.textView_sName);
+                        TextView mob = (TextView) headView.findViewById(R.id.textView_sMobile);
+                        mob.setText(profileInfo.getMobile_number());
+                        name.setText(profileInfo.getUser_name());
+                    }
+                }
+                @Override
+                public void onFailure(Call<HeaderProfile> call, Throwable t) {
+                    Log.i(getClass().getSimpleName(),"Failure Header Profile");
+                }
+            });
+        }
+         else if(lMob == null)
+        {
+
             Log.i(getClass().getSimpleName(),"register Mobile Num:"+rMob);
             final ForProfileHeader forProfileHeader =new ForProfileHeader();
             forProfileHeader.setMobile_number(rMob);
@@ -166,6 +195,7 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
                 }
             });
         }
+
         else {
             final ForProfileHeader forProfileHeader =new ForProfileHeader();
             forProfileHeader.setMobile_number(lMob);
@@ -214,6 +244,7 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
                 Intent intentSrc = new Intent(SourceActivity.this, DestinationActivity.class);
                 intentSrc.putExtra("src", srcSelected);
                 intentSrc.putExtra("prfPic",pos_prfPic);
+                intentSrc.putExtra("lMob",frmSplMob);
                 Bundle bundle = new Bundle();
                 bundle.putParcelableArrayList("mylist", (ArrayList<? extends Parcelable>) destinationPoint);
                 intentSrc.putExtras(bundle);

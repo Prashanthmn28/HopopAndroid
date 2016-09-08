@@ -11,6 +11,16 @@ public class ForBookId {
     public String total_seats;
     public String sys_time;
 
+    public String amount_paid;
+    public String getAmount_paid() {
+        return amount_paid;
+    }
+
+    public void setAmount_paid(String amount_paid) {
+        this.amount_paid = amount_paid;
+    }
+
+
     public String getSys_time() {
         return sys_time;
     }

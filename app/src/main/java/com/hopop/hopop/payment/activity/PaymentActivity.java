@@ -10,6 +10,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.NotificationCompat;
@@ -74,7 +75,12 @@ public class PaymentActivity extends AppCompatActivity
     @Nullable @Bind(R.id.textView_NumofSeats) TextView numofSeats;
     @Nullable @Bind(R.id.textView_rideshareCalc) TextView rideshareCalc;
     @Nullable @Bind(R.id.textView_rideshareAmt) TextView rideshareAmt;
-    int pos_PrfPay;
+    int pos_PrfPay,nSeats;
+    String frmSplMob,tripId;
+    String lMob = LoginActivity.usrMobileNum;
+    String rMob = RegisterActivity.userMobNum;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,29 +96,122 @@ public class PaymentActivity extends AppCompatActivity
         new LoadViewTask().execute();
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        String userMobileNum = LoginActivity.usrMobileNum;
-        Log.i(getClass().getSimpleName(),"UserLogin Mobile Number:"+userMobileNum);
-        LoginUser loginUser  = new LoginUser();
-        loginUser.setMobile_number(userMobileNum);
-        CommunicatorClass.getRegisterClass().forWallet(loginUser).enqueue(new Callback<WalletInfo>() {
-            @Override
-            public void onResponse(Call<WalletInfo> call, Response<WalletInfo> response) {
-                Toast.makeText(PaymentActivity.this,"Payment Activity Successfully",Toast.LENGTH_SHORT).show();
-                Log.e(getClass().getSimpleName(),"Successfull");
-                WalletInfo walletInfo = response.body();
-                for (Wallet wallet:walletInfo.getWallet())
-                {
-                    Log.i(getClass().getSimpleName(),"user wallet is:"+wallet.getBalance().toString());
-                    TextView balance = (TextView) findViewById(R.id.textView_BalanceAmt);
-                    String bal = wallet.getBalance().toString();
-                    balance.setText(bal+"Rs");
+
+        if(getIntent().getExtras()!=null) {
+            pos_PrfPay = getIntent().getExtras().getInt("prfPic");
+            Log.i(getClass().getSimpleName(),"ImgPosition:"+pos_PrfPay);
+            frmSplMob = getIntent().getExtras().getString("lMob");
+            tripId = getIntent().getExtras().getString("tripID");
+            nSeats = getIntent().getExtras().getInt("nSeats");
+        }
+
+        if(nSeats <=1)
+        {
+            MePlus1.setEnabled(false);
+            MePlus1.setClickable(false);
+            MePlus1.setBackgroundColor(Color.TRANSPARENT);
+
+            MePlus2.setEnabled(false);
+            MePlus2.setClickable(false);
+            MePlus2.setBackgroundColor(Color.TRANSPARENT);
+
+            MePlus3.setEnabled(false);
+            MePlus3.setClickable(false);
+            MePlus3.setBackgroundColor(Color.TRANSPARENT);
+        }
+        if(nSeats <=2)
+        {
+
+            MePlus2.setEnabled(false);
+            MePlus2.setClickable(false);
+            MePlus2.setBackgroundColor(Color.TRANSPARENT);
+
+            MePlus3.setEnabled(false);
+            MePlus3.setClickable(false);
+            MePlus3.setBackgroundColor(Color.TRANSPARENT);
+        }
+        if (nSeats<=3)
+        {
+
+            MePlus3.setEnabled(false);
+            MePlus3.setClickable(false);
+            MePlus3.setBackgroundColor(Color.TRANSPARENT);
+        }
+
+        if(lMob == null && rMob ==null)
+        {
+            LoginUser loginUser  = new LoginUser();
+            loginUser.setMobile_number(frmSplMob);
+            CommunicatorClass.getRegisterClass().forWallet(loginUser).enqueue(new Callback<WalletInfo>() {
+                @Override
+                public void onResponse(Call<WalletInfo> call, Response<WalletInfo> response) {
+                    Toast.makeText(PaymentActivity.this,"Payment Activity Successfully",Toast.LENGTH_SHORT).show();
+                    Log.e(getClass().getSimpleName(),"Successfull");
+                    WalletInfo walletInfo = response.body();
+                    for (Wallet wallet:walletInfo.getWallet())
+                    {
+                        Log.i(getClass().getSimpleName(),"user wallet is:"+wallet.getBalance().toString());
+                        TextView balance = (TextView) findViewById(R.id.textView_BalanceAmt);
+                        String bal = wallet.getBalance().toString();
+                        balance.setText(bal+"Rs");
+                    }
                 }
-            }
-            @Override
-            public void onFailure(Call<WalletInfo> call, Throwable t) {
-                Log.i(getClass().getSimpleName(),"Failure");
-            }
-        });
+                @Override
+                public void onFailure(Call<WalletInfo> call, Throwable t) {
+                    Log.i(getClass().getSimpleName(),"Failure");
+                }
+            });
+
+        }
+        else if (lMob == null)
+        {
+            LoginUser loginUser  = new LoginUser();
+            loginUser.setMobile_number(rMob);
+            CommunicatorClass.getRegisterClass().forWallet(loginUser).enqueue(new Callback<WalletInfo>() {
+                @Override
+                public void onResponse(Call<WalletInfo> call, Response<WalletInfo> response) {
+                    Toast.makeText(PaymentActivity.this,"Payment Activity Successfully",Toast.LENGTH_SHORT).show();
+                    Log.e(getClass().getSimpleName(),"Successfull");
+                    WalletInfo walletInfo = response.body();
+                    for (Wallet wallet:walletInfo.getWallet())
+                    {
+                        Log.i(getClass().getSimpleName(),"user wallet is:"+wallet.getBalance().toString());
+                        TextView balance = (TextView) findViewById(R.id.textView_BalanceAmt);
+                        String bal = wallet.getBalance().toString();
+                        balance.setText(bal+"Rs");
+                    }
+                }
+                @Override
+                public void onFailure(Call<WalletInfo> call, Throwable t) {
+                    Log.i(getClass().getSimpleName(),"Failure");
+                }
+            });
+        }
+        else
+        {
+            LoginUser loginUser  = new LoginUser();
+            loginUser.setMobile_number(lMob);
+            CommunicatorClass.getRegisterClass().forWallet(loginUser).enqueue(new Callback<WalletInfo>() {
+                @Override
+                public void onResponse(Call<WalletInfo> call, Response<WalletInfo> response) {
+                    Toast.makeText(PaymentActivity.this,"Payment Activity Successfully",Toast.LENGTH_SHORT).show();
+                    Log.e(getClass().getSimpleName(),"Successfull");
+                    WalletInfo walletInfo = response.body();
+                    for (Wallet wallet:walletInfo.getWallet())
+                    {
+                        Log.i(getClass().getSimpleName(),"user wallet is:"+wallet.getBalance().toString());
+                        TextView balance = (TextView) findViewById(R.id.textView_BalanceAmt);
+                        String bal = wallet.getBalance().toString();
+                        balance.setText(bal+"Rs");
+                    }
+                }
+                @Override
+                public void onFailure(Call<WalletInfo> call, Throwable t) {
+                    Log.i(getClass().getSimpleName(),"Failure");
+                }
+            });
+        }
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -121,15 +220,36 @@ public class PaymentActivity extends AppCompatActivity
         final NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         final View headView = navigationView.getHeaderView(0);
         final ImageView imgView = (ImageView) headView.findViewById(R.id.imageView);
-        Intent i = getIntent();
-        pos_PrfPay = i.getExtras().getInt("prfPic");
-        Log.i(getClass().getSimpleName(),"ImgPosition:"+pos_PrfPay);
+
         ProfilePicAdapter imageAdapter = new ProfilePicAdapter(this);
         imgView.setImageResource(imageAdapter.picArry[pos_PrfPay]);
-        String lMob = LoginActivity.usrMobileNum;
-        if(lMob == null)
+
+        if(lMob == null && rMob == null)
         {
-            String rMob = RegisterActivity.userMobNum;
+            final ForProfileHeader forProfileHeader =new ForProfileHeader();
+            forProfileHeader.setMobile_number(frmSplMob);
+            CommunicatorClass.getRegisterClass().headerProfile(forProfileHeader).enqueue(new Callback<HeaderProfile>() {
+                @Override
+                public void onResponse(Call<HeaderProfile> call, Response<HeaderProfile> response) {
+                    HeaderProfile headerProfile = response.body();
+                    for(ProfileInfo profileInfo:headerProfile.getProfileInfo())
+                    {
+                        View headView = navigationView.getHeaderView(0);
+                        TextView name = (TextView) headView.findViewById(R.id.textView_pmName);
+                        TextView mob = (TextView) headView.findViewById(R.id.textView_pmMobile);
+                        mob.setText(profileInfo.getMobile_number());
+                        name.setText(profileInfo.getUser_name());
+                    }
+                }
+                @Override
+                public void onFailure(Call<HeaderProfile> call, Throwable t) {
+                    Log.i(getClass().getSimpleName(),"Failure Header Profile");
+                }
+            });
+        }
+       else if(lMob == null)
+        {
+
             Log.i(getClass().getSimpleName(),"register Mobile Num:"+rMob);
             final ForProfileHeader forProfileHeader =new ForProfileHeader();
             forProfileHeader.setMobile_number(rMob);
@@ -219,29 +339,34 @@ public class PaymentActivity extends AppCompatActivity
 
     @OnClick(R.id.button_Pay)
     public void payUser(View view){
-        final ForBookId forBookId = new ForBookId();
-        String userMobileNum = LoginActivity.usrMobileNum;
         String frmRoute = SourceActivity.srcSelected;
         String toRoute = DestinationActivity.destSelect;
         String rid = PlyActivity.routeId;
-        String tid = PlyActivity.tripId;
+        String tid = tripId;
         String num_seats = numofSeats.getText().toString();
-        Log.i(getClass().getSimpleName(),"SeatsNumber:"+num_seats);
-        forBookId.setUser_mobile(userMobileNum);
-        forBookId.setFrom_route(frmRoute);
-        forBookId.setTo_route(toRoute);
-        forBookId.setRoute_id(rid);
-        forBookId.setTrip_id(tid);
-        forBookId.setTotal_seats(num_seats);
-        CommunicatorClass.getRegisterClass().forBookIdInfo(forBookId).enqueue(new Callback<BookIdInfo>() {
-            @Override
-            public void onResponse(Call<BookIdInfo> call, Response<BookIdInfo> response) {
-                Log.e(getClass().getSimpleName(), "successful bookid");
-                BookIdInfo bookIdInfo = response.body();
-                for (BookId bookId: bookIdInfo.getBookId())
-                {
-                    bookidNum[0] = bookId.getBookId().toString();
-                    Log.i(getClass().getSimpleName(),"user BookId is:"+bookidNum[0]);
+        String amtPaid = rideshareAmt.getText().toString();
+        final ForBookId forBookId = new ForBookId();
+
+        if(lMob ==null && rMob ==null)
+        {
+            forBookId.setUser_mobile(frmSplMob);
+            forBookId.setFrom_route(frmRoute);
+            forBookId.setTo_route(toRoute);
+            forBookId.setRoute_id(rid);
+            forBookId.setTrip_id(tid);
+            forBookId.setTotal_seats(num_seats);
+            forBookId.setAmount_paid(amtPaid);
+            CommunicatorClass.getRegisterClass().forBookIdInfo(forBookId).enqueue(new Callback<BookIdInfo>() {
+                @Override
+                public void onResponse(Call<BookIdInfo> call, Response<BookIdInfo> response) {
+                    Log.e(getClass().getSimpleName(), "successful bookid");
+                    BookIdInfo bookIdInfo = response.body();
+                    for (BookId bookId: bookIdInfo.getBookId())
+                    {
+                        bookidNum[0] = bookId.getBookId().toString();
+                        Log.i(getClass().getSimpleName(),"user BookId is:"+bookidNum[0]);
+
+                    }
                     AlertDialog alertDialog = new AlertDialog.Builder(
                             PaymentActivity.this).create();
                     alertDialog.setTitle("Ticket Confirmed");
@@ -253,17 +378,107 @@ public class PaymentActivity extends AppCompatActivity
                                 public void onClick(DialogInterface dialog,
                                                     int which) {
                                     Intent intent_1 = new Intent(PaymentActivity.this, SourceActivity.class);
+                                    intent_1.putExtra("id",pos_PrfPay);
+                                    intent_1.putExtra("lMob",frmSplMob);
                                     startActivity(intent_1);
                                 }
                             });
                     alertDialog.show();
                     showNotification(PaymentActivity.this);
                 }
-            }
-            @Override
-            public void onFailure(Call<BookIdInfo> call, Throwable t) {
-            }
-        });
+                @Override
+                public void onFailure(Call<BookIdInfo> call, Throwable t) {
+                }
+            });
+        }
+        else if(lMob == null)
+        {
+            forBookId.setUser_mobile(rMob);
+            forBookId.setFrom_route(frmRoute);
+            forBookId.setTo_route(toRoute);
+            forBookId.setRoute_id(rid);
+            forBookId.setTrip_id(tid);
+            forBookId.setTotal_seats(num_seats);
+            forBookId.setAmount_paid(amtPaid);
+            CommunicatorClass.getRegisterClass().forBookIdInfo(forBookId).enqueue(new Callback<BookIdInfo>() {
+                @Override
+                public void onResponse(Call<BookIdInfo> call, Response<BookIdInfo> response) {
+                    Log.e(getClass().getSimpleName(), "successful bookid");
+                    BookIdInfo bookIdInfo = response.body();
+                    for (BookId bookId: bookIdInfo.getBookId())
+                    {
+                        bookidNum[0] = bookId.getBookId().toString();
+                        Log.i(getClass().getSimpleName(),"user BookId is:"+bookidNum[0]);
+
+                    }
+                    AlertDialog alertDialog = new AlertDialog.Builder(
+                            PaymentActivity.this).create();
+                    alertDialog.setTitle("Ticket Confirmed");
+                    alertDialog.setMessage("Booking Id:"+  bookidNum[0]);
+                    alertDialog.setIcon(R.drawable.tick);
+                    alertDialog.setButton("OK",
+                            new DialogInterface.OnClickListener() {
+
+                                public void onClick(DialogInterface dialog,
+                                                    int which) {
+                                    Intent intent_1 = new Intent(PaymentActivity.this, SourceActivity.class);
+                                    intent_1.putExtra("id",pos_PrfPay);
+                                    intent_1.putExtra("lMob",frmSplMob);
+                                    startActivity(intent_1);
+                                }
+                            });
+                    alertDialog.show();
+                    showNotification(PaymentActivity.this);
+                }
+                @Override
+                public void onFailure(Call<BookIdInfo> call, Throwable t) {
+                }
+            });
+        }
+        else
+        {
+            forBookId.setUser_mobile(lMob);
+            forBookId.setFrom_route(frmRoute);
+            forBookId.setTo_route(toRoute);
+            forBookId.setRoute_id(rid);
+            forBookId.setTrip_id(tid);
+            forBookId.setTotal_seats(num_seats);
+            forBookId.setAmount_paid(amtPaid);
+            CommunicatorClass.getRegisterClass().forBookIdInfo(forBookId).enqueue(new Callback<BookIdInfo>() {
+                @Override
+                public void onResponse(Call<BookIdInfo> call, Response<BookIdInfo> response) {
+                    Log.e(getClass().getSimpleName(), "successful bookid");
+                    BookIdInfo bookIdInfo = response.body();
+                    for (BookId bookId: bookIdInfo.getBookId())
+                    {
+                        bookidNum[0] = bookId.getBookId().toString();
+                        Log.i(getClass().getSimpleName(),"user BookId is:"+bookidNum[0]);
+                    }
+                    AlertDialog alertDialog = new AlertDialog.Builder(
+                            PaymentActivity.this).create();
+                    alertDialog.setTitle("Ticket Confirmed");
+                    alertDialog.setMessage("Booking Id:"+  bookidNum[0]);
+                    alertDialog.setIcon(R.drawable.tick);
+                    alertDialog.setButton("OK",
+                            new DialogInterface.OnClickListener() {
+
+                                public void onClick(DialogInterface dialog,
+                                                    int which) {
+                                    Intent intent_1 = new Intent(PaymentActivity.this, SourceActivity.class);
+                                    intent_1.putExtra("id",pos_PrfPay);
+                                    intent_1.putExtra("lMob",frmSplMob);
+                                    startActivity(intent_1);
+                                }
+                            });
+                    alertDialog.show();
+                    showNotification(PaymentActivity.this);
+
+                }
+                @Override
+                public void onFailure(Call<BookIdInfo> call, Throwable t) {
+                }
+            });
+        }
     }
 
     @Override

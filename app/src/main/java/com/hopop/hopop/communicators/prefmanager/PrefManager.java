@@ -4,13 +4,11 @@ import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
-import com.hopop.hopop.infrastructure.activity.HopopApplication;
 import com.hopop.hopop.registration.activity.MyApplication;
 
 public class PrefManager {
 
     public static String AUTH_KEY = "auth_key";
-
 
     public static SharedPreferences getPreferences(){
         Log.d("PrefManager","the instance is "+MyApplication.getInstance());

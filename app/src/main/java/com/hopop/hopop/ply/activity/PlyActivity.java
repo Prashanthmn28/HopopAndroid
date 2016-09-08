@@ -67,6 +67,8 @@ public class PlyActivity extends AppCompatActivity implements NavigationView.OnN
     public static String routeId = null;
     public static String tripId = null;
     public static String seats = null;
+
+    String frmSplMob;
     int pos_PrfPly;
     Bundle bundle = new Bundle();
 
@@ -75,7 +77,6 @@ public class PlyActivity extends AppCompatActivity implements NavigationView.OnN
         super.onCreate(savedInstanceState);
         setTitle(R.string.PlyHeader);
         setContentView(R.layout.activity_ply);
-        //Initialize a LoadViewTask object and call the execute() method
         new LoadViewTask().execute();
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -85,6 +86,11 @@ public class PlyActivity extends AppCompatActivity implements NavigationView.OnN
         recyclerView.setLayoutManager(layoutManager);
         //-----------post the parameters of from and to locations to server-----------------
         Bundle b = getIntent().getExtras();
+        if(getIntent().getExtras()!=null) {
+            pos_PrfPly = getIntent().getExtras().getInt("prfPic");
+            frmSplMob = getIntent().getExtras().getString("lMob");
+
+        }
         String src_point = b.getString("src");
         String src_pointId = SourceActivity.srcRId;
         String dest_point = DestinationActivity.destSelect;
@@ -117,7 +123,7 @@ public class PlyActivity extends AppCompatActivity implements NavigationView.OnN
                             Intent intentsrcTxt = new Intent(PlyActivity.this, SourceActivity.class);
                             intentsrcTxt.putExtras(bundle);
                             intentsrcTxt.putExtra("id",pos_PrfPly);
-                               startActivity(intentsrcTxt);
+                            startActivity(intentsrcTxt);
                         }
                     });
                     destTxt.setOnClickListener(new View.OnClickListener() {
@@ -127,7 +133,6 @@ public class PlyActivity extends AppCompatActivity implements NavigationView.OnN
                             intentdestTxt.putExtras(bundle);
                             intentdestTxt.putExtra("id",pos_PrfPly);
                             startActivity(intentdestTxt);
-
                         }
                     });
                     TextView textView_NeedTrip = (TextView) findViewById(R.id.textView_needtrip);
@@ -176,14 +181,28 @@ public class PlyActivity extends AppCompatActivity implements NavigationView.OnN
                         ((DataAdapter) adapter).setOnItemClickListener(new DataAdapter.ItemClickListenr() {
                             @Override
                             public void onItemClick(int position, View v) {
+
+                                int numSeats = Integer.parseInt(sti.getSeatTimeList().get(position).getSeatsAvailable());
+                                if(numSeats == 0)
+                                {
+                                    v.setClickable(false);
+                                }
+                                else {
+
                                 Log.i(getClass().getSimpleName(), "the idem selected is " + sti.getSeatTimeList().get(position));
                                 seats = sti.getSeatTimeList().get(position).getSeatsAvailable();
                                 Intent intentSA = new Intent(PlyActivity.this, PaymentActivity.class);
-
                                 bundle.putParcelable("seatDetails", sti.getSeatTimeList().get(position));
+                                String tripID = sti.getSeatTimeList().get(position).getTripId();
+
+                              //  Toast.makeText(PlyActivity.this,"tripID:"+tripID,Toast.LENGTH_SHORT).show();
                                 intentSA.putExtras(bundle);
                                 intentSA.putExtra("prfPic",pos_PrfPly);
+                                intentSA.putExtra("lMob",frmSplMob);
+                                intentSA.putExtra("tripID",tripID);
+                                intentSA.putExtra("nSeats",numSeats);
                                 startActivity(intentSA);
+                                }
                             }
                         });
                     }
@@ -205,6 +224,7 @@ public class PlyActivity extends AppCompatActivity implements NavigationView.OnN
                 Intent intentsrcTxt = new Intent(PlyActivity.this, SourceActivity.class);
                 intentsrcTxt.putExtras(bundle);
                 intentsrcTxt.putExtra("id",pos_PrfPly);
+                intentsrcTxt.putExtra("lMob",frmSplMob);
                 startActivity(intentsrcTxt);
             }
         });
@@ -213,7 +233,7 @@ public class PlyActivity extends AppCompatActivity implements NavigationView.OnN
             public void onClick(View v) {
                 Intent intentdestTxt = new Intent(PlyActivity.this, SourceActivity.class);
                 intentdestTxt.putExtras(bundle);
-                intentdestTxt.putExtra("id",pos_PrfPly);
+                intentdestTxt.putExtra("lMob",frmSplMob);
                 startActivity(intentdestTxt);
             }
         });
@@ -226,17 +246,37 @@ public class PlyActivity extends AppCompatActivity implements NavigationView.OnN
         final NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         final View headView = navigationView.getHeaderView(0);
         final ImageView imgView = (ImageView) headView.findViewById(R.id.imageView);
-        // get intent data
-        Intent i = getIntent();
-        // Selected image id
-        pos_PrfPly = i.getExtras().getInt("prfPic");
-        Log.i(getClass().getSimpleName(),"ImgPosition:"+pos_PrfPly);
+
         ProfilePicAdapter imageAdapter = new ProfilePicAdapter(this);
         imgView.setImageResource(imageAdapter.picArry[pos_PrfPly]);
         String lMob = LoginActivity.usrMobileNum;
-        if(lMob == null)
+        String rMob = RegisterActivity.userMobNum;
+        if(lMob == null && rMob == null)
         {
-            String rMob = RegisterActivity.userMobNum;
+            final ForProfileHeader forProfileHeader =new ForProfileHeader();
+            forProfileHeader.setMobile_number(frmSplMob);
+            CommunicatorClass.getRegisterClass().headerProfile(forProfileHeader).enqueue(new Callback<HeaderProfile>() {
+                @Override
+                public void onResponse(Call<HeaderProfile> call, Response<HeaderProfile> response) {
+                    HeaderProfile headerProfile = response.body();
+                    for(ProfileInfo profileInfo:headerProfile.getProfileInfo())
+                    {
+                        View headView = navigationView.getHeaderView(0);
+                        TextView name = (TextView) headView.findViewById(R.id.textView_pName);
+                        TextView mob = (TextView) headView.findViewById(R.id.textView_pMobile);
+                        mob.setText(profileInfo.getMobile_number());
+                        name.setText(profileInfo.getUser_name());
+                    }
+                }
+                @Override
+                public void onFailure(Call<HeaderProfile> call, Throwable t) {
+                    Log.i(getClass().getSimpleName(),"Failure Header Profile");
+                }
+            });
+        }
+       else if(lMob == null)
+        {
+
             Log.i(getClass().getSimpleName(),"register Mobile Num:"+rMob);
             final ForProfileHeader forProfileHeader =new ForProfileHeader();
             forProfileHeader.setMobile_number(rMob);
@@ -251,9 +291,9 @@ public class PlyActivity extends AppCompatActivity implements NavigationView.OnN
                         TextView mob = (TextView) headView.findViewById(R.id.textView_pMobile);
                         name.setText(profileInfo.getUser_name());
                         mob.setText(profileInfo.getMobile_number());
-                   }
+                    }
                 }
-               @Override
+                @Override
                 public void onFailure(Call<HeaderProfile> call, Throwable t) {
                     Log.i(getClass().getSimpleName(),"Failure Header Profile");
                 }
@@ -277,8 +317,8 @@ public class PlyActivity extends AppCompatActivity implements NavigationView.OnN
                 }
                 @Override
                 public void onFailure(Call<HeaderProfile> call, Throwable t) {
-                   Log.i(getClass().getSimpleName(),"Failure Header Profile");
-               }
+                    Log.i(getClass().getSimpleName(),"Failure Header Profile");
+                }
             });
         }
         navigationView.setNavigationItemSelectedListener(this);
@@ -287,7 +327,6 @@ public class PlyActivity extends AppCompatActivity implements NavigationView.OnN
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
         int id = item.getItemId();
         if (id == R.id.profile) {
             Intent profileintent = new Intent(PlyActivity.this, Profile.class);
@@ -318,50 +357,35 @@ public class PlyActivity extends AppCompatActivity implements NavigationView.OnN
 
     @Override
     public void onBackPressed() {
-            super.onBackPressed();
+        super.onBackPressed();
     }
 
     private class LoadViewTask extends AsyncTask<Void, Integer, Void>
     {
-        //Before running code in separate thread
         @Override
         protected void onPreExecute()
         {
-            //Create a new progress dialog
             progressDialog = new ProgressDialog(PlyActivity.this);
             progressDialog.setMessage("Loading...");
-            //This dialog can't be canceled by pressing the back key
             progressDialog.setCancelable(false);
-            //This dialog isn't indeterminate
             progressDialog.setIndeterminate(true);
-            //The maximum number of items is 100
             progressDialog.setMax(100);
-            //Set the current progress to zero
             progressDialog.setProgress(0);
-            //Display the progress dialog
             progressDialog.show();
         }
 
-        //The code to be executed in a background thread.
         @Override
         protected Void doInBackground(Void... params)
         {
             try
             {
-                //Get the current thread's token
                 synchronized (this)
                 {
-                    //Initialize an integer (that will act as a counter) to zero
                     int counter = 0;
-                    //While the counter is smaller than four
                     while(counter <= 4)
                     {
-                        //Wait 850 milliseconds
                         this.wait(500);
-                        //Increment the counter
                         counter++;
-                        //Set the current progress.
-                        //This value is going to be passed to the onProgressUpdate() method.
                         publishProgress(counter*25);
                     }
                 }
@@ -373,36 +397,26 @@ public class PlyActivity extends AppCompatActivity implements NavigationView.OnN
             return null;
         }
 
-        //Update the progress
         @Override
         protected void onProgressUpdate(Integer... values)
         {
-            //set the current progress of the progress dialog
             progressDialog.setProgress(values[0]);
         }
 
-        //after executing the code in the thread
         @Override
         protected void onPostExecute(Void result)
         {
-            //close the progress dialog
             progressDialog.dismiss();
-            //initialize the View
-            //setContentView(R.layout.content_booking);
         }
     }
-
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
-
-        // Checks the orientation of the screen for landscape and portrait and set portrait mode always
         if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         }
     }
-
 }

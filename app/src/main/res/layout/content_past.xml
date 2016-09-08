@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#ffffff"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.hopop.hopop.sidenavigation.mybooking.BookingHistoryActivity"
+    tools:context="com.hopop.hopop.sidenavigation.mybooking.activity.BookingHistoryActivity"
     tools:showIn="@layout/app_bar_past">
     <android.support.v7.widget.RecyclerView
         android:id="@+id/past_list"

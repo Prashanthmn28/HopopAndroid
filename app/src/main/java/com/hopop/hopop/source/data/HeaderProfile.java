@@ -9,9 +9,6 @@ import com.hopop.hopop.database.ProfileInfo;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by girishvinu on 8/1/2016.
- */
 public class HeaderProfile implements Parcelable {
     @SerializedName("profile_info")
     private List<ProfileInfo> profileInfo = new ArrayList<ProfileInfo>();
