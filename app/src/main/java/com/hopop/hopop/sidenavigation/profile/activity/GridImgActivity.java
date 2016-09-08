@@ -11,9 +11,6 @@ import com.hopop.hopop.login.activity.R;
 import com.hopop.hopop.sidenavigation.profile.adapter.ProfilePicAdapter;
 import com.hopop.hopop.source.activity.SourceActivity;
 
-/**
- * Created by girishvinu on 8/3/2016.
- */
 public class GridImgActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {

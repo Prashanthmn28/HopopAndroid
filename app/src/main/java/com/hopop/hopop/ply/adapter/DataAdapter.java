@@ -3,12 +3,16 @@ package com.hopop.hopop.ply.adapter;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.support.v7.app.ActionBar;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.hopop.hopop.database.SeatTimeList;
@@ -25,10 +29,8 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
     private Context context;
     static ItemClickListenr itemClickListenr;
 
-
     public DataAdapter(ArrayList<SeatTimeList> seatTimeLst) {
         this.seatTimeLst = seatTimeLst;
-
     }
 
     @Override
@@ -39,19 +41,15 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(DataAdapter.ViewHolder holder, int position) {
-
         holder.tnumOfSeats.findViewById(R.id.textView_seats);
         holder.numOfSeats.setText(seatTimeLst.get(position).getSeatsAvailable());
         holder.numOfSeats.setTypeface(null,Typeface.BOLD);
-
         SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
         String systime = sdf.format(new Date());
-
         String timeSlot = seatTimeLst.get(position).getTimeSlot();
 
         Date d1 = null;
         Date d2 = null;
-
         try {
             d1 = sdf.parse(systime);
             Log.i(getClass().getSimpleName(),"system time"+d1);
@@ -64,10 +62,7 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
         } catch (ParseException e) {
             e.printStackTrace();
         }
-
-        //in milliseconds
         long diff = d2.getTime() - d1.getTime();
-
         if(diff<0)
         {
             //negative values
@@ -78,7 +73,6 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
             long diffSeconds = diff / 1000 ;
             long diffMinutes = diffSeconds/ 60;
             Log.i(getClass().getSimpleName(),"diff in mins"+diffMinutes);
-
             if(diffMinutes<=59)
             {
                 holder.timeSlot.setText(String.valueOf(diffMinutes)+" mins");
@@ -90,11 +84,9 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
                 long hourmins = diffMinutes - (diffHours * 60);
                 Log.i(getClass().getSimpleName(), "diff in hours" + hourmins);
                 holder.timeSlot.setText(String.valueOf(diffHours) + " Hours " + String.valueOf(hourmins) + " mins");
-
             }
             holder.timeSlot.setTypeface(null, Typeface.BOLD);
             holder.ttimeSlot.findViewById(R.id.textView_slot);
-
             try {
                 if( Integer.parseInt(seatTimeLst.get(position).getSeatsAvailable()) <=12  && Integer.parseInt(seatTimeLst.get(position).getSeatsAvailable()) > 7){
                     holder.mimageId.setImageResource(R.drawable.orangebus);
@@ -112,7 +104,21 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
             }catch (Exception e){
                 Log.d(getClass().getSimpleName(),e.getMessage());
             }
-        }//else of positive value
+        }
+        int numSeats = Integer.parseInt(seatTimeLst.get(position).getSeatsAvailable());
+        if(numSeats <= 0)
+        {
+            holder.tnumOfSeats.setText("");
+            holder.numOfSeats.setText("Seats Full");
+            holder.numOfSeats.setTypeface(null,Typeface.BOLD);
+
+            holder.numOfSeats.setTextColor(Color.RED);
+            holder.mimageId.setImageResource(R.drawable.redbus);
+            holder.mFillingStatus.findViewById(R.id.tv_filling_status);
+            holder.mFillingStatus.setText("Booking Closed");
+            holder.mFillingStatus.setTextColor(Color.RED);
+        }
+
     }
 
     @Override
@@ -131,6 +137,7 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public TextView numOfSeats,tnumOfSeats, timeSlot,ttimeSlot, mFillingStatus;
         public ImageView mimageId;
+        public CardView lstView;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -140,8 +147,8 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
             mFillingStatus = (TextView) itemView.findViewById(R.id.tv_filling_status);
             timeSlot = (TextView) itemView.findViewById(R.id.timeSlot);
             mimageId = (ImageView) itemView.findViewById(R.id.imageView2);
+            lstView = (CardView) itemView.findViewById(R.id.card_view);
             itemView.setOnClickListener(this);
-
         }
 
         @Override

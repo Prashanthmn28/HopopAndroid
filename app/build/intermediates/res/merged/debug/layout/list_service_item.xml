@@ -58,7 +58,7 @@
                 android:layout_below="@+id/numOfSeats"
                 android:layout_marginTop="5dp"
                 android:padding="5dp"
-                android:text="In Next "
+                android:text="In "
                 android:textSize="15sp"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -71,7 +71,7 @@
                 android:layout_alignParentLeft="false"
                 android:layout_below="@+id/numOfSeats"
                 android:layout_marginTop="5dp"
-                android:layout_marginLeft="60dp"
+                android:layout_marginLeft="20dp"
                 android:padding="5dp"
                 android:textSize="15sp"
                 android:textAppearance="?android:attr/textAppearanceMedium" />

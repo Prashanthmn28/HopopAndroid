@@ -10,9 +10,6 @@ import com.orm.query.Select;
 
 import java.util.List;
 
-/**
- * Created by girishvinu on 7/15/2016.
- */
 public class BookingHistory extends SugarRecord implements Parcelable {
 
     @SerializedName("mobile_number")

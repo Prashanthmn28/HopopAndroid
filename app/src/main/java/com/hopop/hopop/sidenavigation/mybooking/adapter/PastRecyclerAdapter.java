@@ -22,9 +22,6 @@ import java.util.concurrent.LinkedBlockingDeque;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-/**
- * Created by girishvinu on 7/18/2016.
- */
 public class PastRecyclerAdapter extends RecyclerView.Adapter<PastRecyclerAdapter.PastObjectHolder> implements Filterable{
     public static List<BookingHistory> bookingHis;
     private Context context;

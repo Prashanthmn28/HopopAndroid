@@ -2,11 +2,14 @@ package com.hopop.hopop.sidenavigation.mybooking.activity;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -21,6 +24,7 @@ import com.hopop.hopop.database.BookingHistory;
 import com.hopop.hopop.login.activity.LoginActivity;
 import com.hopop.hopop.login.activity.R;
 import com.hopop.hopop.login.data.LoginUser;
+import com.hopop.hopop.registration.activity.RegisterActivity;
 import com.hopop.hopop.sidenavigation.mybooking.data.BookingHisInfo;
 import com.hopop.hopop.source.activity.SourceActivity;
 import com.orm.query.Select;
@@ -46,6 +50,10 @@ public class MyBooking extends AppCompatActivity {
     Button btn_hist;
     private ProgressDialog progressDialog;
     List<BookingHistory> pastList = new ArrayList<BookingHistory>();
+    String frmSplMob,lMob,rMob;
+    Context context;
+    SharedPreferences sharedPreferences;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,33 +73,97 @@ public class MyBooking extends AppCompatActivity {
             }
         });
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        String mob = LoginActivity.usrMobileNum;
-        Log.i(getClass().getSimpleName(),"login current mobile num:"+mob);
-        final  LoginUser loginUser = new LoginUser();
-        loginUser.setMobile_number(mob);
-        CommunicatorClass.getRegisterClass().bookingHis(loginUser).enqueue(new Callback<BookingHisInfo>() {
-            @Override
-            public void onResponse(Call<BookingHisInfo> call, Response<BookingHisInfo> response) {
-                BookingHisInfo bookingHisInfo = response.body();
-                for (BookingHistory bookingHistory : bookingHisInfo.getBookingHistory()) {
-                    if(BookingHistory.isNew(bookingHistory.getMobileNumber()))
-                    {
-                        bookingHistory.save();
-                    }
-                    pastList = Select.from(BookingHistory.class).list();
-                    if (pastList.size() == 0) {
-                        btn_hist.setVisibility(View.INVISIBLE);
-                    } else {
-                        btn_hist.setVisibility(View.VISIBLE);
-                        ride.setVisibility(View.INVISIBLE);
-                        bookNow.setVisibility(View.INVISIBLE);
+        lMob = LoginActivity.usrMobileNum;
+        rMob = RegisterActivity.userMobNum;
+        context = MyBooking.this.getApplicationContext();
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+        frmSplMob = sharedPreferences.getString("lMob",null);
+        if(lMob ==null && rMob==null)
+        {
+            final  LoginUser loginUser = new LoginUser();
+            loginUser.setMobile_number(frmSplMob);
+            CommunicatorClass.getRegisterClass().bookingHis(loginUser).enqueue(new Callback<BookingHisInfo>() {
+                @Override
+                public void onResponse(Call<BookingHisInfo> call, Response<BookingHisInfo> response) {
+                    BookingHisInfo bookingHisInfo = response.body();
+                    for (BookingHistory bookingHistory : bookingHisInfo.getBookingHistory()) {
+                        if(BookingHistory.isNew(bookingHistory.getMobileNumber()))
+                        {
+                            bookingHistory.save();
+                        }
+                        pastList = Select.from(BookingHistory.class).list();
+                        if (pastList.size() == 0) {
+                            btn_hist.setVisibility(View.INVISIBLE);
+                        } else {
+                            btn_hist.setVisibility(View.VISIBLE);
+                            ride.setVisibility(View.INVISIBLE);
+                            bookNow.setVisibility(View.INVISIBLE);
+                        }
                     }
                 }
-            }
-            @Override
-            public void onFailure(Call<BookingHisInfo> call, Throwable t) {
-            }
-        });
+                @Override
+                public void onFailure(Call<BookingHisInfo> call, Throwable t) {
+                }
+            });
+        }
+        else if(lMob == null)
+        {
+            final  LoginUser loginUser = new LoginUser();
+            loginUser.setMobile_number(rMob);
+            CommunicatorClass.getRegisterClass().bookingHis(loginUser).enqueue(new Callback<BookingHisInfo>() {
+                @Override
+                public void onResponse(Call<BookingHisInfo> call, Response<BookingHisInfo> response) {
+                    BookingHisInfo bookingHisInfo = response.body();
+                    for (BookingHistory bookingHistory : bookingHisInfo.getBookingHistory()) {
+                        if(BookingHistory.isNew(bookingHistory.getMobileNumber()))
+                        {
+                            bookingHistory.save();
+                        }
+                        pastList = Select.from(BookingHistory.class).list();
+                        if (pastList.size() == 0) {
+                            btn_hist.setVisibility(View.INVISIBLE);
+                        } else {
+                            btn_hist.setVisibility(View.VISIBLE);
+                            ride.setVisibility(View.INVISIBLE);
+                            bookNow.setVisibility(View.INVISIBLE);
+                        }
+                    }
+                }
+                @Override
+                public void onFailure(Call<BookingHisInfo> call, Throwable t) {
+                }
+            });
+        }
+        else
+        {
+            final  LoginUser loginUser = new LoginUser();
+            loginUser.setMobile_number(lMob);
+            CommunicatorClass.getRegisterClass().bookingHis(loginUser).enqueue(new Callback<BookingHisInfo>() {
+                @Override
+                public void onResponse(Call<BookingHisInfo> call, Response<BookingHisInfo> response) {
+                    BookingHisInfo bookingHisInfo = response.body();
+                    for (BookingHistory bookingHistory : bookingHisInfo.getBookingHistory()) {
+                        if(BookingHistory.isNew(bookingHistory.getMobileNumber()))
+                        {
+                            bookingHistory.save();
+                        }
+                        pastList = Select.from(BookingHistory.class).list();
+                        if (pastList.size() == 0) {
+                            btn_hist.setVisibility(View.INVISIBLE);
+                        } else {
+                            btn_hist.setVisibility(View.VISIBLE);
+                            ride.setVisibility(View.INVISIBLE);
+                            bookNow.setVisibility(View.INVISIBLE);
+                        }
+                    }
+                }
+                @Override
+                public void onFailure(Call<BookingHisInfo> call, Throwable t) {
+                }
+            });
+        }
+
+
     }
 
     @OnClick(R.id.button_history)

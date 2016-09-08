@@ -5,11 +5,7 @@
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_holo_light.xml"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_social_vkontakte.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_social_vkontakte.xml"
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\drawable\\abc_list_selector_holo_light.xml"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\hopop.png",
@@ -20,44 +16,44 @@
         "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\tick.png"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_social_thecity.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_social_thecity.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_tick_mark_material.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\drawable\\abc_seekbar_tick_mark_material.xml"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\drawable\\abc_dialog_material_background.xml"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\login_bg.xml",
         "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\login_bg.xml"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_social_twitter.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_social_twitter.xml"
-    },
-    {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cell_shape.xml",
         "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\cell_shape.xml"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_social_github.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_social_github.xml"
-    },
-    {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_holo_dark.xml"
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\drawable\\abc_list_selector_holo_dark.xml"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\loading_please_wait.gif",
         "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\loading_please_wait.gif"
     },
     {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\women3.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\women3.png"
+    },
+    {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_swap_calls_white_24dp.png",
         "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\ic_swap_calls_white_24dp.png"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_social_dropbox.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_social_dropbox.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_light.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.4.0\\res\\drawable\\common_google_signin_btn_text_light.xml"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\messenger_button_blue_bg_selector.xml",
@@ -72,8 +68,12 @@
         "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\drawable\\com_facebook_button_send_background.xml"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_social_windowslive.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_social_windowslive.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_ic_visibility.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.2.0\\res\\drawable\\design_ic_visibility.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_overflow_material.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\drawable\\abc_ic_menu_overflow_material.xml"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_like_background.xml",
@@ -81,91 +81,79 @@
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_seekbar_track_material.xml"
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\drawable\\abc_seekbar_track_material.xml"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_password.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_password.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_material.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\drawable\\abc_ratingbar_material.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\men9.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\men9.png"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pickup1.png",
         "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\pickup1.png"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_accountkit_error_exclamation.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\drawable\\com_accountkit_error_exclamation.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_dark.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.4.0\\res\\drawable\\common_google_signin_btn_icon_dark.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_plus_signin_btn_text_dark.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.4.0\\res\\drawable\\common_plus_signin_btn_text_dark.xml"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\joseph_strauss.png",
         "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\joseph_strauss.png"
     },
     {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\men8.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\men8.png"
+    },
+    {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\loading.gif",
         "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\loading.gif"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_social_salesforce.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_social_salesforce.xml"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_social_amazon.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_social_amazon.xml"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\one.png",
         "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\one.png"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_social_baidu.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_social_baidu.xml"
-    },
-    {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\greenbus.png",
         "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\greenbus.png"
     },
     {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\navigation_empty_icon.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.2.0\\res\\drawable\\navigation_empty_icon.xml"
+    },
+    {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_borderless_material.xml"
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\drawable\\abc_btn_borderless_material.xml"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_social_yandex.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_social_yandex.xml"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_social_evernote_sandbox.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_social_evernote_sandbox.xml"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_radio_button_left_background.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_radio_button_left_background.xml"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_check_unset.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_check_unset.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_search_api_material.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\drawable\\abc_ic_search_api_material.xml"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_textfield_search_material.xml"
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\drawable\\abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_voice_search_api_material.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\drawable\\abc_ic_voice_search_api_material.xml"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\textcolorshuttle.xml",
         "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\textcolorshuttle.xml"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_username.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_username.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\women2.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\women2.png"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\orangevanhi.png",
         "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\orangevanhi.png"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_social_evernote.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_social_evernote.xml"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_social_facebook.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_social_facebook.xml"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_login_silver_background.xml",
@@ -176,40 +164,16 @@
         "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.github.afollestad.material-dialogs\\core\\0.8.5.3\\res\\drawable\\md_selector.xml"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_accountkit_error.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\drawable\\com_accountkit_error.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_plus_signin_btn_text_light.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.4.0\\res\\drawable\\common_plus_signin_btn_text_light.xml"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_social_google_oauth2.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_social_google_oauth2.xml"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_social_salesforce_sandbox.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_social_salesforce_sandbox.xml"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_social_paypal.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_social_paypal.xml"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_full_material.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_full_material.xml"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_social_shopify.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_social_shopify.xml"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_radio_button_text_color.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_radio_button_text_color.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\women5.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\women5.png"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_auth_dialog_cancel_background.xml",
         "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\drawable\\com_facebook_auth_dialog_cancel_background.xml"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_social_salesforce_community.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_social_salesforce_community.xml"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\md_btn_selector.xml",
@@ -220,48 +184,48 @@
         "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\bg3.jpg"
     },
     {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_plus_signin_btn_icon_dark.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.4.0\\res\\drawable\\common_plus_signin_btn_icon_dark.xml"
+    },
+    {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_indicator_material.xml"
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\drawable\\abc_ratingbar_indicator_material.xml"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\button_default_bg.xml",
         "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\button_default_bg.xml"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_accountkit_progress_complete.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\drawable\\com_accountkit_progress_complete.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\women4.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\women4.png"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_chevron.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_chevron.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_light.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.4.0\\res\\drawable\\common_google_signin_btn_icon_light.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\men6.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\men6.png"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_radio_material.xml"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_social_thirtysevensignals.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_social_thirtysevensignals.xml"
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\drawable\\abc_btn_radio_material.xml"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\drawable\\design_fab_background.xml"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_social_instagram.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_social_instagram.xml"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_accountkit_email.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\drawable\\com_accountkit_email.xml"
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.2.0\\res\\drawable\\design_fab_background.xml"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\email.png",
         "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\email.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\women1.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\women1.png"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\edittext_top_bg.xml",
@@ -272,32 +236,20 @@
         "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\login_hover.xml"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_social_thecity_sandbox.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_social_thecity_sandbox.xml"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_phone.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_phone.xml"
-    },
-    {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\messenger_button_white_bg_selector.xml",
         "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\drawable\\messenger_button_white_bg_selector.xml"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_tab_indicator_material.xml"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_social_linkedin.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_social_linkedin.xml"
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\drawable\\abc_tab_indicator_material.xml"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\person1.png",
         "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\person1.png"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_radio_button_right_background.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_radio_button_right_background.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\eye.png",
@@ -305,11 +257,7 @@
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_spinner_textfield_background_material.xml"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_clock.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_clock.xml"
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\drawable\\abc_spinner_textfield_background_material.xml"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\messenger_button_white_bg_round.xml",
@@ -324,48 +272,40 @@
         "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.github.afollestad.material-dialogs\\core\\0.8.5.3\\res\\drawable\\md_item_selected.xml"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_mobile.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_mobile.xml"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_check_error.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_check_error.xml"
-    },
-    {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_text_cursor_material.xml"
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\drawable\\abc_text_cursor_material.xml"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\selector.xml",
         "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\selector.xml"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_light.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_dialog_material_background_light.xml"
-    },
-    {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\person.png",
         "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\person.png"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_social_vimeo.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_social_vimeo.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\women8.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\women8.png"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_item_background_holo_dark.xml"
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\drawable\\abc_item_background_holo_dark.xml"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bus.png",
         "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\bus.png"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_social_fitbit.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_social_fitbit.xml"
-    },
-    {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\edittext_bottom_bg.xml",
         "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\edittext_bottom_bg.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_clear_material.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\drawable\\abc_ic_clear_material.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\men3.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\men3.png"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\rectangle4.xml",
@@ -377,15 +317,23 @@
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_cab_background_internal_bg.xml"
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\drawable\\abc_cab_background_internal_bg.xml"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\orangebus.png",
         "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\orangebus.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_ab_back_material.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\drawable\\abc_ic_ab_back_material.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\women7.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\women7.png"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\md_btn_selected_dark.xml",
@@ -396,16 +344,12 @@
         "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\greennavigation.png"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_social_miicard.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_social_miicard.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\men5.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\men5.png"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_social_yammer.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_social_yammer.xml"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_check_success.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_check_success.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_vector_test.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\drawable\\abc_vector_test.xml"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_portrait_white_48dp.png",
@@ -416,56 +360,40 @@
         "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\male.png"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_social_exact.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_social_exact.xml"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_dark.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_dialog_material_background_dark.xml"
-    },
-    {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\spinnerblue.gif",
         "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\spinnerblue.gif"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_check_material.xml"
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\drawable\\abc_btn_check_material.xml"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_social_weibo.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_social_weibo.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_dark.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.4.0\\res\\drawable\\common_google_signin_btn_text_dark.xml"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\rectangle2.xml",
         "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\rectangle2.xml"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_email.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_email.xml"
-    },
-    {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_edit_text_material.xml"
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\drawable\\abc_edit_text_material.xml"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_small_material.xml"
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\drawable\\abc_ratingbar_small_material.xml"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_social_soundcloud.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_social_soundcloud.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\men2.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\men2.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_plus_signin_btn_icon_light.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.4.0\\res\\drawable\\common_plus_signin_btn_icon_light.xml"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bussuggested.jpg",
         "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\bussuggested.jpg"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_world.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_world.xml"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_sso.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_sso.xml"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\md_selector_dark.xml",
@@ -476,16 +404,12 @@
         "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\drawable\\com_facebook_send_button_icon.xml"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_submit.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_submit.xml"
-    },
-    {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\spinner.gif",
         "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\spinner.gif"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_seekbar_thumb_material.xml"
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\drawable\\abc_seekbar_thumb_material.xml"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\messenger_button_blue_bg_round.xml",
@@ -500,16 +424,8 @@
         "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\drawable\\com_facebook_auth_dialog_background.xml"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_social_yahoo.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_social_yahoo.xml"
-    },
-    {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\linkedinbutton.png",
         "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\linkedinbutton.png"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_social_auth0.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_social_auth0.xml"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_background.xml",
@@ -517,11 +433,7 @@
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_snackbar_background.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\drawable\\design_snackbar_background.xml"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_header_logo.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_header_logo.xml"
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.2.0\\res\\drawable\\design_snackbar_background.xml"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\facebook.png",
@@ -544,16 +456,8 @@
         "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\pickup.png"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_social_aol.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_social_aol.xml"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_accountkit_progress_ring.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\drawable\\com_accountkit_progress_ring.xml"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_social_dwolla.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_social_dwolla.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\men7.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\men7.png"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\side_nav_bar.xml",
@@ -562,10 +466,6 @@
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mappointerwithbusicon.jpg",
         "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\mappointerwithbusicon.jpg"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_social_planningcenter.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_social_planningcenter.xml"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_icon.xml",
@@ -577,39 +477,31 @@
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_switch_thumb_material.xml"
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\drawable\\abc_switch_thumb_material.xml"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\rectangle1.xml",
         "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\rectangle1.xml"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_social_box.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_social_box.xml"
-    },
-    {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_cab_background_top_material.xml"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_social_wordpress.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_social_wordpress.xml"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\about.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\about.png"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\background.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\background.xml"
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\drawable\\abc_cab_background_top_material.xml"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pinknavigation.png",
         "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\pinknavigation.png"
     },
     {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\background.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\background.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\about.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\about.png"
+    },
+    {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_item_background_holo_light.xml"
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\drawable\\abc_item_background_holo_light.xml"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\md_btn_selector_dark.xml",
@@ -620,12 +512,12 @@
         "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.github.afollestad.material-dialogs\\core\\0.8.5.3\\res\\drawable\\md_transparent.xml"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_work.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_work.xml"
-    },
-    {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mybtn.xml",
         "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\mybtn.xml"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_go_search_api_material.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\drawable\\abc_ic_go_search_api_material.xml"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\rectanglecolor.xml",
@@ -636,24 +528,28 @@
         "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\facebook-android-sdk\\4.15.0\\res\\drawable\\com_facebook_auth_dialog_header_background.xml"
     },
     {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\women6.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\women6.png"
+    },
+    {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\edittext_default_bg.xml",
         "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\edittext_default_bg.xml"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_link_sent.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_link_sent.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\men4.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\men4.png"
+    },
+    {
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\women9.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\women9.png"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\rectangle.xml",
         "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\rectangle.xml"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_arrow_back_white.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\drawable\\ic_arrow_back_white.xml"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_auth0_lock_ic_social_renren.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.auth0.android\\lock\\2.0.0-beta.3\\res\\drawable\\com_auth0_lock_ic_social_renren.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\men1.png",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable\\men1.png"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\md_item_selected_dark.xml",
@@ -661,6 +557,6 @@
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_colored_material.xml"
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\drawable\\abc_btn_colored_material.xml"
     }
 ]

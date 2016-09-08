@@ -73,10 +73,7 @@ public class UserProfile extends AppCompatActivity
         });
     }
 
-    /*Once User's can authenticated,
-      It make an HTTP GET request to LinkedIn's REST API using the currently authenticated user's credentials.
-      If successful, A LinkedIn ApiResponse object containing all of the relevant aspects of the server's response will be returned.
-     */
+
 
     public void getUserData(){
         APIHelper apiHelper = APIHelper.getInstance(getApplicationContext());
@@ -111,14 +108,10 @@ public class UserProfile extends AppCompatActivity
         View header = LayoutInflater.from(this).inflate(R.layout.nav_header_source, null);
         navigation_view.addHeaderView(header);
 
-      /*  user_name = (TextView) header.findViewById(R.id.textView_userName);
-        profile_pic = (ImageView) header.findViewById(R.id.profile_image);
-        user_mobile = (TextView) header.findViewById(R.id.textView_mobile);*/
+
     }
 
-    /*
-       Set User Profile Information in Navigation Bar.
-     */
+
 
 
     public  void  setUserProfile(JSONObject response){

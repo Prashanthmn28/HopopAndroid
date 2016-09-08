@@ -1,11 +1,11 @@
 [
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\men8.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable-v21\\men8.png"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_slideshow.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable-v21\\ic_menu_slideshow.xml"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\men5.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable-v21\\men5.png"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_gallery.xml",
@@ -16,8 +16,8 @@
         "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable-v21\\ic_menu_share.xml"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\com_accountkit_input_cursor.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.facebook.android\\account-kit-sdk\\4.15.0\\res\\drawable-v21\\com_accountkit_input_cursor.xml"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\md_btn_selector_ripple_dark.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.github.afollestad.material-dialogs\\core\\0.8.5.3\\res\\drawable-v21\\md_btn_selector_ripple_dark.xml"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_send.xml",
@@ -28,99 +28,23 @@
         "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable-v21\\ic_menu_camera.xml"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\women9.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable-v21\\women9.png"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\men3.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable-v21\\men3.png"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\women6.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable-v21\\women6.png"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\md_btn_shape.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.github.afollestad.material-dialogs\\core\\0.8.5.3\\res\\drawable-v21\\md_btn_shape.xml"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\men4.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable-v21\\men4.png"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\women3.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable-v21\\women3.png"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\men7.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable-v21\\men7.png"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\women4.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable-v21\\women4.png"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\women7.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable-v21\\women7.png"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\women1.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable-v21\\women1.png"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_slideshow.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable-v21\\ic_menu_slideshow.xml"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\men9.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable-v21\\men9.png"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\md_btn_selector_ripple_dark.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.github.afollestad.material-dialogs\\core\\0.8.5.3\\res\\drawable-v21\\md_btn_selector_ripple_dark.xml"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\men1.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable-v21\\men1.png"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\men6.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable-v21\\men6.png"
-    },
-    {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\ic_menu_manage.xml",
         "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable-v21\\ic_menu_manage.xml"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\women2.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable-v21\\women2.png"
-    },
-    {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_edit_text_material.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-v21\\abc_edit_text_material.xml"
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\drawable-v21\\abc_edit_text_material.xml"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\md_btn_selector_ripple.xml",
         "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.github.afollestad.material-dialogs\\core\\0.8.5.3\\res\\drawable-v21\\md_btn_selector_ripple.xml"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\women8.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable-v21\\women8.png"
+        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\md_btn_shape.xml",
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.github.afollestad.material-dialogs\\core\\0.8.5.3\\res\\drawable-v21\\md_btn_shape.xml"
     },
     {
         "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_btn_colored_material.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-v21\\abc_btn_colored_material.xml"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\women5.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable-v21\\women5.png"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\men2.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\drawable-v21\\men2.png"
+        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\drawable-v21\\abc_btn_colored_material.xml"
     }
 ]

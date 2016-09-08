@@ -5,9 +5,6 @@ import android.os.Parcelable;
 
 import com.google.gson.annotations.SerializedName;
 
-/**
- * Created by girishvinu on 8/1/2016.
- */
 public class ProfileInfo implements Parcelable {
 
     @SerializedName("mobile_number")

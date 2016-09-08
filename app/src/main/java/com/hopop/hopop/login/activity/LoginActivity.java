@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -28,7 +29,6 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-
 public class LoginActivity extends AppCompatActivity {
 
     public static String usrMobileNum = null;
@@ -46,16 +46,21 @@ public class LoginActivity extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 
-
+      /*  if (BuildConfig.DEBUG){
+            mobile.setText("9844425308");
+            pass.setText("swaroop");
+        }*/
     }
 
     @Bind(R.id.editText_mn) EditText mobile;
     @Bind(R.id.editText_Psw) EditText pass;
 
+    String lMob;
     @OnClick (R.id.button_Login)
     public void loginUser(View view){
         if(checkFieldValidation()){
 
+            lMob = mobile.getText().toString().trim();
             final LoginUser loginUser = new LoginUser();
             loginUser.setMobile_number(mobile.getText().toString().trim());
             loginUser.setPassword(pass.getText().toString().trim());
@@ -65,18 +70,26 @@ public class LoginActivity extends AppCompatActivity {
                 public void onResponse(Call<Registerresponse> call, Response<Registerresponse> response) {
                   //  Toast.makeText(LoginActivity.this, "Login SuccessFully", Toast.LENGTH_SHORT).show();
                     usrMobileNum = loginUser.getMobile_number();
+                    Registerresponse regResp = response.body();
                     SharedPreferences prfs = getSharedPreferences("AUTHENTICATION_FILE_NAME", Context.MODE_PRIVATE);
                     String uname = prfs.getString("uname", "");
                     Log.i(getClass().getSimpleName(),"uname:"+uname);
                     String mobile = prfs.getString("userMob","");
+
+                    SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(LoginActivity.this);
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putString("lMob",lMob);
+                    editor.apply();
+             //       Toast.makeText(LoginActivity.this,"Thanks"+lMob,Toast.LENGTH_LONG).show();
+
+                    String AuthKey = regResp.getAuth_key();
+                    Log.i(getClass().getSimpleName(),"AuKey:"+AuthKey);
+                    PrefManager.putAuthKey(AuthKey);
                     Intent searchIntent = new Intent(LoginActivity.this, SourceActivity.class);
-                    searchIntent.putExtra("uname",uname);//.putString("uname",uname);
+                    searchIntent.putExtra("uname",uname);
                     searchIntent.putExtra("mobile",mobile);
                     startActivity(searchIntent);
-                    Log.e(getClass().getSimpleName(), "successful");
-					PrefManager.putAuthKey(" pass authKey obtained");
-                    PrefManager.putAuthKey(" pass authKey obtained");
-
+                   // PrefManager.putAuthKey(" pass authKey obtained");
                 }
                 @Override
                 public void onFailure(Call<Registerresponse> call, Throwable t) {
@@ -114,6 +127,11 @@ public class LoginActivity extends AppCompatActivity {
 
         return valid;
     }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
