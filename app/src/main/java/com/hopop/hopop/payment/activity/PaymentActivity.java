@@ -29,6 +29,8 @@ import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.hopop.hopop.communicators.CommunicatorClass;
+import com.hopop.hopop.communicators.interceptor.ApiRequestInterceptor;
+import com.hopop.hopop.communicators.prefmanager.PrefManager;
 import com.hopop.hopop.database.BookId;
 import com.hopop.hopop.database.ProfileInfo;
 import com.hopop.hopop.database.Wallet;
@@ -76,7 +78,7 @@ public class PaymentActivity extends AppCompatActivity
     @Nullable @Bind(R.id.textView_rideshareCalc) TextView rideshareCalc;
     @Nullable @Bind(R.id.textView_rideshareAmt) TextView rideshareAmt;
     int pos_PrfPay,nSeats;
-    String frmSplMob,tripId;
+    String frmSplMob,tripId,authenticationToken;
     String lMob = LoginActivity.usrMobileNum;
     String rMob = RegisterActivity.userMobNum;
 
@@ -96,6 +98,9 @@ public class PaymentActivity extends AppCompatActivity
         new LoadViewTask().execute();
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        authenticationToken = PrefManager.getAuehKey();
+       // Toast.makeText(PaymentActivity.this,"Auth:"+authenticationToken,Toast.LENGTH_SHORT).show();
+        ApiRequestInterceptor apiRequestInterceptor = new ApiRequestInterceptor(authenticationToken);
 
         if(getIntent().getExtras()!=null) {
             pos_PrfPay = getIntent().getExtras().getInt("prfPic");

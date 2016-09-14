@@ -11,7 +11,8 @@ import okhttp3.Response;
 
 public class ApiRequestInterceptor implements Interceptor {
 
-    public static final String HEADER_AUTH = "Authorization";
+  //  public static final String HEADER_AUTH = "Authorization";
+     public static final String HEADER_AUTH = "Auth-Key";
 
     public ApiRequestInterceptor(){
 

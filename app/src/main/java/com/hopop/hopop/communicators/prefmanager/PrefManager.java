@@ -10,6 +10,9 @@ public class PrefManager {
 
     public static String AUTH_KEY = "auth_key";
 
+    public static final String L_MOBILE = "lMob";
+
+
     public static SharedPreferences getPreferences(){
         Log.d("PrefManager","the instance is "+MyApplication.getInstance());
         return PreferenceManager.getDefaultSharedPreferences(MyApplication.getInstance());
@@ -31,8 +34,13 @@ public class PrefManager {
         return getString(AUTH_KEY,"NA");
     }
 
-    public static String getToken() {
-        String token;
-        return getToken();
+    public static String getlMobile(){
+        return getPreferences().getString(L_MOBILE,"");
     }
+
+    public static String setlMobile(String lMobile) {
+        getPreferences().edit().putString(L_MOBILE,lMobile).commit();
+        return lMobile;
+    }
+
 }

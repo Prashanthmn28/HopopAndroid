@@ -110,7 +110,7 @@ public class DestinationActivity extends AppCompatActivity implements Navigation
             pos_desPic = getIntent().getExtras().getInt("prfPic");
             frmSplMob = getIntent().getExtras().getString("lMob");
             Log.i(getClass().getSimpleName(),"ImgPosition:"+pos_desPic);
-            Toast.makeText(DestinationActivity.this,"frmMob"+frmSplMob,Toast.LENGTH_SHORT).show();
+            //Toast.makeText(DestinationActivity.this,"frmMob"+frmSplMob,Toast.LENGTH_SHORT).show();
             ProfilePicAdapter imageAdapter = new ProfilePicAdapter(this);
             imgView.setImageResource(imageAdapter.picArry[pos_desPic]);
         }

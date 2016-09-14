@@ -33,10 +33,6 @@ import com.hopop.hopop.login.data.LoginUser;
 import com.hopop.hopop.registration.activity.RegisterActivity;
 import com.hopop.hopop.sidenavigation.profile.data.ProfileDetailsInfo;
 import com.hopop.hopop.sidenavigation.profile.data.ProfileUpdatedInfo;
-import com.orm.SchemaGenerator;
-import com.orm.SugarContext;
-import com.orm.SugarDb;
-
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -217,15 +213,6 @@ public void handleMessage(Message msg) {
         }
         }
         };
-
-        /*SugarContext.terminate();
-        SchemaGenerator schemaGenerator = new SchemaGenerator(getApplicationContext());
-        schemaGenerator.deleteTables(new SugarDb(getApplicationContext()).getDB());
-        SugarContext.init(getApplicationContext());
-        schemaGenerator.createDatabase(new SugarDb(getApplicationContext()).getDB());
-        Intent lgIntent = new Intent(getApplicationContext(), LoginActivity.class);
-        startActivity(lgIntent);*/
-
 
     private class LoadViewTask extends AsyncTask<Void, Integer, Void>
     {

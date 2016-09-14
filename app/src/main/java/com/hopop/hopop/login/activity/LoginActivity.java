@@ -76,11 +76,11 @@ public class LoginActivity extends AppCompatActivity {
                     Log.i(getClass().getSimpleName(),"uname:"+uname);
                     String mobile = prfs.getString("userMob","");
 
-                    SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(LoginActivity.this);
+                    /*SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(LoginActivity.this);
                     SharedPreferences.Editor editor = preferences.edit();
                     editor.putString("lMob",lMob);
-                    editor.apply();
-             //       Toast.makeText(LoginActivity.this,"Thanks"+lMob,Toast.LENGTH_LONG).show();
+                    editor.apply();*/
+                     PrefManager.setlMobile(lMob);
 
                     String AuthKey = regResp.getAuth_key();
                     Log.i(getClass().getSimpleName(),"AuKey:"+AuthKey);
@@ -89,7 +89,7 @@ public class LoginActivity extends AppCompatActivity {
                     searchIntent.putExtra("uname",uname);
                     searchIntent.putExtra("mobile",mobile);
                     startActivity(searchIntent);
-                   // PrefManager.putAuthKey(" pass authKey obtained");
+
                 }
                 @Override
                 public void onFailure(Call<Registerresponse> call, Throwable t) {
@@ -130,6 +130,8 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
+        moveTaskToBack(true);
+        finish();
     }
 
 
