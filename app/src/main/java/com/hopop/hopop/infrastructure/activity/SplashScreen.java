@@ -67,19 +67,20 @@ public class SplashScreen extends Activity {
                 }
                 if (progressStatus==100)
                 {
-                    context = SplashScreen.this.getApplicationContext();
+                   /* context = SplashScreen.this.getApplicationContext();
                     sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
                     authenticationToken = sharedPreferences.getString(PrefManager.AUTH_KEY, "NA");
-
-
+*/
+                    authenticationToken = PrefManager.getAuehKey();
                     if (authenticationToken.equals("NA")) {
                         startActivity(new Intent(SplashScreen.this, LoginActivity.class));
                     } else {
-                        String authKey = sharedPreferences.getString(PrefManager.getAuehKey(),null);
-                        ApiRequestInterceptor apiRequestInterceptor = new ApiRequestInterceptor(authKey);
-                        lMob = sharedPreferences.getString("lMob",null);
+                        //String authKey = sharedPreferences.getString(PrefManager.getAuehKey(),null);
+                      //  String authKey = PrefManager.getAuehKey();
+                        ApiRequestInterceptor apiRequestInterceptor = new ApiRequestInterceptor(authenticationToken);
+                     //   lMob = sharedPreferences.getString("lMob",null);
+                        lMob = PrefManager.getlMobile();
                         Log.i(getClass().getSimpleName(),"lMob in Splash:"+lMob);
-
                         Intent splIntnet = new Intent(SplashScreen.this, SourceActivity.class);
                         splIntnet.putExtra("lMob", lMob);
                         Bundle bundle = new Bundle();
@@ -88,36 +89,24 @@ public class SplashScreen extends Activity {
                     }
                     finish();
                 }
-
-
             }
         }).start();}
 
         public final boolean isInternetOn() {
-
             // get Connectivity Manager object to check connection
             ConnectivityManager connec =  (ConnectivityManager)getSystemService(getBaseContext().CONNECTIVITY_SERVICE);
-
             // Check for network connections
             if ( connec.getNetworkInfo(0).getState() == android.net.NetworkInfo.State.CONNECTED ||
                     connec.getNetworkInfo(0).getState() == android.net.NetworkInfo.State.CONNECTING ||
                     connec.getNetworkInfo(1).getState() == android.net.NetworkInfo.State.CONNECTING ||
                     connec.getNetworkInfo(1).getState() == android.net.NetworkInfo.State.CONNECTED ) {
-
                 // if connected with internet
-
                 Toast.makeText(this, " Connected ", Toast.LENGTH_LONG).show();
                 return true;
-
             } else if ( connec.getNetworkInfo(0).getState() == android.net.NetworkInfo.State.DISCONNECTED ||  connec.getNetworkInfo(1).getState() == android.net.NetworkInfo.State.DISCONNECTED  ) {
-
                 Toast.makeText(this, " Not Connected ", Toast.LENGTH_LONG).show();
                 return false;
             }
             return false;
         }
-
-
-
-
 }

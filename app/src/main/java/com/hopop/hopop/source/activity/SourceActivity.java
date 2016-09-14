@@ -28,6 +28,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.hopop.hopop.communicators.CommunicatorClass;
+import com.hopop.hopop.communicators.interceptor.ApiRequestInterceptor;
+import com.hopop.hopop.communicators.prefmanager.PrefManager;
 import com.hopop.hopop.database.FromRoute;
 import com.hopop.hopop.database.ProfileInfo;
 import com.hopop.hopop.destination.activity.DestinationActivity;
@@ -78,147 +80,150 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
     @Nullable @Bind(R.id.textView_sName)
     TextView name;
     int pos_prfPic;
-    String frmSplMob;
+    String frmSplMob,authenticationToken;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setTitle(R.string.PickHeader);
-        setContentView(R.layout.activity_source);
-        ButterKnife.bind(this);
-        new LoadViewTask().execute();
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        source_list = (RecyclerView) findViewById(R.id.source_list);
-        final Call<SourceList> sourceList1 = CommunicatorClass.getRegisterClass().groupListSrc();
-        final LinearLayoutManager layoutManager = new LinearLayoutManager(this.getApplicationContext());
-        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-        source_list.setLayoutManager(layoutManager);
-        source_list.setItemAnimator(new DefaultItemAnimator());
-        sourceList1.enqueue(new Callback<SourceList>() {
-            @Override
-            public void onResponse(Call<SourceList> call, Response<SourceList> response) {
-                SourceList sl = response.body();
-                for(FromRoute fromRoute: sl.getFromRoutes()){
-                    if(FromRoute.isNew(fromRoute.getStopId())) {
-                        fromRoute.save();
+
+            setTitle(R.string.PickHeader);
+            setContentView(R.layout.activity_source);
+            ButterKnife.bind(this);
+            new LoadViewTask().execute();
+            toolbar = (Toolbar) findViewById(R.id.toolbar);
+            setSupportActionBar(toolbar);
+            source_list = (RecyclerView) findViewById(R.id.source_list);
+            authenticationToken = PrefManager.getAuehKey();
+           // Toast.makeText(SourceActivity.this,"Auth:"+authenticationToken,Toast.LENGTH_SHORT).show();
+            ApiRequestInterceptor apiRequestInterceptor = new ApiRequestInterceptor(authenticationToken);
+            final Call<SourceList> sourceList1 = CommunicatorClass.getRegisterClass().groupListSrc();
+            final LinearLayoutManager layoutManager = new LinearLayoutManager(this.getApplicationContext());
+            layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+            source_list.setLayoutManager(layoutManager);
+            source_list.setItemAnimator(new DefaultItemAnimator());
+            sourceList1.enqueue(new Callback<SourceList>() {
+                @Override
+                public void onResponse(Call<SourceList> call, Response<SourceList> response) {
+                    SourceList sl = response.body();
+
+                    for (FromRoute fromRoute : sl.getFromRoutes()) {
+                        if (FromRoute.isNew(fromRoute.getStopId())) {
+                            fromRoute.save();
+                        }
                     }
+                    list1 = Select.from(FromRoute.class).list();
+                    for (FromRoute frmRout : list1) {
+                    }
+                    listItems = FromRoute.findWithQuery(FromRoute.class, "Select * from FROM_ROUTE Group By stop_location");
+                    for (FromRoute fromRoute : listItems) {
+                        Log.i(getClass().getSimpleName(), "the stops are " + fromRoute.getStopLocation());
+                    }
+                    displayTheList(listItems);
+                    addTextListener();
                 }
-                list1 = Select.from(FromRoute.class).list();
-                for(FromRoute frmRout:list1){
+
+                @Override
+                public void onFailure(Call<SourceList> call, Throwable t) {
+                    Toast.makeText(SourceActivity.this, "Invalid Mobile Number/Password", Toast.LENGTH_SHORT).show();
                 }
-                listItems = FromRoute.findWithQuery(FromRoute.class,"Select * from FROM_ROUTE Group By stop_location");
-                for(FromRoute fromRoute: listItems){
-                    Log.i(getClass().getSimpleName(),"the stops are "+fromRoute.getStopLocation());
-                }
-                displayTheList(listItems);
-                addTextListener();
-            }
-            @Override
-            public void onFailure(Call<SourceList> call, Throwable t) {
-                Toast.makeText(SourceActivity.this, "Invalid Mobile Number/Password", Toast.LENGTH_SHORT).show();
-            }
-        });
+            });
 //-------------SIDE NAVIGATION --------------------------------------------------------
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
-        //  drawer.addDrawerListener(toggle);
-        toggle.syncState();
-        final NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        final View headView = navigationView.getHeaderView(0);
-        final ImageView imgView = (ImageView) headView.findViewById(R.id.imageView);
-        imgView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent gridIntent = new Intent(getApplicationContext(),GridImgActivity.class);
-                startActivity(gridIntent);
-            }
-        });
+            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+            ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                    this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+            drawer.setDrawerListener(toggle);
+            //  drawer.addDrawerListener(toggle);
+            toggle.syncState();
+            final NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+            final View headView = navigationView.getHeaderView(0);
+            final ImageView imgView = (ImageView) headView.findViewById(R.id.imageView);
+            imgView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent gridIntent = new Intent(getApplicationContext(), GridImgActivity.class);
+                    startActivity(gridIntent);
+                }
+            });
 //---------for profilePic------------------
-        if(getIntent().getExtras()!=null) {
-            pos_prfPic = getIntent().getExtras().getInt("id");
-            frmSplMob = getIntent().getExtras().getString("lMob");
-            Log.i(getClass().getSimpleName(),"srcImgPrf:"+pos_prfPic);
-            ProfilePicAdapter imageAdapter = new ProfilePicAdapter(this);
-            imgView.setImageResource(imageAdapter.picArry[pos_prfPic]);
-        }
+            if (getIntent().getExtras() != null) {
+                pos_prfPic = getIntent().getExtras().getInt("id");
+                //  frmSplMob = getIntent().getExtras().getString("lMob");
+                frmSplMob = PrefManager.getlMobile();
+                //Toast.makeText(SourceActivity.this, "frmSplMob:" + frmSplMob, Toast.LENGTH_SHORT).show();
+                ProfilePicAdapter imageAdapter = new ProfilePicAdapter(this);
+                imgView.setImageResource(imageAdapter.picArry[pos_prfPic]);
+            }
 //-------------------for profileName nd Number-------------
-        String lMob = LoginActivity.usrMobileNum;
-        String rMob = RegisterActivity.userMobNum;
-         if(lMob == null && rMob == null)
-        {
-            final ForProfileHeader forProfileHeader =new ForProfileHeader();
-            forProfileHeader.setMobile_number(frmSplMob);
-            CommunicatorClass.getRegisterClass().headerProfile(forProfileHeader).enqueue(new Callback<HeaderProfile>() {
-                @Override
-                public void onResponse(Call<HeaderProfile> call, Response<HeaderProfile> response) {
-                    HeaderProfile headerProfile = response.body();
-                    for(ProfileInfo profileInfo:headerProfile.getProfileInfo())
-                    {
-                        View headView = navigationView.getHeaderView(0);
-                        TextView name = (TextView) headView.findViewById(R.id.textView_sName);
-                        TextView mob = (TextView) headView.findViewById(R.id.textView_sMobile);
-                        mob.setText(profileInfo.getMobile_number());
-                        name.setText(profileInfo.getUser_name());
+            String lMob = LoginActivity.usrMobileNum;
+            String rMob = RegisterActivity.userMobNum;
+            if (lMob == null && rMob == null) {
+                final ForProfileHeader forProfileHeader = new ForProfileHeader();
+                forProfileHeader.setMobile_number(frmSplMob);
+                CommunicatorClass.getRegisterClass().headerProfile(forProfileHeader).enqueue(new Callback<HeaderProfile>() {
+                    @Override
+                    public void onResponse(Call<HeaderProfile> call, Response<HeaderProfile> response) {
+                        HeaderProfile headerProfile = response.body();
+                        for (ProfileInfo profileInfo : headerProfile.getProfileInfo()) {
+                            View headView = navigationView.getHeaderView(0);
+                            TextView name = (TextView) headView.findViewById(R.id.textView_sName);
+                            TextView mob = (TextView) headView.findViewById(R.id.textView_sMobile);
+                            mob.setText(profileInfo.getMobile_number());
+                            name.setText(profileInfo.getUser_name());
+                        }
                     }
-                }
-                @Override
-                public void onFailure(Call<HeaderProfile> call, Throwable t) {
-                    Log.i(getClass().getSimpleName(),"Failure Header Profile");
-                }
-            });
-        }
-         else if(lMob == null)
-        {
 
-            Log.i(getClass().getSimpleName(),"register Mobile Num:"+rMob);
-            final ForProfileHeader forProfileHeader =new ForProfileHeader();
-            forProfileHeader.setMobile_number(rMob);
-            CommunicatorClass.getRegisterClass().headerProfile(forProfileHeader).enqueue(new Callback<HeaderProfile>() {
-                @Override
-                public void onResponse(Call<HeaderProfile> call, Response<HeaderProfile> response) {
-                    HeaderProfile headerProfile = response.body();
-                    for(ProfileInfo profileInfo:headerProfile.getProfileInfo())
-                    {
-                        TextView name = (TextView) headView.findViewById(R.id.textView_sName);
-                        TextView mob = (TextView) headView.findViewById(R.id.textView_sMobile);
-                        name.setText(profileInfo.getUser_name());
-                        mob.setText(profileInfo.getMobile_number());
+                    @Override
+                    public void onFailure(Call<HeaderProfile> call, Throwable t) {
+                        Log.i(getClass().getSimpleName(), "Failure Header Profile");
                     }
-                }
-                @Override
-                public void onFailure(Call<HeaderProfile> call, Throwable t) {
-                    Log.i(getClass().getSimpleName(),"Failure Header Profile");
-                }
-            });
-        }
+                });
+            } else if (lMob == null) {
 
-        else {
-            final ForProfileHeader forProfileHeader =new ForProfileHeader();
-            forProfileHeader.setMobile_number(lMob);
-            CommunicatorClass.getRegisterClass().headerProfile(forProfileHeader).enqueue(new Callback<HeaderProfile>() {
-                @Override
-                public void onResponse(Call<HeaderProfile> call, Response<HeaderProfile> response) {
-                    HeaderProfile headerProfile = response.body();
-                    for(ProfileInfo profileInfo:headerProfile.getProfileInfo())
-                    {
-                        View headView = navigationView.getHeaderView(0);
-                        TextView name = (TextView) headView.findViewById(R.id.textView_sName);
-                        TextView mob = (TextView) headView.findViewById(R.id.textView_sMobile);
-                        mob.setText(profileInfo.getMobile_number());
-                        name.setText(profileInfo.getUser_name());
+                Log.i(getClass().getSimpleName(), "register Mobile Num:" + rMob);
+                final ForProfileHeader forProfileHeader = new ForProfileHeader();
+                forProfileHeader.setMobile_number(rMob);
+                CommunicatorClass.getRegisterClass().headerProfile(forProfileHeader).enqueue(new Callback<HeaderProfile>() {
+                    @Override
+                    public void onResponse(Call<HeaderProfile> call, Response<HeaderProfile> response) {
+                        HeaderProfile headerProfile = response.body();
+                        for (ProfileInfo profileInfo : headerProfile.getProfileInfo()) {
+                            TextView name = (TextView) headView.findViewById(R.id.textView_sName);
+                            TextView mob = (TextView) headView.findViewById(R.id.textView_sMobile);
+                            name.setText(profileInfo.getUser_name());
+                            mob.setText(profileInfo.getMobile_number());
+                        }
                     }
-                }
-                @Override
-                public void onFailure(Call<HeaderProfile> call, Throwable t) {
-                    Log.i(getClass().getSimpleName(),"Failure Header Profile");
-                }
-            });
-        }
-        navigationView.setNavigationItemSelectedListener(this);
+
+                    @Override
+                    public void onFailure(Call<HeaderProfile> call, Throwable t) {
+                        Log.i(getClass().getSimpleName(), "Failure Header Profile");
+                    }
+                });
+            } else {
+                final ForProfileHeader forProfileHeader = new ForProfileHeader();
+                forProfileHeader.setMobile_number(lMob);
+                CommunicatorClass.getRegisterClass().headerProfile(forProfileHeader).enqueue(new Callback<HeaderProfile>() {
+                    @Override
+                    public void onResponse(Call<HeaderProfile> call, Response<HeaderProfile> response) {
+                        HeaderProfile headerProfile = response.body();
+                        for (ProfileInfo profileInfo : headerProfile.getProfileInfo()) {
+                            View headView = navigationView.getHeaderView(0);
+                            TextView name = (TextView) headView.findViewById(R.id.textView_sName);
+                            TextView mob = (TextView) headView.findViewById(R.id.textView_sMobile);
+                            mob.setText(profileInfo.getMobile_number());
+                            name.setText(profileInfo.getUser_name());
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<HeaderProfile> call, Throwable t) {
+                        Log.i(getClass().getSimpleName(), "Failure Header Profile");
+                    }
+                });
+            }
+            navigationView.setNavigationItemSelectedListener(this);
+
     }//eof onCreate()
 
     List<FromRoute> startingPoint = null;

@@ -24,6 +24,8 @@ import android.widget.Toast;
 
 
 import com.hopop.hopop.communicators.CommunicatorClass;
+import com.hopop.hopop.communicators.interceptor.ApiRequestInterceptor;
+import com.hopop.hopop.communicators.prefmanager.PrefManager;
 import com.hopop.hopop.database.ProfileInfo;
 import com.hopop.hopop.database.SeatTimeList;
 import com.hopop.hopop.destination.activity.DestinationActivity;
@@ -68,7 +70,7 @@ public class PlyActivity extends AppCompatActivity implements NavigationView.OnN
     public static String tripId = null;
     public static String seats = null;
 
-    String frmSplMob;
+   String frmSplMob,authenticationToken;
     int pos_PrfPly;
     Bundle bundle = new Bundle();
 
@@ -91,16 +93,23 @@ public class PlyActivity extends AppCompatActivity implements NavigationView.OnN
             frmSplMob = getIntent().getExtras().getString("lMob");
 
         }
+        final String lMob = LoginActivity.usrMobileNum;
+        final String rMob = RegisterActivity.userMobNum;
+
         String src_point = b.getString("src");
-        String src_pointId = SourceActivity.srcRId;
         String dest_point = DestinationActivity.destSelect;
-        String dest_pointId = DestinationActivity.destSelectId;
+
+
         Intent bookinHistIntent = getIntent();
         src_point = bookinHistIntent.getExtras().getString("src");
         dest_point = bookinHistIntent.getExtras().getString("dest");
         SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
         String systime = sdf.format(new Date());
-        Log.i(getClass().getSimpleName(), "Current Time:" + systime);
+
+        authenticationToken = PrefManager.getAuehKey();
+      //  Toast.makeText(PlyActivity.this,"Auth:"+authenticationToken,Toast.LENGTH_SHORT).show();
+        ApiRequestInterceptor apiRequestInterceptor = new ApiRequestInterceptor(authenticationToken);
+
         final ForSeatAvailability forSeats = new ForSeatAvailability();
         forSeats.setSrc_stop(src_point);
         forSeats.setDest_stop(dest_point);
@@ -112,7 +121,8 @@ public class PlyActivity extends AppCompatActivity implements NavigationView.OnN
             public void onResponse(Call<SeatTimeInfo> call, Response<SeatTimeInfo> response) {
                 Log.e(getClass().getSimpleName(), "successful");
                 final SeatTimeInfo sti = response.body();
-                if (sti == null) {
+                if (sti == null)
+                {
                     srcTxt = (TextView) findViewById(R.id.textView_pickpoint);
                     destTxt = (TextView) findViewById(R.id.textView_droppoint);
                     srcTxt.setText(finalSrc_point);
@@ -145,24 +155,70 @@ public class PlyActivity extends AppCompatActivity implements NavigationView.OnN
                         @Override
                         public void onClick(View v) {
                             final ForSuggestedRoute forSuggestedRoute = new ForSuggestedRoute();
-                            String userMobileNum = LoginActivity.usrMobileNum;
                             SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
                             String systime = sdf.format(new Date());
-                            forSuggestedRoute.setMobile_number(userMobileNum);
-                            forSuggestedRoute.setFrom_route(srcTxt.getText().toString());
-                            forSuggestedRoute.setTo_route(destTxt.getText().toString());
-                            forSuggestedRoute.getRequeste_on(systime);
-                            CommunicatorClass.getRegisterClass().forRoute(forSuggestedRoute).enqueue(new Callback<SuggestedInfo>() {
-                                @Override
-                                public void onResponse(Call<SuggestedInfo> call, Response<SuggestedInfo> response) {
-                                    Toast.makeText(PlyActivity.this, "The Suggested Route Add Successfully", Toast.LENGTH_LONG).show();
-                                    Intent suggIntent = new Intent(PlyActivity.this, SourceActivity.class);
-                                    startActivity(suggIntent);
-                                }
-                                @Override
-                                public void onFailure(Call<SuggestedInfo> call, Throwable t) {
-                                }
-                            });
+                            if(lMob == null && rMob == null)
+                            {
+                                forSuggestedRoute.setMobile_number(frmSplMob);
+                                Toast.makeText(PlyActivity.this,"SplashMob:"+frmSplMob,Toast.LENGTH_SHORT).show();
+                                forSuggestedRoute.setFrom_route(srcTxt.getText().toString());
+                                forSuggestedRoute.setTo_route(destTxt.getText().toString());
+                                forSuggestedRoute.getRequeste_on(systime);
+                                CommunicatorClass.getRegisterClass().forRoute(forSuggestedRoute).enqueue(new Callback<SuggestedInfo>() {
+                                    @Override
+                                    public void onResponse(Call<SuggestedInfo> call, Response<SuggestedInfo> response) {
+                                        Toast.makeText(PlyActivity.this, "The Suggested Route Add Successfully", Toast.LENGTH_LONG).show();
+                                        Intent suggIntent = new Intent(PlyActivity.this, SourceActivity.class);
+                                        suggIntent.putExtras(bundle);
+                                        suggIntent.putExtra("id",pos_PrfPly);
+                                        suggIntent.putExtra("lMob",frmSplMob);
+                                        startActivity(suggIntent);
+                                    }
+                                    @Override
+                                    public void onFailure(Call<SuggestedInfo> call, Throwable t) {
+                                    }
+                                });
+                            }
+                            else if(lMob == null)
+                            {
+                                forSuggestedRoute.setMobile_number(rMob);
+                                forSuggestedRoute.setFrom_route(srcTxt.getText().toString());
+                                forSuggestedRoute.setTo_route(destTxt.getText().toString());
+                                forSuggestedRoute.getRequeste_on(systime);
+                                CommunicatorClass.getRegisterClass().forRoute(forSuggestedRoute).enqueue(new Callback<SuggestedInfo>() {
+                                    @Override
+                                    public void onResponse(Call<SuggestedInfo> call, Response<SuggestedInfo> response) {
+                                        Toast.makeText(PlyActivity.this, "The Suggested Route Add Successfully", Toast.LENGTH_LONG).show();
+                                        Intent suggIntent = new Intent(PlyActivity.this, SourceActivity.class);
+                                        suggIntent.putExtra("id",pos_PrfPly);
+                                        startActivity(suggIntent);
+                                    }
+                                    @Override
+                                    public void onFailure(Call<SuggestedInfo> call, Throwable t) {
+                                    }
+                                });
+                            }
+                            else
+                            {
+                                forSuggestedRoute.setMobile_number(lMob);
+                                forSuggestedRoute.setFrom_route(srcTxt.getText().toString());
+                                forSuggestedRoute.setTo_route(destTxt.getText().toString());
+                                forSuggestedRoute.getRequeste_on(systime);
+                                CommunicatorClass.getRegisterClass().forRoute(forSuggestedRoute).enqueue(new Callback<SuggestedInfo>() {
+                                    @Override
+                                    public void onResponse(Call<SuggestedInfo> call, Response<SuggestedInfo> response) {
+                                        Toast.makeText(PlyActivity.this, "The Suggested Route Add Successfully", Toast.LENGTH_LONG).show();
+                                        Intent suggIntent = new Intent(PlyActivity.this, SourceActivity.class);
+                                        suggIntent.putExtra("id",pos_PrfPly);
+                                        suggIntent.putExtra("lMob",frmSplMob);
+                                        startActivity(suggIntent);
+                                    }
+                                    @Override
+                                    public void onFailure(Call<SuggestedInfo> call, Throwable t) {
+                                    }
+                                });
+                            }
+
                         }
                     });
                 } else {
@@ -194,8 +250,6 @@ public class PlyActivity extends AppCompatActivity implements NavigationView.OnN
                                 Intent intentSA = new Intent(PlyActivity.this, PaymentActivity.class);
                                 bundle.putParcelable("seatDetails", sti.getSeatTimeList().get(position));
                                 String tripID = sti.getSeatTimeList().get(position).getTripId();
-
-                              //  Toast.makeText(PlyActivity.this,"tripID:"+tripID,Toast.LENGTH_SHORT).show();
                                 intentSA.putExtras(bundle);
                                 intentSA.putExtra("prfPic",pos_PrfPly);
                                 intentSA.putExtra("lMob",frmSplMob);
@@ -249,8 +303,7 @@ public class PlyActivity extends AppCompatActivity implements NavigationView.OnN
 
         ProfilePicAdapter imageAdapter = new ProfilePicAdapter(this);
         imgView.setImageResource(imageAdapter.picArry[pos_PrfPly]);
-        String lMob = LoginActivity.usrMobileNum;
-        String rMob = RegisterActivity.userMobNum;
+
         if(lMob == null && rMob == null)
         {
             final ForProfileHeader forProfileHeader =new ForProfileHeader();
