@@ -11,7 +11,6 @@ public class Wallet extends SugarRecord implements Parcelable {
     @JsonProperty
     private String balance;
 
-
     public String getBalance() {
         return balance;
     }
@@ -19,8 +18,6 @@ public class Wallet extends SugarRecord implements Parcelable {
     public void setBalance(String balance) {
         this.balance = balance;
     }
-
-
 
     public Wallet(String balance) {
         this.balance = balance;

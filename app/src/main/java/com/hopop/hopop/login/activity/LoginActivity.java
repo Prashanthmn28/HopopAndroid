@@ -32,12 +32,12 @@ import retrofit2.Response;
 public class LoginActivity extends AppCompatActivity {
 
     public static String usrMobileNum = null;
-
+    int pos_PrfPly;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Stetho.initializeWithDefaults(this);
+//        Stetho.initializeWithDefaults(this);
         setTitle("Hop In");
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
@@ -45,7 +45,6 @@ public class LoginActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
-
       /*  if (BuildConfig.DEBUG){
             mobile.setText("9844425308");
             pass.setText("swaroop");
@@ -64,38 +63,22 @@ public class LoginActivity extends AppCompatActivity {
             final LoginUser loginUser = new LoginUser();
             loginUser.setMobile_number(mobile.getText().toString().trim());
             loginUser.setPassword(pass.getText().toString().trim());
-            Log.d("RANDOM TAG", "on submit button pressed");
             CommunicatorClass.getRegisterClass().groupListLogin(loginUser).enqueue(new Callback<Registerresponse>() {
                 @Override
                 public void onResponse(Call<Registerresponse> call, Response<Registerresponse> response) {
-                  //  Toast.makeText(LoginActivity.this, "Login SuccessFully", Toast.LENGTH_SHORT).show();
                     usrMobileNum = loginUser.getMobile_number();
                     Registerresponse regResp = response.body();
-                    SharedPreferences prfs = getSharedPreferences("AUTHENTICATION_FILE_NAME", Context.MODE_PRIVATE);
-                    String uname = prfs.getString("uname", "");
-                    Log.i(getClass().getSimpleName(),"uname:"+uname);
-                    String mobile = prfs.getString("userMob","");
-
-                    /*SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(LoginActivity.this);
-                    SharedPreferences.Editor editor = preferences.edit();
-                    editor.putString("lMob",lMob);
-                    editor.apply();*/
-                     PrefManager.setlMobile(lMob);
-
+                    PrefManager.setlMobile(lMob);
                     String AuthKey = regResp.getAuth_key();
-                    Log.i(getClass().getSimpleName(),"AuKey:"+AuthKey);
                     PrefManager.putAuthKey(AuthKey);
                     Intent searchIntent = new Intent(LoginActivity.this, SourceActivity.class);
-                    searchIntent.putExtra("uname",uname);
-                    searchIntent.putExtra("mobile",mobile);
-                    startActivity(searchIntent);
 
+                    searchIntent.putExtra("id", pos_PrfPly);
+                    startActivity(searchIntent);
                 }
                 @Override
                 public void onFailure(Call<Registerresponse> call, Throwable t) {
-                    Log.e(getClass().getSimpleName(), "failure");
                     Toast.makeText(LoginActivity.this, "Invalid Mobile Number/Password", Toast.LENGTH_SHORT).show();
-                    Log.e(getClass().getSimpleName(), "failure");
                 }
             });
         }

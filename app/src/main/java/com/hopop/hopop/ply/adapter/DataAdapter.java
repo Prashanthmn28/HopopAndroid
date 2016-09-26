@@ -52,13 +52,11 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
         Date d2 = null;
         try {
             d1 = sdf.parse(systime);
-            Log.i(getClass().getSimpleName(),"system time"+d1);
         } catch (ParseException e) {
             e.printStackTrace();
         }
         try {
             d2 = sdf.parse(timeSlot);
-            Log.i(getClass().getSimpleName(),"given time"+d2);
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -69,10 +67,8 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
         }
         else
         {
-            Log.i(getClass().getSimpleName(),"diff time"+diff);
             long diffSeconds = diff / 1000 ;
             long diffMinutes = diffSeconds/ 60;
-            Log.i(getClass().getSimpleName(),"diff in mins"+diffMinutes);
             if(diffMinutes<=59)
             {
                 holder.timeSlot.setText(String.valueOf(diffMinutes)+" mins");
@@ -80,9 +76,7 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
             else
             {
                 long diffHours = diffSeconds / 3600;
-                Log.i(getClass().getSimpleName(), "diff in hours" + diffHours);
                 long hourmins = diffMinutes - (diffHours * 60);
-                Log.i(getClass().getSimpleName(), "diff in hours" + hourmins);
                 holder.timeSlot.setText(String.valueOf(diffHours) + " Hours " + String.valueOf(hourmins) + " mins");
             }
             holder.timeSlot.setTypeface(null, Typeface.BOLD);

@@ -20,14 +20,12 @@ public class DestSearchFilter extends Filter {
         this.originalList = new LinkedList<>(stopPoints);;
         this.adapter = destRecyclerAdapter;
         this.filteredList = new ArrayList<>();
-
     }
 
     @Override
     protected FilterResults performFiltering(CharSequence constraint) {
         filteredList.clear();
         final FilterResults results = new FilterResults();
-
         if (constraint.length() == 0) {
             filteredList.addAll(originalList);
         } else {
@@ -50,7 +48,6 @@ public class DestSearchFilter extends Filter {
         adapter.filteredList.clear();
         adapter.filteredList.addAll((ArrayList<FromRoute>) results.values);
         adapter.notifyDataSetChanged();
-
     }
 
     public List<FromRoute> getFilteredList() {

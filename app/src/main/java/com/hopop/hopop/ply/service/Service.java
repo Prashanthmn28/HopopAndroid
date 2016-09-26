@@ -36,7 +36,6 @@ public class Service {
         this.interval = interval;
     }
 
-
     public int getColor() {
         return color;
     }

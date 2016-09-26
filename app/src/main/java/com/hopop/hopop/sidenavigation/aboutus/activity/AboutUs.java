@@ -21,6 +21,7 @@ public class AboutUs extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_aboutus);
         setTitle("AboutUs");
         new LoadViewTask().execute();
@@ -33,7 +34,7 @@ public class AboutUs extends AppCompatActivity {
                 onBackPressed();
             }
         });
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
         WebView view = (WebView) findViewById(R.id.webView);
         String text;
         text = "<html><body><p align=\"justify\">";

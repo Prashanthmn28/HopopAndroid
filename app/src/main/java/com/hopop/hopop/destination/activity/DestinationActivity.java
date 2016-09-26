@@ -109,8 +109,6 @@ public class DestinationActivity extends AppCompatActivity implements Navigation
         if(getIntent().getExtras()!=null) {
             pos_desPic = getIntent().getExtras().getInt("prfPic");
             frmSplMob = getIntent().getExtras().getString("lMob");
-            Log.i(getClass().getSimpleName(),"ImgPosition:"+pos_desPic);
-            //Toast.makeText(DestinationActivity.this,"frmMob"+frmSplMob,Toast.LENGTH_SHORT).show();
             ProfilePicAdapter imageAdapter = new ProfilePicAdapter(this);
             imgView.setImageResource(imageAdapter.picArry[pos_desPic]);
         }
@@ -197,7 +195,6 @@ public class DestinationActivity extends AppCompatActivity implements Navigation
         recyclerAdapter.setOnItemClickListener(new DestRecyclerAdapter.ItemClickListenr(){
             @Override
             public void onItemClick(int position, View v) {
-                Log.i(getClass().getSimpleName(), "the item clicked is " + fromRoutes.get(position).getStopLocation());
                 destSelect = recyclerAdapter.getFilteredItem(position).getStopLocation();
                 destSelectId = fromRoutes.get(position).getRouteId();
                 Intent destIntent = new Intent(DestinationActivity.this, PlyActivity.class);

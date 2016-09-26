@@ -24,14 +24,10 @@ public class ProfilePicAdapter extends BaseAdapter {
         this.mContex = context;
     }
 
-
-
     @Override
     public int getCount() {
         return picArry.length;
     }
-
-
 
     @Override
     public Object getItem(int position) {

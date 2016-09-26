@@ -16,20 +16,14 @@ public class AlertDialogActvity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setTitle(R.string.SignUpHeader);
         setContentView(R.layout.activity_alert);
-
-
         AlertDialog alertDialog = new AlertDialog.Builder(
                 AlertDialogActvity.this).create();
-
         // Setting Dialog Title
         alertDialog.setTitle("Registration Successful");
-
         // Setting Dialog Message
         alertDialog.setMessage("Welcome to the HopOp Family");
-
         // Setting Icon to Dialog
         alertDialog.setIcon(R.drawable.tick);
-
         // Setting OK Button
         alertDialog.setButton("OK",
                 new DialogInterface.OnClickListener() {
@@ -41,8 +35,6 @@ public class AlertDialogActvity extends AppCompatActivity {
                         // Toast.makeText(getApplicationContext(),
                         //       "You clicked on OK", Toast.LENGTH_SHORT)
                         //     .show();
-
-
                         Intent intent_1 = new Intent(AlertDialogActvity.this, LoginActivity.class);
                         startActivity(intent_1);
                     }

@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:2:1-125:12
+ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:2:1-129:12
 	package
 		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:4:5-45
 		INJECTED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml
@@ -18,14 +18,14 @@ ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:2:1-125:
 uses-permission#android.permission.INTERNET
 ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:6:5-67
 MERGED from [HopopAndroid:linkedin-sdk:unspecified] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\HopopAndroid\linkedin-sdk\unspecified\AndroidManifest.xml:11:5-67
-MERGED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:15:5-67
+MERGED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:14:5-67
 MERGED from [com.google.android.gms:play-services-gcm:9.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\9.2.0\AndroidManifest.xml:22:5-67
 MERGED from [com.google.android.gms:play-services-iid:9.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-iid\9.2.0\AndroidManifest.xml:22:5-67
 	android:name
 		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:6:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:7:5-79
-MERGED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:24:5-79
+MERGED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:22:5-79
 	android:name
 		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:7:22-76
 uses-permission#android.permission.ACCESS_WIFI_STATE
@@ -45,7 +45,7 @@ ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:11:5-71
 	android:name
 		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:11:22-68
 application
-ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:15:5-123:19
+ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:14:5-127:19
 MERGED from [com.github.afollestad.material-dialogs:core:0.8.5.3] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.github.afollestad.material-dialogs\core\0.8.5.3\AndroidManifest.xml:13:5-20
 MERGED from [com.android.support:support-v4:24.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.0\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-compat:24.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.0\AndroidManifest.xml:25:5-20
@@ -263,7 +263,7 @@ MERGED from [com.android.support:support-compat:24.2.0] D:\Android App\HopopAndr
 MERGED from [com.android.support:support-core-ui:24.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.0\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-compat:24.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.0\AndroidManifest.xml:25:5-20
 MERGED from [de.hdodenhof:circleimageview:1.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\de.hdodenhof\circleimageview\1.3.0\AndroidManifest.xml:9:5-20
-MERGED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:45:5-86:19
+MERGED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:37:5-78:19
 MERGED from [com.google.android.gms:play-services-gcm:9.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\9.2.0\AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.gms:play-services-base:9.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.2.0\AndroidManifest.xml:19:5-23:19
 MERGED from [com.google.android.gms:play-services-basement:9.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.2.0\AndroidManifest.xml:20:5-24:19
@@ -427,213 +427,219 @@ MERGED from [com.android.support:support-compat:24.2.0] D:\Android App\HopopAndr
 MERGED from [com.android.support:support-core-ui:24.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.0\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-compat:24.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.0\AndroidManifest.xml:25:5-20
 	android:label
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:19:9-41
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:18:9-41
 	android:supportsRtl
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:20:9-35
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:19:9-35
 	android:allowBackup
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:17:9-35
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:16:9-35
 	android:icon
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:18:9-39
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:17:9-37
 	android:theme
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:21:9-40
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:20:9-40
 	android:name
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:16:9-75
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:15:9-75
 meta-data#DATABASE
-ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:22:9-24:40
+ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:21:9-23:40
 	android:value
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:24:13-37
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:23:13-37
 	android:name
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:23:13-36
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:22:13-36
 meta-data#VERSION
-ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:25:9-27:33
+ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:24:9-26:33
 	android:value
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:27:13-30
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:26:13-30
 	android:name
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:26:13-35
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:25:13-35
 meta-data#QUERY_LOG
-ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:28:9-30:36
+ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:27:9-29:36
 	android:value
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:30:13-33
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:29:13-33
 	android:name
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:29:13-37
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:28:13-37
 meta-data#DOMAIN_PACKAGE_NAME
-ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:31:9-33:56
+ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:30:9-32:56
 	android:value
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:33:13-53
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:32:13-53
 	android:name
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:32:13-47
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:31:13-47
 meta-data#com.facebook.sdk.ApplicationId
-ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:34:9-36:55
+ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:33:9-35:55
 	android:value
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:36:13-52
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:35:13-52
 	android:name
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:35:13-58
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:34:13-58
+meta-data#com.onesignal.NotificationOpened.DEFAULT
+ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:36:9-38:39
+	android:value
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:38:13-36
+	android:name
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:37:13-68
 provider#com.facebook.FacebookContentProvider
-ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:38:9-41:39
+ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:40:9-43:39
 	android:authorities
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:40:13-90
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:42:13-90
 	android:exported
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:41:13-36
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:43:13-36
 	android:name
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:39:13-64
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:41:13-64
 activity#com.hopop.hopop.infrastructure.activity.SplashScreen
-ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:43:9-53:20
+ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:45:9-55:20
 	android:label
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:46:13-45
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:48:13-45
 	android:hardwareAccelerated
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:45:13-48
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:47:13-48
 	android:theme
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:47:13-62
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:49:13-62
 	android:name
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:44:13-80
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:46:13-80
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:48:13-52:29
+ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:50:13-54:29
 action#android.intent.action.MAIN
-ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:49:17-69
+ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:51:17-69
 	android:name
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:49:25-66
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:51:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:51:17-77
+ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:53:17-77
 	android:name
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:51:27-74
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:53:27-74
 activity#com.hopop.hopop.login.activity.LoginActivity
-ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:54:9-57:59
+ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:56:9-59:59
 	android:label
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:56:13-45
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:58:13-45
 	android:theme
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:57:13-56
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:59:13-56
 	android:name
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:55:13-42
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:57:13-42
 activity#com.hopop.hopop.registration.activity.RegisterActivity
-ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:58:9-61:59
+ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:60:9-63:59
 	android:label
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:60:13-35
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:62:13-35
 	android:theme
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:61:13-56
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:63:13-56
 	android:name
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:59:13-82
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:61:13-82
 activity#com.hopop.hopop.source.activity.SourceActivity
-ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:62:9-65:59
+ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:64:9-67:59
 	android:label
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:64:13-44
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:66:13-44
 	android:theme
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:65:13-56
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:67:13-56
 	android:name
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:63:13-74
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:65:13-74
 activity#com.hopop.hopop.destination.activity.DestinationActivity
-ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:66:9-69:59
+ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:68:9-71:59
 	android:label
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:68:13-45
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:70:13-45
 	android:theme
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:69:13-56
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:71:13-56
 	android:name
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:67:13-84
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:69:13-84
 activity#com.hopop.hopop.ply.activity.PlyActivity
-ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:70:9-73:59
+ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:72:9-75:59
 	android:label
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:72:13-36
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:74:13-36
 	android:theme
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:73:13-56
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:75:13-56
 	android:name
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:71:13-68
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:73:13-68
 activity#com.hopop.hopop.payment.activity.PaymentActivity
-ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:74:9-76:58
+ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:76:9-79:59
 	android:label
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:75:13-44
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:78:13-44
 	android:theme
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:76:13-56
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:79:13-56
 	android:name
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:74:19-82
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:77:13-76
 activity#com.hopop.hopop.sidenavigation.aboutus.activity.AboutUs
-ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:78:9-80:59
-	android:theme
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:80:13-56
-	android:name
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:79:13-83
-activity#com.hopop.hopop.sidenavigation.feedback.activity.FeedBack
 ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:81:9-83:59
 	android:theme
 		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:83:13-56
 	android:name
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:82:13-85
-activity#com.hopop.hopop.sidenavigation.mybooking.activity.MyBooking
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:82:13-83
+activity#com.hopop.hopop.sidenavigation.feedback.activity.FeedBack
 ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:84:9-86:59
 	android:theme
 		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:86:13-56
 	android:name
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:85:13-87
-activity#com.hopop.hopop.sidenavigation.mybooking.activity.BookingHistoryActivity
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:85:13-85
+activity#com.hopop.hopop.sidenavigation.mybooking.activity.MyBooking
 ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:87:9-89:59
 	android:theme
 		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:89:13-56
 	android:name
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:88:13-100
-activity#com.hopop.hopop.sidenavigation.notifications.activity.Notifications
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:88:13-87
+activity#com.hopop.hopop.sidenavigation.mybooking.activity.BookingHistoryActivity
 ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:90:9-92:59
 	android:theme
 		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:92:13-56
 	android:name
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:91:13-95
-activity#com.hopop.hopop.sidenavigation.profile.activity.Profile
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:91:13-100
+activity#com.hopop.hopop.sidenavigation.notifications.activity.Notifications
 ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:93:9-95:59
 	android:theme
 		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:95:13-56
 	android:name
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:94:13-83
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:94:13-95
+activity#com.hopop.hopop.sidenavigation.profile.activity.Profile
+ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:96:9-98:59
+	android:theme
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:98:13-56
+	android:name
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:97:13-83
 activity#com.hopop.hopop.sidenavigation.profile.activity.GridImgActivity
-ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:96:9-97:58
+ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:99:9-101:59
 	android:theme
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:97:13-56
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:101:13-56
 	android:name
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:96:19-97
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:100:13-91
 activity#com.hopop.hopop.sidenavigation.suggestedroute.activity.SuggestedRoute
-ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:98:9-100:59
+ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:102:9-104:59
 	android:theme
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:100:13-56
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:104:13-56
 	android:name
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:99:13-97
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:103:13-97
 activity#com.hopop.hopop.sidenavigation.wallet.activity.Wallet
-ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:101:9-103:59
+ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:105:9-107:59
 	android:theme
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:103:13-56
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:107:13-56
 	android:name
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:102:13-81
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:106:13-81
 activity#com.facebook.FacebookActivity
-ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:104:9-108:75
+ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:108:9-112:75
 MERGED from [com.facebook.android:facebook-android-sdk:4.15.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.15.0\AndroidManifest.xml:29:9-32:75
 	android:label
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:107:13-45
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:111:13-45
 	android:configChanges
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:106:13-96
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:110:13-96
 	android:theme
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:108:13-72
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:112:13-72
 	android:name
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:105:13-57
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:109:13-57
 activity#com.facebook.CustomTabActivity
-ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:110:9-121:20
+ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:114:9-125:20
 MERGED from [com.facebook.android:facebook-android-sdk:4.15.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.15.0\AndroidManifest.xml:33:9-36:20
 	android:exported
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:112:13-36
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:116:13-36
 	android:name
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:111:13-58
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:115:13-58
 intent-filter#android.intent.action.VIEW+android.intent.category.BROWSABLE+android.intent.category.DEFAULT
-ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:113:13-120:29
+ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:117:13-124:29
 action#android.intent.action.VIEW
-ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:114:17-69
+ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:118:17-69
 	android:name
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:114:25-66
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:118:25-66
 category#android.intent.category.DEFAULT
-ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:116:17-76
+ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:120:17-76
 	android:name
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:116:27-73
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:120:27-73
 category#android.intent.category.BROWSABLE
-ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:117:17-78
+ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:121:17-78
 	android:name
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:117:27-75
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:121:27-75
 data
-ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:119:17-75
+ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:123:17-75
 	android:scheme
-		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:119:23-72
+		ADDED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml:123:23-72
 uses-sdk
 INJECTED from D:\Android App\HopopAndroid\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:multidex:1.0.1] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.android.support\multidex\1.0.1\AndroidManifest.xml:18:5-42
@@ -859,7 +865,7 @@ MERGED from [com.android.support:support-compat:24.2.0] D:\Android App\HopopAndr
 MERGED from [com.android.support:support-core-ui:24.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.0\AndroidManifest.xml:21:5-23:58
 MERGED from [com.android.support:support-compat:24.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.0\AndroidManifest.xml:21:5-23:58
 MERGED from [de.hdodenhof:circleimageview:1.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\de.hdodenhof\circleimageview\1.3.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:5:5-43
+MERGED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-gcm:9.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\9.2.0\AndroidManifest.xml:18:5-42
 MERGED from [com.google.android.gms:play-services-base:9.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.2.0\AndroidManifest.xml:18:5-42
 MERGED from [com.google.android.gms:play-services-basement:9.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.2.0\AndroidManifest.xml:18:5-42
@@ -1034,154 +1040,154 @@ activity#com.facebook.CustomTabMainActivity
 ADDED from [com.facebook.android:facebook-android-sdk:4.15.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.15.0\AndroidManifest.xml:37:9-71
 	android:name
 		ADDED from [com.facebook.android:facebook-android-sdk:4.15.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.facebook.android\facebook-android-sdk\4.15.0\AndroidManifest.xml:37:19-68
-permission#${manifestApplicationId}.permission.C2D_MESSAGE
-ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:8:5-10:47
+permission#${applicationId}.permission.C2D_MESSAGE
+ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:7:5-9:47
 	android:protectionLevel
-		ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:10:9-44
+		ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:9:9-44
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:9:9-71
-uses-permission#${manifestApplicationId}.permission.C2D_MESSAGE
-ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:12:5-87
+		ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:8:9-63
+uses-permission#${applicationId}.permission.C2D_MESSAGE
+ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:11:5-79
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:12:22-84
+		ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:11:22-76
 uses-permission#com.google.android.c2dm.permission.RECEIVE
-ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:16:5-82
+ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:15:5-82
 MERGED from [com.google.android.gms:play-services-gcm:9.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\9.2.0\AndroidManifest.xml:21:5-82
 MERGED from [com.google.android.gms:play-services-iid:9.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-iid\9.2.0\AndroidManifest.xml:21:5-82
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:16:22-79
+		ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:15:22-79
 uses-permission#android.permission.WAKE_LOCK
-ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:18:5-68
+ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:16:5-68
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:18:22-65
+		ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:16:22-65
 uses-permission#android.permission.VIBRATE
-ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:23:5-66
+ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:21:5-66
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:23:22-63
+		ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:21:22-63
 uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
-ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:25:5-81
+ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:23:5-81
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:25:22-78
+		ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:23:22-78
 uses-permission#com.sec.android.provider.badge.permission.READ
-ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:28:5-86
+ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:25:5-86
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:28:22-83
+		ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:25:22-83
 uses-permission#com.sec.android.provider.badge.permission.WRITE
-ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:29:5-87
+ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:26:5-87
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:29:22-84
+		ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:26:22-84
 uses-permission#com.htc.launcher.permission.READ_SETTINGS
-ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:31:5-81
+ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:27:5-81
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:31:22-78
+		ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:27:22-78
 uses-permission#com.htc.launcher.permission.UPDATE_SHORTCUT
-ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:32:5-83
+ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:28:5-83
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:32:22-80
+		ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:28:22-80
 uses-permission#com.sonyericsson.home.permission.BROADCAST_BADGE
-ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:34:5-88
+ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:29:5-88
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:34:22-85
+		ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:29:22-85
 uses-permission#com.sonymobile.home.permission.PROVIDER_INSERT_BADGE
-ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:35:5-92
+ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:30:5-92
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:35:22-89
+		ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:30:22-89
 uses-permission#com.anddoes.launcher.permission.UPDATE_COUNT
-ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:37:5-84
+ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:31:5-84
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:37:22-81
+		ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:31:22-81
 uses-permission#com.majeur.launcher.permission.UPDATE_BADGE
-ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:39:5-83
+ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:32:5-83
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:39:22-80
+		ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:32:22-80
 uses-permission#com.huawei.android.launcher.permission.CHANGE_BADGE
-ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:41:5-91
+ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:33:5-91
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:41:22-88
+		ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:33:22-88
 uses-permission#com.huawei.android.launcher.permission.READ_SETTINGS
-ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:42:5-92
+ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:34:5-92
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:42:22-89
+		ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:34:22-89
 uses-permission#com.huawei.android.launcher.permission.WRITE_SETTINGS
-ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:43:5-93
+ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:35:5-93
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:43:22-90
+		ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:35:22-90
 meta-data#onesignal_app_id
-ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:46:9-48:51
+ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:38:9-40:51
 	android:value
-		ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:48:13-48
+		ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:40:13-48
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:47:13-44
+		ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:39:13-44
 meta-data#onesignal_google_project_number
-ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:49:9-51:70
+ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:41:9-43:70
 	android:value
-		ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:51:13-67
+		ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:43:13-67
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:50:13-59
+		ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:42:13-59
 receiver#com.onesignal.GcmBroadcastReceiver
-ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:53:9-61:20
+ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:45:9-53:20
 	android:permission
-		ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:55:13-73
+		ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:47:13-73
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:54:13-62
-intent-filter#${manifestApplicationId}+com.google.android.c2dm.intent.RECEIVE
-ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:56:13-60:29
+		ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:46:13-62
+intent-filter#${applicationId}+com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:48:13-52:29
 action#com.google.android.c2dm.intent.RECEIVE
-ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:57:17-81
+ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:49:17-81
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:57:25-78
-category#${manifestApplicationId}
-ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:59:17-69
+		ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:49:25-78
+category#${applicationId}
+ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:51:17-61
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:59:27-66
+		ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:51:27-58
 receiver#com.onesignal.NotificationOpenedReceiver
-ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:62:9-77
+ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:54:9-77
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:62:19-74
+		ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:54:19-74
 service#com.onesignal.GcmIntentService
-ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:64:9-66
+ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:56:9-66
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:64:18-63
+		ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:56:18-63
 service#com.onesignal.SyncService
-ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:65:9-67:44
+ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:57:9-59:44
 	android:stopWithTask
-		ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:67:13-41
+		ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:59:13-41
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:66:13-53
+		ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:58:13-53
 activity#com.onesignal.PermissionsActivity
-ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:69:9-71:75
+ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:61:9-63:75
 	android:theme
-		ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:71:13-72
+		ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:63:13-72
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:70:13-61
+		ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:62:13-61
 service#com.onesignal.NotificationRestoreService
-ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:73:9-76
+ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:65:9-76
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:73:18-73
+		ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:65:18-73
 receiver#com.onesignal.BootUpReceiver
-ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:75:9-80:20
+ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:67:9-72:20
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:75:19-62
+		ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:67:19-62
 intent-filter#android.intent.action.BOOT_COMPLETED+android.intent.action.QUICKBOOT_POWERON
-ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:76:13-79:29
+ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:68:13-71:29
 action#android.intent.action.BOOT_COMPLETED
-ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:77:17-79
+ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:69:17-79
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:77:25-76
+		ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:69:25-76
 action#android.intent.action.QUICKBOOT_POWERON
-ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:78:17-82
+ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:70:17-82
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:78:25-79
+		ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:70:25-79
 receiver#com.onesignal.UpgradeReceiver
-ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:81:9-85:20
+ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:73:9-77:20
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:81:19-63
+		ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:73:19-63
 intent-filter#android.intent.action.MY_PACKAGE_REPLACED
-ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:82:13-84:29
+ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:74:13-76:29
 action#android.intent.action.MY_PACKAGE_REPLACED
-ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:83:17-84
+ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:75:17-84
 	android:name
-		ADDED from [com.onesignal:OneSignal:3.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.2.0\AndroidManifest.xml:83:25-81
+		ADDED from [com.onesignal:OneSignal:3.3.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.onesignal\OneSignal\3.3.0\AndroidManifest.xml:75:25-81
 activity#com.google.android.gms.common.api.GoogleApiActivity
 ADDED from [com.google.android.gms:play-services-base:9.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.2.0\AndroidManifest.xml:20:9-22:45
 MERGED from [com.google.android.gms:play-services-base:9.2.0] D:\Android App\HopopAndroid\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.2.0\AndroidManifest.xml:20:9-22:45

@@ -17,6 +17,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.hopop.hopop.communicators.CommunicatorClass;
+import com.hopop.hopop.communicators.prefmanager.PrefManager;
 import com.hopop.hopop.login.activity.LoginActivity;
 import com.hopop.hopop.login.activity.R;
 import com.hopop.hopop.registration.activity.RegisterActivity;
@@ -42,12 +43,11 @@ public class SuggestedRoute extends AppCompatActivity {
     @Bind(R.id.editText_Drp)
     EditText drpPoint;
     String frmSplMob,lMob,rMob;
-    Context context;
-    SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_suggestedroute);
         ButterKnife.bind(this);
         setTitle("Suggest Routes");
@@ -55,7 +55,7 @@ public class SuggestedRoute extends AppCompatActivity {
         new LoadViewTask().execute();
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
         toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_keyboard_backspace_white_48px));
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -71,12 +71,10 @@ public class SuggestedRoute extends AppCompatActivity {
     {
         if (checkFieldValidation()) {
             final ForSuggestedRoute forSuggestedRoute = new ForSuggestedRoute();
-          //  String userMobileNum = LoginActivity.usrMobileNum;
             lMob = LoginActivity.usrMobileNum;
             rMob = RegisterActivity.userMobNum;
-            context = SuggestedRoute.this.getApplicationContext();
-            sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
-            frmSplMob = sharedPreferences.getString("lMob",null);
+
+            frmSplMob = PrefManager.getlMobile();
             SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
             String systime = sdf.format(new Date());
             if(lMob ==null && rMob ==null)

@@ -35,7 +35,7 @@
                 android:id="@+id/imageview_past"
                 android:layout_width="30dp"
                 android:layout_height="60dp"
-                android:background="@drawable/pickup"
+                android:background="@drawable/pickup2"
                 android:padding="5dp" />
 
             <TextView
@@ -49,19 +49,6 @@
                 android:layout_alignTop="@+id/text2"
                 android:layout_alignLeft="@+id/button_rebook"
                 android:layout_alignStart="@+id/button_rebook" />
-            <!--<ImageView
-                android:id="@+id/destpast"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_alignParentBottom="false"
-                android:layout_alignParentLeft="true"
-                android:layout_below="@+id/srcpast"
-                android:layout_marginTop="5dp"
-                android:padding="5dp"
-                android:background="@drawable/pinknavigation"
-                android:textSize="15sp"
-                android:textAppearance="?android:attr/textAppearanceMedium" />-->
-
 
             <TextView
                 android:id="@+id/text3"

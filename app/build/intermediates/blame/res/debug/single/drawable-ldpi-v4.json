@@ -4,32 +4,44 @@
         "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_account_circle_black_48px.png"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_account_box_white_24px.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_account_box_white_24px.png"
-    },
-    {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_perm_contact_calendar_black_24px1.png",
         "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_perm_contact_calendar_black_24px1.png"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_info_outline_white_24px.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_info_outline_white_24px.png"
+        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_stars_24dp.png",
+        "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_stars_24dp.png"
+    },
+    {
+        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_account_box_black_24px.png",
+        "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_account_box_black_24px.png"
     },
     {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_power_settings_new_white_24px.png",
         "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_power_settings_new_white_24px.png"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_stars_24dp.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_stars_24dp.png"
+        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_cake_black_24dp.png",
+        "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_cake_black_24dp.png"
     },
     {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_edit_black_24dp.png",
         "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_edit_black_24dp.png"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_notifications_white_24px.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_notifications_white_24px.png"
+        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_swap_calls_24dp.png",
+        "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_swap_calls_24dp.png"
+    },
+    {
+        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_stars_white_24px.png",
+        "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_stars_white_24px.png"
+    },
+    {
+        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_account_circle_white_24px.png",
+        "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_account_circle_white_24px.png"
+    },
+    {
+        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_info_24dp.png",
+        "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_info_24dp.png"
     },
     {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_account_balance_wallet_24dp.png",
@@ -40,36 +52,44 @@
         "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_person_white_24px1.png"
     },
     {
+        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_phone_iphone_black_18px.png",
+        "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_phone_iphone_black_18px.png"
+    },
+    {
+        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_account_box_white_24px.png",
+        "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_account_box_white_24px.png"
+    },
+    {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_view_carousel_white_24px.png",
         "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_view_carousel_white_24px.png"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_phone_iphone_black_18px.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_phone_iphone_black_18px.png"
+        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_account_circle_24dp.png",
+        "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_account_circle_24dp.png"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_cake_black_24dp.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_cake_black_24dp.png"
+        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_search_white_48px.png",
+        "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_search_white_48px.png"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_edit_black_24dp.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_edit_black_24dp.png"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_swap_calls_24dp.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_swap_calls_24dp.png"
+        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_view_carousel_24dp.png",
+        "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_view_carousel_24dp.png"
     },
     {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_notifications_white_24px.png",
         "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_notifications_white_24px.png"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_notifications_24dp.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_notifications_24dp.png"
-    },
-    {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_person_outline_24dp.png",
         "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_person_outline_24dp.png"
+    },
+    {
+        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_account_balance_wallet_white_24px.png",
+        "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_account_balance_wallet_white_24px.png"
+    },
+    {
+        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_mail_black_18px.png",
+        "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_mail_black_18px.png"
     },
     {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_person_white_24px.png",
@@ -88,16 +108,16 @@
         "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_perm_contact_calendar_white_24px.png"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_account_circle_24dp.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_account_circle_24dp.png"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_account_circle_black_48px.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_account_circle_black_48px.png"
+        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_notifications_24dp.png",
+        "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_notifications_24dp.png"
     },
     {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_info_outline_white_24px.png",
         "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_info_outline_white_24px.png"
+    },
+    {
+        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\md_nav_back.png",
+        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.github.afollestad.material-dialogs\\core\\0.8.5.3\\res\\drawable-ldpi-v4\\md_nav_back.png"
     },
     {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_search_black_48px.png",
@@ -108,183 +128,19 @@
         "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.2.0\\res\\drawable-ldpi-v4\\common_ic_googleplayservices.png"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_view_carousel_24dp.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_view_carousel_24dp.png"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_view_carousel_white_24px.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_view_carousel_white_24px.png"
-    },
-    {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_visibility_black_18px.png",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_visibility_black_18px.png"
-    },
-    {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_stars_24dp.png",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_stars_24dp.png"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_person_white_24px.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_person_white_24px.png"
-    },
-    {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_account_box_black_24px.png",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_account_box_black_24px.png"
-    },
-    {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_cake_black_24dp.png",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_cake_black_24dp.png"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\common_ic_googleplayservices.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.google.android.gms\\play-services-base\\9.4.0\\res\\drawable-ldpi-v4\\common_ic_googleplayservices.png"
-    },
-    {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_swap_calls_24dp.png",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_swap_calls_24dp.png"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_mail_black_18px.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_mail_black_18px.png"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_perm_contact_calendar_black_24px.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_perm_contact_calendar_black_24px.png"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_search_white_48px.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_search_white_48px.png"
-    },
-    {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_stars_white_24px.png",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_stars_white_24px.png"
-    },
-    {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_account_circle_white_24px.png",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_account_circle_white_24px.png"
-    },
-    {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_info_24dp.png",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_info_24dp.png"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_visibility_black_18px.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_visibility_black_18px.png"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_perm_contact_calendar_white_24px.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_perm_contact_calendar_white_24px.png"
-    },
-    {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_phone_iphone_black_18px.png",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_phone_iphone_black_18px.png"
-    },
-    {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_account_box_white_24px.png",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_account_box_white_24px.png"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\md_nav_back.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.github.afollestad.material-dialogs\\core\\0.8.5.3\\res\\drawable-ldpi-v4\\md_nav_back.png"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_lock_black_18px.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_lock_black_18px.png"
-    },
-    {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_account_circle_24dp.png",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_account_circle_24dp.png"
-    },
-    {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_search_white_48px.png",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_search_white_48px.png"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_account_balance_wallet_24dp.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_account_balance_wallet_24dp.png"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_keyboard_backspace_white_48px.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_keyboard_backspace_white_48px.png"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_person_white_24px1.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_person_white_24px1.png"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_person_black_18px.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_person_black_18px.png"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_account_circle_white_24px.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_account_circle_white_24px.png"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_info_24dp.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_info_24dp.png"
-    },
-    {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_view_carousel_24dp.png",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_view_carousel_24dp.png"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_search_black_48px.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_search_black_48px.png"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_perm_contact_calendar_black_24px1.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_perm_contact_calendar_black_24px1.png"
-    },
-    {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_account_balance_wallet_white_24px.png",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_account_balance_wallet_white_24px.png"
-    },
-    {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_mail_black_18px.png",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_mail_black_18px.png"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_portrait_48px.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_portrait_48px.png"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_stars_white_24px.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_stars_white_24px.png"
-    },
-    {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_notifications_24dp.png",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_notifications_24dp.png"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_account_balance_wallet_white_24px.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_account_balance_wallet_white_24px.png"
-    },
-    {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\md_nav_back.png",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\exploded-aar\\com.github.afollestad.material-dialogs\\core\\0.8.5.3\\res\\drawable-ldpi-v4\\md_nav_back.png"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_power_settings_new_white_24px.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_power_settings_new_white_24px.png"
-    },
-    {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_perm_contact_calendar_black_24px.png",
         "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_perm_contact_calendar_black_24px.png"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_account_box_black_24px.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_account_box_black_24px.png"
     },
     {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_keyboard_backspace_white_48px.png",
         "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_keyboard_backspace_white_48px.png"
     },
     {
-        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_lock_black_18px.png",
-        "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_lock_black_18px.png"
+        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_visibility_black_18px.png",
+        "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_visibility_black_18px.png"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_person_outline_24dp.png",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_person_outline_24dp.png"
+        "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_lock_black_18px.png",
+        "source": "D:\\Android App\\HopopAndroid\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_lock_black_18px.png"
     }
 ]

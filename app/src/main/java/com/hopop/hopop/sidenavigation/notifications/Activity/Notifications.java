@@ -17,6 +17,7 @@ public class Notifications extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_notifications);
         setTitle("Notifications");
         //Initialize a LoadViewTask object and call the execute() method
@@ -31,7 +32,7 @@ public class Notifications extends AppCompatActivity
                 onBackPressed();
             }
         });
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
 
     }
 

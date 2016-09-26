@@ -28,7 +28,6 @@ public class ProfileInfo implements Parcelable {
         this.user_name = user_name;
     }
 
-
     @Override
     public int describeContents() {
         return 0;

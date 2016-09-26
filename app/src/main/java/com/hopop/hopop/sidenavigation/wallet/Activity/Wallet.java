@@ -16,6 +16,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.hopop.hopop.communicators.CommunicatorClass;
+import com.hopop.hopop.communicators.prefmanager.PrefManager;
 import com.hopop.hopop.login.activity.LoginActivity;
 import com.hopop.hopop.login.activity.R;
 import com.hopop.hopop.login.data.LoginUser;
@@ -32,11 +33,11 @@ import retrofit2.Response;
 public class Wallet extends AppCompatActivity {
     private ProgressDialog progressDialog;
     String frmSplMob,lMob,rMob;
-    Context context;
-    SharedPreferences sharedPreferences;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_wallet);
         ButterKnife.bind(this);
         new LoadViewTask().execute();
@@ -50,15 +51,11 @@ public class Wallet extends AppCompatActivity {
                 onBackPressed();
             }
         });
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
-      /*  String userMobileNum = LoginActivity.usrMobileNum;
-        Log.i(getClass().getSimpleName(), "UserLogin Mobile Number:" + userMobileNum);*/
         lMob = LoginActivity.usrMobileNum;
         rMob = RegisterActivity.userMobNum;
-        context = Wallet.this.getApplicationContext();
-        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
-        frmSplMob = sharedPreferences.getString("lMob",null);
+        frmSplMob = PrefManager.getlMobile();
         LoginUser loginUser = new LoginUser();
 
         if (lMob == null && rMob ==null)
@@ -67,10 +64,8 @@ public class Wallet extends AppCompatActivity {
             CommunicatorClass.getRegisterClass().forWallet(loginUser).enqueue(new Callback<WalletInfo>() {
                 @Override
                 public void onResponse(Call<WalletInfo> call, Response<WalletInfo> response) {
-                    Log.e(getClass().getSimpleName(), "Success");
                     WalletInfo walletInfo = response.body();
                     for (com.hopop.hopop.database.Wallet wallet : walletInfo.getWallet()) {
-                        Log.i(getClass().getSimpleName(), "user wallet is:" + wallet.getBalance().toString());
                         TextView balance = (TextView) findViewById(R.id.textView_paise);
                         String bal = wallet.getBalance().toString();
                         balance.setText(bal + "Rs");
@@ -88,10 +83,8 @@ public class Wallet extends AppCompatActivity {
             CommunicatorClass.getRegisterClass().forWallet(loginUser).enqueue(new Callback<WalletInfo>() {
                 @Override
                 public void onResponse(Call<WalletInfo> call, Response<WalletInfo> response) {
-                    Log.e(getClass().getSimpleName(), "Success");
                     WalletInfo walletInfo = response.body();
                     for (com.hopop.hopop.database.Wallet wallet : walletInfo.getWallet()) {
-                        Log.i(getClass().getSimpleName(), "user wallet is:" + wallet.getBalance().toString());
                         TextView balance = (TextView) findViewById(R.id.textView_paise);
                         String bal = wallet.getBalance().toString();
                         balance.setText(bal + "Rs");
@@ -109,10 +102,8 @@ public class Wallet extends AppCompatActivity {
             CommunicatorClass.getRegisterClass().forWallet(loginUser).enqueue(new Callback<WalletInfo>() {
                 @Override
                 public void onResponse(Call<WalletInfo> call, Response<WalletInfo> response) {
-                    Log.e(getClass().getSimpleName(), "Success");
                     WalletInfo walletInfo = response.body();
                     for (com.hopop.hopop.database.Wallet wallet : walletInfo.getWallet()) {
-                        Log.i(getClass().getSimpleName(), "user wallet is:" + wallet.getBalance().toString());
                         TextView balance = (TextView) findViewById(R.id.textView_paise);
                         String bal = wallet.getBalance().toString();
                         balance.setText(bal + "Rs");

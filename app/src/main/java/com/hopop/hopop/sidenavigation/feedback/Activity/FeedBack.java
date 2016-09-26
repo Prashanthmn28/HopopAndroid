@@ -17,6 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hopop.hopop.communicators.CommunicatorClass;
+import com.hopop.hopop.communicators.prefmanager.PrefManager;
 import com.hopop.hopop.login.activity.LoginActivity;
 import com.hopop.hopop.login.activity.R;
 import com.hopop.hopop.registration.activity.RegisterActivity;
@@ -34,12 +35,11 @@ public class FeedBack extends AppCompatActivity {
 
     private ProgressDialog progressDialog;
     String frmSplMob,lMob,rMob;
-    Context context;
-    SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_feedback);
         setTitle("FeedBack");
         ButterKnife.bind(this);
@@ -53,7 +53,7 @@ public class FeedBack extends AppCompatActivity {
                 onBackPressed();
             }
         });
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
         information.setText("Please provide additional information or suggestions for improvement");
     }
@@ -68,12 +68,9 @@ public class FeedBack extends AppCompatActivity {
         if(checkFieldValidation())
         {
             final FeedBackField feedBackField = new FeedBackField();
-         //   String mob = LoginActivity.usrMobileNum;
             lMob = LoginActivity.usrMobileNum;
             rMob = RegisterActivity.userMobNum;
-            context = FeedBack.this.getApplicationContext();
-            sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
-            frmSplMob = sharedPreferences.getString("lMob",null);
+            frmSplMob = PrefManager.getlMobile();
             if(lMob ==null && rMob ==null)
             {
                 feedBackField.setMobile_number(frmSplMob);

@@ -26,13 +26,23 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.hopop.hopop.communicators.CommunicatorClass;
+import com.hopop.hopop.communicators.prefmanager.PrefManager;
+import com.hopop.hopop.database.BookId;
+import com.hopop.hopop.database.BookingHistory;
 import com.hopop.hopop.database.ProfileDetail;
+import com.hopop.hopop.database.ProfileInfo;
+import com.hopop.hopop.database.SeatTimeList;
+import com.hopop.hopop.database.Wallet;
 import com.hopop.hopop.login.activity.LoginActivity;
 import com.hopop.hopop.login.activity.R;
 import com.hopop.hopop.login.data.LoginUser;
 import com.hopop.hopop.registration.activity.RegisterActivity;
 import com.hopop.hopop.sidenavigation.profile.data.ProfileDetailsInfo;
 import com.hopop.hopop.sidenavigation.profile.data.ProfileUpdatedInfo;
+import com.orm.SchemaGenerator;
+import com.orm.SugarContext;
+import com.orm.SugarDb;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -49,19 +59,18 @@ public class Profile extends AppCompatActivity {
     @Bind(R.id.editText_mn) EditText mobileNumber;
 
     String frmSplMob,lMob,rMob;
-    Context context;
-    SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_profile);
         ButterKnife.bind(this);
         setTitle("User Details");
         new LoadViewTask().execute();
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
         toolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_keyboard_backspace_white_48px));
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -73,9 +82,7 @@ public class Profile extends AppCompatActivity {
 
         lMob = LoginActivity.usrMobileNum;
         rMob = RegisterActivity.userMobNum;
-        context = Profile.this.getApplicationContext();
-        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
-        frmSplMob = sharedPreferences.getString("lMob",null);
+        frmSplMob = PrefManager.getlMobile();
 
         if(lMob ==null && rMob ==null)
         {
@@ -158,8 +165,6 @@ public class Profile extends AppCompatActivity {
                 }
             });
         }
-
-
     }
 
     @OnClick(R.id.button_update)
@@ -183,23 +188,18 @@ public class Profile extends AppCompatActivity {
 
     @OnClick(R.id.button_logout)
     public void logoutUser(View view) {
+        BookingHistory.deleteAll(BookingHistory.class);
+        BookId.deleteAll(BookId.class);
+        ProfileDetail.deleteAll(ProfileDetail.class);
+        SeatTimeList.deleteAll(SeatTimeList.class);
+        Wallet.deleteAll(com.hopop.hopop.sidenavigation.wallet.activity.Wallet.class);
 
-        SharedPreferences mPreferences = getSharedPreferences("CurrentUser", MODE_PRIVATE);
-        SharedPreferences.Editor editor = mPreferences.edit();
-        editor.remove("mobileNumber");
-        //editor.remove("Password");
-        editor.commit();
-        Message myMessage = new Message();
-        myMessage.obj = "NOTSUCCESS";
-        handler.sendMessage(myMessage);
+        Toast.makeText(Profile.this,"Data Flushed",Toast.LENGTH_LONG).show();
+        Intent lgIntent = new Intent(Profile.this,LoginActivity.class);
+        startActivity(lgIntent);
         finish();
 
     }
-
-
-
-
-
 
 private Handler handler = new Handler() {
 @Override

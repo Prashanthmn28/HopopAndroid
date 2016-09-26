@@ -53,6 +53,11 @@ import com.hopop.hopop.sidenavigation.suggestedroute.activity.SuggestedRoute;
 import com.hopop.hopop.source.activity.SourceActivity;
 import com.hopop.hopop.source.data.ForProfileHeader;
 import com.hopop.hopop.source.data.HeaderProfile;
+import com.onesignal.OneSignal;
+
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import javax.annotation.Nullable;
 
@@ -78,16 +83,15 @@ public class PaymentActivity extends AppCompatActivity
     @Nullable @Bind(R.id.textView_rideshareCalc) TextView rideshareCalc;
     @Nullable @Bind(R.id.textView_rideshareAmt) TextView rideshareAmt;
     int pos_PrfPay,nSeats;
-    String frmSplMob,tripId,authenticationToken;
+    String frmSplMob,tripId,authenticationToken,frmRoute,toRoute;
     String lMob = LoginActivity.usrMobileNum;
     String rMob = RegisterActivity.userMobNum;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setTitle(R.string.PaymentHeader);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_payment);
         try {
             ButterKnife.bind(this);
@@ -99,15 +103,16 @@ public class PaymentActivity extends AppCompatActivity
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         authenticationToken = PrefManager.getAuehKey();
-       // Toast.makeText(PaymentActivity.this,"Auth:"+authenticationToken,Toast.LENGTH_SHORT).show();
         ApiRequestInterceptor apiRequestInterceptor = new ApiRequestInterceptor(authenticationToken);
 
         if(getIntent().getExtras()!=null) {
             pos_PrfPay = getIntent().getExtras().getInt("prfPic");
-            Log.i(getClass().getSimpleName(),"ImgPosition:"+pos_PrfPay);
             frmSplMob = getIntent().getExtras().getString("lMob");
             tripId = getIntent().getExtras().getString("tripID");
             nSeats = getIntent().getExtras().getInt("nSeats");
+            frmRoute = getIntent().getExtras().getString("src");
+            toRoute = getIntent().getExtras().getString("dest");
+           // Toast.makeText(PaymentActivity.this,frmRoute+"-"+toRoute,Toast.LENGTH_LONG).show();
         }
 
         if(nSeats <=1)
@@ -150,12 +155,9 @@ public class PaymentActivity extends AppCompatActivity
             CommunicatorClass.getRegisterClass().forWallet(loginUser).enqueue(new Callback<WalletInfo>() {
                 @Override
                 public void onResponse(Call<WalletInfo> call, Response<WalletInfo> response) {
-                    Toast.makeText(PaymentActivity.this,"Payment Activity Successfully",Toast.LENGTH_SHORT).show();
-                    Log.e(getClass().getSimpleName(),"Successfull");
                     WalletInfo walletInfo = response.body();
                     for (Wallet wallet:walletInfo.getWallet())
                     {
-                        Log.i(getClass().getSimpleName(),"user wallet is:"+wallet.getBalance().toString());
                         TextView balance = (TextView) findViewById(R.id.textView_BalanceAmt);
                         String bal = wallet.getBalance().toString();
                         balance.setText(bal+"Rs");
@@ -175,12 +177,9 @@ public class PaymentActivity extends AppCompatActivity
             CommunicatorClass.getRegisterClass().forWallet(loginUser).enqueue(new Callback<WalletInfo>() {
                 @Override
                 public void onResponse(Call<WalletInfo> call, Response<WalletInfo> response) {
-                    Toast.makeText(PaymentActivity.this,"Payment Activity Successfully",Toast.LENGTH_SHORT).show();
-                    Log.e(getClass().getSimpleName(),"Successfull");
                     WalletInfo walletInfo = response.body();
                     for (Wallet wallet:walletInfo.getWallet())
                     {
-                        Log.i(getClass().getSimpleName(),"user wallet is:"+wallet.getBalance().toString());
                         TextView balance = (TextView) findViewById(R.id.textView_BalanceAmt);
                         String bal = wallet.getBalance().toString();
                         balance.setText(bal+"Rs");
@@ -199,12 +198,9 @@ public class PaymentActivity extends AppCompatActivity
             CommunicatorClass.getRegisterClass().forWallet(loginUser).enqueue(new Callback<WalletInfo>() {
                 @Override
                 public void onResponse(Call<WalletInfo> call, Response<WalletInfo> response) {
-                    Toast.makeText(PaymentActivity.this,"Payment Activity Successfully",Toast.LENGTH_SHORT).show();
-                    Log.e(getClass().getSimpleName(),"Successfull");
                     WalletInfo walletInfo = response.body();
                     for (Wallet wallet:walletInfo.getWallet())
                     {
-                        Log.i(getClass().getSimpleName(),"user wallet is:"+wallet.getBalance().toString());
                         TextView balance = (TextView) findViewById(R.id.textView_BalanceAmt);
                         String bal = wallet.getBalance().toString();
                         balance.setText(bal+"Rs");
@@ -254,8 +250,6 @@ public class PaymentActivity extends AppCompatActivity
         }
        else if(lMob == null)
         {
-
-            Log.i(getClass().getSimpleName(),"register Mobile Num:"+rMob);
             final ForProfileHeader forProfileHeader =new ForProfileHeader();
             forProfileHeader.setMobile_number(rMob);
             CommunicatorClass.getRegisterClass().headerProfile(forProfileHeader).enqueue(new Callback<HeaderProfile>() {
@@ -344,13 +338,45 @@ public class PaymentActivity extends AppCompatActivity
 
     @OnClick(R.id.button_Pay)
     public void payUser(View view){
-        String frmRoute = SourceActivity.srcSelected;
-        String toRoute = DestinationActivity.destSelect;
+        new LoadViewTask().execute();
+       /* String frmRoute = SourceActivity.srcSelected;
+        String toRoute = DestinationActivity.destSelect;*/
         String rid = PlyActivity.routeId;
         String tid = tripId;
         String num_seats = numofSeats.getText().toString();
         String amtPaid = rideshareAmt.getText().toString();
         final ForBookId forBookId = new ForBookId();
+
+        OneSignal.idsAvailable(new OneSignal.IdsAvailableHandler() {
+            @Override
+            public void idsAvailable(String userId, String registrationId) {
+                Log.d("debug", "User:" + userId);
+                if (registrationId != null)
+                    try {
+                        OneSignal.postNotification(new JSONObject("{'contents': {'en':'Test Message'}, 'include_player_ids': ['" + "userId" + "']}"),
+                                new OneSignal.PostNotificationResponseHandler() {
+                                    @Override
+                                    public void onSuccess(JSONObject response) {
+                                        Log.i("OneSignalExample", "postNotification Success: " + response.toString());
+                                    }
+
+                                    @Override
+                                    public void onFailure(JSONObject response) {
+                                        Log.e("OneSignalExample", "postNotification Failure: " + response.toString());
+                                    }
+                                });
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+
+
+                    try {
+                        OneSignal.postNotification(new JSONObject("{'contents': {'en':'Test Message'}, 'include_player_ids': ['" + userId + "']}"), null);
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+            }
+        });
 
         if(lMob ==null && rMob ==null)
         {
@@ -364,13 +390,10 @@ public class PaymentActivity extends AppCompatActivity
             CommunicatorClass.getRegisterClass().forBookIdInfo(forBookId).enqueue(new Callback<BookIdInfo>() {
                 @Override
                 public void onResponse(Call<BookIdInfo> call, Response<BookIdInfo> response) {
-                    Log.e(getClass().getSimpleName(), "successful bookid");
                     BookIdInfo bookIdInfo = response.body();
                     for (BookId bookId: bookIdInfo.getBookId())
                     {
                         bookidNum[0] = bookId.getBookId().toString();
-                        Log.i(getClass().getSimpleName(),"user BookId is:"+bookidNum[0]);
-
                     }
                     AlertDialog alertDialog = new AlertDialog.Builder(
                             PaymentActivity.this).create();
@@ -383,9 +406,11 @@ public class PaymentActivity extends AppCompatActivity
                                 public void onClick(DialogInterface dialog,
                                                     int which) {
                                     Intent intent_1 = new Intent(PaymentActivity.this, SourceActivity.class);
-                                    intent_1.putExtra("id",pos_PrfPay);
+                                    intent_1.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                             /*       intent_1.putExtra("id",pos_PrfPay);
                                     intent_1.putExtra("lMob",frmSplMob);
-                                    startActivity(intent_1);
+                             */       startActivity(intent_1);
+                                    finish();
                                 }
                             });
                     alertDialog.show();
@@ -408,13 +433,10 @@ public class PaymentActivity extends AppCompatActivity
             CommunicatorClass.getRegisterClass().forBookIdInfo(forBookId).enqueue(new Callback<BookIdInfo>() {
                 @Override
                 public void onResponse(Call<BookIdInfo> call, Response<BookIdInfo> response) {
-                    Log.e(getClass().getSimpleName(), "successful bookid");
                     BookIdInfo bookIdInfo = response.body();
                     for (BookId bookId: bookIdInfo.getBookId())
                     {
                         bookidNum[0] = bookId.getBookId().toString();
-                        Log.i(getClass().getSimpleName(),"user BookId is:"+bookidNum[0]);
-
                     }
                     AlertDialog alertDialog = new AlertDialog.Builder(
                             PaymentActivity.this).create();
@@ -452,12 +474,10 @@ public class PaymentActivity extends AppCompatActivity
             CommunicatorClass.getRegisterClass().forBookIdInfo(forBookId).enqueue(new Callback<BookIdInfo>() {
                 @Override
                 public void onResponse(Call<BookIdInfo> call, Response<BookIdInfo> response) {
-                    Log.e(getClass().getSimpleName(), "successful bookid");
                     BookIdInfo bookIdInfo = response.body();
                     for (BookId bookId: bookIdInfo.getBookId())
                     {
                         bookidNum[0] = bookId.getBookId().toString();
-                        Log.i(getClass().getSimpleName(),"user BookId is:"+bookidNum[0]);
                     }
                     AlertDialog alertDialog = new AlertDialog.Builder(
                             PaymentActivity.this).create();
@@ -576,7 +596,7 @@ public class PaymentActivity extends AppCompatActivity
                     int counter = 0;
                     while(counter <= 4)
                     {
-                        this.wait(500);
+                        this.wait(1000);
                         counter++;
                         publishProgress(counter*25);
                     }

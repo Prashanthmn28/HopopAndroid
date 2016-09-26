@@ -22,7 +22,6 @@ public class ProfileDetailsInfo implements Parcelable {
         this.profileDetails = profileDetails;
     }
 
-
     @Override
     public int describeContents() {
         return 0;
