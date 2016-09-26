@@ -6,8 +6,6 @@ public class ForSeatAvailability {
     public String dest_stop;
     public String user_time;
 
-
-
     public String getUser_time() {
         return user_time;
     }
@@ -15,8 +13,6 @@ public class ForSeatAvailability {
     public void setUser_time(String user_time) {
         this.user_time = user_time;
     }
-
-
 
     public String getSrc_stop() {
         return src_stop;

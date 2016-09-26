@@ -17,70 +17,65 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.facebook.stetho.Stetho;
 import com.hopop.hopop.communicators.interceptor.ApiRequestInterceptor;
 import com.hopop.hopop.communicators.prefmanager.PrefManager;
 import com.hopop.hopop.login.activity.LoginActivity;
 import com.hopop.hopop.login.activity.R;
+import com.hopop.hopop.payment.activity.PaymentActivity;
 import com.hopop.hopop.source.activity.SourceActivity;
+import com.onesignal.OSNotificationAction;
+import com.onesignal.OSNotificationOpenResult;
+import com.onesignal.OneSignal;
+
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class SplashScreen extends Activity {
     private ProgressBar progressBar;
     private int progressStatus = 0;
     private TextView hopop, pc;
     private Handler handler = new Handler();
-    Context context;
-    String authenticationToken,lMob;
-    SharedPreferences sharedPreferences;
+    String authenticationToken, lMob;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Stetho.initializeWithDefaults(this);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        this.requestWindowFeature(Window.FEATURE_NO_TITLE);	// Removes title bar
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);	// Removes notification bar
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);    // Removes title bar
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);    // Removes notification bar
         setContentView(R.layout.splash);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
         hopop = (TextView) findViewById(R.id.textView);
         pc = (TextView) findViewById(R.id.textView2);
 
+
+
         new Thread(new Runnable() {
             public void run() {
-                while (progressStatus < 100)
-                {
+                while (progressStatus < 100) {
                     progressStatus += 1;
-                    handler.post(new Runnable()
-                    {
-                        public void run()
-                        {
+                    handler.post(new Runnable() {
+                        public void run() {
                             progressBar.setProgress(progressStatus);
                             //pc.setText(progressStatus + "%");
                         }
                     });
-                    try
-                    {
+                    try {
                         Thread.sleep(10);
-                    }
-                    catch (InterruptedException e)
-                    {
+                    } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
                 }
-                if (progressStatus==100)
-                {
-                   /* context = SplashScreen.this.getApplicationContext();
-                    sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
-                    authenticationToken = sharedPreferences.getString(PrefManager.AUTH_KEY, "NA");
-*/
+                if (progressStatus == 100) {
                     authenticationToken = PrefManager.getAuehKey();
                     if (authenticationToken.equals("NA")) {
                         startActivity(new Intent(SplashScreen.this, LoginActivity.class));
                     } else {
-                        //String authKey = sharedPreferences.getString(PrefManager.getAuehKey(),null);
-                      //  String authKey = PrefManager.getAuehKey();
                         ApiRequestInterceptor apiRequestInterceptor = new ApiRequestInterceptor(authenticationToken);
-                     //   lMob = sharedPreferences.getString("lMob",null);
                         lMob = PrefManager.getlMobile();
-                        Log.i(getClass().getSimpleName(),"lMob in Splash:"+lMob);
                         Intent splIntnet = new Intent(SplashScreen.this, SourceActivity.class);
                         splIntnet.putExtra("lMob", lMob);
                         Bundle bundle = new Bundle();
@@ -90,23 +85,37 @@ public class SplashScreen extends Activity {
                     finish();
                 }
             }
-        }).start();}
+        }).start();
+    }
 
-        public final boolean isInternetOn() {
-            // get Connectivity Manager object to check connection
-            ConnectivityManager connec =  (ConnectivityManager)getSystemService(getBaseContext().CONNECTIVITY_SERVICE);
-            // Check for network connections
-            if ( connec.getNetworkInfo(0).getState() == android.net.NetworkInfo.State.CONNECTED ||
-                    connec.getNetworkInfo(0).getState() == android.net.NetworkInfo.State.CONNECTING ||
-                    connec.getNetworkInfo(1).getState() == android.net.NetworkInfo.State.CONNECTING ||
-                    connec.getNetworkInfo(1).getState() == android.net.NetworkInfo.State.CONNECTED ) {
-                // if connected with internet
-                Toast.makeText(this, " Connected ", Toast.LENGTH_LONG).show();
-                return true;
-            } else if ( connec.getNetworkInfo(0).getState() == android.net.NetworkInfo.State.DISCONNECTED ||  connec.getNetworkInfo(1).getState() == android.net.NetworkInfo.State.DISCONNECTED  ) {
-                Toast.makeText(this, " Not Connected ", Toast.LENGTH_LONG).show();
-                return false;
+    private class ExampleNotificationOpenedHandler implements OneSignal.NotificationOpenedHandler {
+        // This fires when a notification is opened by tapping on it.
+        @Override
+        public void notificationOpened(OSNotificationOpenResult result) {
+            OSNotificationAction.ActionType actionType = result.action.type;
+            JSONObject data = result.notification.payload.additionalData;
+            String customKey;
+
+            if (data != null) {
+                customKey = data.optString("customkey", null);
+                if (customKey != null)
+                    Log.i("OneSignalExample", "customkey set with value: " + customKey);
             }
-            return false;
+
+            if (actionType == OSNotificationAction.ActionType.ActionTaken)
+                Log.i("OneSignalExample", "Button pressed with id: " + result.action.actionID);
+
+            // The following can be used to open an Activity of your choice.
+
+             Intent intent = new Intent(getApplicationContext(), PaymentActivity.class);
+             intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT | Intent.FLAG_ACTIVITY_NEW_TASK);
+             startActivity(intent);
+
+            // Follow the instructions in the link below to prevent the launcher Activity from starting.
+            // https://documentation.onesignal.com/docs/android-notification-customizations#changing-the-open-action-of-a-notification
         }
+    }
+
+
 }
+//}

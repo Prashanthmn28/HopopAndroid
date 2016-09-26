@@ -31,7 +31,6 @@ public class SeatTimeList extends SugarRecord implements Parcelable {
     String fillingStatus;
     int color,imageId;
 
-
     @Override
     public String toString() {
         return "SeatTimeList{" +
@@ -42,10 +41,8 @@ public class SeatTimeList extends SugarRecord implements Parcelable {
     public SeatTimeList(String fillingStatus, int color, int imageId) {
 
         this.fillingStatus = fillingStatus;
-
         this.color = color;
         this.imageId = imageId;
-
     }
 
     public String getFromRoute() {
@@ -147,9 +144,6 @@ public class SeatTimeList extends SugarRecord implements Parcelable {
             } catch (ParseException e) {
                 e.printStackTrace();
             }
-
-
-
             return (d2.getTime() > d1.getTime() ? -1 :0);
         }
     };

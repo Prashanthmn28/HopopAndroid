@@ -22,7 +22,6 @@ public class BookingHisInfo implements Parcelable {
         this.bookingHistory = bookingHistory;
     }
 
-
     @Override
     public int describeContents() {
         return 0;

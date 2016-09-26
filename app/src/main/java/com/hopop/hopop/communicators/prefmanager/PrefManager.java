@@ -9,9 +9,7 @@ import com.hopop.hopop.registration.activity.MyApplication;
 public class PrefManager {
 
     public static String AUTH_KEY = "auth_key";
-
     public static final String L_MOBILE = "lMob";
-
 
     public static SharedPreferences getPreferences(){
         Log.d("PrefManager","the instance is "+MyApplication.getInstance());

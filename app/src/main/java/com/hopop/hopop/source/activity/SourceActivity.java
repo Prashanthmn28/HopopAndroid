@@ -27,6 +27,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.hopop.hopop.communicators.CommunicatorClass;
 import com.hopop.hopop.communicators.interceptor.ApiRequestInterceptor;
 import com.hopop.hopop.communicators.prefmanager.PrefManager;
@@ -49,11 +50,17 @@ import com.hopop.hopop.source.adapter.SrcRecyclerAdapter;
 import com.hopop.hopop.source.data.ForProfileHeader;
 import com.hopop.hopop.source.data.HeaderProfile;
 import com.hopop.hopop.source.data.SourceList;
+import com.orm.SchemaGenerator;
+import com.orm.SugarContext;
+import com.orm.SugarDb;
 import com.orm.query.Condition;
 import com.orm.query.Select;
+
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.annotation.Nullable;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import retrofit2.Call;
@@ -66,190 +73,189 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
     Toolbar toolbar;
     private static final int TIME_DELAY = 3000;
     private static long back_pressed;
-    public static String srcSelected = null,srcRId=null;
+    public static String srcSelected = null, srcRId = null;
     SrcRecyclerAdapter recyclerAdapter;
     public List<FromRoute> list1 = new ArrayList<>();
     public List<FromRoute> listItems = new ArrayList<>();
     List<FromRoute> tempDestList;
     @Bind(R.id.source_list)
     RecyclerView source_list;
-    @Nullable @Bind(R.id.search)
+    @Nullable
+    @Bind(R.id.search)
     EditText search;
-    @Nullable @Bind(R.id.textView_sMobile)
+    @Nullable
+    @Bind(R.id.textView_sMobile)
     TextView number;
-    @Nullable @Bind(R.id.textView_sName)
+    @Nullable
+    @Bind(R.id.textView_sName)
     TextView name;
     int pos_prfPic;
-    String frmSplMob,authenticationToken;
+    String frmSplMob, authenticationToken;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-            setTitle(R.string.PickHeader);
-            setContentView(R.layout.activity_source);
-            ButterKnife.bind(this);
-            new LoadViewTask().execute();
-            toolbar = (Toolbar) findViewById(R.id.toolbar);
-            setSupportActionBar(toolbar);
-            source_list = (RecyclerView) findViewById(R.id.source_list);
-            authenticationToken = PrefManager.getAuehKey();
-           // Toast.makeText(SourceActivity.this,"Auth:"+authenticationToken,Toast.LENGTH_SHORT).show();
-            ApiRequestInterceptor apiRequestInterceptor = new ApiRequestInterceptor(authenticationToken);
-            final Call<SourceList> sourceList1 = CommunicatorClass.getRegisterClass().groupListSrc();
-            final LinearLayoutManager layoutManager = new LinearLayoutManager(this.getApplicationContext());
-            layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-            source_list.setLayoutManager(layoutManager);
-            source_list.setItemAnimator(new DefaultItemAnimator());
-            sourceList1.enqueue(new Callback<SourceList>() {
-                @Override
-                public void onResponse(Call<SourceList> call, Response<SourceList> response) {
-                    SourceList sl = response.body();
-
-                    for (FromRoute fromRoute : sl.getFromRoutes()) {
-                        if (FromRoute.isNew(fromRoute.getStopId())) {
-                            fromRoute.save();
-                        }
+        setTitle(R.string.PickHeader);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        setContentView(R.layout.activity_source);
+        ButterKnife.bind(this);
+        new LoadViewTask().execute();
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        source_list = (RecyclerView) findViewById(R.id.source_list);
+        authenticationToken = PrefManager.getAuehKey();
+        ApiRequestInterceptor apiRequestInterceptor = new ApiRequestInterceptor(authenticationToken);
+        final Call<SourceList> sourceList1 = CommunicatorClass.getRegisterClass().groupListSrc();
+        final LinearLayoutManager layoutManager = new LinearLayoutManager(this.getApplicationContext());
+        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        source_list.setLayoutManager(layoutManager);
+        source_list.setItemAnimator(new DefaultItemAnimator());
+        sourceList1.enqueue(new Callback<SourceList>() {
+            @Override
+            public void onResponse(Call<SourceList> call, Response<SourceList> response) {
+                SourceList sl = response.body();
+                for (FromRoute fromRoute : sl.getFromRoutes()) {
+                    if (FromRoute.isNew(fromRoute.getStopId())) {
+                        fromRoute.save();
                     }
-                    list1 = Select.from(FromRoute.class).list();
-                    for (FromRoute frmRout : list1) {
-                    }
-                    listItems = FromRoute.findWithQuery(FromRoute.class, "Select * from FROM_ROUTE Group By stop_location");
-                    for (FromRoute fromRoute : listItems) {
-                        Log.i(getClass().getSimpleName(), "the stops are " + fromRoute.getStopLocation());
-                    }
-                    displayTheList(listItems);
-                    addTextListener();
                 }
-
-                @Override
-                public void onFailure(Call<SourceList> call, Throwable t) {
-                    Toast.makeText(SourceActivity.this, "Invalid Mobile Number/Password", Toast.LENGTH_SHORT).show();
+                list1 = Select.from(FromRoute.class).list();
+                for (FromRoute frmRout : list1) {
                 }
-            });
+                listItems = FromRoute.findWithQuery(FromRoute.class, "Select * from FROM_ROUTE Group By stop_location");
+                for (FromRoute fromRoute : listItems) {
+                    Log.i(getClass().getSimpleName(), "the stops are " + fromRoute.getStopLocation());
+                }
+                displayTheList(listItems);
+                addTextListener();
+            }
+
+            @Override
+            public void onFailure(Call<SourceList> call, Throwable t) {
+                Toast.makeText(SourceActivity.this, "Invalid Mobile Number/Password", Toast.LENGTH_SHORT).show();
+            }
+        });
 //-------------SIDE NAVIGATION --------------------------------------------------------
-            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-            ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                    this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-            drawer.setDrawerListener(toggle);
-            //  drawer.addDrawerListener(toggle);
-            toggle.syncState();
-            final NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-            final View headView = navigationView.getHeaderView(0);
-            final ImageView imgView = (ImageView) headView.findViewById(R.id.imageView);
-            imgView.setOnClickListener(new View.OnClickListener() {
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.setDrawerListener(toggle);
+        //  drawer.addDrawerListener(toggle);
+        toggle.syncState();
+        final NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        final View headView = navigationView.getHeaderView(0);
+        final ImageView imgView = (ImageView) headView.findViewById(R.id.imageView);
+        imgView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent gridIntent = new Intent(getApplicationContext(), GridImgActivity.class);
+                startActivity(gridIntent);
+            }
+        });
+//---------for profilePic------------------
+        if (getIntent().getExtras() != null) {
+            pos_prfPic = getIntent().getExtras().getInt("id");
+            frmSplMob = PrefManager.getlMobile();
+            ProfilePicAdapter imageAdapter = new ProfilePicAdapter(this);
+            imgView.setImageResource(imageAdapter.picArry[pos_prfPic]);
+        }
+//-------------------for profileName nd Number-------------
+        String lMob = LoginActivity.usrMobileNum;
+        String rMob = RegisterActivity.userMobNum;
+        if (lMob == null && rMob == null) {
+            final ForProfileHeader forProfileHeader = new ForProfileHeader();
+            forProfileHeader.setMobile_number(frmSplMob);
+            CommunicatorClass.getRegisterClass().headerProfile(forProfileHeader).enqueue(new Callback<HeaderProfile>() {
                 @Override
-                public void onClick(View v) {
-                    Intent gridIntent = new Intent(getApplicationContext(), GridImgActivity.class);
-                    startActivity(gridIntent);
+                public void onResponse(Call<HeaderProfile> call, Response<HeaderProfile> response) {
+                    HeaderProfile headerProfile = response.body();
+                    for (ProfileInfo profileInfo : headerProfile.getProfileInfo()) {
+                        View headView = navigationView.getHeaderView(0);
+                        TextView name = (TextView) headView.findViewById(R.id.textView_sName);
+                        TextView mob = (TextView) headView.findViewById(R.id.textView_sMobile);
+                        mob.setText(profileInfo.getMobile_number());
+                        name.setText(profileInfo.getUser_name());
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<HeaderProfile> call, Throwable t) {
+                    Log.i(getClass().getSimpleName(), "Failure Header Profile");
                 }
             });
-//---------for profilePic------------------
-            if (getIntent().getExtras() != null) {
-                pos_prfPic = getIntent().getExtras().getInt("id");
-                //  frmSplMob = getIntent().getExtras().getString("lMob");
-                frmSplMob = PrefManager.getlMobile();
-                //Toast.makeText(SourceActivity.this, "frmSplMob:" + frmSplMob, Toast.LENGTH_SHORT).show();
-                ProfilePicAdapter imageAdapter = new ProfilePicAdapter(this);
-                imgView.setImageResource(imageAdapter.picArry[pos_prfPic]);
-            }
-//-------------------for profileName nd Number-------------
-            String lMob = LoginActivity.usrMobileNum;
-            String rMob = RegisterActivity.userMobNum;
-            if (lMob == null && rMob == null) {
-                final ForProfileHeader forProfileHeader = new ForProfileHeader();
-                forProfileHeader.setMobile_number(frmSplMob);
-                CommunicatorClass.getRegisterClass().headerProfile(forProfileHeader).enqueue(new Callback<HeaderProfile>() {
-                    @Override
-                    public void onResponse(Call<HeaderProfile> call, Response<HeaderProfile> response) {
-                        HeaderProfile headerProfile = response.body();
-                        for (ProfileInfo profileInfo : headerProfile.getProfileInfo()) {
-                            View headView = navigationView.getHeaderView(0);
-                            TextView name = (TextView) headView.findViewById(R.id.textView_sName);
-                            TextView mob = (TextView) headView.findViewById(R.id.textView_sMobile);
-                            mob.setText(profileInfo.getMobile_number());
-                            name.setText(profileInfo.getUser_name());
-                        }
+        } else if (lMob == null) {
+            final ForProfileHeader forProfileHeader = new ForProfileHeader();
+            forProfileHeader.setMobile_number(rMob);
+            CommunicatorClass.getRegisterClass().headerProfile(forProfileHeader).enqueue(new Callback<HeaderProfile>() {
+                @Override
+                public void onResponse(Call<HeaderProfile> call, Response<HeaderProfile> response) {
+                    HeaderProfile headerProfile = response.body();
+                    for (ProfileInfo profileInfo : headerProfile.getProfileInfo()) {
+                        TextView name = (TextView) headView.findViewById(R.id.textView_sName);
+                        TextView mob = (TextView) headView.findViewById(R.id.textView_sMobile);
+                        name.setText(profileInfo.getUser_name());
+                        mob.setText(profileInfo.getMobile_number());
                     }
+                }
 
-                    @Override
-                    public void onFailure(Call<HeaderProfile> call, Throwable t) {
-                        Log.i(getClass().getSimpleName(), "Failure Header Profile");
+                @Override
+                public void onFailure(Call<HeaderProfile> call, Throwable t) {
+                    Log.i(getClass().getSimpleName(), "Failure Header Profile");
+                }
+            });
+        } else {
+            final ForProfileHeader forProfileHeader = new ForProfileHeader();
+            forProfileHeader.setMobile_number(lMob);
+            CommunicatorClass.getRegisterClass().headerProfile(forProfileHeader).enqueue(new Callback<HeaderProfile>() {
+                @Override
+                public void onResponse(Call<HeaderProfile> call, Response<HeaderProfile> response) {
+                    HeaderProfile headerProfile = response.body();
+                    for (ProfileInfo profileInfo : headerProfile.getProfileInfo()) {
+                        View headView = navigationView.getHeaderView(0);
+                        TextView name = (TextView) headView.findViewById(R.id.textView_sName);
+                        TextView mob = (TextView) headView.findViewById(R.id.textView_sMobile);
+                        mob.setText(profileInfo.getMobile_number());
+                        name.setText(profileInfo.getUser_name());
                     }
-                });
-            } else if (lMob == null) {
+                }
 
-                Log.i(getClass().getSimpleName(), "register Mobile Num:" + rMob);
-                final ForProfileHeader forProfileHeader = new ForProfileHeader();
-                forProfileHeader.setMobile_number(rMob);
-                CommunicatorClass.getRegisterClass().headerProfile(forProfileHeader).enqueue(new Callback<HeaderProfile>() {
-                    @Override
-                    public void onResponse(Call<HeaderProfile> call, Response<HeaderProfile> response) {
-                        HeaderProfile headerProfile = response.body();
-                        for (ProfileInfo profileInfo : headerProfile.getProfileInfo()) {
-                            TextView name = (TextView) headView.findViewById(R.id.textView_sName);
-                            TextView mob = (TextView) headView.findViewById(R.id.textView_sMobile);
-                            name.setText(profileInfo.getUser_name());
-                            mob.setText(profileInfo.getMobile_number());
-                        }
-                    }
-
-                    @Override
-                    public void onFailure(Call<HeaderProfile> call, Throwable t) {
-                        Log.i(getClass().getSimpleName(), "Failure Header Profile");
-                    }
-                });
-            } else {
-                final ForProfileHeader forProfileHeader = new ForProfileHeader();
-                forProfileHeader.setMobile_number(lMob);
-                CommunicatorClass.getRegisterClass().headerProfile(forProfileHeader).enqueue(new Callback<HeaderProfile>() {
-                    @Override
-                    public void onResponse(Call<HeaderProfile> call, Response<HeaderProfile> response) {
-                        HeaderProfile headerProfile = response.body();
-                        for (ProfileInfo profileInfo : headerProfile.getProfileInfo()) {
-                            View headView = navigationView.getHeaderView(0);
-                            TextView name = (TextView) headView.findViewById(R.id.textView_sName);
-                            TextView mob = (TextView) headView.findViewById(R.id.textView_sMobile);
-                            mob.setText(profileInfo.getMobile_number());
-                            name.setText(profileInfo.getUser_name());
-                        }
-                    }
-
-                    @Override
-                    public void onFailure(Call<HeaderProfile> call, Throwable t) {
-                        Log.i(getClass().getSimpleName(), "Failure Header Profile");
-                    }
-                });
-            }
-            navigationView.setNavigationItemSelectedListener(this);
+                @Override
+                public void onFailure(Call<HeaderProfile> call, Throwable t) {
+                    Log.i(getClass().getSimpleName(), "Failure Header Profile");
+                }
+            });
+        }
+        navigationView.setNavigationItemSelectedListener(this);
 
     }//eof onCreate()
 
     List<FromRoute> startingPoint = null;
-    private void displayTheList(final List<FromRoute> fromRoutes){
-        recyclerAdapter = new SrcRecyclerAdapter(fromRoutes,getApplicationContext());
+
+    private void displayTheList(final List<FromRoute> fromRoutes) {
+        recyclerAdapter = new SrcRecyclerAdapter(fromRoutes, getApplicationContext());
         source_list.setAdapter(recyclerAdapter);
-        ((SrcRecyclerAdapter)recyclerAdapter).setOnItemClickListener(new SrcRecyclerAdapter.ItemClickListenr() {
+        ((SrcRecyclerAdapter) recyclerAdapter).setOnItemClickListener(new SrcRecyclerAdapter.ItemClickListenr() {
 
             @Override
             public void onItemClick(int position, View v) {
-                Log.i(getClass().getSimpleName(),"the item clicked is "+fromRoutes.get(position).getStopLocation());
+                Log.i(getClass().getSimpleName(), "the item clicked is " + fromRoutes.get(position).getStopLocation());
                 srcSelected = recyclerAdapter.getFilteredItem(position).getStopLocation();
                 startingPoint = Select.from(FromRoute.class).where(Condition.prop("stop_location").eq(srcSelected)).list();
-                for (FromRoute fromRoute: startingPoint) {
-                    Log.i(getClass().getSimpleName(),"starting point:" + fromRoute.getRouteId());
+                for (FromRoute fromRoute : startingPoint) {
+                    Log.i(getClass().getSimpleName(), "starting point:" + fromRoute.getRouteId());
                 }
                 //to get the stop points with the rout id(s) and the item not equal to the selected stop point
                 List<FromRoute> destinationPoint = new ArrayList<FromRoute>();
                 destList(destinationPoint);
-                for(FromRoute fromRoute:destinationPoint) {
-                    Log.i(getClass().getSimpleName(), "the destination point are "+fromRoute.getStopLocation());
+                for (FromRoute fromRoute : destinationPoint) {
+                    Log.i(getClass().getSimpleName(), "the destination point are " + fromRoute.getStopLocation());
                 }
                 Intent intentSrc = new Intent(SourceActivity.this, DestinationActivity.class);
                 intentSrc.putExtra("src", srcSelected);
-                intentSrc.putExtra("prfPic",pos_prfPic);
-                intentSrc.putExtra("lMob",frmSplMob);
+                intentSrc.putExtra("prfPic", pos_prfPic);
+                intentSrc.putExtra("lMob", frmSplMob);
                 Bundle bundle = new Bundle();
                 bundle.putParcelableArrayList("mylist", (ArrayList<? extends Parcelable>) destinationPoint);
                 intentSrc.putExtras(bundle);
@@ -259,7 +265,7 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
     }//eof displayTheList
 
     private void destList(List<FromRoute> destinationPoint) {
-        for(FromRoute fromRoute:startingPoint) {
+        for (FromRoute fromRoute : startingPoint) {
             tempDestList = FromRoute.findWithQuery(FromRoute.class, "Select * from FROM_ROUTE where route_id = ? AND stop_location != ? Group By stop_location", fromRoute.getRouteId(), srcSelected);
             if (destinationPoint.isEmpty()) {
                 destinationPoint.addAll(tempDestList);
@@ -286,11 +292,15 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
         }
     }//eof destList()
 
-    public void addTextListener(){
+    public void addTextListener() {
         if (search != null) {
             search.addTextChangedListener(new TextWatcher() {
-                public void afterTextChanged(Editable s) {}
-                public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+                public void afterTextChanged(Editable s) {
+                }
+
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                }
+
                 public void onTextChanged(CharSequence query, int start, int before, int count) {
                     query = query.toString().toLowerCase();
                     final List<FromRoute> fromRoutes = new ArrayList<>();
@@ -362,11 +372,9 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
         return true;
     }//eof onNavigationItemSelected
 
-    private class LoadViewTask extends AsyncTask<Void, Integer, Void>
-    {
+    private class LoadViewTask extends AsyncTask<Void, Integer, Void> {
         @Override
-        protected void onPreExecute()
-        {
+        protected void onPreExecute() {
             progressDialog = new ProgressDialog(SourceActivity.this);
             progressDialog.setMessage("Loading...");
             progressDialog.setCancelable(false);
@@ -377,37 +385,29 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
         }
 
         @Override
-        protected Void doInBackground(Void... params)
-        {
-            try
-            {
-                synchronized (this)
-                {
+        protected Void doInBackground(Void... params) {
+            try {
+                synchronized (this) {
                     int counter = 0;
-                    while(counter <= 4)
-                    {
+                    while (counter <= 4) {
                         this.wait(500);
                         counter++;
-                        publishProgress(counter*25);
+                        publishProgress(counter * 25);
                     }
                 }
-            }
-            catch (InterruptedException e)
-            {
+            } catch (InterruptedException e) {
                 e.printStackTrace();
             }
             return null;
         }
 
         @Override
-        protected void onProgressUpdate(Integer... values)
-        {
+        protected void onProgressUpdate(Integer... values) {
             progressDialog.setProgress(values[0]);
         }
 
         @Override
-        protected void onPostExecute(Void result)
-        {
+        protected void onPostExecute(Void result) {
             progressDialog.dismiss();
         }
     }
@@ -416,9 +416,9 @@ public class SourceActivity extends AppCompatActivity implements NavigationView.
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT){
-            setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         }
     }
 }

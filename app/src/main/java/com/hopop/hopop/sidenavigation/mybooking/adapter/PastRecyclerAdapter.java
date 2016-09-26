@@ -39,27 +39,16 @@ public class PastRecyclerAdapter extends RecyclerView.Adapter<PastRecyclerAdapte
 
         PastObjectHolder pastObj = new PastObjectHolder(view);
         return pastObj;
-
-
     }
 
     @Override
     public void onBindViewHolder(PastRecyclerAdapter.PastObjectHolder holder, int position) {
-
         String date = bookingHis.get(position).getCreatedOn();
-
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         date = dateFormat.format(new Date());
-
-
-
-
-
         holder.getTextDate().setText(date);
         holder.getTextSrc().setText(bookingHis.get(position).getFromLocation());
         holder.getTextDst().setText(bookingHis.get(position).getToLocation());
-
-
     }
 
     @Override
@@ -102,18 +91,13 @@ public class PastRecyclerAdapter extends RecyclerView.Adapter<PastRecyclerAdapte
         public PastObjectHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
-
             itemView.setOnClickListener(this);
         }
 
         @Override
         public void onClick(View v) {
             if (itemClickListenr != null)  itemClickListenr.onItemClick(getAdapterPosition(),v);
-
-
-        }
-
-
+       }
     }
 
     public void setOnItemClickListener(ItemClickListenr itemClickListenr) {

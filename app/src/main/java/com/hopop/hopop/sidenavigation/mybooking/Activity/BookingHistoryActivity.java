@@ -8,14 +8,21 @@ import android.content.pm.ActivityInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.NavUtils;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import com.hopop.hopop.communicators.CommunicatorClass;
+import com.hopop.hopop.communicators.prefmanager.PrefManager;
 import com.hopop.hopop.database.BookingHistory;
 import com.hopop.hopop.login.activity.LoginActivity;
 import com.hopop.hopop.login.activity.R;
@@ -41,16 +48,15 @@ public class BookingHistoryActivity extends AppCompatActivity {
     @Bind(R.id.past_list)
     RecyclerView past_list;
     List<BookingHistory> pastList = new ArrayList<BookingHistory>();
-    List<BookingHistory> srcList = new ArrayList<BookingHistory>();
-    List<BookingHistory> destList = new ArrayList<BookingHistory>();
     String frmSplMob,lMob,rMob;
-    Context context;
-    SharedPreferences sharedPreferences;
-
+    private static final int TIME_DELAY = 3000;
+    private static long back_pressed;
+    PastRecyclerAdapter pastRecycAda;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_past);
         ButterKnife.bind(this);
         new LoadViewTask().execute();
@@ -61,20 +67,17 @@ public class BookingHistoryActivity extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onBackPressed();
+          onBackPressed();
             }
         });
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
         final LinearLayoutManager layoutManager = new LinearLayoutManager(this.getApplicationContext());
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         past_list.setLayoutManager(layoutManager);
         past_list.setItemAnimator(new DefaultItemAnimator());
-      //  String mob = LoginActivity.usrMobileNum;
         lMob = LoginActivity.usrMobileNum;
         rMob = RegisterActivity.userMobNum;
-        context = BookingHistoryActivity.this.getApplicationContext();
-        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
-        frmSplMob = sharedPreferences.getString("lMob",null);
+        frmSplMob = PrefManager.getlMobile();
         if(lMob ==null && rMob ==null)
         {
             LoginUser loginUser = new LoginUser();
@@ -83,18 +86,19 @@ public class BookingHistoryActivity extends AppCompatActivity {
                 @Override
                 public void onResponse(Call<BookingHisInfo> call, Response<BookingHisInfo> response) {
                     BookingHisInfo bookingHisInfo = response.body();
-                    for (BookingHistory bookingHistory : bookingHisInfo.getBookingHistory()) {
-                        if (BookingHistory.isNew(bookingHistory.getRoute())) {
+                    BookingHistory.deleteAll(BookingHistory.class);
+                   for (BookingHistory bookingHistory : bookingHisInfo.getBookingHistory()) {
+                       if (BookingHistory.isNew(bookingHistory.getMobileNumber())) {
                             bookingHistory.save();
-                        }
-                    }
-                    pastList = Select.from(BookingHistory.class).list();
-                    displayThePastList(pastList);
-                    for (BookingHistory bookingHistory:bookingHisInfo.getBookingHistory()){
-                        if(BookingHistory.isExisting(bookingHistory.getMobileNumber())){
-                            bookingHistory.delete();
-                        }
-                    }
+                       }
+                         else
+                       {
+                           bookingHistory.save();
+                       }
+                      }
+                   pastList = Select.from(BookingHistory.class).list();
+                   Log.i(getClass().getSimpleName(),"PastList:"+pastList);
+                   displayThePastList(pastList);
                 }
                 @Override
                 public void onFailure(Call<BookingHisInfo> call, Throwable t) {
@@ -109,19 +113,20 @@ public class BookingHistoryActivity extends AppCompatActivity {
                 @Override
                 public void onResponse(Call<BookingHisInfo> call, Response<BookingHisInfo> response) {
                     BookingHisInfo bookingHisInfo = response.body();
+                    BookingHistory.deleteAll(BookingHistory.class);
                     for (BookingHistory bookingHistory : bookingHisInfo.getBookingHistory()) {
-                        if (BookingHistory.isNew(bookingHistory.getRoute())) {
+                        if (BookingHistory.isNew(bookingHistory.getMobileNumber())) {
+                            bookingHistory.save();
+                        }
+                        else
+                        {
                             bookingHistory.save();
                         }
                     }
-                    pastList = Select.from(BookingHistory.class).list();
+                  pastList = Select.from(BookingHistory.class).list();
+                    Log.i(getClass().getSimpleName(),"PastList:"+pastList);
                     displayThePastList(pastList);
-                    for (BookingHistory bookingHistory:bookingHisInfo.getBookingHistory()){
-                        if(BookingHistory.isExisting(bookingHistory.getMobileNumber())){
-                            bookingHistory.delete();
-                        }
-                    }
-                }
+                  }
                 @Override
                 public void onFailure(Call<BookingHisInfo> call, Throwable t) {
                 }
@@ -135,18 +140,20 @@ public class BookingHistoryActivity extends AppCompatActivity {
                 @Override
                 public void onResponse(Call<BookingHisInfo> call, Response<BookingHisInfo> response) {
                     BookingHisInfo bookingHisInfo = response.body();
+                    BookingHistory.deleteAll(BookingHistory.class);
                     for (BookingHistory bookingHistory : bookingHisInfo.getBookingHistory()) {
-                        if (BookingHistory.isNew(bookingHistory.getRoute())) {
+                        if (BookingHistory.isNew(bookingHistory.getMobileNumber())) {
+                            bookingHistory.save();
+                        }
+                        else
+                        {
                             bookingHistory.save();
                         }
                     }
                     pastList = Select.from(BookingHistory.class).list();
+                    Log.i(getClass().getSimpleName(),"PastList:"+pastList);
                     displayThePastList(pastList);
-                    for (BookingHistory bookingHistory:bookingHisInfo.getBookingHistory()){
-                        if(BookingHistory.isExisting(bookingHistory.getMobileNumber())){
-                            bookingHistory.delete();
-                        }
-                    }
+
                 }
                 @Override
                 public void onFailure(Call<BookingHisInfo> call, Throwable t) {
@@ -157,8 +164,11 @@ public class BookingHistoryActivity extends AppCompatActivity {
     }
 
     private void displayThePastList(final List<BookingHistory> pastList) {
-        PastRecyclerAdapter pastRecycAda = new PastRecyclerAdapter(pastList, getApplicationContext());
+        pastRecycAda = new PastRecyclerAdapter(pastList, getApplicationContext());
         past_list.setAdapter(pastRecycAda);
+        pastRecycAda.notifyDataSetChanged();
+
+
         ((PastRecyclerAdapter) pastRecycAda).setOnItemClickListener(new PastRecyclerAdapter.ItemClickListenr() {
 
             @Override
@@ -174,10 +184,7 @@ public class BookingHistoryActivity extends AppCompatActivity {
 
         });
     }
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-    }
+
 
     private class LoadViewTask extends AsyncTask<Void, Integer, Void>
     {
@@ -228,4 +235,9 @@ public class BookingHistoryActivity extends AppCompatActivity {
             progressDialog.dismiss();
         }
     }
+    @Override
+    public void onBackPressed() {
+       super.onBackPressed();
+    }
+
 }

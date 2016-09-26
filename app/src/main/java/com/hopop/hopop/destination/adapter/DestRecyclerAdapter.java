@@ -52,11 +52,7 @@ public class DestRecyclerAdapter extends RecyclerView.Adapter<DestRecyclerAdapte
 
     @Override
     public void onBindViewHolder(DestRecyclerAdapter.ViewHolder holder, int position) {
-
         holder.tv_entity_name.setText(filteredList.get(position).getStopLocation());
-
-        // Log.i(getClass().getSimpleName(),"dest clickStop Points is:"+stopPoints.get(position).getStopLocation());
-
     }
 
     @Override
@@ -73,13 +69,8 @@ public class DestRecyclerAdapter extends RecyclerView.Adapter<DestRecyclerAdapte
         if (filteredList == null || filteredList.isEmpty()) {
             return stopPoints.get(position);
         }
-//        if (filteredList == null || filteredList.isEmpty()) {
         return filteredList.get(position);
-//        }
-//        return filteredList.get(position);
     }
-
-
 
     public interface ItemClickListenr {
         void onItemClick(int adapterPosition, View v);
@@ -90,12 +81,9 @@ public class DestRecyclerAdapter extends RecyclerView.Adapter<DestRecyclerAdapte
         @Bind(R.id.tv_entity_name)
         TextView tv_entity_name;
 
-
         public ViewHolder(final View itemView) {
             super(itemView);
-
             ButterKnife.bind(this, itemView);
-            Log.i(getClass().getSimpleName(), "Dest Adding Listener");
             itemView.setOnClickListener(this);
         }
 

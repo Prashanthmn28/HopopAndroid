@@ -70,7 +70,7 @@ public class PlyActivity extends AppCompatActivity implements NavigationView.OnN
     public static String tripId = null;
     public static String seats = null;
 
-   String frmSplMob,authenticationToken;
+   String frmSplMob,authenticationToken,src_point,dest_point;
     int pos_PrfPly;
     Bundle bundle = new Bundle();
 
@@ -78,6 +78,7 @@ public class PlyActivity extends AppCompatActivity implements NavigationView.OnN
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setTitle(R.string.PlyHeader);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_ply);
         new LoadViewTask().execute();
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -87,27 +88,32 @@ public class PlyActivity extends AppCompatActivity implements NavigationView.OnN
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
         //-----------post the parameters of from and to locations to server-----------------
-        Bundle b = getIntent().getExtras();
+     //   Bundle b = getIntent().getExtras();
         if(getIntent().getExtras()!=null) {
             pos_PrfPly = getIntent().getExtras().getInt("prfPic");
             frmSplMob = getIntent().getExtras().getString("lMob");
+            src_point = getIntent().getExtras().getString("src");
+            dest_point = getIntent().getExtras().getString("dest");
 
+            Toast.makeText(PlyActivity.this,src_point+"-"+dest_point,Toast.LENGTH_LONG).show();
         }
         final String lMob = LoginActivity.usrMobileNum;
         final String rMob = RegisterActivity.userMobNum;
+       /* String src_point = b.getString("src");
+        String dest_point = DestinationActivity.destSelect;*/
+       /* Intent destIntent = getIntent();
 
-        String src_point = b.getString("src");
-        String dest_point = DestinationActivity.destSelect;
-
+        String src_point = destIntent.getExtras().getString("src");
+        String dest_point = destIntent.getExtras().getString("dest");
 
         Intent bookinHistIntent = getIntent();
         src_point = bookinHistIntent.getExtras().getString("src");
-        dest_point = bookinHistIntent.getExtras().getString("dest");
+        dest_point = bookinHistIntent.getExtras().getString("dest");*/
+
+
         SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
         String systime = sdf.format(new Date());
-
         authenticationToken = PrefManager.getAuehKey();
-      //  Toast.makeText(PlyActivity.this,"Auth:"+authenticationToken,Toast.LENGTH_SHORT).show();
         ApiRequestInterceptor apiRequestInterceptor = new ApiRequestInterceptor(authenticationToken);
 
         final ForSeatAvailability forSeats = new ForSeatAvailability();
@@ -119,7 +125,6 @@ public class PlyActivity extends AppCompatActivity implements NavigationView.OnN
         CommunicatorClass.getRegisterClass().forSeatAvailiability(forSeats).enqueue(new Callback<SeatTimeInfo>() {
             @Override
             public void onResponse(Call<SeatTimeInfo> call, Response<SeatTimeInfo> response) {
-                Log.e(getClass().getSimpleName(), "successful");
                 final SeatTimeInfo sti = response.body();
                 if (sti == null)
                 {
@@ -160,7 +165,6 @@ public class PlyActivity extends AppCompatActivity implements NavigationView.OnN
                             if(lMob == null && rMob == null)
                             {
                                 forSuggestedRoute.setMobile_number(frmSplMob);
-                                Toast.makeText(PlyActivity.this,"SplashMob:"+frmSplMob,Toast.LENGTH_SHORT).show();
                                 forSuggestedRoute.setFrom_route(srcTxt.getText().toString());
                                 forSuggestedRoute.setTo_route(destTxt.getText().toString());
                                 forSuggestedRoute.getRequeste_on(systime);
@@ -224,13 +228,10 @@ public class PlyActivity extends AppCompatActivity implements NavigationView.OnN
                 } else {
                     //----------------DISPLAY THE NUMBER OF SEATS and MODE OF BUS IN UI------------------------
                     for (SeatTimeList stl : sti.getSeatTimeList()) {
-                        Log.i(getClass().getSimpleName(), "Seats Available are " + stl.getSeatsAvailable());
-                        Log.i(getClass().getSimpleName(), "Timings Available are " + stl.getTimeSlot());
                         routeId = stl.getRouteId();
                         tripId = stl.getTripId();
                     }
                     if (sti.getSeatTimeList() != null) {
-                        Log.e(getClass().getSimpleName(), "The sorted list is " + sti.getSortedSeatTimeListByTime());
                         ArrayList<SeatTimeList> timeList = sti.getSortedSeatTimeListByTime();
                         adapter = new DataAdapter(timeList);
                         recyclerView.setAdapter(adapter);
@@ -239,13 +240,11 @@ public class PlyActivity extends AppCompatActivity implements NavigationView.OnN
                             public void onItemClick(int position, View v) {
 
                                 int numSeats = Integer.parseInt(sti.getSeatTimeList().get(position).getSeatsAvailable());
-                                if(numSeats == 0)
+                                if(numSeats <= 0)
                                 {
                                     v.setClickable(false);
                                 }
                                 else {
-
-                                Log.i(getClass().getSimpleName(), "the idem selected is " + sti.getSeatTimeList().get(position));
                                 seats = sti.getSeatTimeList().get(position).getSeatsAvailable();
                                 Intent intentSA = new Intent(PlyActivity.this, PaymentActivity.class);
                                 bundle.putParcelable("seatDetails", sti.getSeatTimeList().get(position));
@@ -255,6 +254,9 @@ public class PlyActivity extends AppCompatActivity implements NavigationView.OnN
                                 intentSA.putExtra("lMob",frmSplMob);
                                 intentSA.putExtra("tripID",tripID);
                                 intentSA.putExtra("nSeats",numSeats);
+                                intentSA.putExtra("src",src_point);
+                                intentSA.putExtra("dest",dest_point);
+
                                 startActivity(intentSA);
                                 }
                             }
@@ -329,8 +331,6 @@ public class PlyActivity extends AppCompatActivity implements NavigationView.OnN
         }
        else if(lMob == null)
         {
-
-            Log.i(getClass().getSimpleName(),"register Mobile Num:"+rMob);
             final ForProfileHeader forProfileHeader =new ForProfileHeader();
             forProfileHeader.setMobile_number(rMob);
             CommunicatorClass.getRegisterClass().headerProfile(forProfileHeader).enqueue(new Callback<HeaderProfile>() {

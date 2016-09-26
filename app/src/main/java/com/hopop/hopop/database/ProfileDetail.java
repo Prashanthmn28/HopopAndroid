@@ -8,7 +8,6 @@ import com.orm.SugarRecord;
 
 public class ProfileDetail extends SugarRecord implements Parcelable {
 
-
     @SerializedName("mobile_number")
     private String mobileNumber;
     @SerializedName("first_name")
@@ -17,7 +16,6 @@ public class ProfileDetail extends SugarRecord implements Parcelable {
     private String lastName;
     @SerializedName("mail_id")
     private String mailId;
-
 
     public String getFirstName() {
         return firstName;
@@ -50,7 +48,6 @@ public class ProfileDetail extends SugarRecord implements Parcelable {
     public void setMobileNumber(String mobileNumber) {
         this.mobileNumber = mobileNumber;
     }
-
 
     @Override
     public int describeContents() {

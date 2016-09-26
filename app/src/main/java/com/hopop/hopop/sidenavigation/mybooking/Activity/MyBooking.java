@@ -20,6 +20,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.hopop.hopop.communicators.CommunicatorClass;
+import com.hopop.hopop.communicators.prefmanager.PrefManager;
 import com.hopop.hopop.database.BookingHistory;
 import com.hopop.hopop.login.activity.LoginActivity;
 import com.hopop.hopop.login.activity.R;
@@ -31,6 +32,7 @@ import com.orm.query.Select;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -51,14 +53,12 @@ public class MyBooking extends AppCompatActivity {
     private ProgressDialog progressDialog;
     List<BookingHistory> pastList = new ArrayList<BookingHistory>();
     String frmSplMob,lMob,rMob;
-    Context context;
-    SharedPreferences sharedPreferences;
-
+    int pos_PrfPly;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_mybooking);
         setTitle("Booking History");
         ButterKnife.bind(this);
@@ -70,14 +70,13 @@ public class MyBooking extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 onBackPressed();
+                return;
             }
         });
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
         lMob = LoginActivity.usrMobileNum;
         rMob = RegisterActivity.userMobNum;
-        context = MyBooking.this.getApplicationContext();
-        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
-        frmSplMob = sharedPreferences.getString("lMob",null);
+        frmSplMob = PrefManager.getlMobile();
         if(lMob ==null && rMob==null)
         {
             final  LoginUser loginUser = new LoginUser();
@@ -91,14 +90,21 @@ public class MyBooking extends AppCompatActivity {
                         {
                             bookingHistory.save();
                         }
+                        Log.d(getClass().getSimpleName(),"call booking history activity 1");
                         pastList = Select.from(BookingHistory.class).list();
-                        if (pastList.size() == 0) {
+                        Intent bhIntent = new Intent(MyBooking.this, BookingHistoryActivity.class);
+                        bhIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(bhIntent);
+                        finish();
+                       /* if (pastList.size() == 0) {
                             btn_hist.setVisibility(View.INVISIBLE);
-                        } else {
+                        }
+                        else {
                             btn_hist.setVisibility(View.VISIBLE);
                             ride.setVisibility(View.INVISIBLE);
                             bookNow.setVisibility(View.INVISIBLE);
                         }
+*/
                     }
                 }
                 @Override
@@ -119,14 +125,19 @@ public class MyBooking extends AppCompatActivity {
                         {
                             bookingHistory.save();
                         }
+                        Log.d(getClass().getSimpleName(),"call booking history activity 2");
                         pastList = Select.from(BookingHistory.class).list();
-                        if (pastList.size() == 0) {
+                        Intent bhIntent = new Intent(MyBooking.this, BookingHistoryActivity.class);
+                        startActivity(bhIntent);
+  /*                     if (pastList.size() == 0) {
                             btn_hist.setVisibility(View.INVISIBLE);
                         } else {
+
                             btn_hist.setVisibility(View.VISIBLE);
                             ride.setVisibility(View.INVISIBLE);
                             bookNow.setVisibility(View.INVISIBLE);
-                        }
+
+                        }*/
                     }
                 }
                 @Override
@@ -147,14 +158,17 @@ public class MyBooking extends AppCompatActivity {
                         {
                             bookingHistory.save();
                         }
+                        Log.d(getClass().getSimpleName(),"call booking history activity 3");
                         pastList = Select.from(BookingHistory.class).list();
-                        if (pastList.size() == 0) {
+                        Intent bhIntent = new Intent(MyBooking.this, BookingHistoryActivity.class);
+                        startActivity(bhIntent);
+                      /* if (pastList.size() == 0) {
                             btn_hist.setVisibility(View.INVISIBLE);
                         } else {
                             btn_hist.setVisibility(View.VISIBLE);
                             ride.setVisibility(View.INVISIBLE);
                             bookNow.setVisibility(View.INVISIBLE);
-                        }
+                        }*/
                     }
                 }
                 @Override
@@ -162,10 +176,7 @@ public class MyBooking extends AppCompatActivity {
                 }
             });
         }
-
-
     }
-
     @OnClick(R.id.button_history)
     public void pastUser(View view) {
         Intent bhIntent = new Intent(MyBooking.this, BookingHistoryActivity.class);
@@ -175,6 +186,8 @@ public class MyBooking extends AppCompatActivity {
     public void bookNow(View view)
     {
         Intent bknw = new Intent(MyBooking.this, SourceActivity.class);
+        bknw.putExtra("lMob",frmSplMob);
+        bknw.putExtra("id",pos_PrfPly);
         startActivity(bknw);
     }
 
@@ -218,4 +231,10 @@ public class MyBooking extends AppCompatActivity {
             progressDialog.dismiss();
         }
     }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        return;
+    }
+
 }

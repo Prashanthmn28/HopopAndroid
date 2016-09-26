@@ -4,28 +4,12 @@
         "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\menu\\menu_login.xml"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_ply_drawer.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\menu\\activity_ply_drawer.xml"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\menu\\payment_activity1.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\menu\\payment_activity1.xml"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_destination_drawer.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\menu\\activity_destination_drawer.xml"
-    },
-    {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_ply_drawer.xml",
         "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\menu\\activity_ply_drawer.xml"
     },
     {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_source_drawer.xml",
         "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\menu\\activity_source_drawer.xml"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_login.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\menu\\menu_login.xml"
     },
     {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\menu\\payment.xml",
@@ -36,20 +20,8 @@
         "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\menu\\ply.xml"
     },
     {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_source_drawer.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\menu\\activity_source_drawer.xml"
-    },
-    {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_payment_drawer.xml",
         "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\menu\\activity_payment_drawer.xml"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_payment_drawer.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\menu\\activity_payment_drawer.xml"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\menu\\ply.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\menu\\ply.xml"
     },
     {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_destination_drawer.xml",
@@ -62,13 +34,5 @@
     {
         "merged": "D:\\Android App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\menu\\destination_activity.xml",
         "source": "D:\\Android App\\HopopAndroid\\app\\src\\main\\res\\menu\\destination_activity.xml"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\menu\\payment.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\menu\\payment.xml"
-    },
-    {
-        "merged": "E:\\Android_App\\HopopAndroid\\app\\build\\intermediates\\res\\merged\\debug\\menu\\destination_activity.xml",
-        "source": "E:\\Android_App\\HopopAndroid\\app\\src\\main\\res\\menu\\destination_activity.xml"
     }
 ]

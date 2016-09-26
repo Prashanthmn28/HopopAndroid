@@ -25,16 +25,12 @@ public class BookingHistory extends SugarRecord implements Parcelable {
     @SerializedName("created_on")
     private String createdOn;
 
-
     @Override
     public String toString() {
         return "BookingHistory{" +
                 "fromLocation='" + fromLocation + ",toLocation='"+toLocation+ '\'' +
                 ",createdOn='"+createdOn+ '\'' +'}';
     }
-
-
-
     public String getCreatedOn() {
         return createdOn;
     }
@@ -82,7 +78,6 @@ public class BookingHistory extends SugarRecord implements Parcelable {
     public void setTripId(String tripId) {
         this.tripId = tripId;
     }
-
 
     @Override
     public int describeContents() {

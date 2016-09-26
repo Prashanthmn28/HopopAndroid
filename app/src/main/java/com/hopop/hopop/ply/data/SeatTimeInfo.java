@@ -16,15 +16,12 @@ public class SeatTimeInfo implements Parcelable {
 
     public SeatTimeInfo(ArrayList<SeatTimeList> seatTimeLst) {
         this.seatTimeList = seatTimeList;
-
     }
-
 
     @Override
     public String toString() {
         return "SeatTimeInfo{" +
                 "seatTimeList=" + seatTimeList +
-
                 '}';
     }
 
@@ -44,7 +41,6 @@ public class SeatTimeInfo implements Parcelable {
         Collections.sort(seatTimeList, SeatTimeList.timeComparator);
         return seatTimeList;
     }
-
 
     @Override
     public int describeContents() {
